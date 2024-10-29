@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'Virile';
+    src: url('../css/Virile\ Regular.ttf') format('truetype');
+    font-weight: normal; /* or specify as needed */
+    font-style: normal; /* or italic, etc. */
+}
+:root {
+    --animation-duration: 2s;
+}
+
+.background-wrapper{
+  background-image: url("../media/backgrounds/Psych\ Background.png");
+  background-color: rgba(0, 0, 0, 0.0);
+  background-blend-mode: overlay;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  transform: scale(1.0); 
+  background-size: cover;
+  background-position: center;
+}
+ /*
+
+.background-wrapper::after {
+    content: "";
+    background-image: url("../media/backgrounds/Church.png");
+    background-blend-mode: overlay;
+    z-index: 1;
+    position:absolute;
+    top: 100px; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+
+  }
+  
+  */
+
+  body, html {
+    overflow-x: hidden;
+  }
+
+
+  .flowers{
+    position: absolute;
+    top:0;
+    width: 100%;
+    pointer-events:none; 
+  }
+
+
+  .church{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    filter: drop-shadow(0px -5px 4px #2222227a);
+    z-index: 2;
+  }
+  .church img{
+    width: 60%;
+
+  }
+
+  #animated-word {
+    letter-spacing: 40px; /* Initial letter spacing */
+    transition: letter-spacing 0.1s ease; /* Smooth transition */
+}
+
+  .website-title {
+    color: rgb(255,228,214);
+    font-family: "Virile";
+    font-weight: normal;
+    position:absolute;
+    letter-spacing: 40px;
+    top: 200px;
+    font-size: 300px;
+    filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.473));
+  }
+
+  .bricked-up{
+    height: 100vh;
+    width: 110%;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    top: -0px;
+    filter: blur(0px);
+    background-color: rgb(255,228,214);
+    z-index: 0;
+    }
+  .bricked-up img {
+    width: 100%;
+  }
+
+  #grad1 {
+    height: 200px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(90deg, #672033, #C87B6E, #672033);
+  }
+  .flower-bundleL{
+    left:0px;
+    top:0px;
+    width: 300px;
+    height: 300px;
+    transition: transform 0.3s;
+
+  }
+  .flower-bundleR{
+    right:0px;
+    top:0px;
+    width: 300px;
+    height: 300px;
+    transition: transform 0.3s;
+    
+  }
+  .flowerL{
+    position:fixed;
+    transform-origin: center;
+    animation: rustle-flipped var(--animation-duration) ease-in infinite;
+    animation-delay: var(--animation-delay);
+    filter: drop-shadow(0px -5px 11px #2222227a);
+  }
+
+  .flowerR{
+    position:fixed;
+    transform-origin: center;
+    animation: rustle-flipped var(--animation-duration) ease-in infinite;
+    animation-delay: var(--animation-delay);
+    filter: drop-shadow(0px -5px 11px #2222227a);
+  
+  }
+  
+  .flower1 {
+    top: -110px;
+    left: -110px;
+    transform:rotate(-110deg);
+
+    transform:scaleY(-1);
+    z-index: 2;
+  }
+
+  .flower2 {
+    top: -120px;
+    left: 80px;
+    transform: scaleY(-1);
+    z-index: 1;
+  }
+  
+  .flower3 {
+    top: 5px;
+    left: 20px;
+    transform: scaleY(-1);
+    z-index: 4;
+  }
+  
+  .flower4 {
+    top: 55px;
+    left: -174px;
+    transform: rotate(-120deg);
+    transform: scaleY(-1);
+    z-index: 3;
+  }
+
+
+.flower5 {
+    top: -136px;
+    right: 160px;
+    transform: scaleY(-1);
+    z-index: 2;
+}
+
+.flower6 {
+    top: -110px;
+    right: -75px;
+    transform: scaleY(-1);
+    rotate: 240deg;
+    z-index: 2;
+}
+
+.flower7 {
+    top: 10px;
+    right: 40px;
+    transform: scaleY(-1);
+    z-index: 4;
+}
+
+.flower8 {
+    top: 47px;
+    right: -120px;
+    transform: scaleY(-1);
+    z-index: 3;
+}
+
+@keyframes rustle {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(+3deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rustle-flipped{
+    0% {
+        transform: rotate(0deg) scaleY(-1);
+    }
+    50% {
+        transform: rotate(+3deg) scaleY(-1);
+    }
+    100% {
+        transform: rotate(0deg) scaleY(-1);
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="css/global-styles.css">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+
+
+<body>
+    <div class="background-wrapper"></div>
+    <div class="flowers">
+        <div class="flower-bundleL">
+            <img src="media/flowers/flowers_L_downscaled/lily4.png" class="flowerL flower4" alt="Flower 4">
+            <img src="media/flowers/flowers_L_downscaled/lily5.png" class="flowerL flower3" alt="Flower 3">
+
+            <img src="media/flowers/flowers_L_downscaled/lily2-flip.png" class="flowerL flower1" alt="Flower 1">
+            <img src="media/flowers/flowers_L_downscaled/lily2.png" class="flowerL flower2" alt="Flower 2">
+        </div>
+        <div class="flower-bundleR">
+            <img src="media/flowers/flowers_R_downscaled/lily4.png" class="flowerR flower7" alt="Flower 3">
+            <img src="media/flowers/flowers_R_downscaled/lily1.png" class="flowerR flower5" alt="Flower 1">
+            <img src="media/flowers/flowers_R_downscaled/lily4.png" class="flowerR flower6" alt="Flower 2">
+           <img src="media/flowers/flowers_R_downscaled/lily3.png" class="flowerR flower8" alt="Flower 4">
+        </div>
+    </div>
+   <section>
+
+    <div class="church" style="height: fit-content;">
+        <img src="media/backgrounds/Church.png" alt="Church">
+        <h1 id="animated-word" class="website-title">HAVEN</h1>
+    </div>        
+    <div class="bricked-up">
+       <img src="../havensite/media/backgrounds/bricked-up.png">
+    </div>
+   </section>
+</body>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded',function() {
+        const flowersL = document.querySelectorAll('.flowerL');
+        const flowersR = document.querySelectorAll('.flowerR');
+        const totalDuration = 2;
+
+        flowersL.forEach((flower, index) => {
+            const delayFraction = (index+1) / flowersL.length;
+            const delay = totalDuration * delayFraction;
+
+            flower.style.setProperty('--animation-delay',`-${delay}s`)
+        })
+
+        flowersR.forEach((flower, index) => {
+            const delayFraction = (index+1)/flowersR.length;
+            const delay = totalDuration * delayFraction;
+
+            flower.style.setProperty("--animation-delay", `-${delay}s`)
+        })
+
+    });
+</script>
+
+<script>
+   document.addEventListener('scroll', () => {
+    const word = document.getElementById('animated-word');
+    const scrollPosition = window.scrollY; // Get the current scroll position
+    const maxSpacing = 200; // Maximum letter spacing in pixels
+    const startScroll = 0; // Scroll position where spacing starts to change
+    const endScroll = window.innerHeight; // Scroll position where maximum spacing is applied
+
+    // Calculate the letter spacing based on the scroll position
+    let letterSpacing = 40;
+
+    if (scrollPosition >= startScroll && scrollPosition <= endScroll) {
+        letterSpacing += (scrollPosition / endScroll) * maxSpacing; // Calculate letter spacing
+    } else if (scrollPosition > endScroll) {
+        letterSpacing += maxSpacing; // Cap at max spacing
+    }
+
+    // Apply the calculated letter spacing to the word
+    word.style.letterSpacing = `${letterSpacing}px`;
+});
+
+</script>
+</html>
