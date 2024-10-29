@@ -41,6 +41,7 @@
 
   body, html {
     overflow-x: hidden;
+    margin: 0px;
   }
 
 
@@ -49,6 +50,7 @@
     top:0;
     width: 100%;
     pointer-events:none; 
+    z-index: 10;
   }
 
 
@@ -86,14 +88,13 @@
 
   .bricked-up{
     height: 100vh;
-    width: 110%;
+    width: 100%;
     overflow: hidden;
     display: flex;
     position: relative;
-    top: -0px;
-    filter: blur(0px);
     background-color: rgb(255,228,214);
     z-index: 0;
+    background-attachment: fixed;
     }
   .bricked-up img {
     width: 100%;
