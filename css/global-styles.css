@@ -53,8 +53,18 @@
     z-index: 10;
   }
 
+  @keyframes slideUp {
+    0% {
+        transform: translateY(100%); /* Starts offscreen, below the viewport */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* Ends in the original position */
+        opacity: 1;
+    }
+}
 
-  .church{
+.church {
     width: 100%;
     position: relative;
     display: flex;
@@ -63,8 +73,10 @@
     justify-content: center;
     top: 0;
     filter: drop-shadow(0px -5px 4px #2222227a);
-    z-index: 2;
-  }
+    z-index: 0;
+    animation: slideUp .7s ease-out forwards; /* Apply the slide-up animation */
+}
+
   .church img{
     width: 60%;
 
