@@ -80,63 +80,156 @@
     font-family: "Virile";
     font-weight: normal;
     position:absolute;
+    justify-content: center;
     letter-spacing: 40px;
     top: 200px;
     font-size: 300px;
     filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.473));
   }
 
-  .bricked-up{
+  .bricked-up-body{
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    display: flex;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(1,1fr);
     position: relative;
     background-color: rgb(255,228,214);
     z-index: 0;
     background-attachment: fixed;
     }
-  .bricked-up img {
+  .bricked-up-body img {
     width: 100%;
+    grid-column: 1;
+    grid-row: 1;
+
   }
+
+  .newsletter-signup {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    width: 40%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    justify-items: center;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 2;
+    background-color: #ffe4d6
+  }
+
+.newsletter-signup h2 {
+    font-size: 10vh;
+    color: #989BD9;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+.newsletter-signup p {
+    font-size: 16px;
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#newsletterForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  padding: 30px;
+  width: -webkit-fill-available;
+}
+
+#newsletterForm input[type="email"] {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#newsletterForm button {
+    padding: 10px;
+    background-color: #989BD9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#newsletterForm button:hover {
+    background-color: #494c81;
+}
+
+#responseMessage {
+    margin-top: 10px;
+    font-size: 14px;
+    color: green; /* Can also use red if showing error messages */
+}
+
 
   #grad1 {
     height: 200px;
     background-color: red; /* For browsers that do not support gradients */
     background-image: linear-gradient(90deg, #672033, #C87B6E, #672033);
   }
-  .flower-bundleL{
-    left:0px;
-    top:0px;
-    width: 300px;
-    height: 300px;
-    transition: transform 0.3s;
+  @keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
-  }
-  .flower-bundleR{
-    right:0px;
-    top:0px;
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.flower-bundleL {
+    position: absolute;
+    left: 0px;
+    top: 0px;
     width: 300px;
     height: 300px;
     transition: transform 0.3s;
-    
-  }
-  .flowerL{
-    position:fixed;
+    animation: slideInLeft .5s ease-out forwards; /* Animation for left flowers */
+}
+
+.flower-bundleR {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 300px;
+    height: 300px;
+    transition: transform 0.3s;
+    animation: slideInRight .5s ease-out forwards; /* Animation for right flowers */
+}
+
+/* Adjust other flower-specific classes if necessary, like below */
+.flowerL, .flowerR {
+    position: fixed;
     transform-origin: center;
     animation: rustle-flipped var(--animation-duration) ease-in infinite;
     animation-delay: var(--animation-delay);
     filter: drop-shadow(0px -5px 11px #2222227a);
-  }
+}
 
-  .flowerR{
-    position:fixed;
-    transform-origin: center;
-    animation: rustle-flipped var(--animation-duration) ease-in infinite;
-    animation-delay: var(--animation-delay);
-    filter: drop-shadow(0px -5px 11px #2222227a);
-  
-  }
   
   .flower1 {
     top: -110px;
