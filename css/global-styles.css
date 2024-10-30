@@ -94,7 +94,7 @@
     position:absolute;
     justify-content: center;
     letter-spacing: 40px;
-    top: 200px;
+    top: 225px;
     font-size: 300px;
     filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.473));
   }
@@ -117,6 +117,31 @@
     grid-row: 1;
 
   }
+  .arrow {
+    margin: 50px;
+    scale: 300%;
+    color: #989BD9;
+    /* border: solid rgb(162, 138, 201);
+    
+    border-width: 0 3px 3px 0; */
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg); /* Set initial rotation */
+    transform-origin: rotate(45deg);
+    animation: bounce 1s infinite;
+  }
+  
+  /* Bouncing animation */
+  @keyframes bounce {
+    0%, 100% {
+      
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+
 
   .newsletter-signup {
     padding: 20px;
@@ -152,7 +177,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 500px;
+  max-width: 400px;
   padding: 30px;
   width: -webkit-fill-available;
 }

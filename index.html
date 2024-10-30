@@ -33,13 +33,20 @@
     </div>        
     <div class="bricked-up-body">
         <section class="newsletter-signup">
-            <h2>LAUNCHING THIS JANUARY</h2>
+            <p><i class="arrow">↓</i></p>
+            <h2>COMING THIS JANUARY</h2>
             <p>BE THE FIRST TO KNOW WHEN TICKETS GO LIVE</p>
             <form id="newsletterForm">
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                <input type="phone" id="phone" name="phone" placeholder="Enter your phone number" optional>
-
+                <input type="phone" id="phone" name="phone" placeholder="Enter your phone number (optional)" optional>
                 <button type="submit">Subscribe</button>
+            </form>
+            
+            <form id="contactForm">
+                <label>Name: <input type="text" name="name" required></label>
+                <label>Email: <input type="email" name="email" required></label>
+                <label>Message: <textarea name="message" required></textarea></label>
+                <button type="submit">Send</button>
             </form>
             <p id="responseMessage"></p>
         </section>
@@ -94,5 +101,27 @@
     word.style.letterSpacing = `${letterSpacing}px`;
 });
 
+</script>
+
+<script>
+    //FORM OUTPUT
+    const scriptURL = "https://script.google.com/macros/s/AKfycby6RqF5A4vjZ8gDVZ7-PaC3GW8L4dA_OMXsUs8XEcWlitO5WpDT76PiZt6HPHppjLYfRw/exec";
+
+    document.getElementById("newsletterForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)) })
+        .then(response => alert("Subscribed successfully!"))
+        .catch(error => alert("Error: " + error.message));
+    });
+/*
+    document.getElementById("contactForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)) })
+        .then(response => alert("Message sent successfully!"))
+        .catch(error => alert("Error: " + error.message));
+    });
+*/
 </script>
 </html>
