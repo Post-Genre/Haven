@@ -95,13 +95,13 @@
     position:absolute;
     justify-content: center;
     letter-spacing: 40px;
-    top: 220px;
+    bottom: -240px;
     font-size: 250px;
     filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.473));
   }
 
   .bricked-up-body {
-    height: 100vh;
+    height: fit-content;
     width: 100%;
     overflow: hidden;
     display: grid;
@@ -176,8 +176,9 @@
     color: #989BD9;
     margin-bottom: 40px;
     margin-top: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
+    font-family: "nexa-rust-sans-black-2", sans-serif;
+font-weight: 900;
+font-style: normal;
 }
 
 .newsletter-signup p {
@@ -372,6 +373,24 @@
 }
 
 /* Apply scale of 0.5 when the window width is less than 900px */
+
+@media (max-width: 1150px) {
+  .flower-bundleL, .flower-bundleR{
+      scale:.8;
+  }
+  .flower-bundleL {
+    left: -100px;
+    top:-50px;
+  }
+  .flower-bundleR {
+    right: -100px;
+    top:-50px;
+  }
+  .church img {
+    width:90%;
+  }
+}
+
 @media (max-width: 900px) {
   .flower-bundleL, .flower-bundleR{
       scale:.4;
@@ -389,6 +408,14 @@
   }
 }
 
+
+@media (max-width: 750px) {
+  .website-title{
+    font-size: 150px;
+    bottom: -150px
+  }
+  
+}
 
 @keyframes rustle {
     0% {
