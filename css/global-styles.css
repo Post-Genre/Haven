@@ -12,6 +12,7 @@
   background-image: url("../media/backgrounds/Psych\ Background.png");
   background-color: rgba(0, 0, 0, 0.0);
   background-blend-mode: overlay;
+  background-attachment: fixed;
   position: fixed;
   top: 0;
   left: 0;
@@ -78,14 +79,14 @@
 }
 
   .church img{
-    width: 60%;
+    width: 70%;
 
   }
 
   #animated-word {
     letter-spacing: 40px; /* Initial letter spacing */
     transition: letter-spacing 0.1s ease; /* Smooth transition */
-}
+} 
 
   .website-title {
     color: rgb(255,228,214);
@@ -94,31 +95,37 @@
     position:absolute;
     justify-content: center;
     letter-spacing: 40px;
-    top: 225px;
-    font-size: 300px;
+    top: 220px;
+    font-size: 250px;
     filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.473));
   }
 
-  .bricked-up-body{
+  .bricked-up-body {
     height: 100vh;
     width: 100%;
     overflow: hidden;
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
     position: relative;
-    background-color: rgb(255,228,214);
+    background-color: rgb(255, 228, 214);
     z-index: 0;
     background-attachment: fixed;
-    }
+    background-image: url('../media/backgrounds/tile-bricked-up.jpg'); /* Replace with the path to your image */
+    background-repeat: repeat; /* This makes the background repeat infinitely */
+    background-size: 500px; /* Set this to the size you want for each repeat tile */
+}
+
+
   .bricked-up-body img {
-    width: 100%;
+    width: 500px;
+    background-repeat: repeat;
     grid-column: 1;
     grid-row: 1;
 
   }
   .arrow {
-    margin: 50px;
+    margin-bottom: 20px;
     scale: 300%;
     color: #989BD9;
     /* border: solid rgb(162, 138, 201);
@@ -142,12 +149,19 @@
     }
   }
 
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
   .newsletter-signup {
     padding: 20px;
     background-color: #f7f7f7;
     border-radius: 8px;
     width: 100%;
+    box-sizing: border-box;
+
     margin: 0 auto;
     text-align: center;
     justify-items: center;
@@ -167,7 +181,8 @@
 }
 
 .newsletter-signup p {
-    font-size: 2vh;
+    font-size: 2.5vh;
+    width: 70%;
     color: #555;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -177,7 +192,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 400px;
+  max-width: 300px;
   padding: 30px;
   width: -webkit-fill-available;
 }
@@ -189,7 +204,7 @@
     font-size: 16px;
 }
 
-#newsletterForm button {
+#newsletterForm button, #contactForm button {
     padding: 10px;
     background-color: #989BD9;
     color: #fff;
@@ -204,12 +219,34 @@
     background-color: #494c81;
 }
 
+#contactForm input {
+  padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  max-width: 300px;
+  padding:30px;
+  width: 100%;
+
+}
+
 #responseMessage {
     margin-top: 10px;
     font-size: 14px;
     color: green; /* Can also use red if showing error messages */
 }
-
 
   #grad1 {
     height: 200px;
@@ -328,6 +365,30 @@
     transform: scaleY(-1);
     z-index: 3;
 }
+
+/* Default styling for flower-bundelL and flower-bundelR */
+.flower-bundleL, .flower-bundleR {
+  transform: scale(1); /* Set default scale */
+}
+
+/* Apply scale of 0.5 when the window width is less than 900px */
+@media (max-width: 900px) {
+  .flower-bundleL, .flower-bundleR{
+      scale:.4;
+  }
+  .flower-bundleL {
+    left: -125px;
+    top:-100px;
+  }
+  .flower-bundleR {
+    right: -125px;
+    top:-100px;
+  }
+  .church img {
+    width:90%;
+  }
+}
+
 
 @keyframes rustle {
     0% {

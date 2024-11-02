@@ -41,17 +41,21 @@
                 <input type="phone" id="phone" name="phone" placeholder="Enter your phone number (optional)" optional>
                 <button type="submit">Subscribe</button>
             </form>
-            
+            <p>SEND US A MESSAGE!</p>
             <form id="contactForm">
-                <label>Name: <input type="text" name="name" required></label>
-                <label>Email: <input type="email" name="email" required></label>
-                <label>Message: <textarea name="message" required></textarea></label>
-                <button type="submit">Send</button>
+                <div class="input-container">
+                    <div class="name">
+                        <input type="text" style="width: 100%" name="firstName" placeholder="First Name" required></label>
+                        <input type="text" style="width: 100%" name="lastName" placeholder="Last Name" required></label>
+                    </div> 
+                    <input type="email" name="email" placeholder="Email Address"required></label>
+                    <textarea name="message" placeholder="Enter your message here!" required></textarea></label>
+                    <button type="submit">Send</button>
+                </div> 
             </form>
             <p id="responseMessage"></p>
         </section>
         
-       <img src="media/backgrounds/bricked-up.png">
     </div>
    </section>
 </body>
