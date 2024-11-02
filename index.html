@@ -37,6 +37,10 @@
             <h2>COMING THIS JANUARY</h2>
             <p>BE THE FIRST TO KNOW WHEN TICKETS GO LIVE</p>
             <form id="newsletterForm">
+                <div class="name">
+                    <input type="text" style="width: 100%" name="firstName" placeholder="First Name" required></label>
+                    <input type="text" style="width: 100%" name="lastName" placeholder="Last Name" required></label>
+                </div> 
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 <input type="phone" id="phone" name="phone" placeholder="Enter your phone number (optional)" optional>
                 <button type="submit">Subscribe</button>
@@ -109,7 +113,7 @@
 
 <script>
     //FORM OUTPUT
-    const scriptURL = "https://script.google.com/macros/s/AKfycby6RqF5A4vjZ8gDVZ7-PaC3GW8L4dA_OMXsUs8XEcWlitO5WpDT76PiZt6HPHppjLYfRw/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwzF6tvfbhEdv96_Hp3wRct1gQhseovMiK_PVzuVdL-MMKa2gcL4aTg_ftwEXBq3xfd4Q/exec";
 
     document.getElementById("newsletterForm").addEventListener("submit", (e) => {
     e.preventDefault();
