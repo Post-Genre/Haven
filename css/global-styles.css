@@ -47,7 +47,7 @@
 
 
   .flowers{
-    position: absolute;
+    position: relative;
     top:0;
     width: 100%;
     pointer-events:none; 
@@ -95,8 +95,8 @@
     position:absolute;
     justify-content: center;
     letter-spacing: 40px;
-    bottom: -240px;
-    font-size: 250px;
+    bottom: -25vw;
+    font-size: 25vw;
     filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.473));
   }
 
@@ -161,7 +161,10 @@
     border-radius: 8px;
     width: 100%;
     box-sizing: border-box;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
     margin: 0 auto;
     text-align: center;
     justify-items: center;
@@ -172,13 +175,18 @@
   }
 
 .newsletter-signup h2 {
-    font-size: 10vh;
+    font-size: 5vw;
     color: #989BD9;
     margin-bottom: 40px;
     margin-top: 40px;
     font-family: "nexa-rust-sans-black-2", sans-serif;
 font-weight: 900;
 font-style: normal;
+}
+@media (max-width: 500px) {
+  .newsletter-signup h2{
+    font-size: 10px;
+  }
 }
 
 .newsletter-signup p {
@@ -192,10 +200,11 @@ font-style: normal;
 #newsletterForm {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
   padding: 30px;
-  width: -webkit-fill-available;
+  width: 300px;
 }
+
+
 
 #newsletterForm input[type="email"] {
     padding: 10px;
@@ -259,6 +268,14 @@ font-style: normal;
     height: 200px;
     background-color: red; /* For browsers that do not support gradients */
     background-image: linear-gradient(90deg, #672033, #C87B6E, #672033);
+  }
+
+  .input-forms {
+    flex-direction: column;
+    width: 50vw;
+    min-width: 400px;
+    display: flex;
+    align-items: center;
   }
   @keyframes slideInLeft {
     0% {
@@ -379,6 +396,8 @@ font-style: normal;
 }
 
 /* Apply scale of 0.5 when the window width is less than 900px */
+
+
 
 @media (max-width: 1150px) {
   .flower-bundleL, .flower-bundleR{
