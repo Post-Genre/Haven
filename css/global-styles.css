@@ -47,7 +47,7 @@
 
 
   .flowers{
-    position: relative;
+    position: fixed;
     top:0;
     width: 100%;
     pointer-events:none; 
@@ -98,6 +98,12 @@
     bottom: -25vw;
     font-size: 25vw;
     filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.473));
+  }
+
+  @media (max-width: 500px){
+    .website-title{
+      color: rebeccapurple;
+    }
   }
 
   .bricked-up-body {
