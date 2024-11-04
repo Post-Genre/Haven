@@ -32,7 +32,7 @@
         <h1 id="animated-word" class="website-title">HAVEN</h1>
     </div>        
     <div class="bricked-up-body">
-        <section class="newsletter-signup">
+        <section id="newsletter-signup" class="newsletter-signup">
             <p><i class="arrow">↓</i></p>
             <h2>COMING THIS JANUARY</h2>
             <p>BE THE FIRST TO KNOW WHEN TICKETS GO LIVE</p>
@@ -54,6 +54,7 @@
                         <input type="text" style="width: 100%" name="lastName" placeholder="Last Name" required></label>
                     </div> 
                     <input type="email" name="email" placeholder="Email Address"required></label>
+                    <input type="phone" id="phone" name="phone" placeholder="Enter your phone number (optional)" optional>
                     <textarea name="message" placeholder="Enter your message here!" required></textarea></label>
                     <button type="submit">Send</button>
                 </div> 
@@ -91,28 +92,53 @@
 </script>
 
 <script>
-   document.addEventListener('scroll', () => {
+    document.addEventListener('DOMContentLoaded', () => {
     const word = document.getElementById('animated-word');
-    const scrollPosition = window.scrollY; // Get the current scroll position
-    const maxSpacing = 200; // Maximum letter spacing in pixels
-    const startScroll = 0; // Scroll position where spacing starts to change
-    const endScroll = window.innerHeight; // Scroll position where maximum spacing is applied
+    const newsletterSignup = document.getElementById('newsletter-signup');
+    
+    // Check if both elements exist to avoid null errors
+    if (word && newsletterSignup) {
+        document.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY; // Get the current scroll position
 
-    // Calculate the letter spacing based on the scroll position
-    let letterSpacing = 40;
+            const maxSpacing = 200; // Maximum letter spacing in pixels
+            const startScroll = 0; // Scroll position where spacing starts to change
+            const endScroll = window.innerHeight * .5; // Scroll position where maximum spacing is applied
 
-    if (scrollPosition >= startScroll && scrollPosition <= endScroll) {
-        letterSpacing += (scrollPosition / endScroll) * maxSpacing; // Calculate letter spacing
-    } else if (scrollPosition > endScroll) {
-        letterSpacing += maxSpacing; // Cap at max spacing
+            // Calculate the letter spacing based on the scroll position
+            let letterSpacing = 40;
+
+            if (scrollPosition >= startScroll && scrollPosition <= endScroll) {
+                letterSpacing += (scrollPosition / endScroll) * maxSpacing; // Calculate letter spacing
+            } else if (scrollPosition > endScroll) {
+                letterSpacing += maxSpacing; // Cap at max spacing
+            }
+
+            // Apply the calculated letter spacing to the word
+            word.style.letterSpacing = `${letterSpacing}px`;
+        /*
+            // Adjust the opacity of the newsletter signup background
+            const maxOpacity = 0.80; // Target opacity at maximum scroll
+            const minOpacity = 0; // Starting opacity
+            let opacity;
+
+            if (scrollPosition <= endScroll) {
+                opacity = minOpacity + (scrollPosition / endScroll) * (maxOpacity - minOpacity);
+            } else {
+                opacity = maxOpacity;
+            }
+
+            // Apply the opacity to the background color of newsletterSignup
+            newsletterSignup.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
+        */
+        });
+    } else {
+        console.error("Either 'animated-word' or 'newsletter-signup' element not found.");
     }
-
-    // Apply the calculated letter spacing to the word
-    word.style.letterSpacing = `${letterSpacing}px`;
 });
 
-</script>
 
+</script>
 <script>
     //FORM OUTPUT
     const scriptURL = "https://script.google.com/macros/s/AKfycbwzF6tvfbhEdv96_Hp3wRct1gQhseovMiK_PVzuVdL-MMKa2gcL4aTg_ftwEXBq3xfd4Q/exec";
@@ -124,7 +150,6 @@
         .then(response => alert("Subscribed successfully!"))
         .catch(error => alert("Error: " + error.message));
     });
-/*
     document.getElementById("contactForm").addEventListener("submit", (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -132,6 +157,5 @@
         .then(response => alert("Message sent successfully!"))
         .catch(error => alert("Error: " + error.message));
     });
-*/
 </script>
 </html>
