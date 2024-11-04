@@ -101,8 +101,9 @@
   }
 
   @media (max-width: 500px){
-    .website-title{
-      color: rebeccapurple;
+    {
+      writing-mode: vertical-rl; 
+      text-orientation: upright;
     }
   }
 
@@ -186,8 +187,8 @@
     margin-bottom: 40px;
     margin-top: 40px;
     font-family: "nexa-rust-sans-black-2", sans-serif;
-font-weight: 900;
-font-style: normal;
+    font-weight: 900;
+    font-style: normal;
 }
 @media (max-width: 500px) {
   .newsletter-signup h2{
