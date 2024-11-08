@@ -92,6 +92,7 @@
     color: rgb(255,228,214);
     font-family: "Virile";
     font-weight: normal;
+    -webkit-text-stroke: 4px #A85050;
     position:absolute;
     justify-content: center;
     letter-spacing: 40px;
@@ -142,7 +143,7 @@
     padding: 3px;
     transform: rotate(45deg); /* Set initial rotation */
     transform-origin: rotate(45deg);
-    animation: bounce 1s infinite;
+    animation: bounce 1.5s infinite;
   }
   
   /* Bouncing animation */
@@ -200,7 +201,7 @@
     font-size: 2.5vh;
     width: 70%;
     color: #555;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "nexa-rust-sans-black-2", sans-serif;
     font-weight: bold;
     text-align: center;
 }
