@@ -26,14 +26,14 @@
 <body>
     <div class="background-wrapper"></div>
     <div class="flowers">
-        <div class="flower-bundleL">
+        <div id="flower-bundleL" class="flower-bundleL">
             <img src="media/flowers/flowers_L_downscaled/lily4.png" class="flowerL flower4" alt="Flower 4">
             <img src="media/flowers/flowers_L_downscaled/lily5.png" class="flowerL flower3" alt="Flower 3">
 
             <img src="media/flowers/flowers_L_downscaled/lily2-flip.png" class="flowerL flower1" alt="Flower 1">
             <img src="media/flowers/flowers_L_downscaled/lily2.png" class="flowerL flower2" alt="Flower 2">
         </div>
-        <div class="flower-bundleR">
+        <div id="flower-bundleR" class="flower-bundleR">
             <img src="media/flowers/flowers_R_downscaled/lily4.png" class="flowerR flower7" alt="Flower 3">
             <img src="media/flowers/flowers_R_downscaled/lily1.png" class="flowerR flower5" alt="Flower 1">
             <img src="media/flowers/flowers_R_downscaled/lily4.png" class="flowerR flower6" alt="Flower 2">
@@ -55,19 +55,32 @@
         <div class="input-forms">
             <form id="newsletterForm">
                 <div class="name">
-                    <input type="text" style="width: 100%" name="firstName" placeholder="First Name" required></label>
-                    <input type="text" style="width: 100%" name="lastName" placeholder="Last Name" required></label>
+                    <input type="text" style="width: 100%" name="firstName" placeholder="First Name (optional)" optional></label>
+                    <input type="text" style="width: 100%" name="lastName" placeholder="Last Name (optional)" optional></label>
                 </div> 
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 <input type="phone" id="phone" name="phone" placeholder="Enter your phone number (optional)" optional>
                 <button type="submit">Subscribe</button>
             </form>
-            <p>SEND US A MESSAGE!</p>
+            <p>GET IN TOUCH!</p>
+
+            <div class="socials">
+                <a href="mailto:info@postgenre.world">
+                    <img src="../havensite/media/email.png" alt="email">
+                </a>
+                <a href="https://discord.gg/YnPGXRsryk">
+                    <img src="../havensite/media/discord.svg" alt="discord" style="filter: brightness(0);">
+                </a>
+                <a href="https://www.instagram.com/postgenre.world/reels/?hl=en">
+                    <img src="../havensite/media/instagram.png" alt="intagram">
+                </a>
+            </div>
+        <!--
             <form id="contactForm">
                 <div class="input-container">
                     <div class="name">
-                        <input type="text" style="width: 100%" name="firstName" placeholder="First Name" required></label>
-                        <input type="text" style="width: 100%" name="lastName" placeholder="Last Name" required></label>
+                        <input type="text" style="width: 100%" name="firstName" placeholder="First Name" optional></label>
+                        <input type="text" style="width: 100%" name="lastName" placeholder="Last Name" optional></label>
                     </div> 
                     <input type="email" name="email" placeholder="Email Address"required></label>
                     <input type="phone" id="phone" name="phone" placeholder="Enter your phone number (optional)" optional>
@@ -75,12 +88,17 @@
                     <button type="submit">Send</button>
                 </div> 
             </form>
+        -->
             <p id="responseMessage"></p>
         </div>
+            <div class="copyright">
+                © 2024 Post Genre. All Rights Reserved.
+            </div>
         </section>
         
     </div>
    </section>
+
 </body>
 
 
@@ -108,9 +126,35 @@
 </script>
 
 <script>
+    function checkWindowSize() {
+        const arrow = document.querySelector('.arrow')
+
+        if(window.innerWidth < 500) {
+            arrow.style.display = 'none';
+            arrow.parentElement.style.display='none';
+        }
+        else {
+            arrow.style.display = "inline-block"
+            arrow.parentElement.style.display='block';
+        }
+    }
+
+    checkWindowSize();
+    window.addEventListener('resize', checkWindowSize);
+</script>
+
+<script>
+    window.addEventListener('beforeunload', () => {
+        window.scrollTo(0,0);
+    })
+</script>
+
+<script>
     document.addEventListener('DOMContentLoaded', () => {
     const word = document.getElementById('animated-word');
     const newsletterSignup = document.getElementById('newsletter-signup');
+    const flowerBundleL = document.getElementById('flower-bundleL');
+    const flowerBundleR = document.getElementById('flower-bundleR');
     
     // Check if both elements exist to avoid null errors
     if (word && newsletterSignup) {
@@ -118,20 +162,38 @@
             const scrollPosition = window.scrollY; // Get the current scroll position
 
             const maxSpacing = 40; // Maximum letter spacing in pixels
+            const maxOffset = -100;
             const startScroll = 0; // Scroll position where spacing starts to change
             const endScroll = window.innerHeight * .5; // Scroll position where maximum spacing is applied
-
+            //SCALE VARIABLES
+            const startScaleScroll = document.body.scrollHeight * 0;
+            const endScaleScroll = document.body.scrollHeight * .3;
+            const totalScale = (window.innerWidth/1920);
+            const minScale = totalScale*.6;
+            let currScale = totalScale;
             // Calculate the letter spacing based on the scroll position
-            let letterSpacing = 40;
-
+            let letterSpacing = window.innerWidth < 500 ? 0 : 0; //changed so this does nothing
+            
+            //if scroll is not at top or bottom
             if (scrollPosition >= startScroll && scrollPosition <= endScroll) {
                 letterSpacing += (scrollPosition / endScroll) * maxSpacing; // Calculate letter spacing
+            //else if scroll is at bottom
             } else if (scrollPosition > endScroll) {
                 letterSpacing += maxSpacing; // Cap at max spacing
             }
-
+            if (scrollPosition >= startScaleScroll && scrollPosition <= endScaleScroll) {
+                const scaleProgress = (scrollPosition - startScaleScroll) / (endScaleScroll - startScaleScroll);
+                currScale = totalScale-((totalScale-minScale) * scaleProgress); // Adjust scale proportionally
+            } else if (scrollPosition > endScaleScroll) {
+                currScale = minScale; // Cap at minimum scale
+            }
+        
             // Apply the calculated letter spacing to the word
-            word.style.letterSpacing = `${letterSpacing}px`;
+            word.style.letterSpacing = `${letterSpacing}px`; 
+            flowerBundleL.style.scale = `${currScale}`;
+            flowerBundleR.style.scale = `${currScale}`;
+
+
         /*
             // Adjust the opacity of the newsletter signup background
             const maxOpacity = 0.80; // Target opacity at maximum scroll
@@ -153,8 +215,9 @@
     }
 });
 
-
 </script>
+
+
 <script>
     //FORM OUTPUT
     const scriptURL = "https://script.google.com/macros/s/AKfycbwzF6tvfbhEdv96_Hp3wRct1gQhseovMiK_PVzuVdL-MMKa2gcL4aTg_ftwEXBq3xfd4Q/exec";
