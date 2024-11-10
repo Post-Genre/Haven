@@ -66,14 +66,14 @@
 
             <div class="socials">
                 <a href="mailto:info@postgenre.world">
-                    <img src="../havensite/media/email.png" alt="email">
+                    <img src="./media/email.png" alt="email">
                 </a>
                 <a href="https://discord.gg/YnPGXRsryk">
-                    <img src="../havensite/media/discord.svg" alt="discord" style="filter: brightness(0);">
+                    <img src=".media/discord.svg" alt="discord" style="filter: brightness(0);">
                 </a>
                 <a href="https://www.instagram.com/postgenre.world/reels/?hl=en">
-                    <img src="../havensite/media/instagram.png" alt="intagram">
-                </a>
+                    <img src="./media/instagram.png" alt="intagram">
+                </a> 
             </div>
         <!--
             <form id="contactForm">
@@ -156,6 +156,26 @@
     const flowerBundleL = document.getElementById('flower-bundleL');
     const flowerBundleR = document.getElementById('flower-bundleR');
     
+    const adjustFlowerScale = () => {
+        const totalScale = (window.innerWidth / 1920);
+        const minScale = totalScale * 0.6;
+        let currScale = totalScale;
+
+        // Calculate the scale proportionally
+        const scaleProgress = (window.scrollY - 0) / (document.body.scrollHeight * 0.3);
+        currScale = totalScale - ((totalScale - minScale) * scaleProgress);
+        if (window.scrollY > document.body.scrollHeight * 0.3) {
+            currScale = minScale;
+        }
+
+        flowerBundleL.style.scale = `${currScale}`;
+        flowerBundleR.style.scale = `${currScale}`;
+    };
+
+    // Run the flower scaling logic on load and scroll
+    adjustFlowerScale();
+
+    
     // Check if both elements exist to avoid null errors
     if (word && newsletterSignup) {
         document.addEventListener('scroll', () => {
@@ -186,6 +206,9 @@
                 currScale = totalScale-((totalScale-minScale) * scaleProgress); // Adjust scale proportionally
             } else if (scrollPosition > endScaleScroll) {
                 currScale = minScale; // Cap at minimum scale
+            }
+            else if (scrollPosition == startScaleScroll) {
+                currScale = totalScale;
             }
         
             // Apply the calculated letter spacing to the word
