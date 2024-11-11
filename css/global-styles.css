@@ -9,7 +9,7 @@
 }
 
 .background-wrapper{
-  background-image: url("../media/backgrounds/Psych\ Background.png");
+  background-image: url("../media/backgrounds/psychbackground_lowres.jpg");
   background-color: rgba(0, 0, 0, 0.0);
   background-blend-mode: overlay;
   background-attachment: scroll;
@@ -18,7 +18,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vw;
+  height: 100vh;
   z-index: 0;
   background-size: cover;
   background-position: center;
