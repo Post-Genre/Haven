@@ -136,6 +136,7 @@
     padding: 3px;
     transform: rotate(45deg); /* Set initial rotation */
     transform-origin: rotate(45deg);
+    font-style: normal;
     animation: bounce 1.5s infinite;
   }
   
