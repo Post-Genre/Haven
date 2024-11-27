@@ -179,16 +179,13 @@
 .newsletter-signup h2 {
     font-size: 5vw;
     color: #989BD9;
-    margin-bottom: 40px;
-    margin-top: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
     font-family: "nexa-rust-sans-black-2", sans-serif;
     font-weight: 900;
     font-style: normal;
 }
-@media (max-width: 500px) {
-  .newsletter-signup h2{
-  }
-}
+
 
 .newsletter-signup p {
     font-size: 2.5vh;
@@ -197,6 +194,14 @@
     font-family: "nexa-rust-sans-black-2", sans-serif;
     font-weight: bold;
     text-align: center;
+}
+
+@media (max-width: 750px) {
+
+  .blurb{
+    text-align: center !important;
+    font-size: 4vw !important;
+  }
 }
 
 #newsletterForm {
@@ -289,7 +294,7 @@
   }
 
   .copyright {
-    font-style: italic;
+    font-style: normal;
   }
 
   @media (max-width: 500px) {
