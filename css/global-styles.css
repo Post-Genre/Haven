@@ -4,6 +4,13 @@
     font-weight: normal; /* or specify as needed */
     font-style: normal; /* or italic, etc. */
 }
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../css/inter-regular.ttf') format('truetype');
+  font-weight: normal; /* or specify as needed */
+  font-style: normal; /* or italic, etc. */
+}
 :root {
     --animation-duration: 2s;
 }
@@ -123,8 +130,85 @@
     background-repeat: repeat;
     grid-column: 1;
     grid-row: 1;
-
   }
+
+
+  .event-card {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Adjust the card size */
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Image container with a 16:9 aspect ratio */
+.event-image {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+.event-image img {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Info section at the bottom of the card */
+.event-info {
+  box-sizing: border-box; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.63); /* semi-transparent black background */
+    color: white;
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.event-info a {
+  color: white;
+  font-style: normal;
+}
+
+.event-info a:visited {
+  color: white;
+}
+
+/* Style for each item (DATE, TIME, COST, TICKET LINK) */
+.event-item {
+    text-align: center;
+    flex: 1;
+    padding: 5px;
+}
+
+/* Event title styling */
+.event-title {
+  font-family: "Inter"; 
+  font-weight:bolder;
+  color: #555;
+  font-size: 2rem;
+  max-width: 500px;
+}
+
+
+.event-item:not(:last-child) {
+    border-right: 1px solid white;
+}
+
   .arrow {
     margin-bottom: 20px;
     scale: 300%;
@@ -202,6 +286,16 @@
     text-align: center !important;
     font-size: 4vw !important;
   }
+}
+
+.blurb a {
+  color: #555;
+  font-style: normal;
+}
+
+.blurb a:visited {
+  color: #555;
+  font-style: normal;
 }
 
 #newsletterForm {
