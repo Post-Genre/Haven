@@ -130,18 +130,23 @@
     background-repeat: repeat;
     grid-column: 1;
     grid-row: 1;
+    border-radius: 8px;
   }
 
 
   .event-card {
+    display: flex;
+    justify-content: center;
     position: relative;
-    width: 100%;
+    width: 90%;
     max-width: 500px; /* Adjust the card size */
     margin: 20px auto;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+
 
 /* Image container with a 16:9 aspect ratio */
 .event-image {
@@ -197,12 +202,98 @@
 
 /* Event title styling */
 .event-title {
+  position: absolute;
+  padding: 1%;
+  width: 100%;
+  z-index: 9;
   font-family: "Inter"; 
   font-weight:bolder;
-  color: #555;
-  font-size: 2rem;
+  color: #ffffff;
+  font-size: 1.5rem;
   max-width: 500px;
+  background-color: #2222227a;
 }
+
+
+
+.gallery{
+  width: 900px;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.gallery div {
+  width: 100%;
+  display: grid;
+  /*repeat applies to every column, with auto fit, and */
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(150px, 1fr);
+  white-space: nowrap;  grid-gap: 2vw;
+  flex: none;
+  padding: 2vw 2vw 2vw 0;
+}
+
+.event-date-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: white;
+  font-size: 16px;
+  align-items: center;
+  font-weight: bold;
+  z-index: 2;   
+  font-family: "inter";
+
+}
+
+.event-date-label p {
+  padding: 0;
+  margin: 0;
+}
+
+.gallery div img {
+  width: 100%;
+  display: block;
+}
+
+.gallery div span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(100%);
+}
+
+.gallery::-webkit-scrollbar{
+  display: none;
+}
+
+.gallery-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  max-width: 800px;
+}
+
+.gallery-wrap #backButton{
+  transform: rotate(180deg);
+}
+
+.gallery-wrap #forwardButton, .gallery-wrap #backButton{
+  scale: 32%;
+  cursor: pointer;
+  width: 10vw;
+}
+
+.gallery div span:hover {
+  filter: grayscale(0%);
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.15s;
+  z-index: 2;
+
+ }
 
 
 .event-item:not(:last-child) {
@@ -242,7 +333,6 @@
   }
 
   .newsletter-signup {
-    padding: 20px;
     border-radius: 8px;
     width: 100%;
     box-sizing: border-box;
@@ -274,7 +364,6 @@
 .newsletter-signup p {
     font-size: 2.5vh;
     width: 70%;
-    color: #555;
     font-family: "nexa-rust-sans-black-2", sans-serif;
     font-weight: bold;
     text-align: center;
