@@ -1,16 +1,17 @@
 @font-face {
     font-family: 'Virile';
     src: url('../css/Virile\ Regular.ttf') format('truetype');
-    font-weight: normal; /* or specify as needed */
-    font-style: normal; /* or italic, etc. */
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url('../css/inter-regular.ttf') format('truetype');
-  font-weight: normal; /* or specify as needed */
-  font-style: normal; /* or italic, etc. */
+  src: url('../css/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-weight:700;
+  font-style: normal; 
 }
+
 :root {
     --animation-duration: 2s;
 }
@@ -47,11 +48,20 @@
   
   */
 
-  body, html {
+  body {
     overflow-x: hidden;
+    overflow-y: scroll;
     margin: 0px;
   }
 
+  /*Hide scrollbar*/
+  body::-webkit-scrollbar {
+    display: none; 
+}
+
+  html {
+    scrollbar-width: none;
+  }
 
   .flowers{
     position: fixed;
@@ -87,7 +97,6 @@
 
   .church img{
     width: 70%;
-
   }
 
   #animated-word {
@@ -98,13 +107,21 @@
     color: rgb(255,228,214);
     font-family: "Virile";
     font-weight: normal;
-    -webkit-text-stroke: 4px #A85050;
+    -webkit-text-stroke: 3px #A85050;
     position:absolute;
     justify-content: center;
     letter-spacing: 0px;
     bottom: -25vw;
     font-size: 25vw;
     filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.473));
+  }
+
+  .section-title {
+    font-family: "nexa-rust-sans-black-2", sans-serif;
+    color: #989BD9;
+    font-weight: 800;
+    font-size: 2rem;
+    margin: 2vh 2vh 1vh 2vh;
   }
 
 
@@ -117,7 +134,7 @@
     grid-template-columns: repeat(1, 1fr);
     position: relative;
     background-color: rgb(255, 228, 214);
-    z-index: 0;
+    z-index: 10;
     background-attachment: fixed;
     background-image: url('../media/backgrounds/tile-bricked-up.jpg'); /* Replace with the path to your image */
     background-repeat: repeat; /* This makes the background repeat infinitely */
@@ -130,7 +147,6 @@
     background-repeat: repeat;
     grid-column: 1;
     grid-row: 1;
-    border-radius: 8px;
   }
 
 
@@ -139,8 +155,8 @@
     justify-content: center;
     position: relative;
     width: 90%;
-    max-width: 500px; /* Adjust the card size */
-    margin: 20px auto;
+    max-width: 600px;
+    margin-bottom: 30px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -217,7 +233,7 @@
 
 
 .gallery{
-  width: 900px;
+  width: 450px;
   display: flex;
   overflow-x: scroll;
 }
@@ -228,9 +244,8 @@
   /*repeat applies to every column, with auto fit, and */
   grid-auto-flow: column;
   grid-auto-columns: minmax(150px, 1fr);
-  white-space: nowrap;  grid-gap: 2vw;
+  white-space: nowrap;  grid-gap: 1vw;
   flex: none;
-  padding: 2vw 2vw 2vw 0;
 }
 
 .event-date-label {
@@ -254,6 +269,7 @@
 .gallery div img {
   width: 100%;
   display: block;
+  border-radius: 5px;
 }
 
 .gallery div span {
@@ -274,6 +290,9 @@
   justify-content: center;
   width: 90vw;
   max-width: 800px;
+  height: fit-content;
+  padding: 0;
+  margin: 0;
 }
 
 .gallery-wrap #backButton{
@@ -281,9 +300,10 @@
 }
 
 .gallery-wrap #forwardButton, .gallery-wrap #backButton{
-  scale: 32%;
+  scale: 100%;
   cursor: pointer;
-  width: 10vw;
+  width: 5vw;
+  height: 5vh;
 }
 
 .gallery div span:hover {
@@ -332,8 +352,7 @@
     width: 100%;
   }
 
-  .newsletter-signup {
-    border-radius: 8px;
+  .section-a {
     width: 100%;
     box-sizing: border-box;
     display: flex;
@@ -347,10 +366,11 @@
     grid-row: 1;
     z-index: 2;
     background-color: #ffe4d6eb;
+    padding: 6vh 0vh;
   }
 
 
-.newsletter-signup h2 {
+.section-a h2 {
     font-size: 5vw;
     color: #989BD9;
     margin-bottom: 0px;
@@ -361,12 +381,29 @@
 }
 
 
-.newsletter-signup p {
+.section-a p {
     font-size: 2.5vh;
     width: 70%;
     font-family: "nexa-rust-sans-black-2", sans-serif;
     font-weight: bold;
     text-align: center;
+}
+
+.section-header {
+  display: grid;
+  height: 35vh;
+  align-items: center;
+  align-content: center;
+}
+
+.section-header img, .section-header h2 {
+  grid-column: 1;
+  grid-row: 1;
+  height: fit-content;
+}
+
+.section-header img {
+  width: 100%;
 }
 
 @media (max-width: 750px) {
@@ -481,8 +518,7 @@
   }
 
   @media (max-width: 500px) {
-  
-    .newsletter-signup h2{
+    .section-a h2{
       font-size: 10vw;
     }
   }
@@ -546,8 +582,8 @@
     top: -110px;
     left: -110px;
     transform:rotate(-110deg);
-
     transform:scaleY(-1);
+    
     z-index: 2;
   }
 
