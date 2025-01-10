@@ -117,9 +117,10 @@
 
   .section-title {
     font-family: "nexa-rust-sans-black-2", sans-serif;
-    color: #989BD9;
+    text-transform: uppercase;
+    color: #210114;
     font-weight: 800;
-    font-size: max(2rem, 5cqw);
+    font-size: max(2rem, 3.8cqw);
     line-height: 100%;
     margin: 0;
     padding: 0 0 3cqh 0;
@@ -452,6 +453,43 @@
 
 .content-text p {
   top: -100px;
+}
+
+.content-button {
+  background-color: white;
+  color:#142413;
+  font-family: "inter";
+  font-size: 25px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding: 20px;
+  border-radius: 5px;
+  transition: 0.15s;
+  text-decoration: none;
+}
+
+.content-button:visited {
+  text-decoration: none;
+}
+
+.content-button:hover {
+  background-color: #ffffff00;
+  color: white;
+  transition: 0.15s;
+}
+
+.link {
+  color: white;
+  font-style:normal;
+  font-weight: bold;
+  text-decoration: none;
+} 
+
+.content-header {
+  font-size: 35px; 
+  font-weight: bold; 
+  text-transform: uppercase; 
+  color: #e7be47;
 }
 
 .content img, .content div {
