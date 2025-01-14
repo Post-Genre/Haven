@@ -60,6 +60,7 @@
 
   html {
     scrollbar-width: none;
+    scroll-behavior: smooth;
   }
 
   .flowers{
@@ -116,7 +117,7 @@
   }
 
   .section-title {
-    font-family: "nexa-rust-sans-black-2", sans-serif;
+    font-family: "inter", sans-serif;
     text-transform: uppercase;
     color: #210114;
     font-weight: 800;
