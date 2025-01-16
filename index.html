@@ -641,12 +641,11 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
     const collapsibleButtons = document.querySelectorAll('.collapsible');
-    const expandIcon = document.querySelector("#expandIcon");
   
       collapsibleButtons.forEach(button => {
           button.addEventListener('click', function(){
               const content = this.nextElementSibling;
-  
+
               this.classList.toggle('active');
   
             if(content.style.maxHeight) {
