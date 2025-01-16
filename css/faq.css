@@ -1,0 +1,103 @@
+.collapsible {
+    background-color: #45628769;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    text-align: left;
+    outline: none;
+    font-size: 22px;
+    transition: background-color 0.3s ease;
+    transition: border-radius .5s;
+
+  }
+
+  .active {
+    border-radius: 10px 10px 0px 0px;
+    transition: border-radius .2s;
+  }
+  .collapsible-section {
+    width: 90%;
+    max-width: 650px;
+  }
+  
+  .collapsible:hover {
+  background-color: rgba(255, 255, 255, 0.158);}
+  
+  .collapsible:hover h2{
+      color: black;
+    }
+
+  .collapsible-button {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0% 2% 0% 2%;
+    margin: 0;
+  }
+
+  .collapsible-button h3 {
+    margin: 0;
+    padding: 5% 3%;
+    text-align: left;
+  }
+
+  #expandIcon {
+    text-align: center;
+    align-items: center;
+  }
+
+  .faq-content {
+    max-height: 0; /* Initially hidden */
+    overflow: hidden; /* Hide content when collapsed */
+    transition: max-height 0.3s ease-out; /* Smooth expansion */
+    background-color: #45698769;
+    color: white;
+    padding: 0% 4%;
+    border-radius: 0px 0px 10px 10px;
+    transition: all 0.3s ease;
+    text-align: left;
+    font-family: inter;
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  .faq-content a:visited {
+    color: white !important;
+  }
+  
+  .expanded {
+    padding: 4%;
+    transition: all 0.3s ease;
+  }
+  .profile {
+      animation: slideDown 0.5s ease forwards;
+      opacity: 0;
+      
+  }
+  @keyframes slideIn {
+      0% {
+          transform: translateX(100%); /*start all the way on the right*/
+          opacity: 0; /*invisible, just in case*/
+      }
+      100% {
+          transform: translateX(0);
+          opacity: 100%;
+      }
+  }
+  @keyframes slideDown {
+      0% {
+          transform: translateY(100%); /*start all the way on the right*/
+          opacity: 0; /*invisible, just in case*/
+      }
+      100% {
+          transform: translateY(0);
+          opacity: 100%;
+      }
+  }
+  .collapsibl-section h2 { 
+      animation: slideIn 0.5s ease forwards;
+      opacity: 0;
+  }
