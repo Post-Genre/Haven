@@ -224,6 +224,10 @@ html{
   font-size: max(.8rem, 3cqw);
 }
 
+#ticket-link {
+  color:#672033;
+}
+
 .event-info a {
   color: white;
   font-style: normal;
