@@ -514,7 +514,6 @@ html{
 .content img, .content div {
   grid-column: 1;
   grid-row: 1;
-  height: fit-content;
 }
 
 /* 301c09 */
