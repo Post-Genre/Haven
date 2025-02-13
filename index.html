@@ -47,8 +47,17 @@
 
 
 <body>
-    <div class="background-wrapper"></div>
-    <div class="flowers">
+    <!-- <div class="background-wrapper"> -->
+    <!-- <div class="church" style="height: fit-content;"> -->
+    <!-- <img src="media/backgrounds/Church-Lowres.png" alt="Church"> -->
+
+    <!-- </div> -->
+    <!-- </div> -->
+
+    <!-- <div class="container"> -->
+
+    <!-- </div> -->
+    <!-- <div class="flowers">
         <div id="flower-bundleL" class="flower-bundleL">
             <img src="media/flowers/flowers_L_downscaled/lily4.png" class="flowerL flower4" alt="Flower 4">
             <img src="media/flowers/flowers_L_downscaled/lily5.png" class="flowerL flower3" alt="Flower 3">
@@ -62,22 +71,21 @@
             <img src="media/flowers/flowers_R_downscaled/lily4.png" class="flowerR flower6" alt="Flower 2">
             <img src="media/flowers/flowers_R_downscaled/lily3.png" class="flowerR flower8" alt="Flower 4">
         </div>
-    </div>
+    </div> -->
 
     <section>
 
-        <div class="church" style="height: fit-content;">
-            <img src="media/backgrounds/Church-Lowres.png" alt="Church">
-            <h1 id="animated-word" class="website-title">HAVEN</h1>
-        </div>
+
 
         <nav class="navbar">
             <div class="nav-content">
                 <ul class="nav-links">
+                    <li><img src="media/haven-church-logo.png" alt=""></li>
                     <li><a href="events.html">Events</a></li>
+                    <!-- <li><a href="#events">Events</a></li> -->
                     <li><a href="#about">About</a></li>
                     <li><a href="#studio">Studio</a></li>
-                    <li><a href="#studio">Rentals</a></li>
+                    <!-- <li><a href="#studio">Rentals</a></li> -->
                     <li><a href="#artists">Artists</a></li>
                     <li><a href="#faqs">FAQS</a></li>
 
@@ -85,7 +93,7 @@
             </div>
             <div class="two-row-nav-content" onclick="toggleMenu()">
                 <ul class="nav-links">
-                    <li><a href="events.html">Events</a></li>
+                    <li><a href="#events">Events</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#studio">Studio</a></li>
                 </ul>
@@ -100,27 +108,150 @@
 
         <div class="bricked-up-body">
 
+
+
             <div class="contents" style="width: 100vw;">
-                <section class="section-a">
+
+
+                <section class="section-a" id="events">
+
+                    <h1 class="website-title">HAVEN</h1>
 
                     <h1 class="section-title" id="events">Upcoming Events</h1>
 
-                    <div class="event-card">
-                        <div class="event-title"></div>
+                    <div class="events-container">
+                        <!-- <img src="./media/right-arrow-svgrepo-com.svg" class="arrow-button flip-button" id="back-button"
+                            nopin="nopin" /> -->
+                        <button class="arrow-button" id="back-button">
+                            < </button>
 
-                        <div class="event-image">
-                            <img src="./media/church-opening-poster.png" alt="Event Image" />
-                        </div>
+                                <div class="event-cards-container">
+                                    <div class="new-event-card invisible">
+                                        <!-- <h1>HI</h1> -->
+                                    </div>
+                                    <div class="new-event-card invisible">
+                                        <h1>EVENT 0</h1>
+                                    </div>
+                                    <div class="new-event-card left-box">
+                                        <h1>EVENT 1</h1>
+                                    </div>
+                                    <div class="new-event-card center-box">
+                                        <h1>EVENT 2</h1>
+                                    </div>
 
-                        <div class="event-info">
-                            <div class="event-item"></div>
-                            <div class="event-item"></div>
-                            <div class="event-item"></div>
-                            <div class="event-item"><a href="" target="_blank">TICKETS</a></div>
-                        </div>
+
+                                    <div class="new-event-card right-box">
+                                        <h1>EVENT 3</h1>
+                                    </div>
+                                    <div class="new-event-card invisible">
+                                        <h1>EVENT 4</h1>
+                                    </div>
+                                    <div class="new-event-card invisible">
+                                        <h1>EVENT 5</h1>
+                                    </div>
+                                    <div class="new-event-card invisible">
+                                        <!-- <h1>HI</h1> -->
+                                    </div>
+
+
+                                </div>
+                                <!-- <img src="./media/right-arrow-svgrepo-com.svg" nopin="nopin" class="arrow-button"
+                                    id="front-button" /> -->
+                                <button class="arrow-button" id="front-button">
+                                    > </button>
+
+
                     </div>
 
-                    <div class="gallery-wrap">
+
+                    <!-- <div class="event-card">
+                            <div class="event-title">UNESCAPEDLY x HAVEN DJ Night</div>
+
+                            <div class="event-image">
+                                <img src="/media/events/1_24-TheSpins.png" alt="Event Image" />
+                            </div>
+
+                            <div class="event-info">
+                                <div class="event-item tickets"><a
+                                        href="https://indietix.org/events/postgenre/haven-show-4"
+                                        target="_blank">TICKETS</a></div>
+                                <div class="event-item">FRI, JAN 24</div>
+                                <div class="event-item">8:30PM</div>
+                                <div class="event-item">$5.00</div>
+                            </div>
+                        </div> -->
+                    <!-- <div class="event-card">
+                            <div class="event-title">UNESCAPEDLY x HAVEN DJ Night</div>
+
+                            <div class="event-image">
+                                <img src="/media/events/1_24-TheSpins.png" alt="Event Image" />
+                            </div>
+
+                            <div class="event-info">
+                                <div class="event-item tickets"><a
+                                        href="https://indietix.org/events/postgenre/haven-show-4"
+                                        target="_blank">TICKETS</a></div>
+                                <div class="event-item">FRI, JAN 24</div>
+                                <div class="event-item">8:30PM</div>
+                                <div class="event-item">$5.00</div>
+                            </div>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-title">UNESCAPEDLY x HAVEN DJ Night</div>
+
+                            <div class="event-image">
+                                <img src="/media/events/1_24-TheSpins.png" alt="Event Image" />
+                            </div>
+
+                            <div class="event-info">
+                                <div class="event-item tickets"><a
+                                        href="https://indietix.org/events/postgenre/haven-show-4"
+                                        target="_blank">TICKETS</a></div>
+                                <div class="event-item">FRI, JAN 24</div>
+                                <div class="event-item">8:30PM</div>
+                                <div class="event-item">$5.00</div>
+                            </div>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-title">UNESCAPEDLY x HAVEN DJ Night</div>
+
+                            <div class="event-image">
+                                <img src="/media/events/1_24-TheSpins.png" alt="Event Image" />
+                            </div>
+
+                            <div class="event-info">
+                                <div class="event-item tickets"><a
+                                        href="https://indietix.org/events/postgenre/haven-show-4"
+                                        target="_blank">TICKETS</a></div>
+                                <div class="event-item">FRI, JAN 24</div>
+                                <div class="event-item">8:30PM</div>
+                                <div class="event-item">$5.00</div>
+                            </div>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-title">UNESCAPEDLY x HAVEN DJ Night</div>
+
+                            <div class="event-image">
+                                <img src="/media/events/1_24-TheSpins.png" alt="Event Image" />
+                            </div>
+
+                            <div class="event-info">
+                                <div class="event-item tickets"><a
+                                        href="https://indietix.org/events/postgenre/haven-show-4"
+                                        target="_blank">TICKETS</a></div>
+                                <div class="event-item">FRI, JAN 24</div>
+                                <div class="event-item">8:30PM</div>
+                                <div class="event-item">$5.00</div>
+
+                            </div> -->
+                    <!-- </div>
+                    </div> -->
+
+
+                    <!-- <div class="gallery-wrap">
                         <img src="./media/right-arrow-svgrepo-com.svg" id="backButton" nopin="nopin">
 
                         <div class="gallery">
@@ -156,7 +287,7 @@
                             </div>
                         </div>
                         <img src="./media/right-arrow-svgrepo-com.svg" id="forwardButton" nopin="nopin">
-                    </div>
+                    </div> -->
                 </section>
 
                 <section class="section-b" id="about">
@@ -227,6 +358,14 @@
                         </div>
 
                         <div class="content-text">
+                            <!-- Calendly badge widget begin -->
+                            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"
+                                async></script>
+                            <script
+                                type="text/javascript">window.onload = function () { Calendly.initBadgeWidget({ url: 'https://calendly.com/kuehnle-jason', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
+                            <!-- Calendly badge widget end -->
+
                             <p>
                                 Starting this Spring, PG Studios will offer a smart rehearsal studio in HAVEN that will
                                 provide musicians with a convenient, professional, and affordable environment to
@@ -240,12 +379,22 @@
                                 lighting, tables/chairs that are available for events. <br><br>
                             </p>
 
-                            <p> Reach out to
+                            <!-- <p> Reach out to
                                 <a href="mailto:adam@postgenre.world" target="_blank" style="color: white;">
                                     adam@postgenre.world
                                 </a>
                                 to schedule your event, rehearsal, or recording session!
-                            </p>
+                            </p> -->
+
+                            <!-- Calendly link widget begin -->
+                            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"
+                                async></script>
+                            <a href=""
+                                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kuehnle-jason'});return false;">Book
+                                practice time at HAVEN</a>
+                            <!-- Calendly link widget end -->
+
                         </div>
 
                     </div>
@@ -449,8 +598,103 @@
 
 </body>
 
+<script>
+
+
+    function getEventIndexes() {
+        const events = document.querySelectorAll(".new-event-card");
+        const leftIndex = Array.from(events).findIndex(event => event.classList.contains("left-box"));
+        const leftEvent = events[leftIndex];
+        const centerIndex = Array.from(events).findIndex(event => event.classList.contains("center-box"));
+        const centerEvent = events[centerIndex];
+        const rightIndex = Array.from(events).findIndex(event => event.classList.contains("right-box"));
+        const rightEvent = events[rightIndex];
+
+        return events, leftIndex, centerIndex, rightIndex;
+    }
+
+
+    document.getElementById("back-button").addEventListener("click", function () {
+        console.log("IM HITTING THE BACK BUTTON");
+
+        const events = document.querySelectorAll(".new-event-card");
+        const leftIndex = Array.from(events).findIndex(event => event.classList.contains("left-box"));
+        const leftEvent = events[leftIndex];
+        const centerIndex = Array.from(events).findIndex(event => event.classList.contains("center-box"));
+        const centerEvent = events[centerIndex];
+        const rightIndex = Array.from(events).findIndex(event => event.classList.contains("right-box"));
+        const rightEvent = events[rightIndex];
+
+        console.log("before: ");
+        console.log(events);
+
+
+        if (centerIndex > 1) {
+            if (rightIndex !== -1) {
+                rightEvent.classList.replace("right-box", "invisible");
+            } else { //end card is on   
+                events[events.length - 1].classList.replace("end-card", "invisible");
+            }
+            centerEvent.classList.replace("center-box", "right-box");
+            if (leftIndex - 1 >= 1) {
+                events[leftIndex - 1].classList.replace("invisible", "left-box");
+            } else {
+                events[leftIndex - 1].classList.replace("invisible", "end-card");
+            }
+            leftEvent.classList.replace("left-box", "center-box");
+        } else {
+            centerEvent.classList.remove("left-box");
+        }
+        console.log("after: ");
+        console.log(events);
+
+        document.body.offsetHeight;
+
+    });
+
+    document.getElementById("front-button").addEventListener("click", function () {
+        console.log("IM HITTING THE FRONT BUTTON");
+
+        const events = document.querySelectorAll(".new-event-card");
+        const leftIndex = Array.from(events).findIndex(event => event.classList.contains("left-box"));
+        const leftEvent = events[leftIndex];
+        const centerIndex = Array.from(events).findIndex(event => event.classList.contains("center-box"));
+        const centerEvent = events[centerIndex];
+        const rightIndex = Array.from(events).findIndex(event => event.classList.contains("right-box"));
+        const rightEvent = events[rightIndex];
+        console.log("before: ");
+        console.log(events);
+
+        console.log("left index", leftIndex);
+
+        if (centerIndex < (events.length - 2)) {
+            rightEvent.classList.replace("right-box", "center-box");
+            centerEvent.classList.replace("center-box", "left-box");
+            if (leftIndex !== -1) {
+                leftEvent.classList.replace("left-box", "invisible");
+            } else { //end card is on
+                events[0].classList.replace("end-card", "invisible");
+            }
+            if (rightIndex + 1 < events.length - 1) {
+                events[rightIndex + 1].classList.replace("invisible", "right-box");
+            } else {
+                events[rightIndex + 1].classList.replace("invisible", "end-card");
+            }
+        } else {
+            centerEvent.classList.remove("right-box");
+        }
+
+        console.log("after: ");
+        console.log(events);
+
+        document.body.offsetHeight;
+
+    });
+</script>
+
 <!--EVENT CAROUSEL NAVIGATION-->
 <script>
+    console.log("HII");
     const backButton = document.getElementById("backButton");
     const forwardButton = document.getElementById("forwardButton");
     const gallery = document.querySelector(".gallery");

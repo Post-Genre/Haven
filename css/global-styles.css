@@ -23,16 +23,16 @@ html {
 .background-wrapper {
   background-image: url("../media/backgrounds/psychbackground_lowres.jpg");
   background-color: rgba(0, 0, 0, 0);
-  background-blend-mode: overlay;
-  background-attachment: scroll;
-  transform-origin: bottom;
-  position: fixed;
-  top: 0;
+  /* background-blend-mode: overlay; */
+  /* background-attachment: scroll; */
+  /* transform-origin: bottom; */
+  /* position: fixed; */
+  /* top: 0; */
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100px;
   z-index: 0;
-  background-size: cover;
+  /* background-size: cover; */
   background-position: center;
 }
 /*
@@ -120,12 +120,27 @@ html {
   font-family: "Virile";
   font-weight: normal;
   -webkit-text-stroke: 3px #a85050;
-  position: absolute;
+  /* position: absolute; */
+  align-items: center;
   justify-content: center;
   letter-spacing: 0px;
-  bottom: -25vw;
+  /* bottom: -25vw; */
   font-size: 25vw;
   filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.473));
+  /* height: 100%; */
+  z-index: 1;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 100px;
+}
+
+.website-title h1 {
+  padding: 0px 0px;
+}
+
+.container {
+  height: 400px;
+  display: flex;
 }
 
 .section-title {
@@ -139,10 +154,14 @@ html {
   padding: 0 0 3cqh 0;
 }
 
+.contents {
+  display: flex;
+  flex-direction: column;
+}
 .bricked-up-body {
   height: fit-content;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(1, 1fr);
@@ -162,6 +181,139 @@ html {
   grid-row: 1;
 }
 
+.events-container {
+  display: flex;
+  height: 100%;
+  /* margin-left: 200px;
+  margin-right: 20px; */
+  padding-bottom: 25px;
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px; */
+  position: relative;
+}
+
+.button-container {
+  width: 50px !important;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.arrow-button {
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  margin: 0px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  font-size: 50px;
+  /* position: absolute; */
+  /* z-index: 2;
+  position: absolute;
+  top: 20%;
+  transform: translateY(-50%); */
+}
+
+/* .arrow-button:first-of-type {
+  left: calc(25% - 190px); /* Keeps it dynamically near the center card */
+/* } */
+
+/* .arrow-button:last-of-type {
+  right: calc(25% - 190px); /* Keeps it dynamically near the center card */
+/* } */
+
+.flip-button {
+  transform: rotate(180deg);
+  top: 15%;
+}
+
+.event-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 90vw;
+  /* flex-direction: column;
+  gap: 10px;  */
+  overflow: hidden;
+  /* overflow-x: auto; */
+  white-space: nowrap;
+  /* flex-shrink: 0; */
+  gap: 15px;
+  position: relative;
+  z-index: 1;
+  /* flex-wrap: nowrap; */
+}
+
+.new-event-card {
+  display: flex;
+  flex: none;
+  width: 500px;
+  aspect-ratio: 1.75; /* Maintains the proportion */
+  border-radius: 2vw;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+
+.new-event-card h1 {
+  font-size: 50px;
+}
+
+@media (max-width: 500px) {
+  .new-event-card {
+    width: 300px;
+  }
+}
+
+.left-box {
+  /* background: linear-gradient(
+    to left,
+    lightgray,
+    rgba(0, 0, 0, 0)
+  ); Fades from black to transparent */
+  background-color: lightgray;
+
+  mask-image: linear-gradient(to left, lightgray, rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(to left, lightgray, rgba(0, 0, 0, 0));
+}
+
+.right-box {
+  /* background: linear-gradient(
+    to right,
+    lightgray,
+    rgba(0, 0, 0, 0)
+  ); Fades from black to transparent */
+
+  background-color: lightgray;
+
+  mask-image: linear-gradient(to right, lightgray, rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(to right, lightgray, rgba(0, 0, 0, 0));
+}
+
+.center-box {
+  background-color: gray;
+  mask-image: none;
+}
+
+.invisible {
+  width: 0;
+  display: none;
+}
+
+.end-card {
+  width: 500px;
+  background-color: transparent;
+  color: transparent;
+}
+
+/* Optional: Expand hidden boxes slightly on hover */
+.box:hover {
+  transform: scale(1.05);
+}
 .event-card {
   display: flex;
   justify-content: center;
@@ -173,7 +325,8 @@ html {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
-  container-type: inline-size; /* need this for container query units! */
+  container-type: inline-size;
+  /* need this for container query units! */
 }
 
 .event-title {
@@ -224,6 +377,11 @@ html {
   font-family: "Inter";
   font-weight: bold;
   font-size: max(0.8rem, 3cqw);
+}
+
+.event-item.tickets {
+  border: 1px solid;
+  border-radius: 8px;
 }
 
 .event-info a {
@@ -318,12 +476,12 @@ html {
   margin: 0;
 }
 
-.gallery-wrap #backButton {
+#backButton {
   transform: rotate(180deg);
 }
 
-.gallery-wrap #forwardButton,
-.gallery-wrap #backButton {
+#forwardButton,
+#backButton {
   scale: 100%;
   cursor: pointer;
   width: 7vw;
@@ -367,7 +525,9 @@ html {
 }
 
 .section-a {
-  padding: 10vh 0 10vh 0;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-b {
