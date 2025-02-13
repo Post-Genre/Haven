@@ -215,14 +215,14 @@ html {
   top: 20%;
   transform: translateY(-50%); */
 }
-
-/* .arrow-button:first-of-type {
-  left: calc(25% - 190px); /* Keeps it dynamically near the center card */
+/* 
+.arrow-button:first-of-type {
+  left: calc(25% - 250px); /* Keeps it dynamically near the center card */
 /* } */
-
-/* .arrow-button:last-of-type {
-  right: calc(25% - 190px); /* Keeps it dynamically near the center card */
-/* } */
+/* 
+.arrow-button:last-of-type {
+  right: calc(25% - 250px); /* Keeps it dynamically near the center card */
+/* }  */
 
 .flip-button {
   transform: rotate(180deg);
@@ -234,7 +234,8 @@ html {
   justify-content: center;
   align-items: center;
   height: 300px;
-  width: 90vw;
+  /* width: 50vw; */
+  width: clamp(50vw, 80%, 80vw);
   /* flex-direction: column;
   gap: 10px;  */
   overflow: hidden;
@@ -253,6 +254,7 @@ html {
   width: 500px;
   aspect-ratio: 1.75; /* Maintains the proportion */
   border-radius: 2vw;
+  /* border-radius: clamp(2vw, 80%, 15vw); */
   align-items: center;
   justify-content: center;
   margin: 0px 0px;
