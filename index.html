@@ -633,28 +633,48 @@
         console.log(events);
 
 
-        if (centerIndex > 1) {
-            if (rightIndex !== -1) {
-                rightEvent.classList.replace("right-box", "invisible");
-            } else { //end card is on   
-                events[events.length - 1].classList.replace("end-card", "invisible");
-            }
-            centerEvent.classList.replace("center-box", "right-box");
-            if (leftIndex - 1 >= 1) {
-                events[leftIndex - 1].classList.replace("invisible", "left-box");
-            } else {
-                events[leftIndex - 1].classList.replace("invisible", "end-card");
-            }
-            leftEvent.classList.replace("left-box", "center-box");
-        } else {
-            centerEvent.classList.remove("left-box");
-        }
+
         console.log("after: ");
         console.log(events);
 
-        document.body.offsetHeight;
+        if (leftEvent) {
+            // Apply sliding effect
+            leftEvent.style.transform = "translateX(100%)";
+            centerEvent.style.transform = "translateX(100%)";
+            if (rightEvent) rightEvent.style.transform = "translateX(100%)";
+
+            setTimeout(() => {
+
+
+                if (centerIndex > 1) {
+                    if (rightIndex !== -1) {
+                        rightEvent.classList.replace("right-box", "invisible");
+                    } else { //end card is on   
+                        events[events.length - 1].classList.replace("end-card", "invisible");
+                    }
+                    centerEvent.classList.replace("center-box", "right-box");
+                    if (leftIndex - 1 >= 1) {
+                        events[leftIndex - 1].classList.replace("invisible", "left-box");
+                    } else {
+                        events[leftIndex - 1].classList.replace("invisible", "end-card");
+                    }
+                    leftEvent.classList.replace("left-box", "center-box");
+                } else {
+                    centerEvent.classList.remove("left-box");
+                }
+
+
+                leftEvent.style.transform = "translateX(0)";
+                centerEvent.style.transform = "translateX(0)";
+                if (rightEvent) rightEvent.style.transform = "translateX(0)";
+            }, 100); // Matches CSS transition duration
+        }
+
+        //document.body.offsetHeight;
 
     });
+
+
 
     document.getElementById("front-button").addEventListener("click", function () {
         console.log("IM HITTING THE FRONT BUTTON");
@@ -671,29 +691,67 @@
 
         console.log("left index", leftIndex);
 
-        if (centerIndex < (events.length - 2)) {
-            rightEvent.classList.replace("right-box", "center-box");
-            centerEvent.classList.replace("center-box", "left-box");
-            if (leftIndex !== -1) {
-                leftEvent.classList.replace("left-box", "invisible");
-            } else { //end card is on
-                events[0].classList.replace("end-card", "invisible");
-            }
-            if (rightIndex + 1 < events.length - 1) {
-                events[rightIndex + 1].classList.replace("invisible", "right-box");
-            } else {
-                events[rightIndex + 1].classList.replace("invisible", "end-card");
-            }
-        } else {
-            centerEvent.classList.remove("right-box");
-        }
+
+
+
+
 
         console.log("after: ");
         console.log(events);
+        if (rightEvent) {
+            // Move elements left with animation
 
-        document.body.offsetHeight;
+
+
+
+            rightEvent.style.transform = "translateX(-100%)";
+            centerEvent.style.transform = "translateX(-100%)";
+            if (leftEvent) leftEvent.style.transform = "translateX(-100%)";
+
+
+
+
+
+
+            setTimeout(() => {
+
+                if (centerIndex < (events.length - 2)) {
+                    rightEvent.classList.replace("right-box", "center-box");
+                    centerEvent.classList.replace("center-box", "left-box");
+                    if (leftIndex !== -1) {
+                        leftEvent.classList.replace("left-box", "invisible");
+                    } else { //end card is on
+                        events[0].classList.replace("end-card", "invisible");
+                    }
+                    if (rightIndex + 1 < events.length - 1) {
+                        events[rightIndex + 1].classList.replace("invisible", "right-box");
+                    } else {
+                        events[rightIndex + 1].classList.replace("invisible", "end-card");
+                    }
+                } else {
+                    centerEvent.classList.remove("right-box");
+                }
+
+
+
+                // Reset position
+                rightEvent.style.transform = "translateX(0)";
+                centerEvent.style.transform = "translateX(0)";
+                if (leftEvent) leftEvent.style.transform = "translateX(0)";
+
+
+            }, 100); // Matches CSS transition duration
+        }
+
+        // document.body.offsetHeight;
 
     });
+
+
+
+
+
+
 </script>
 
 <!--EVENT CAROUSEL NAVIGATION-->
