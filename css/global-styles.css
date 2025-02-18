@@ -224,9 +224,28 @@ html{
   font-size: max(.8rem, 3cqw);
 }
 
+
+/*
 #ticket-link {
-  color:#672033;
+  background-color: white;
+  border-radius: 8px;
 }
+#ticket-link:hover{
+  background-color: black;
+  border-radius: 8px;
+  transition-duration: .2s;
+}
+
+#ticket-link a{
+color: black;
+}
+
+
+#ticket-link a:hover{
+  color: white;
+  }
+
+*/
 
 .event-info a {
   color: white;
