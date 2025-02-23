@@ -186,7 +186,7 @@ html {
   height: 100%;
   /* margin-left: 200px;
   margin-right: 20px; */
-  padding-bottom: 25px;
+  padding-bottom: 0;
   justify-content: center;
   align-items: center;
   /* gap: 10px; */
@@ -235,7 +235,8 @@ html {
   align-items: center;
   height: 300px;
   /* width: 50vw; */
-  width: clamp(50vw, 80%, 80vw);
+  /* width: clamp(50vw, 80%, 80vw); */
+  width: 750px;
   /* flex-direction: column;
   gap: 10px;  */
   overflow: hidden;
@@ -246,12 +247,38 @@ html {
   position: relative;
   z-index: 1;
   /* flex-wrap: nowrap; */
-  overflow-x: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-padding: 50%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 0;
+
+  /* Apply a mask to fade the edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    black 20%,
+    black 80%,
+    rgba(0, 0, 0, 0)
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    black 20%,
+    black 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.events-cards-container::-webkit-scrollbar {
+  display: none;
 }
 
 .new-event-card {
   display: flex;
-  flex: none;
+  flex: 1 0 60%;
   width: 500px;
   aspect-ratio: 1.75; /* Maintains the proportion */
   border-radius: 2vw;
@@ -261,6 +288,7 @@ html {
   margin: 0px 0px;
   padding: 0px 0px;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  scroll-snap-align: center;
   /* position: absolute; */
 }
 
@@ -319,6 +347,10 @@ html {
   width: 500px;
   background-color: transparent;
   color: transparent;
+}
+
+.events-nav-container {
+  padding: 10px;
 }
 
 /* Optional: Expand hidden boxes slightly on hover */
