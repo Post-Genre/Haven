@@ -686,7 +686,6 @@
     const container = document.querySelector('.event-cards-container');
     const cardWidth = container.querySelector('.new-event-card').offsetWidth + 15; // Account for the gap
     const backScrollLeft = document.querySelector("#first-card").offsetLeft;
-    // const frontScrollLeft = document.querySelector("#last-card").offsetLeft;
     const frontScrollLeft = -backScrollLeft;
     document.getElementById('back-button').addEventListener('click', moveLeft);
 
@@ -738,6 +737,9 @@
         console.log(container.scrollLeft);
 
     }
+
+    setInterval(moveRight, 10000);
+
 
 
 
