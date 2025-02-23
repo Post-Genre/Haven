@@ -149,23 +149,8 @@
                                     <div id="event-4" class="new-event-card center-box">
                                         <h1>EVENT 4</h1>
                                     </div>
-                                    <div id="event-5" class="new-event-card center-box">
-                                        <h1>EVENT 5</h1>
-                                    </div>
-                                    <div id="event-6" class="new-event-card center-box">
-                                        <h1>EVENT 6</h1>
-                                    </div>
-                                    <div id="event-7" class="new-event-card center-box">
-                                        <h1>EVENT 7</h1>
-                                    </div>
-                                    <div id="event-8" class="new-event-card center-box">
-                                        <h1>EVENT 8</h1>
-                                    </div>
-                                    <div id="event-9" class="new-event-card center-box">
-                                        <h1>EVENT 9</h1>
-                                    </div>
                                     <div id="last-card" class="new-event-card center-box">
-                                        <h1>EVENT 10</h1>
+                                        <h1>EVENT 5</h1>
                                     </div>
                                     <div class="new-event-card end-card"></div>
 
@@ -189,11 +174,6 @@
                         <a href="#event-2"><button></button></a>
                         <a href="#event-3"><button></button></a>
                         <a href="#event-4"><button></button></a>
-                        <a href="#event-5"><button></button></a>
-                        <a href="#event-6"><button></button></a>
-                        <a href="#event-7"><button></button></a>
-                        <a href="#event-8"><button></button></a>
-                        <a href="#event-9"><button></button></a>
                         <a href="#last-card"><button></button></a>
 
 
@@ -648,6 +628,7 @@
 
 <script>
 
+    let intervalID;
 
     document.addEventListener('DOMContentLoaded', () => {
         const container = document.querySelector('.event-cards-container');
@@ -680,6 +661,7 @@
                 left: target.offsetLeft - container.offsetLeft,
                 behavior: 'smooth'
             });
+            resetInterval();
         });
     });
 
@@ -713,6 +695,9 @@
         const endScroll = container.scrollLeft;
 
         console.log(endScroll);
+
+        resetInterval();
+
     }
 
     function moveRight() {
@@ -736,13 +721,21 @@
 
         console.log(container.scrollLeft);
 
+        resetInterval();
+
     }
 
-    setInterval(moveRight, 10000);
+    function resetInterval() {
+        clearInterval(intervalID);
+        startInterval();
+    }
+
+    function startInterval() {
+        intervalID = setInterval(moveRight, 10000);
+    }
 
 
-
-
+    startInterval();
 
 </script>
 
