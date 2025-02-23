@@ -302,33 +302,6 @@ html {
   }
 }
 
-.left-box {
-  /* background: linear-gradient(
-    to left,
-    lightgray,
-    rgba(0, 0, 0, 0)
-  ); Fades from black to transparent */
-  background-color: lightgray;
-
-  mask-image: linear-gradient(to left, lightgray, rgba(0, 0, 0, 0));
-  -webkit-mask-image: linear-gradient(to left, lightgray, rgba(0, 0, 0, 0));
-  /* transform: translateX(-100%); */
-}
-
-.right-box {
-  /* background: linear-gradient(
-    to right,
-    lightgray,
-    rgba(0, 0, 0, 0)
-  ); Fades from black to transparent */
-
-  background-color: lightgray;
-
-  mask-image: linear-gradient(to right, lightgray, rgba(0, 0, 0, 0));
-  -webkit-mask-image: linear-gradient(to right, lightgray, rgba(0, 0, 0, 0));
-  /* transform: translateX(100%); */
-}
-
 .center-box {
   background-color: gray;
   mask-image: none;
