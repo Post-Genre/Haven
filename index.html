@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="css/faq.css">
 
 
+
 <!--Vercel traffic and speed insights-->
 <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -26,6 +27,8 @@
     <meta name="description"
         content="Oakland's first above-ground, independent music venue in 20 years launches in January 2025. Get in touch, or sign up for our newsletter so we can keep you in the loop!">
     <link rel="icon" href="media/backgrounds/Church-Lowres.png" type="image/png"> <!-- For .png files -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
 
     <!--Get outta here Pinterest button-->
     <meta name="pinterest" content="nohover">
@@ -124,15 +127,16 @@
                     <div class="events-container">
                         <!-- <img src="./media/right-arrow-svgrepo-com.svg" class="arrow-button flip-button" id="back-button"
                             nopin="nopin" /> -->
-                        <button class="arrow-button" id="back-button">
-                            < </button>
+                        <!-- <button class="arrow-button" id="back-button">
+                            < </button> -->
+                        <i class="arrow-button bi bi-arrow-left-circle" id="back-button"></i>
 
-                                <div class="event-cards-container">
-                                    <!-- <button class="arrow-button" id="back-button">
+                        <div class="event-cards-container">
+                            <!-- <button class="arrow-button" id="back-button">
                                 < </button> -->
 
-                                    <div class="new-event-card end-card"></div>
-                                    <!-- 
+                            <div class="new-event-card end-card"></div>
+                            <!-- 
                                     <div id="first-card" class="new-event-card center-box">
                                         <h1>EVENT 0</h1>
                                     </div>
@@ -152,147 +156,150 @@
                                     <div id="last-card" class="new-event-card center-box">
                                         <h1>EVENT 5</h1>
                                     </div> -->
-                                    <div id="first-card" class="new-event-card"
-                                        style="background-image: url('/media/events/1_24-TheSpins.png')">
-                                        <div class="new-event-title">
-                                            UNESCAPEDLY x HAVEN DJ Night: Get Your Tickets Now!
-                                        </div>
-                                        <!-- <div class="new-event-image"><img src="/media/events/1_24-TheSpins.png"
+                            <div id="first-card" class="new-event-card"
+                                style="background-image: url('/media/events/1_24-TheSpins.png')">
+                                <div class="new-event-title">
+                                    UNESCAPEDLY x HAVEN DJ Night: Get Your Tickets Now!
+                                </div>
+                                <!-- <div class="new-event-image"><img src="/media/events/1_24-TheSpins.png"
                                                 alt="Event Image" /></div> -->
 
-                                        <!-- <div class="new-event-image">
+                                <!-- <div class="new-event-image">
                                             <img src="/media/events/1_24-TheSpins.png" alt="Event Image" />
                                         </div> -->
-                                        <div class="new-event-button">
+                                <div class="new-event-button">
 
 
-                                            <button
-                                                onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
-                                                TICKETS
-                                            </button>
-                                        </div>
-
-                                    </div>
-
-                                    <div id="event-1" class="new-event-card"
-                                        style="background-image: url('/media/events/1_24-TheSpins.png')">
-                                        <div class="new-event-title">
-                                            UNESCAPEDLY x HAVEN DJ Night: Get Your Tickets Now! (1)
-                                        </div>
-                                        <!-- <div class="new-event-image"><img src="/media/events/1_24-TheSpins.png"
-                                                alt="Event Image" /></div> -->
-
-                                        <!-- <div class="new-event-image">
-                                            <img src="/media/events/1_24-TheSpins.png" alt="Event Image" />
-                                        </div> -->
-                                        <div class="new-event-button">
-
-
-                                            <button
-                                                onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
-                                                TICKETS
-                                            </button>
-                                        </div>
-
-                                    </div>
-                                    <div id="event-2" class="new-event-card"
-                                        style="background-image: url('/media/events/1_24-TheSpins.png')">
-                                        <div class="new-event-title">
-                                            UNESCAPEDLY x HAVEN DJ Night: Get Your Tickets Now! (2)
-                                        </div>
-                                        <!-- <div class="new-event-image"><img src="/media/events/1_24-TheSpins.png"
-                                                alt="Event Image" /></div> -->
-
-                                        <!-- <div class="new-event-image">
-                                            <img src="/media/events/1_24-TheSpins.png" alt="Event Image" />
-                                        </div> -->
-                                        <div class="new-event-button">
-
-
-                                            <button
-                                                onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
-                                                TICKETS
-                                            </button>
-                                        </div>
-
-                                    </div>
-                                    <div id="event-3" class="new-event-card"
-                                        style="background-image: url('/media/events/1_24-TheSpins.png')">
-                                        <div class="new-event-title">
-                                            UNESCAPEDLY x HAVEN DJ Night: Get Your Tickets Now! (3)
-                                        </div>
-                                        <!-- <div class="new-event-image"><img src="/media/events/1_24-TheSpins.png"
-                                                alt="Event Image" /></div> -->
-
-                                        <!-- <div class="new-event-image">
-                                            <img src="/media/events/1_24-TheSpins.png" alt="Event Image" />
-                                        </div> -->
-                                        <div class="new-event-button">
-
-
-                                            <button
-                                                onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
-                                                TICKETS
-                                            </button>
-                                        </div>
-
-                                    </div>
-                                    <div id="event-4" class="new-event-card"
-                                        style="background-image: url('/media/events/1_24-TheSpins.png')">
-                                        <div class="new-event-title">
-                                            UNESCAPEDLY x HAVEN DJ Night: Get Your Tickets Now! (4)
-                                        </div>
-                                        <!-- <div class="new-event-image"><img src="/media/events/1_24-TheSpins.png"
-                                                alt="Event Image" /></div> -->
-
-                                        <!-- <div class="new-event-image">
-                                            <img src="/media/events/1_24-TheSpins.png" alt="Event Image" />
-                                        </div> -->
-                                        <div class="new-event-button">
-
-
-                                            <button
-                                                onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
-                                                TICKETS
-                                            </button>
-                                        </div>
-
-                                    </div>
-
-
-                                    <div id="last-card" class="new-event-card"
-                                        style="background-image: url('/media/events/1_24-TheSpins.png')">
-                                        <div class="new-event-title">
-                                            UNESCAPEDLY x HAVEN DJ Night: Get Your Tickets Now! (5)
-                                        </div>
-                                        <!-- <div class="new-event-image"><img src="/media/events/1_24-TheSpins.png"
-                                                alt="Event Image" /></div> -->
-
-                                        <!-- <div class="new-event-image">
-                                            <img src="/media/events/1_24-TheSpins.png" alt="Event Image" />
-                                        </div> -->
-                                        <div class="new-event-button">
-
-
-                                            <button
-                                                onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
-                                                TICKETS
-                                            </button>
-                                        </div>
-
-                                    </div>
-
-
-
-                                    <div class="new-event-card end-card"></div>
-
-
+                                    <button
+                                        onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
+                                        TICKETS
+                                    </button>
                                 </div>
 
-                                <button class="arrow-button" id="front-button">
-                                    > </button>
+                            </div>
 
-                                <!-- <button class="arrow-button" id="front-button">
+                            <div id="event-1" class="new-event-card"
+                                style="background-image: url('/media/events/1_24-TheSpins.png')">
+                                <div class="new-event-title">
+                                    UNESCAPEDLY x HAVEN DJ Night: Get Your Tickets Now! (1)
+                                </div>
+                                <!-- <div class="new-event-image"><img src="/media/events/1_24-TheSpins.png"
+                                                alt="Event Image" /></div> -->
+
+                                <!-- <div class="new-event-image">
+                                            <img src="/media/events/1_24-TheSpins.png" alt="Event Image" />
+                                        </div> -->
+                                <div class="new-event-button">
+
+
+                                    <button
+                                        onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
+                                        TICKETS
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div id="event-2" class="new-event-card"
+                                style="background-image: url('/media/events/1_24-TheSpins.png')">
+                                <div class="new-event-title">
+                                    UNESCAPEDLY x HAVEN DJ Night: Get Your Tickets Now! (2)
+                                </div>
+                                <!-- <div class="new-event-image"><img src="/media/events/1_24-TheSpins.png"
+                                                alt="Event Image" /></div> -->
+
+                                <!-- <div class="new-event-image">
+                                            <img src="/media/events/1_24-TheSpins.png" alt="Event Image" />
+                                        </div> -->
+                                <div class="new-event-button">
+
+
+                                    <button
+                                        onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
+                                        TICKETS
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div id="event-3" class="new-event-card"
+                                style="background-image: url('/media/events/1_24-TheSpins.png')">
+                                <div class="new-event-title">
+                                    UNESCAPEDLY x HAVEN DJ Night: Get Your Tickets Now! (3)
+                                </div>
+                                <!-- <div class="new-event-image"><img src="/media/events/1_24-TheSpins.png"
+                                                alt="Event Image" /></div> -->
+
+                                <!-- <div class="new-event-image">
+                                            <img src="/media/events/1_24-TheSpins.png" alt="Event Image" />
+                                        </div> -->
+                                <div class="new-event-button">
+
+
+                                    <button
+                                        onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
+                                        TICKETS
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div id="event-4" class="new-event-card"
+                                style="background-image: url('/media/events/1_24-TheSpins.png')">
+                                <div class="new-event-title">
+                                    UNESCAPEDLY x HAVEN DJ Night: Get Your Tickets Now! (4)
+                                </div>
+                                <!-- <div class="new-event-image"><img src="/media/events/1_24-TheSpins.png"
+                                                alt="Event Image" /></div> -->
+
+                                <!-- <div class="new-event-image">
+                                            <img src="/media/events/1_24-TheSpins.png" alt="Event Image" />
+                                        </div> -->
+                                <div class="new-event-button">
+
+
+                                    <button
+                                        onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
+                                        TICKETS
+                                    </button>
+                                </div>
+
+                            </div>
+
+
+                            <div id="last-card" class="new-event-card"
+                                style="background-image: url('/media/events/1_24-TheSpins.png')">
+                                <div class="new-event-title">
+                                    UNESCAPEDLY x HAVEN DJ Night: Get Your Tickets Now! (5)
+                                </div>
+                                <!-- <div class="new-event-image"><img src="/media/events/1_24-TheSpins.png"
+                                                alt="Event Image" /></div> -->
+
+                                <!-- <div class="new-event-image">
+                                            <img src="/media/events/1_24-TheSpins.png" alt="Event Image" />
+                                        </div> -->
+                                <div class="new-event-button">
+
+
+                                    <button
+                                        onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
+                                        TICKETS
+                                    </button>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="new-event-card end-card"></div>
+
+
+                        </div>
+
+                        <!-- <button class="arrow-button" id="front-button">
+                            > </button> -->
+
+                        <i class="arrow-button bi bi-arrow-right-circle" id="front-button"></i>
+
+
+                        <!-- <button class="arrow-button" id="front-button">
                                         > </button> -->
 
 
@@ -755,6 +762,7 @@
     </div>
     </div>
     </section>
+
     <script>
 
         let intervalID;
@@ -861,13 +869,15 @@
         }
 
         function startInterval() {
-            //   intervalID = setInterval(moveRight, 10000);
+            intervalID = setInterval(moveRight, 10000);
+            console.log("interval started");
         }
 
 
         startInterval();
 
     </script>
+
 </body>
 
 <!-- <script>
@@ -977,6 +987,7 @@
 
     function startInterval() {
         intervalID = setInterval(moveRight, 10000);
+        console.log("interval started");
     }
 
 

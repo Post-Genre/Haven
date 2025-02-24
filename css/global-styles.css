@@ -205,15 +205,16 @@ html {
   padding: 0px;
   margin: 0px;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 50%;
   border: none;
-  background-color: transparent;
+  /* background-color: transparent; */
   font-size: 50px;
-  /* background-color: #2222227a; */
+  background-color: #2222227a;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
+  opacity: 50%;
 
   /* position: relative; */
   /* z-index: 2;
@@ -221,6 +222,17 @@ html {
   top: 20%;
   transform: translateY(-50%); */
 }
+
+.arrow-button:hover {
+  opacity: 80%;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.arrow-button:active {
+  background-color: white;
+}
+
 /* 
 .arrow-button:first-of-type {
   left: calc(25% - 250px); /* Keeps it dynamically near the center card */
@@ -369,6 +381,10 @@ html {
   transform: scale(1.1);
 }
 
+/* .new-event-button button:active {
+  background-color: blue;
+} */
+
 .new-event-card h1 {
   font-size: 50px;
 }
@@ -418,6 +434,10 @@ html {
 
 .events-nav-button:hover {
   transform: scale(1.2);
+}
+
+.events-nav-button:active {
+  background-color: lightgrey;
 }
 
 /* Optional: Expand hidden boxes slightly on hover */
