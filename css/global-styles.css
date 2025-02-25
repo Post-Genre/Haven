@@ -186,7 +186,7 @@ html {
   height: 100%;
   /* margin-left: 200px;
   margin-right: 20px; */
-  padding-bottom: 0;
+  padding-bottom: 15px;
   justify-content: center;
   align-items: center;
   /* gap: 10px; */
@@ -263,7 +263,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 400px;
   /* width: 50vw; */
   /* width: clamp(50vw, 80%, 80vw); */
   width: 750px;
@@ -309,8 +309,10 @@ html {
 .new-event-card {
   display: flex;
   flex: 1 0 60%;
-  width: 500px;
-  aspect-ratio: 1.75; /* Maintains the proportion */
+  width: 650px;
+  height: 400px;
+  aspect-ratio: 1.75;
+  /* Maintains the proportion */
   /* border-radius: 2vw; */
   /* border-radius: clamp(2vw, 80%, 1vw); */
   border-radius: 20px;
@@ -329,6 +331,8 @@ html {
 
 .new-event-title {
   position: absolute;
+  margin-left: 10px;
+  margin-right: 10px;
   padding: 10px 10px;
   z-index: 9;
   font-family: "Inter";
@@ -339,7 +343,8 @@ html {
   font-size: 24px;
   border-radius: inherit;
   /* overflow: wrap; */
-  max-width: 420px;
+  /* max-width: 420px; */
+  width: 95%;
   overflow-wrap: break-word;
   white-space: normal;
 }
@@ -423,7 +428,7 @@ html {
 }
 
 .end-card {
-  width: 500px;
+  /* width: 500px; */
   background-color: transparent;
   color: transparent;
   border: none;

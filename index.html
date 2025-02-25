@@ -159,7 +159,7 @@
                             <div id="first-card" class="new-event-card"
                                 style="background-image: url('/media/events/1_24-TheSpins.png')">
                                 <div class="new-event-title">
-                                    UNESCAPEDLY x HAVEN DJ Night: Get Your Tickets Now!
+                                    UNESCAPEDLY x HAVEN DJ Night
                                 </div>
                                 <!-- <div class="new-event-image"><img src="/media/events/1_24-TheSpins.png"
                                                 alt="Event Image" /></div> -->
@@ -202,7 +202,7 @@
                             <div id="event-2" class="new-event-card"
                                 style="background-image: url('/media/events/1_24-TheSpins.png')">
                                 <div class="new-event-title">
-                                    UNESCAPEDLY x HAVEN DJ Night: Get Your Tickets Now! (2)
+                                    UNESCAPEDLY x HAVEN DJ Night
                                 </div>
                                 <!-- <div class="new-event-image"><img src="/media/events/1_24-TheSpins.png"
                                                 alt="Event Image" /></div> -->
@@ -244,7 +244,7 @@
                             <div id="event-4" class="new-event-card"
                                 style="background-image: url('/media/events/1_24-TheSpins.png')">
                                 <div class="new-event-title">
-                                    UNESCAPEDLY x HAVEN DJ Night: Get Your Tickets Now! (4)
+                                    UNESCAPEDLY x HAVEN DJ Night
                                 </div>
                                 <!-- <div class="new-event-image"><img src="/media/events/1_24-TheSpins.png"
                                                 alt="Event Image" /></div> -->
@@ -763,165 +763,24 @@
     </div>
     </section>
 
-    <script>
 
-        let intervalID;
-        const anchors = document.querySelectorAll('#events-nav-tag');
-        const anchorsArray = Array.from(anchors);
-        let index = 0;
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const container = document.querySelector('.event-cards-container');
-            const firstCard = document.querySelector('#first-card');
-
-            if (container && firstCard) {
-                console.log("loaded");
-                // Calculate the offset to center the first card
-                const containerWidth = container.offsetWidth;
-                const cardWidth = firstCard.offsetWidth;
-                const scrollPosition = firstCard.offsetLeft - (containerWidth - cardWidth) / 2;
-
-                // Scroll the container to the calculated position
-                container.scrollLeft = scrollPosition;
-
-            }
-        });
-
-
-        if (window.location.hash) {
-            history.replaceState(null, null, ' '); // Removes the hash from the URL without refreshing
-        }
-
-        document.querySelectorAll('#events-nav-tag').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                index = anchorsArray.indexOf(anchor);
-                setActiveButton();
-
-
-
-                const target = document.querySelector(this.getAttribute('href'));
-                const container = document.querySelector('.event-cards-container');
-
-                container.scrollTo({
-                    left: target.offsetLeft - container.offsetLeft,
-                    behavior: 'smooth'
-                });
-
-                resetInterval();
-            });
-        });
-
-        function setActiveButton() {
-            for (let i = 0; i < anchorsArray.length; i++) {
-                if (i != index) {
-                    const button = anchorsArray[i].querySelector('button');
-                    if (button) button.style.transform = "";
-                }
-            }
-
-            console.log(anchorsArray[index]);
-            console.log(anchorsArray[index].querySelector('button'));
-            const activeButton = anchorsArray[index].querySelector('button');
-            if (activeButton) activeButton.style.transform = "scale(1.2)";
-        }
-
-        const container = document.querySelector('.event-cards-container');
-        const cardWidth = container.querySelector('.new-event-card').offsetWidth + 15; // Account for the gap
-        const backScrollLeft = document.querySelector("#first-card").offsetLeft;
-        const frontScrollLeft = -backScrollLeft;
-        document.getElementById('back-button').addEventListener('click', moveLeft);
-
-        document.getElementById('front-button').addEventListener('click', moveRight);
-
-        function moveLeft() {
-            console.log("hi", backScrollLeft);
-            console.log(container.scrollLeft);
-
-            const startScroll = container.scrollLeft;
-            if (container.scrollLeft <= backScrollLeft) {
-                const lastRealCard = document.querySelector('#last-card');
-                container.scrollTo({
-                    left: lastRealCard.offsetLeft - container.offsetLeft,
-                    behavior: 'smooth'
-                });
-                index = anchorsArray.length - 1;
-            }
-            else {
-                container.scrollBy({
-                    left: -cardWidth,
-                    behavior: 'smooth'
-                });
-                index--;
-
-            }
-
-            const endScroll = container.scrollLeft;
-
-            console.log(endScroll);
-
-            setActiveButton();
-
-
-            resetInterval();
-
-        }
-
-        function moveRight() {
-            console.log("hi", frontScrollLeft);
-            console.log(container.scrollLeft);
-
-            const startScroll = container.scrollLeft;
-
-            if (container.scrollLeft >= frontScrollLeft) {
-                const lastRealCard = document.querySelector('#first-card');
-                container.scrollTo({
-                    left: lastRealCard.offsetLeft - container.offsetLeft,
-                    behavior: 'smooth'
-                });
-                index = 0;
-            } else {
-                container.scrollBy({
-                    left: cardWidth,
-                    behavior: 'smooth'
-                });
-                index++;
-            }
-
-            console.log(container.scrollLeft);
-
-            setActiveButton();
-
-            resetInterval();
-
-        }
-
-        function resetInterval() {
-            clearInterval(intervalID);
-            startInterval();
-        }
-
-        function startInterval() {
-            intervalID = setInterval(moveRight, 5000);
-            console.log("interval started");
-        }
-
-
-        startInterval();
-        setActiveButton();
-
-    </script>
 
 </body>
 
-<!-- <script>
+<script>
 
     let intervalID;
+    let cardWidth;
+    const anchors = document.querySelectorAll('#events-nav-tag');
+    const anchorsArray = Array.from(anchors);
+    let index = 0;
 
     document.addEventListener('DOMContentLoaded', () => {
         const container = document.querySelector('.event-cards-container');
         const firstCard = document.querySelector('#first-card');
+
+        cardWidth = document.querySelector('.new-event-card').offsetWidth + 15; // Account for the gap
+        console.log("cardwidth: ", cardWidth);
 
         if (container && firstCard) {
             console.log("loaded");
@@ -941,9 +800,15 @@
         history.replaceState(null, null, ' '); // Removes the hash from the URL without refreshing
     }
 
-    document.querySelectorAll('a').forEach(anchor => {
+    document.querySelectorAll('#events-nav-tag').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
+
+            index = anchorsArray.indexOf(anchor);
+            setActiveButton();
+
+
+
             const target = document.querySelector(this.getAttribute('href'));
             const container = document.querySelector('.event-cards-container');
 
@@ -951,12 +816,26 @@
                 left: target.offsetLeft - container.offsetLeft,
                 behavior: 'smooth'
             });
+
             resetInterval();
         });
     });
 
+    function setActiveButton() {
+        for (let i = 0; i < anchorsArray.length; i++) {
+            if (i != index) {
+                const button = anchorsArray[i].querySelector('button');
+                if (button) button.style.transform = "";
+            }
+        }
+
+        console.log(anchorsArray[index]);
+        console.log(anchorsArray[index].querySelector('button'));
+        const activeButton = anchorsArray[index].querySelector('button');
+        if (activeButton) activeButton.style.transform = "scale(1.2)";
+    }
+
     const container = document.querySelector('.event-cards-container');
-    const cardWidth = container.querySelector('.new-event-card').offsetWidth + 15; // Account for the gap
     const backScrollLeft = document.querySelector("#first-card").offsetLeft;
     const frontScrollLeft = -backScrollLeft;
     document.getElementById('back-button').addEventListener('click', moveLeft);
@@ -974,17 +853,23 @@
                 left: lastRealCard.offsetLeft - container.offsetLeft,
                 behavior: 'smooth'
             });
+            index = anchorsArray.length - 1;
         }
         else {
             container.scrollBy({
                 left: -cardWidth,
                 behavior: 'smooth'
             });
+            index--;
+
         }
 
         const endScroll = container.scrollLeft;
 
         console.log(endScroll);
+
+        setActiveButton();
+
 
         resetInterval();
 
@@ -1002,14 +887,18 @@
                 left: lastRealCard.offsetLeft - container.offsetLeft,
                 behavior: 'smooth'
             });
+            index = 0;
         } else {
             container.scrollBy({
                 left: cardWidth,
                 behavior: 'smooth'
             });
+            index++;
         }
 
         console.log(container.scrollLeft);
+
+        setActiveButton();
 
         resetInterval();
 
@@ -1021,14 +910,15 @@
     }
 
     function startInterval() {
-        intervalID = setInterval(moveRight, 10000);
+        intervalID = setInterval(moveRight, 5000);
         console.log("interval started");
     }
 
 
     startInterval();
+    setActiveButton();
 
-</script> -->
+</script>
 
 <!--EVENT CAROUSEL NAVIGATION-->
 <script>
