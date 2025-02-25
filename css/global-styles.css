@@ -191,6 +191,8 @@ html {
   align-items: center;
   /* gap: 10px; */
   position: relative;
+  /* margin-left: 50px;
+  margin-right: 50px; */
 }
 
 .button-container {
@@ -200,24 +202,25 @@ html {
   padding: 0;
 }
 .arrow-button {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   padding: 0px;
   margin: 0px;
   cursor: pointer;
   border-radius: 50%;
   border: none;
   /* background-color: transparent; */
-  font-size: 50px;
+  font-size: 70px;
   background-color: #2222227a;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-  /* opacity: 50%; */
+  opacity: 80%;
   color: white;
+  z-index: 8;
 
-  /* position: relative; */
+  position: absolute;
   /* z-index: 2;
   position: absolute;
   top: 20%;
@@ -225,13 +228,21 @@ html {
 }
 
 .arrow-button:hover {
-  opacity: 80%;
+  opacity: 100%;
   transform: scale(1.1);
   transition: 0.3s;
 }
 
 .arrow-button:active {
   background-color: white;
+}
+
+#back-button {
+  left: 25px;
+}
+
+#front-button {
+  right: 25px;
 }
 
 /* 
