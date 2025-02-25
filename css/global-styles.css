@@ -311,8 +311,9 @@ html {
   flex: 1 0 60%;
   width: 500px;
   aspect-ratio: 1.75; /* Maintains the proportion */
-  border-radius: 2vw;
-  /* border-radius: clamp(2vw, 80%, 15vw); */
+  /* border-radius: 2vw; */
+  /* border-radius: clamp(2vw, 80%, 1vw); */
+  border-radius: 20px;
   align-items: center;
   justify-content: center;
   margin: 0px 0px;
