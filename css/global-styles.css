@@ -413,6 +413,18 @@ html {
   }
 }
 
+@media (max-width: 700px) {
+  #back-button {
+    left: 90px;
+  }
+  #front-button {
+    right: 90px;
+  }
+  .new-event-button {
+    right: 40px;
+  }
+}
+
 .center-box {
   background-color: gray;
   mask-image: none;
