@@ -437,8 +437,9 @@ html {
   transform: scale(1.2);
 }
 
-.events-nav-button:active {
+.events-nav-button .active {
   background-color: lightgrey;
+  border-radius: 50%;
 }
 
 /* Optional: Expand hidden boxes slightly on hover */

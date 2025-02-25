@@ -766,6 +766,8 @@
     <script>
 
         let intervalID;
+        const anchors = document.querySelectorAll('a');
+        const anchorsArray = Array.from(anchors);
 
         document.addEventListener('DOMContentLoaded', () => {
             const container = document.querySelector('.event-cards-container');
@@ -792,6 +794,19 @@
         document.querySelectorAll('a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
+
+                const index = anchorsArray.indexOf(anchor);
+                for (let i = 0; i < anchorsArray.length; i++) {
+                    if (i != index) {
+                        const button = anchorsArray[i].querySelector('button');
+                        if (button) button.style.transform = "";
+                    }
+                }
+
+                console.log(anchorsArray[index]);
+                console.log(anchorsArray[index].querySelector('button'));
+                const activeButton = anchorsArray[index].querySelector('button');
+                if (activeButton) activeButton.style.transform = "scale(1.2)";
                 const target = document.querySelector(this.getAttribute('href'));
                 const container = document.querySelector('.event-cards-container');
 
@@ -799,6 +814,7 @@
                     left: target.offsetLeft - container.offsetLeft,
                     behavior: 'smooth'
                 });
+
                 resetInterval();
             });
         });
