@@ -308,12 +308,12 @@
                                     id="front-button" /> -->
 
                     <div class="events-nav-container">
-                        <a href="#first-card"><button class="events-nav-button"></button></a>
-                        <a href="#event-1"><button class="events-nav-button"></button></a>
-                        <a href="#event-2"><button class="events-nav-button"></button></a>
-                        <a href="#event-3"><button class="events-nav-button"></button></a>
-                        <a href="#event-4"><button class="events-nav-button"></button></a>
-                        <a href="#last-card"><button class="events-nav-button"></button></a>
+                        <a id="events-nav-tag" href="#first-card"><button class="events-nav-button"></button></a>
+                        <a id="events-nav-tag" href="#event-1"><button class="events-nav-button"></button></a>
+                        <a id="events-nav-tag" href="#event-2"><button class="events-nav-button"></button></a>
+                        <a id="events-nav-tag" href="#event-3"><button class="events-nav-button"></button></a>
+                        <a id="events-nav-tag" href="#event-4"><button class="events-nav-button"></button></a>
+                        <a id="events-nav-tag" href="#last-card"><button class="events-nav-button"></button></a>
 
 
 
@@ -766,8 +766,9 @@
     <script>
 
         let intervalID;
-        const anchors = document.querySelectorAll('a');
+        const anchors = document.querySelectorAll('#events-nav-tag');
         const anchorsArray = Array.from(anchors);
+        let index = 0;
 
         document.addEventListener('DOMContentLoaded', () => {
             const container = document.querySelector('.event-cards-container');
@@ -791,22 +792,15 @@
             history.replaceState(null, null, ' '); // Removes the hash from the URL without refreshing
         }
 
-        document.querySelectorAll('a').forEach(anchor => {
+        document.querySelectorAll('#events-nav-tag').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
 
-                const index = anchorsArray.indexOf(anchor);
-                for (let i = 0; i < anchorsArray.length; i++) {
-                    if (i != index) {
-                        const button = anchorsArray[i].querySelector('button');
-                        if (button) button.style.transform = "";
-                    }
-                }
+                index = anchorsArray.indexOf(anchor);
+                setActiveButton();
 
-                console.log(anchorsArray[index]);
-                console.log(anchorsArray[index].querySelector('button'));
-                const activeButton = anchorsArray[index].querySelector('button');
-                if (activeButton) activeButton.style.transform = "scale(1.2)";
+
+
                 const target = document.querySelector(this.getAttribute('href'));
                 const container = document.querySelector('.event-cards-container');
 
@@ -818,6 +812,20 @@
                 resetInterval();
             });
         });
+
+        function setActiveButton() {
+            for (let i = 0; i < anchorsArray.length; i++) {
+                if (i != index) {
+                    const button = anchorsArray[i].querySelector('button');
+                    if (button) button.style.transform = "";
+                }
+            }
+
+            console.log(anchorsArray[index]);
+            console.log(anchorsArray[index].querySelector('button'));
+            const activeButton = anchorsArray[index].querySelector('button');
+            if (activeButton) activeButton.style.transform = "scale(1.2)";
+        }
 
         const container = document.querySelector('.event-cards-container');
         const cardWidth = container.querySelector('.new-event-card').offsetWidth + 15; // Account for the gap
@@ -838,17 +846,23 @@
                     left: lastRealCard.offsetLeft - container.offsetLeft,
                     behavior: 'smooth'
                 });
+                index = anchorsArray.length - 1;
             }
             else {
                 container.scrollBy({
                     left: -cardWidth,
                     behavior: 'smooth'
                 });
+                index--;
+
             }
 
             const endScroll = container.scrollLeft;
 
             console.log(endScroll);
+
+            setActiveButton();
+
 
             resetInterval();
 
@@ -866,14 +880,18 @@
                     left: lastRealCard.offsetLeft - container.offsetLeft,
                     behavior: 'smooth'
                 });
+                index = 0;
             } else {
                 container.scrollBy({
                     left: cardWidth,
                     behavior: 'smooth'
                 });
+                index++;
             }
 
             console.log(container.scrollLeft);
+
+            setActiveButton();
 
             resetInterval();
 
@@ -885,12 +903,13 @@
         }
 
         function startInterval() {
-            intervalID = setInterval(moveRight, 10000);
+            intervalID = setInterval(moveRight, 5000);
             console.log("interval started");
         }
 
 
         startInterval();
+        setActiveButton();
 
     </script>
 
