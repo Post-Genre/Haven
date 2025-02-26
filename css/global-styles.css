@@ -340,20 +340,24 @@ html {
   color: #ffffff;
   background-color: #2222227a;
   top: 6px;
-  font-size: 24px;
+  font-size: 22px;
   border-radius: inherit;
   /* overflow: wrap; */
   /* max-width: 420px; */
   width: 95%;
   overflow-wrap: break-word;
   white-space: normal;
+  line-height: 1.5;
 }
 
 .new-event-image {
   /* position: relative; */
   /* width: 500px;
   height: 300px; */
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
   overflow: hidden;
   border-radius: 2vw;
@@ -368,12 +372,13 @@ html {
   position: absolute;
   right: 10px;
   bottom: 5px;
+  margin-right: 6px;
   /* border-top: 1px solid white;
   border-left: 1px solid white; */
 }
 
 .new-event-button button {
-  width: 100px;
+  width: 100%;
   height: 50px;
   border-radius: 10px;
   border: none;
