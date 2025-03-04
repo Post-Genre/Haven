@@ -64,6 +64,12 @@
     font-size: 20px;
   }
 
+  .faq-content a {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: inter;
+  }
+
   .faq-content a:visited {
     color: white !important;
   }

@@ -245,17 +245,24 @@
                                 <br><br>
                             </p>
                             <p>
-                                HAVEN will also be available for private event rentals including formals, conferences,
-                                meetings, and special performances. The space is equipped with professional audio,
-                                lighting, tables/chairs that are available for events. <br><br>
+                                HAVEN is also available for private event rentals including formals, conferences,
+                                meetings, and special performances. The space is equipped with professional audio 
+                                and lighting systems, tables, and chairs. <br><br>
                             </p>
 
-                            <p> Reach out to Mark at
-                                <a href="mailto:mark@postgenre.world" target="_blank" style="color: white;">
-                                    mark@postgenre.world
-                                </a>
-                                to schedule your event, rehearsal, or recording session!
+                            <p> Contact us to schedule an event now!
                             </p>
+
+                            <form method="POST" id="form">
+
+                                <input type="hidden" name="access_key" value="7d9bbf66-6035-418d-b3c6-2a2f8559f139">
+                                <input type="text" name="name" placeholder="Name" required>
+                                <input type="email" name="email" placeholder="Email" required>
+                                <textarea name="message" placeholder="Message" required></textarea>
+                                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                                <button type="submit" id="submitbutton">Submit</button>
+                            </form>
+                            <p id="responseMessage"></p>
                         </div>
 
                     </div>
@@ -387,11 +394,8 @@
                                     of your event. We offer tables and seating arrangements to comfortably accommodate
                                     over 100 guests.
                                     <br><br>
-                                    For more information about hosting your private event at HAVEN, email Adam below.
-                                    <br><br>
-                                    <a href="mailto:mark@postgenre.world" target="_blank" style="color: white;">
-                                        Reach out to mark@postgenre.world to schedule your event!
-                                    </a>
+                                    For more information about hosting your private event at HAVEN, contact us using
+                                    <a href="#studio" style="">this form!</a>
                                 </div>
                             </div>
                         </div>
@@ -458,6 +462,49 @@
     </section>
 
 </body>
+
+<script>
+    const form = document.getElementById("form");
+    const result = document.getElementById("result");
+    const submitButton = document.getElementById("submitbutton")
+
+    form.addEventListener('submit', function(e) {
+
+        e.preventDefault(); //prevents "submit" button from reloading page (its default behavior)
+        const formData = new FormData(form); //FormData is a built in JS object for collecting input data
+        const object = Object.fromEntries(formData); // .fromEntries converts FormData to regular JS object
+        const json = JSON.stringify(object); //turns object into JSON string
+        submitButton.textContent = "Submitting...";
+        submitButton.style = "background-color: grey; pointer-events: none"
+
+            fetch("https://api.web3forms.com/submit", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response)=> {
+                let json = await response.json();
+                if (response.status ==200) {
+                    submitButton.textContent = "submit"
+                    submitButton.style = "background-color: #2b2323"
+                    alert("Message Submitted!")
+                }
+            })
+        .catch(error => {
+            console.log(error);
+            alert = "Something went wrong";
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        })
+    })
+</script>
 
 <!--EVENT CAROUSEL NAVIGATION-->
 <script>
