@@ -761,12 +761,23 @@
             // Calculate the offset to center the first card
             const containerWidth = container.offsetWidth;
             const cardWidth = firstCard.offsetWidth;
-            const scrollPosition = firstCard.offsetLeft - (containerWidth - cardWidth) / 2;
+            // const scrollPosition = firstCard.getBoundingClientRect().x - (containerWidth - cardWidth) / 2;
 
+            console.log("containerWidhth ", containerWidth);
+            console.log("cardwidth ", cardWidth);
+            // console.log("scrollPosiition ", scrollPosition);
             // Scroll the container to the calculated position
-            container.scrollLeft = scrollPosition;
+            // container.scrollLeft = 2000;
 
+            container.scrollTo({
+                left: firstCard.getBoundingClientRect().x - container.getBoundingClientRect().x,
+                behavior: 'smooth'
+            });
+
+            console.log("scrollLeft ", container.scrollLeft);
         }
+
+
     });
 
 

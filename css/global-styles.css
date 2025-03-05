@@ -269,7 +269,7 @@ html {
   width: 750px;
   /* flex-direction: column;
   gap: 10px;  */
-  overflow: hidden;
+  /* overflow: hidden; */
   /* overflow-x: auto; */
   white-space: nowrap;
   /* flex-shrink: 0; */
@@ -277,7 +277,7 @@ html {
   position: relative;
   z-index: 1;
   /* flex-wrap: nowrap; */
-  overflow-x: auto;
+  overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scroll-padding: 50%;
