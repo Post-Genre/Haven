@@ -21,6 +21,7 @@ html {
 }
 
 .background-wrapper {
+.background-wrapper {
   background-image: url("../media/backgrounds/psychbackground_lowres.jpg");
   background-color: rgba(0, 0, 0, 0);
   background-blend-mode: overlay;
@@ -30,9 +31,9 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100px;
   z-index: 0;
-  background-size: cover;
+  /* background-size: cover; */
   background-position: center;
 }
 /*
@@ -105,6 +106,9 @@ html {
 .church img {
   width: 70%;
 }
+.church img {
+  width: 70%;
+}
 
 #animated-word {
   transition: letter-spacing 0.1s ease; /* Smooth transition */
@@ -134,10 +138,14 @@ html {
   padding: 0 0 3cqh 0;
 }
 
+.contents {
+  display: flex;
+  flex-direction: column;
+}
 .bricked-up-body {
   height: fit-content;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(1, 1fr);
@@ -157,6 +165,305 @@ html {
   grid-row: 1;
 }
 
+.events-container {
+  display: flex;
+  height: 100%;
+  /* margin-left: 200px;
+  margin-right: 20px; */
+  padding-bottom: 15px;
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px; */
+  position: relative;
+  /* margin-left: 50px;
+  margin-right: 50px; */
+}
+
+.button-container {
+  width: 50px !important;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.arrow-button {
+  width: 80px;
+  height: 80px;
+  padding: 0px;
+  margin: 0px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  /* background-color: transparent; */
+  font-size: 70px;
+  background-color: #2222227a;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  opacity: 80%;
+  color: white;
+  z-index: 8;
+
+  position: absolute;
+  /* z-index: 2;
+  position: absolute;
+  top: 20%;
+  transform: translateY(-50%); */
+}
+
+.arrow-button:hover {
+  opacity: 100%;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.arrow-button:active {
+  background-color: white;
+}
+
+#back-button {
+  left: 25px;
+}
+
+#front-button {
+  right: 25px;
+}
+
+/* 
+.arrow-button:first-of-type {
+  left: calc(25% - 250px); /* Keeps it dynamically near the center card */
+/* } */
+/* 
+.arrow-button:last-of-type {
+  right: calc(25% - 250px); /* Keeps it dynamically near the center card */
+/* }  */
+
+.flip-button {
+  transform: rotate(180deg);
+  top: 15%;
+}
+
+.event-cards-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 400px;
+  /* width: 50vw; */
+  /* width: clamp(50vw, 80%, 80vw); */
+  width: 750px;
+  /* flex-direction: column;
+  gap: 10px;  */
+  /* overflow: hidden; */
+  /* overflow-x: auto; */
+  white-space: nowrap;
+  /* flex-shrink: 0; */
+  gap: 15px;
+  position: relative;
+  z-index: 1;
+  /* flex-wrap: nowrap; */
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-padding: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 0;
+
+  /* Apply a mask to fade the edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    black 20%,
+    black 80%,
+    rgba(0, 0, 0, 0)
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    black 20%,
+    black 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.events-cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+.new-event-card {
+  display: flex;
+  flex: 1 0 60%;
+  width: 650px;
+  height: 400px;
+  aspect-ratio: 1.75;
+  /* Maintains the proportion */
+  /* border-radius: 2vw; */
+  /* border-radius: clamp(2vw, 80%, 1vw); */
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  scroll-snap-align: center;
+  flex-direction: column;
+  /* position: absolute; */
+  /* border: 1px solid black; */
+  background-size: contain;
+  position: relative;
+}
+
+.new-event-title {
+  position: absolute;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px 10px;
+  z-index: 9;
+  font-family: "Inter";
+  font-weight: bolder;
+  color: #ffffff;
+  background-color: #2222227a;
+  top: 6px;
+  font-size: 22px;
+  border-radius: inherit;
+  /* overflow: wrap; */
+  /* max-width: 420px; */
+  width: 95%;
+  overflow-wrap: break-word;
+  white-space: normal;
+  line-height: 1.5;
+}
+
+.new-event-image {
+  /* position: relative; */
+  /* width: 500px;
+  height: 300px; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  border-radius: 2vw;
+}
+
+.new-event-button {
+  /* justify-self: end;
+  align-self: end; */
+  /* width: 100px;
+  align-items: center; */
+  padding: 0px;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  margin-right: 6px;
+  /* border-top: 1px solid white;
+  border-left: 1px solid white; */
+}
+
+.new-event-button button {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #2222227a;
+  color: white;
+  font-size: 20px;
+  font-family: "Inter";
+  font-weight: bold;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* border: 1px solid white; */
+  cursor: pointer;
+}
+
+.new-event-button button:hover {
+  background-color: #ffffff;
+  color: #222222;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+/* .new-event-button button:active {
+  background-color: blue;
+} */
+
+.new-event-card h1 {
+  font-size: 50px;
+}
+
+@media (max-width: 500px) {
+  .new-event-card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 700px) {
+  #back-button {
+    left: 90px;
+  }
+  #front-button {
+    right: 90px;
+  }
+  .new-event-button {
+    right: 40px;
+  }
+}
+
+.center-box {
+  background-color: gray;
+  mask-image: none;
+  transform: translateX(0);
+}
+
+.invisible {
+  width: 0;
+  display: none;
+  transform: scale(0.9);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.end-card {
+  /* width: 500px; */
+  background-color: transparent;
+  color: transparent;
+  border: none;
+}
+
+.events-nav-container {
+  padding-bottom: 10px;
+  padding-top: 0;
+  display: flex;
+  gap: 5px;
+}
+
+.events-nav-button {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.events-nav-button:hover {
+  transform: scale(1.2);
+}
+
+.events-nav-button .active {
+  background-color: lightgrey;
+  border-radius: 50%;
+}
+
+/* Optional: Expand hidden boxes slightly on hover */
+.box:hover {
+  transform: scale(1.05);
+}
 .event-card {
   display: flex;
   justify-content: center;
@@ -219,6 +526,11 @@ html {
   font-family: "Inter";
   font-weight: bold;
   font-size: max(0.8rem, 3cqw);
+}
+
+.event-item.tickets {
+  border: 1px solid;
+  border-radius: 8px;
 }
 
 /*
@@ -384,7 +696,9 @@ color: black;
 }
 
 .section-a {
-  padding: 10vh 0 10vh 0;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-b {
@@ -502,6 +816,7 @@ color: black;
   width: 90%;
   max-width: 450px;
   margin: 0;
+  cursor: pointer;
 }
 
 .content-text:visited {

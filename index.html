@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="css/faq.css">
 
 
+
 <!--Vercel traffic and speed insights-->
 <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -26,6 +27,8 @@
     <meta name="description"
         content="Oakland's first above-ground, independent music venue in 20 years launches in January 2025. Get in touch, or sign up for our newsletter so we can keep you in the loop!">
     <link rel="icon" href="media/backgrounds/Church-Lowres.png" type="image/png"> <!-- For .png files -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
 
     <!--Get outta here Pinterest button-->
     <meta name="pinterest" content="nohover">
@@ -47,8 +50,17 @@
 
 
 <body>
-    <div class="background-wrapper"></div>
-    <div class="flowers">
+    <!-- <div class="background-wrapper"> -->
+    <!-- <div class="church" style="height: fit-content;"> -->
+    <!-- <img src="media/backgrounds/Church-Lowres.png" alt="Church"> -->
+
+    <!-- </div> -->
+    <!-- </div> -->
+
+    <!-- <div class="container"> -->
+
+    <!-- </div> -->
+    <!-- <div class="flowers">
         <div id="flower-bundleL" class="flower-bundleL">
             <img src="media/flowers/flowers_L_downscaled/lily4.png" class="flowerL flower4" alt="Flower 4">
             <img src="media/flowers/flowers_L_downscaled/lily5.png" class="flowerL flower3" alt="Flower 3">
@@ -101,21 +113,23 @@
         <div class="bricked-up-body">
 
             <div class="contents" style="width: 100vw;">
-                <section class="section-a">
+
+
+                <section class="section-a" id="events">
 
                     <div class="events-container">
                         <!-- <img src="./media/right-arrow-svgrepo-com.svg" class="arrow-button flip-button" id="back-button"
                             nopin="nopin" /> -->
-                        <!-- <button class="arrow-button" id="back-button">
+    <!-- <button class="arrow-button" id="back-button">
                             < </button> -->
-                        <i class="arrow-button bi bi-caret-left-fill" id="back-button"></i>
+    <i class="arrow-button bi bi-caret-left-fill" id="back-button"></i>
 
-                        <div class="event-cards-container">
-                            <!-- <button class="arrow-button" id="back-button">
+    <div class="event-cards-container">
+        <!-- <button class="arrow-button" id="back-button">
                                 < </button> -->
 
-                            <div class="new-event-card end-card"></div>
-                            <!-- 
+        <div class="new-event-card end-card"></div>
+        <!-- 
                                     <div id="first-card" class="new-event-card center-box">
                                         <h1>EVENT 0</h1>
                                     </div>
@@ -135,150 +149,141 @@
                                     <div id="last-card" class="new-event-card center-box">
                                         <h1>EVENT 5</h1>
                                     </div> -->
-                            <div id="first-card" class="new-event-card"
-                                style="background-image: url('/media/2_28.png')">
-                                <div class="new-event-title">
-                                    2/28 - Moontown, Golder, Fosh <br>
-                                    <i>Get Your Tickets Now!</i>
-                                </div>
+        <div id="first-card" class="new-event-card" style="background-image: url('/media/2_28.png')">
+            <div class="new-event-title">
+                2/28 - Moontown, Golder, Fosh <br>
+                <i>Get Your Tickets Now!</i>
+            </div>
 
-                                <div class="new-event-button">
-
-
-                                    <button
-                                        onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
-                                        TICKETS
-                                    </button>
-                                </div>
-
-                            </div>
-
-                            <div id="event-1" class="new-event-card"
-                                style="background-image: url('/media/2_14-Spins.png')">
-                                <div class="new-event-title">
-                                    Check out some photos from our last DJ night! <br>
-                                    <i>2/14 - UNESCAPEDLY X HAVEN</i>
-                                </div>
-
-                                <div class="new-event-button">
+            <div class="new-event-button">
 
 
-                                    <button
-                                        onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
-                                        PHOTOS
-                                    </button>
-                                </div>
+                <button onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
+                    TICKETS
+                </button>
+            </div>
 
-                            </div>
-                            <div id="event-2" class="new-event-card"
-                                style="background-image: url('/media/events/1_24-TheSpins.png')">
-                                <div class="new-event-title">
-                                    PG Studios - Rehearsal Space at HAVEN Open Now! <br>
-                                    <i>Book a reherarsal time at HAVEN Today!</i>
-                                </div>
+        </div>
 
-                                <div class="new-event-button">
+        <div id="event-1" class="new-event-card" style="background-image: url('/media/2_14-Spins.png')">
+            <div class="new-event-title">
+                Check out some photos from our last DJ night! <br>
+                <i>2/14 - UNESCAPEDLY X HAVEN</i>
+            </div>
 
-
-                                    <button
-                                        onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
-                                        PG STUDIOS
-                                    </button>
-                                </div>
-
-                            </div>
-                            <div id="event-3" class="new-event-card" style="background-image: url('/media/3_14.png')">
-                                <div class="new-event-title">
-                                    MEBA Presents: Play-It-Forward (a Farina Foundation Benefit Concert)<br>
-                                    <i>Get Your Tickets Now!</i>
-                                </div>
-
-                                <div class="new-event-button">
+            <div class="new-event-button">
 
 
-                                    <button
-                                        onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
-                                        TICKETS
-                                    </button>
-                                </div>
+                <button onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
+                    PHOTOS
+                </button>
+            </div>
 
-                            </div>
-                            <div id="event-4" class="new-event-card" style="background-image: url('/media/3_15.png')">
-                                <div class="new-event-title">
-                                    3/15 - Times New Wrestlers, Artist Quest, Townsppl <br>
-                                    <i>Get Your Tickets Now!</i>
-                                </div>
+        </div>
+        <div id="event-2" class="new-event-card" style="background-image: url('/media/events/1_24-TheSpins.png')">
+            <div class="new-event-title">
+                PG Studios - Rehearsal Space at HAVEN Open Now! <br>
+                <i>Book a reherarsal time at HAVEN Today!</i>
+            </div>
 
-                                <div class="new-event-button">
-
-
-                                    <button
-                                        onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
-                                        TICKETS
-                                    </button>
-                                </div>
-
-                            </div>
+            <div class="new-event-button">
 
 
-                            <div id="last-card" class="new-event-card"
-                                style="background-image: url('/media/backgrounds/Psych Background.png')">
-                                <div class="new-event-title">
-                                    Want to get involved at HAVEN? <br>
-                                    <i>Fill out our interest form!</i>
-                                </div>
+                <button onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
+                    PG STUDIOS
+                </button>
+            </div>
 
-                                <div class="new-event-button">
+        </div>
+        <div id="event-3" class="new-event-card" style="background-image: url('/media/3_14.png')">
+            <div class="new-event-title">
+                MEBA Presents: Play-It-Forward (a Farina Foundation Benefit Concert)<br>
+                <i>Get Your Tickets Now!</i>
+            </div>
+
+            <div class="new-event-button">
 
 
-                                    <button
-                                        onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
-                                        GET INVOLVED!
-                                    </button>
-                                </div>
+                <button onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
+                    TICKETS
+                </button>
+            </div>
 
-                            </div>
+        </div>
+        <div id="event-4" class="new-event-card" style="background-image: url('/media/3_15.png')">
+            <div class="new-event-title">
+                3/15 - Times New Wrestlers, Artist Quest, Townsppl <br>
+                <i>Get Your Tickets Now!</i>
+            </div>
+
+            <div class="new-event-button">
+
+
+                <button onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
+                    TICKETS
+                </button>
+            </div>
+
+        </div>
+
+
+        <div id="last-card" class="new-event-card"
+            style="background-image: url('/media/backgrounds/Psych Background.png')">
+            <div class="new-event-title">
+                Want to get involved at HAVEN? <br>
+                <i>Fill out our interest form!</i>
+            </div>
+
+            <div class="new-event-button">
+
+
+                <button onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
+                    GET INVOLVED!
+                </button>
+            </div>
+
+        </div>
 
 
 
-                            <div class="new-event-card end-card"></div>
+        <div class="new-event-card end-card"></div>
 
 
-                        </div>
+    </div>
 
-                        <!-- <button class="arrow-button" id="front-button">
+    <!-- <button class="arrow-button" id="front-button">
                             > </button> -->
 
-                        <i class="arrow-button bi bi-caret-right-fill" id="front-button"></i>
+    <i class="arrow-button bi bi-caret-right-fill" id="front-button"></i>
 
 
-                        <!-- <button class="arrow-button" id="front-button">
+    <!-- <button class="arrow-button" id="front-button">
                                         > </button> -->
 
 
-                    </div>
-                    <!-- <img src="./media/right-arrow-svgrepo-com.svg" nopin="nopin" class="arrow-button"
+    </div>
+    <!-- <img src="./media/right-arrow-svgrepo-com.svg" nopin="nopin" class="arrow-button"
                                     id="front-button" /> -->
 
-                    <div class="events-nav-container">
-                        <a id="events-nav-tag" href="#first-card"><button class="events-nav-button"></button></a>
-                        <a id="events-nav-tag" href="#event-1"><button class="events-nav-button"></button></a>
-                        <a id="events-nav-tag" href="#event-2"><button class="events-nav-button"></button></a>
-                        <a id="events-nav-tag" href="#event-3"><button class="events-nav-button"></button></a>
-                        <a id="events-nav-tag" href="#event-4"><button class="events-nav-button"></button></a>
-                        <a id="events-nav-tag" href="#last-card"><button class="events-nav-button"></button></a>
+    <div class="events-nav-container">
+        <a id="events-nav-tag" href="#first-card"><button class="events-nav-button"></button></a>
+        <a id="events-nav-tag" href="#event-1"><button class="events-nav-button"></button></a>
+        <a id="events-nav-tag" href="#event-2"><button class="events-nav-button"></button></a>
+        <a id="events-nav-tag" href="#event-3"><button class="events-nav-button"></button></a>
+        <a id="events-nav-tag" href="#event-4"><button class="events-nav-button"></button></a>
+        <a id="events-nav-tag" href="#last-card"><button class="events-nav-button"></button></a>
 
 
 
-                    </div>
+    </div>
 
-                    <div class="content-button">
-                        View Upcoming Events
-                    </div>
+    <div class="content-button">
+        View Upcoming Events
+    </div>
 
 
 
-            </div>
+    </div>
     </section>
 
     <section class="section-b" id="about">
@@ -300,21 +305,75 @@
                     concerts, event production training, workshops, and more.
                     <br><br>
                 </p>
+                <section class="section-b" id="about">
+                    <div class="section-header">
+                        <img src="./media/banners/banner1.jpg">
+                        <h2 style="color: white;">Who We Are</h2>
+                    </div>
+                    <div class="content" style="background-color: #142714;">
+                        <div>
+                            <img src="./media/banners/bottom1.jpg">
+                        </div>
 
-                <p>
-                    <span class="content-header"> Oakland has musical roots</span>
-                    <br><br>
-                </p>
-                <p>
-                    Once the heart of music in Pittsburgh, Oakland’s vibrant music scene was pushed
-                    underground after a wave of venue closures in the early 2000’s. Although these venues
-                    left Oakland, the borough’s passion for local music perservered.
-                    <br><br>
-                </p>
-                <p>
-                    <span class="content-header"> Why Haven? </span>
-                    <br><br>
+                        <div class="content-text">
+                            <p>
+                                <span class="content-header"> HAVEN </span> is an independent music venue in the heart
+                                of Pittsburgh’s Oakland neighborhood. The venue is operated by <a
+                                    href="https://pg.media" target="_blank" class="link">Post Genre</a> a
+                                Pittsburgh-based organization dedicated to enriching the local community through
+                                concerts, event production training, workshops, and more.
+                                <br><br>
+                            </p>
 
+                            <p>
+                                <span class="content-header"> Oakland has musical roots</span>
+                                <br><br>
+                            </p>
+                            <p>
+                                Once the heart of music in Pittsburgh, Oakland’s vibrant music scene was pushed
+                                underground after a wave of venue closures in the early 2000’s. Although these venues
+                                left Oakland, the borough’s passion for local music perservered.
+                                <br><br>
+                            </p>
+                            <p>
+                                <span class="content-header"> Why Haven? </span>
+                                <br><br>
+                            <p>
+                                <span class="content-header"> Oakland has musical roots</span>
+                                <br><br>
+                            </p>
+                            <p>
+                                Once the heart of music in Pittsburgh, Oakland’s vibrant music scene was pushed
+                                underground after a wave of venue closures in the early 2000’s. Although these venues
+                                left Oakland, the borough’s passion for local music perservered.
+                                <br><br>
+                            </p>
+                            <p>
+                                <span class="content-header"> Why Haven? </span>
+                                <br><br>
+
+                            </p>
+                            <p>
+                                The opening of HAVEN brings an end to the two-decade long absence of permanent music
+                                venues in Oakland, and represents a culmination of the community-driven creative energy
+                                that has sustained the neighborhood’s music scene for the last twenty years. The venue
+                                will serve as a home (or haven) for musicians, artists, and audiences to come together,
+                                providing a secure, professional, and sustainable environment for concerts and other
+                                live events in Pittsburgh’s most populated borough.
+                            </p>
+
+                            <div
+                                style="padding-top: 10vh; container-type: inline-size; width: 100vw; display: flex; justify-content: center;">
+                                <a href="https://pg.media/" target="_blank"
+                                    style="text-decoration: none; display: flex; justify-content: center;">
+                                    <div class="content-button">
+                                        Learn More About Post Genre
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 </p>
                 <p>
                     The opening of HAVEN brings an end to the two-decade long absence of permanent music
@@ -392,8 +451,34 @@
                     below to visit Post Genre’s website, and fill out our artist interest form; we’ll get
                     back to you as soon as we can! We’re excited to collaborate and bring your vision to
                     life.
+                <section class="section-b" id="artists">
+                    <div class="section-header">
+                        <img src="./media/banners/banner2.jpg">
+                        <h2 style="color: white;">Artists</h2>
+                    </div>
+                    <div class="content" style="background-color: #074785;">
+                        <div class="content-text" style="  background-image: url(/media/banners/bottom2.jpg);">
 
-                    <br> <br>
+                            <p>Interested in playing at HAVEN? Events at HAVEN are managed by Post Genre. Click the link
+                                below to visit Post Genre’s website, and fill out our artist interest form; we’ll get
+                                back to you as soon as we can! We’re excited to collaborate and bring your vision to
+                                life.
+
+                                <br> <br>
+                            </p>
+                            <div
+                                style="padding-top: 10vh; container-type: inline-size; width: 100vw; display: flex; justify-content: center;">
+                                <a href="https://pg.media/get-involved.html" target="_blank"
+                                    style="text-decoration: none; display: flex; justify-content: center;">
+                                    <div class="content-button">
+                                        Artist Interest Form
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br> <br>
                 </p>
                 <div
                     style="padding-top: 10vh; container-type: inline-size; width: 100vw; display: flex; justify-content: center;">
@@ -438,85 +523,170 @@
                             </a></a>
                     </div>
                 </div>
-
-                <div class="collapsible-section" style="padding-bottom: 15px;">
-                    <button class="collapsible">
-                        <div class="collapsible-button">
-                            <h3>Is Haven all-ages?</h3>
-                            <h3 id="expandIcon" style="width: 10%; font-size: 30px;">+</h3>
-                        </div>
-                    </button>
-                    <div class="faq-content">
-                        All shows at HAVEN are open to all ages, unless stated otherwise on the event page.
-                        Alcohol is prohibited at events.
-                        <br><br>
-
+                <section class="section-b" id="faqs">
+                    <div class="section-header">
+                        <img src="./media/banners/banner4.jpg">
+                        <h2 style="color: white;">FAQs</h2>
                     </div>
-                </div>
-
-                <div class="collapsible-section" style="padding-bottom: 15px;">
-                    <button class="collapsible">
-                        <div class="collapsible-button">
-                            <h3>Where should I park?</h3>
-                            <h3 id="expandIcon" style="width: 10%; font-size: 30px;">+</h3>
+                    <div class="content" style="background-color: #011e08;">
+                        <div>
+                            <img src="./media/banners/bottom4.jpg">
                         </div>
-                    </button>
-                    <div class="faq-content">
-                        Paid parking is available two blocks from HAVEN, near Forbes Avenue on Atwood and
-                        Meyran Streets. Additionally, the Forbes-Semple Garage is a five-minute walk away
-                        and costs $6.00 on weekends after 4 p.m.
-                        <br><br>
-                        <a href='https://maps.google.com/?q=210 Meyran Ave, Pittsburgh, PA 15213' target="_blank">
-                            <a href='https://maps.apple.com/maps?q=210 Meyran Ave, Pittsburgh, PA 15213'
-                                target="_blank">
-                                Directions to the Forbes-Semple Garage
-                            </a></a>
-                    </div>
-                </div>
+                        <div class="content-text">
+                            <div class="collapsible-section" style="padding-bottom: 15px;">
+                                <button class="collapsible">
+                                    <div class="collapsible-button">
+                                        <h3>Where is Haven?</h3>
+                                        <h3 id="expandIcon" style="width: 10%; font-size: 30px;">+</h3>
+                                    </div>
+                                </button>
+                                <div class="faq-content">
+                                    HAVEN is located at 401 Atwood St in the Oakland Neighborhood of Pittsburgh, PA. The
+                                    venue is in walking distance to the University of Pittsburgh, Carnegie Mellon
+                                    University and Carlow University.
+                                    <br><br>
+                                    <a href='https://maps.google.com/?q=401 Atwood St, Pittsburgh, PA 15213'
+                                        target="_blank" style="color: white;">
+                                        <a href='https://maps.apple.com/maps?q=401 Atwood St, Pittsburgh, PA 15213'
+                                            target="_blank" style="color: white;">
+                                            Directions to HAVEN
+                                        </a></a>
+                                </div>
+                            </div>
 
-                <div class="collapsible-section" style="padding-bottom: 15px;">
-                    <button class="collapsible">
-                        <div class="collapsible-button">
-                            <h3>Where can I get event tickets?
-                            </h3>
-                            <h3 id="expandIcon" style="width: 10%; font-size: 30px;">+</h3>
+                            <div class="collapsible-section" style="padding-bottom: 15px;">
+                                <button class="collapsible">
+                                    <div class="collapsible-button">
+                                        <h3>Is Haven all-ages?</h3>
+                                        <h3 id="expandIcon" style="width: 10%; font-size: 30px;">+</h3>
+                                    </div>
+                                </button>
+                                <div class="faq-content">
+                                    All shows at HAVEN are open to all ages, unless stated otherwise on the event page.
+                                    Alcohol is prohibited at events.
+                                    <br><br>
+
+                                </div>
+                            </div>
+                            <div class="collapsible-section" style="padding-bottom: 15px;">
+                                <button class="collapsible">
+                                    <div class="collapsible-button">
+                                        <h3>Is Haven all-ages?</h3>
+                                        <h3 id="expandIcon" style="width: 10%; font-size: 30px;">+</h3>
+                                    </div>
+                                </button>
+                                <div class="faq-content">
+                                    All shows at HAVEN are open to all ages, unless stated otherwise on the event page.
+                                    Alcohol is prohibited at events.
+                                    <br><br>
+
+                                </div>
+                            </div>
+
+                            <div class="collapsible-section" style="padding-bottom: 15px;">
+                                <button class="collapsible">
+                                    <div class="collapsible-button">
+                                        <h3>Where should I park?</h3>
+                                        <h3 id="expandIcon" style="width: 10%; font-size: 30px;">+</h3>
+                                    </div>
+                                </button>
+                                <div class="faq-content">
+                                    Paid parking is available two blocks from HAVEN, near Forbes Avenue on Atwood and
+                                    Meyran Streets. Additionally, the Forbes-Semple Garage is a five-minute walk away
+                                    and costs $6.00 on weekends after 4 p.m.
+                                    <br><br>
+                                    <a href='https://maps.google.com/?q=210 Meyran Ave, Pittsburgh, PA 15213'
+                                        target="_blank">
+                                        <a href='https://maps.apple.com/maps?q=210 Meyran Ave, Pittsburgh, PA 15213'
+                                            target="_blank">
+                                            Directions to the Forbes-Semple Garage
+                                        </a></a>
+                                </div>
+                            </div>
+
+                            <div class="collapsible-section" style="padding-bottom: 15px;">
+                                <button class="collapsible">
+                                    <div class="collapsible-button">
+                                        <h3>Where can I get event tickets?
+                                        </h3>
+                                        <h3 id="expandIcon" style="width: 10%; font-size: 30px;">+</h3>
+                                    </div>
+                                </button>
+                                <div class="faq-content">
+                                    Tickets for events can be purchased through our ticket provider IndieTix or
+                                    in-person unless the event is Sold Out.
+                                    <br><br>
+                                </div>
+                            </div>
+                            <div class="collapsible-section" style="padding-bottom: 15px;">
+                                <button class="collapsible">
+                                    <div class="collapsible-button">
+                                        <h3>Where should I park?</h3>
+                                        <h3 id="expandIcon" style="width: 10%; font-size: 30px;">+</h3>
+                                    </div>
+                                </button>
+                                <div class="faq-content">
+                                    Paid parking is available two blocks from HAVEN, near Forbes Avenue on Atwood and
+                                    Meyran Streets. Additionally, the Forbes-Semple Garage is a five-minute walk away
+                                    and costs $6.00 on weekends after 4 p.m.
+                                    <br><br>
+                                    <a href='https://maps.google.com/?q=210 Meyran Ave, Pittsburgh, PA 15213'
+                                        target="_blank">
+                                        <a href='https://maps.apple.com/maps?q=210 Meyran Ave, Pittsburgh, PA 15213'
+                                            target="_blank">
+                                            Directions to the Forbes-Semple Garage
+                                        </a></a>
+                                </div>
+                            </div>
+
+                            <div class="collapsible-section" style="padding-bottom: 15px;">
+                                <button class="collapsible">
+                                    <div class="collapsible-button">
+                                        <h3>Where can I get event tickets?
+                                        </h3>
+                                        <h3 id="expandIcon" style="width: 10%; font-size: 30px;">+</h3>
+                                    </div>
+                                </button>
+                                <div class="faq-content">
+                                    Tickets for events can be purchased through our ticket provider IndieTix or
+                                    in-person unless the event is Sold Out.
+                                    <br><br>
+                                </div>
+                            </div>
+
+                            <div class="collapsible-section" style="padding-bottom: 15px;">
+                                <button class="collapsible">
+                                    <div class="collapsible-button">
+                                        <h3>Can I book Haven for my private event?
+                                        </h3>
+                                        <h3 id="expandIcon" style="width: 10%; font-size: 30px;">+</h3>
+                                    </div>
+                                </button>
+                                <div class="faq-content">
+                                    Yes! Haven is available for a wide range of private events, including formals,
+                                    corporate gatherings, private concerts, workshops, and more.
+                                    <br><br>
+                                    Our space is equipped with professional audio and lighting systems to meet the needs
+                                    of your event. We offer tables and seating arrangements to comfortably accommodate
+                                    over 100 guests.
+                                    <br><br>
+                                    For more information about hosting your private event at HAVEN, contact us using
+                                    <a href="#studio" style="">this form!</a>
+                                </div>
+                            </div>
                         </div>
-                    </button>
-                    <div class="faq-content">
-                        Tickets for events can be purchased through our ticket provider IndieTix or
-                        in-person unless the event is Sold Out.
-                        <br><br>
-                    </div>
-                </div>
-
-                <div class="collapsible-section" style="padding-bottom: 15px;">
-                    <button class="collapsible">
-                        <div class="collapsible-button">
-                            <h3>Can I book Haven for my private event?
-                            </h3>
-                            <h3 id="expandIcon" style="width: 10%; font-size: 30px;">+</h3>
-                        </div>
-                    </button>
-                    <div class="faq-content">
-                        Yes! Haven is available for a wide range of private events, including formals,
-                        corporate gatherings, private concerts, workshops, and more.
-                        <br><br>
-                        Our space is equipped with professional audio and lighting systems to meet the needs
-                        of your event. We offer tables and seating arrangements to comfortably accommodate
-                        over 100 guests.
-                        <br><br>
-                        For more information about hosting your private event at HAVEN, contact us using
-                        <a href="#studio" style="">this form!</a>
-                    </div>
-                </div>
-            </div>
-    </section>
+                </section>
 
 
-    <section id="newsletter-signup" class="section-a">
-        <!--   <p><i class="arrow">↓</i></p> -->
+                <section id="newsletter-signup" class="section-a">
+                    <!--   <p><i class="arrow">↓</i></p> -->
+
+                    <section id="newsletter-signup" class="section-a">
+                        <!--   <p><i class="arrow">↓</i></p> -->
 
 
+
+                        <!--
 
         <!--
                 <form id="newsletterForm">
@@ -529,25 +699,29 @@
                     <button type="submit">Subscribe</button>
                 </form>
                 -->
-        <div class="footer">
-            <img src="./media/havenpngvirile2.png" style="filter:brightness(0); width: 100%; scale: 80%;">
+                        <div class="footer">
+                            <img src="./media/havenpngvirile2.png"
+                                style="filter:brightness(0); width: 100%; scale: 80%;">
+                            <div class="footer">
+                                <img src="./media/havenpngvirile2.png"
+                                    style="filter:brightness(0); width: 100%; scale: 80%;">
 
 
-            <div class="socials">
-                <a href="mailto:eli@postgenre.world" target="_blank">
-                    <img src="./media/email.png" alt="email">
-                </a>
-                <a href="https://discord.gg/YnPGXRsryk" target="_blank">
-                    <img src="./media/discord.svg" alt="discord" style="filter: brightness(0);">
-                </a>
-                <a href="https://www.instagram.com/haven.pgh/?hl=en" target="_blank">
-                    <img src="./media/instagram.png" alt="intagram">
-                </a>
-                <a href="https://www.pg.media" target="_blank">
-                    <img src="./media/pg-logo.png" alt="intagram" style="filter: brightness(0);">
-                </a>
-            </div>
-            <!--
+                                <div class="socials">
+                                    <a href="mailto:eli@postgenre.world" target="_blank">
+                                        <img src="./media/email.png" alt="email">
+                                    </a>
+                                    <a href="https://discord.gg/YnPGXRsryk" target="_blank">
+                                        <img src="./media/discord.svg" alt="discord" style="filter: brightness(0);">
+                                    </a>
+                                    <a href="https://www.instagram.com/haven.pgh/?hl=en" target="_blank">
+                                        <img src="./media/instagram.png" alt="intagram">
+                                    </a>
+                                    <a href="https://www.pg.media" target="_blank">
+                                        <img src="./media/pg-logo.png" alt="intagram" style="filter: brightness(0);">
+                                    </a>
+                                </div>
+                                <!--
                         <form id="contactForm">
                             <div class="input-container">
                                 <div class="name">
@@ -561,18 +735,187 @@
                             </div> 
                         </form>
                     -->
-            <p id="responseMessage"></p>
+                                <p id="responseMessage"></p>
+                                <p id="responseMessage"></p>
 
-            <div class="copyright">
-                © 2025 Post Genre. All Rights Reserved.
+                                <div class="copyright">
+                                    © 2025 Post Genre. All Rights Reserved.
+                                </div>
+                            </div>
+                    </section>
             </div>
         </div>
     </section>
-    </div>
-    </div>
     </section>
 
+
+
 </body>
+
+<script>
+
+    let intervalID;
+    const cardWidth = document.querySelector('.new-event-card').offsetWidth + 15;
+    const anchors = document.querySelectorAll('#events-nav-tag');
+    const anchorsArray = Array.from(anchors);
+    let index = 0;
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const container = document.querySelector('.event-cards-container');
+        const firstCard = document.querySelector('#first-card');
+
+        console.log("cardwidth: ", cardWidth);
+
+        if (container && firstCard) {
+            console.log("loaded");
+            // Calculate the offset to center the first card
+            const containerRect = container.getBoundingClientRect();
+            const firstCardRect = firstCard.getBoundingClientRect();
+
+            const scrollOffset = firstCardRect.left - containerRect.left + container.scrollLeft;
+
+            console.log("containerWidth ", container.offsetWidth);
+            console.log("containerSpot ", container.offsetLeft);
+            console.log("cardWidth ", firstCard.offsetWidth);
+
+            console.log("container bound ", containerRect);
+            console.log("card bound ", firstCardRect);
+
+            container.scrollTo({
+                left: scrollOffset,
+                behavior: 'smooth'
+            });
+
+            console.log("scrollLeft ", container.scrollLeft);
+        }
+
+
+    });
+
+
+    if (window.location.hash) {
+        history.replaceState(null, null, ' '); // Removes the hash from the URL without refreshing
+    }
+
+    document.querySelectorAll('#events-nav-tag').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            index = anchorsArray.indexOf(anchor);
+            setActiveButton();
+
+
+
+            const target = document.querySelector(this.getAttribute('href'));
+            const container = document.querySelector('.event-cards-container');
+
+            container.scrollTo({
+                left: target.offsetLeft - container.offsetLeft,
+                behavior: 'smooth'
+            });
+
+            resetInterval();
+        });
+    });
+
+    function setActiveButton() {
+        for (let i = 0; i < anchorsArray.length; i++) {
+            if (i != index) {
+                const button = anchorsArray[i].querySelector('button');
+                if (button) button.style.transform = "";
+            }
+        }
+
+        console.log(anchorsArray[index]);
+        console.log(anchorsArray[index].querySelector('button'));
+        const activeButton = anchorsArray[index].querySelector('button');
+        if (activeButton) activeButton.style.transform = "scale(1.2)";
+    }
+
+    const container = document.querySelector('.event-cards-container');
+    const backScrollLeft = document.querySelector("#first-card").offsetLeft;
+    const frontScrollLeft = document.querySelector("#last-card").offsetLeft - cardWidth;
+    document.getElementById('back-button').addEventListener('click', moveLeft);
+
+    document.getElementById('front-button').addEventListener('click', moveRight);
+
+    function moveLeft() {
+        console.log("hi", backScrollLeft);
+        console.log(container.scrollLeft);
+
+        const startScroll = container.scrollLeft;
+        if (container.scrollLeft <= backScrollLeft) {
+            const lastRealCard = document.querySelector('#last-card');
+            container.scrollTo({
+                left: lastRealCard.offsetLeft - container.offsetLeft,
+                behavior: 'smooth'
+            });
+            index = anchorsArray.length - 1;
+        }
+        else {
+            container.scrollBy({
+                left: -cardWidth,
+                behavior: 'smooth'
+            });
+            index--;
+
+        }
+
+        const endScroll = container.scrollLeft;
+
+        console.log(endScroll);
+
+        setActiveButton();
+
+
+        resetInterval();
+
+    }
+
+    function moveRight() {
+        console.log("hi", frontScrollLeft);
+        console.log(container.scrollLeft);
+
+        const startScroll = container.scrollLeft;
+
+        if (container.scrollLeft >= frontScrollLeft) {
+            const lastRealCard = document.querySelector('#first-card');
+            container.scrollTo({
+                left: lastRealCard.offsetLeft - container.offsetLeft,
+                behavior: 'smooth'
+            });
+            index = 0;
+        } else {
+            container.scrollBy({
+                left: cardWidth,
+                behavior: 'smooth'
+            });
+            index++;
+        }
+
+        console.log(container.scrollLeft);
+
+        setActiveButton();
+
+        resetInterval();
+
+    }
+
+    function resetInterval() {
+        clearInterval(intervalID);
+        startInterval();
+    }
+
+    function startInterval() {
+        intervalID = setInterval(moveRight, 3000);
+        console.log("interval started");
+    }
+
+
+    startInterval();
+    setActiveButton();
+
+</script>
 
 <script>
     const form = document.getElementById("form");
@@ -619,6 +962,7 @@
 
 <!--EVENT CAROUSEL NAVIGATION-->
 <script>
+    console.log("HII");
     const backButton = document.getElementById("backButton");
     const forwardButton = document.getElementById("forwardButton");
     const gallery = document.querySelector(".gallery");
@@ -641,163 +985,249 @@
     const mainEventImage = mainEventCard.querySelector(".event-image img");
     const mainEventInfo = mainEventCard.querySelectorAll(".event-item");
     const mainEventTitle = document.querySelector(".event-title");
+    const miniEventCardsArray = Array.from(miniEventCards);
 
     function updateMainEvent(card) {
         mainEventImage.src = card.dataset.image;
+        function updateMainEvent(card) {
+            mainEventImage.src = card.dataset.image;
 
-        mainEventInfo[0].textContent = card.dataset.date;
-        mainEventInfo[1].textContent = card.dataset.time;
-        mainEventInfo[2].textContent = card.dataset.cost;
-        mainEventInfo[3].querySelector("a").href = card.dataset.link;
-        mainEventTitle.textContent = card.dataset.title;
-    };
-    miniEventCards.forEach((card) => {
-        card.addEventListener("click", () => {
-            updateMainEvent(card);
+            mainEventInfo[0].textContent = card.dataset.date;
+            mainEventInfo[1].textContent = card.dataset.time;
+            mainEventInfo[2].textContent = card.dataset.cost;
+            mainEventInfo[3].querySelector("a").href = card.dataset.link;
+            mainEventTitle.textContent = card.dataset.title;
+        };
+        miniEventCards.forEach((card) => {
+            card.addEventListener("click", () => {
+                updateMainEvent(card);
+                removeColor(card);
+            })
         })
-    })
 
-    if (miniEventCards.length > 0) {
-        miniEventCards[0].click();
-    }
+        if (miniEventCards.length > 0) {
+            miniEventCards[0].click();
+        }
 </script>
 
 
 <!--FLOWER ANIMATION DELAY-->
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const flowersL = document.querySelectorAll('.flowerL');
-        const flowersR = document.querySelectorAll('.flowerR');
-        const totalDuration = 2;
+        document.addEventListener('DOMContentLoaded', function () {
+            document.addEventListener('DOMContentLoaded', function () {
+                const flowersL = document.querySelectorAll('.flowerL');
+                const flowersR = document.querySelectorAll('.flowerR');
+                const totalDuration = 2;
 
-        flowersL.forEach((flower, index) => {
-            const delayFraction = (index + 1) / flowersL.length;
-            const delay = totalDuration * delayFraction;
+                flowersL.forEach((flower, index) => {
+                    const delayFraction = (index + 1) / flowersL.length;
+                    const delay = totalDuration * delayFraction;
 
-            flower.style.setProperty('--animation-delay', `-${delay}s`)
-        })
+                    flower.style.setProperty('--animation-delay', `-${delay}s`)
+                })
 
-        flowersR.forEach((flower, index) => {
-            const delayFraction = (index + 1) / flowersR.length;
-            const delay = totalDuration * delayFraction;
+                flowersR.forEach((flower, index) => {
+                    const delayFraction = (index + 1) / flowersR.length;
+                    const delay = totalDuration * delayFraction;
 
-            flower.style.setProperty("--animation-delay", `-${delay}s`)
-        })
+                    flower.style.setProperty("--animation-delay", `-${delay}s`)
+                })
 
-    });
+            });
 </script>
 
 <!--BOUNCY ARROW-->
 <script>
-    function checkWindowSize() {
-        const arrow = document.querySelector('.arrow')
+        function checkWindowSize() {
+            const arrow = document.querySelector('.arrow')
 
-        if (window.innerWidth < 500) {
-            arrow.style.display = 'none';
-            arrow.parentElement.style.display = 'none';
-        }
-        else {
-            arrow.style.display = "inline-block"
-            arrow.parentElement.style.display = 'block';
-        }
-    }
+            if (window.innerWidth < 500) {
+                if (window.innerWidth < 500) {
+                    arrow.style.display = 'none';
+                    arrow.parentElement.style.display = 'none';
+                }
+                else {
+                    arrow.style.display = "inline-block"
+                    arrow.parentElement.style.display = 'block';
+                    arrow.parentElement.style.display = 'block';
+                }
+            }
 
-    checkWindowSize();
-    window.addEventListener('resize', checkWindowSize);
+            checkWindowSize();
+            window.addEventListener('resize', checkWindowSize);
 </script>
 
 <!--START SCROLL @ TOP-->
 <script>
-    window.addEventListener('beforeunload', () => {
-        window.scrollTo(0, 0);
-    })
+        window.addEventListener('beforeunload', () => {
+            window.scrollTo(0, 0);
+            window.scrollTo(0, 0);
+        })
 </script>
 
 <!--TITLE ANIM AND FLOWER ANIM-->
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const word = document.getElementById('animated-word');
-        const newsletterSignup = document.getElementById('newsletter-signup');
-        const flowerBundleL = document.getElementById('flower-bundleL');
-        const flowerBundleR = document.getElementById('flower-bundleR');
+            document.addEventListener('DOMContentLoaded', () => {
+                const word = document.getElementById('animated-word');
+                const newsletterSignup = document.getElementById('newsletter-signup');
+                const flowerBundleL = document.getElementById('flower-bundleL');
+                const flowerBundleR = document.getElementById('flower-bundleR');
 
-        const adjustFlowerScale = () => {
-            const totalScale = (window.innerWidth / 1920);
-            const minScale = totalScale * 0.6;
-            let currScale = totalScale;
+                const adjustFlowerScale = () => {
+                    const totalScale = (window.innerWidth / 1920);
+                    const minScale = totalScale * 0.6;
+                    let currScale = totalScale;
+                    const word = document.getElementById('animated-word');
+                    const newsletterSignup = document.getElementById('newsletter-signup');
+                    const flowerBundleL = document.getElementById('flower-bundleL');
+                    const flowerBundleR = document.getElementById('flower-bundleR');
 
-            // Calculate the scale proportionally
-            const scaleProgress = (window.scrollY - 0) / (document.body.scrollHeight * 0.3);
-            currScale = totalScale - ((totalScale - minScale) * scaleProgress);
-            if (window.scrollY > document.body.scrollHeight * 0.3) {
-                currScale = minScale;
-            }
+                    const adjustFlowerScale = () => {
+                        const totalScale = (window.innerWidth / 1920);
+                        const minScale = totalScale * 0.6;
+                        let currScale = totalScale;
 
-            flowerBundleL.style.scale = `${currScale}`;
-            flowerBundleR.style.scale = `${currScale}`;
-        };
+                        // Calculate the scale proportionally
+                        const scaleProgress = (window.scrollY - 0) / (document.body.scrollHeight * 0.3);
+                        currScale = totalScale - ((totalScale - minScale) * scaleProgress);
+                        if (window.scrollY > document.body.scrollHeight * 0.3) {
+                            currScale = minScale;
+                        }
+                        // Calculate the scale proportionally
+                        const scaleProgress = (window.scrollY - 0) / (document.body.scrollHeight * 0.3);
+                        currScale = totalScale - ((totalScale - minScale) * scaleProgress);
+                        if (window.scrollY > document.body.scrollHeight * 0.3) {
+                            currScale = minScale;
+                        }
 
-        // Run the flower scaling stuff on load and scroll
-        adjustFlowerScale();
+                        flowerBundleL.style.scale = `${currScale}`;
+                        flowerBundleR.style.scale = `${currScale}`;
+                    };
+                    flowerBundleL.style.scale = `${currScale}`;
+                    flowerBundleR.style.scale = `${currScale}`;
+                };
 
-
-        // Check if both elements exist to avoid null errors
-        if (word && newsletterSignup) {
-            document.addEventListener('scroll', () => {
-                const scrollPosition = window.scrollY; // Get the current scroll position
-
-                const maxSpacing = 40; // Maximum letter spacing in pixels
-                const maxOffset = -100;
-                const startScroll = 0; // Scroll position where spacing starts to change
-                const endScroll = window.innerHeight * .5; // Scroll position where maximum spacing is applied
-                //SCALE VARIABLES
-                const startScaleScroll = document.body.scrollHeight * 0;
-                const endScaleScroll = document.body.scrollHeight * .3;
-                const totalScale = (window.innerWidth / 1920);
-                const minScale = totalScale * .6;
-                let currScale = totalScale;
-                // Calculate the letter spacing based on the scroll position
-                let letterSpacing = window.innerWidth < 500 ? 0 : 0; //changed so this does nothing
-
-                //if scroll is not at top or bottom
-                if (scrollPosition >= startScroll && scrollPosition <= endScroll) {
-                    letterSpacing += (scrollPosition / endScroll) * maxSpacing; // Calculate letter spacing
-                    //else if scroll is at bottom
-                } else if (scrollPosition > endScroll) {
-                    letterSpacing += maxSpacing; // Cap at max spacing
-                }
-                if (scrollPosition >= startScaleScroll && scrollPosition <= endScaleScroll) {
-                    const scaleProgress = (scrollPosition - startScaleScroll) / (endScaleScroll - startScaleScroll);
-                    currScale = totalScale - ((totalScale - minScale) * scaleProgress); // Adjust scale proportionally
-                } else if (scrollPosition > endScaleScroll) {
-                    currScale = minScale; // Cap at minimum scale
-                }
-                else if (scrollPosition == startScaleScroll) {
-                    currScale = totalScale;
-                }
-
-                // Apply the calculated letter spacing to the word
-                word.style.letterSpacing = `${letterSpacing}px`;
-                flowerBundleL.style.scale = `${currScale}`;
-                flowerBundleR.style.scale = `${currScale}`;
+                // Run the flower scaling stuff on load and scroll
+                adjustFlowerScale();
+                // Run the flower scaling stuff on load and scroll
+                adjustFlowerScale();
 
 
-                /*
-                    // Adjust the opacity of the newsletter signup background
-                    const maxOpacity = 0.80; // Target opacity at maximum scroll
-                    const minOpacity = 0; // Starting opacity
-                    let opacity;
-        
-                    if (scrollPosition <= endScroll) {
-                        opacity = minOpacity + (scrollPosition / endScroll) * (maxOpacity - minOpacity);
-                    } else {
-                        opacity = maxOpacity;
-                    }
-        
-                    // Apply the opacity to the background color of newsletterSignup
-                    newsletterSignup.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
-                */
-            });
+                // Check if both elements exist to avoid null errors
+                if (word && newsletterSignup) {
+                    document.addEventListener('scroll', () => {
+                        const scrollPosition = window.scrollY; // Get the current scroll position
+                        // Check if both elements exist to avoid null errors
+                        if (word && newsletterSignup) {
+                            document.addEventListener('scroll', () => {
+                                const scrollPosition = window.scrollY; // Get the current scroll position
+
+                                const maxSpacing = 40; // Maximum letter spacing in pixels
+                                const maxOffset = -100;
+                                const startScroll = 0; // Scroll position where spacing starts to change
+                                const endScroll = window.innerHeight * .5; // Scroll position where maximum spacing is applied
+                                //SCALE VARIABLES
+                                const startScaleScroll = document.body.scrollHeight * 0;
+                                const endScaleScroll = document.body.scrollHeight * .3;
+                                const totalScale = (window.innerWidth / 1920);
+                                const minScale = totalScale * .6;
+                                let currScale = totalScale;
+                                // Calculate the letter spacing based on the scroll position
+                                let letterSpacing = window.innerWidth < 500 ? 0 : 0; //changed so this does nothing
+
+                                //if scroll is not at top or bottom
+                                if (scrollPosition >= startScroll && scrollPosition <= endScroll) {
+                                    letterSpacing += (scrollPosition / endScroll) * maxSpacing; // Calculate letter spacing
+                                    //else if scroll is at bottom
+                                } else if (scrollPosition > endScroll) {
+                                    letterSpacing += maxSpacing; // Cap at max spacing
+                                }
+                                if (scrollPosition >= startScaleScroll && scrollPosition <= endScaleScroll) {
+                                    const scaleProgress = (scrollPosition - startScaleScroll) / (endScaleScroll - startScaleScroll);
+                                    currScale = totalScale - ((totalScale - minScale) * scaleProgress); // Adjust scale proportionally
+                                } else if (scrollPosition > endScaleScroll) {
+                                    currScale = minScale; // Cap at minimum scale
+                                }
+                                else if (scrollPosition == startScaleScroll) {
+                                    currScale = totalScale;
+                                }
+
+                                // Apply the calculated letter spacing to the word
+                                word.style.letterSpacing = `${letterSpacing}px`;
+                                flowerBundleL.style.scale = `${currScale}`;
+                                flowerBundleR.style.scale = `${currScale}`;
+                                const maxSpacing = 40; // Maximum letter spacing in pixels
+                                const maxOffset = -100;
+                                const startScroll = 0; // Scroll position where spacing starts to change
+                                const endScroll = window.innerHeight * .5; // Scroll position where maximum spacing is applied
+                                //SCALE VARIABLES
+                                const startScaleScroll = document.body.scrollHeight * 0;
+                                const endScaleScroll = document.body.scrollHeight * .3;
+                                const totalScale = (window.innerWidth / 1920);
+                                const minScale = totalScale * .6;
+                                let currScale = totalScale;
+                                // Calculate the letter spacing based on the scroll position
+                                let letterSpacing = window.innerWidth < 500 ? 0 : 0; //changed so this does nothing
+
+                                //if scroll is not at top or bottom
+                                if (scrollPosition >= startScroll && scrollPosition <= endScroll) {
+                                    letterSpacing += (scrollPosition / endScroll) * maxSpacing; // Calculate letter spacing
+                                    //else if scroll is at bottom
+                                } else if (scrollPosition > endScroll) {
+                                    letterSpacing += maxSpacing; // Cap at max spacing
+                                }
+                                if (scrollPosition >= startScaleScroll && scrollPosition <= endScaleScroll) {
+                                    const scaleProgress = (scrollPosition - startScaleScroll) / (endScaleScroll - startScaleScroll);
+                                    currScale = totalScale - ((totalScale - minScale) * scaleProgress); // Adjust scale proportionally
+                                } else if (scrollPosition > endScaleScroll) {
+                                    currScale = minScale; // Cap at minimum scale
+                                }
+                                else if (scrollPosition == startScaleScroll) {
+                                    currScale = totalScale;
+                                }
+
+                                // Apply the calculated letter spacing to the word
+                                word.style.letterSpacing = `${letterSpacing}px`;
+                                flowerBundleL.style.scale = `${currScale}`;
+                                flowerBundleR.style.scale = `${currScale}`;
+
+
+                                /*
+                                    // Adjust the opacity of the newsletter signup background
+                                    const maxOpacity = 0.80; // Target opacity at maximum scroll
+                                    const minOpacity = 0; // Starting opacity
+                                    let opacity;
+                        
+                                    if (scrollPosition <= endScroll) {
+                                        opacity = minOpacity + (scrollPosition / endScroll) * (maxOpacity - minOpacity);
+                                    } else {
+                                        opacity = maxOpacity;
+                                    }
+                        
+                                    // Apply the opacity to the background color of newsletterSignup
+                                    newsletterSignup.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
+                                */
+                            });
+                        } else {
+                            console.error("Either 'animated-word' or 'newsletter-signup' element not found.");
+                        }
+                    });
+                    /*
+                        // Adjust the opacity of the newsletter signup background
+                        const maxOpacity = 0.80; // Target opacity at maximum scroll
+                        const minOpacity = 0; // Starting opacity
+                        let opacity;
+            
+                        if (scrollPosition <= endScroll) {
+                            opacity = minOpacity + (scrollPosition / endScroll) * (maxOpacity - minOpacity);
+                        } else {
+                            opacity = maxOpacity;
+                        }
+            
+                        // Apply the opacity to the background color of newsletterSignup
+                        newsletterSignup.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
+                    */
+                });
         } else {
             console.error("Either 'animated-word' or 'newsletter-signup' element not found.");
         }
@@ -807,69 +1237,111 @@
 
 <!--FORM OUTPUT-->
 <script>
-    //FORM OUTPUT
-    const scriptURL = "https://script.google.com/macros/s/AKfycbwzF6tvfbhEdv96_Hp3wRct1gQhseovMiK_PVzuVdL-MMKa2gcL4aTg_ftwEXBq3xfd4Q/exec";
+        //FORM OUTPUT
+        const scriptURL = "https://script.google.com/macros/s/AKfycbwzF6tvfbhEdv96_Hp3wRct1gQhseovMiK_PVzuVdL-MMKa2gcL4aTg_ftwEXBq3xfd4Q/exec";
 
-    document.getElementById("newsletterForm").addEventListener("submit", (e) => {
+        document.getElementById("newsletterForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)) })
+                .then(response => alert("Subscribed successfully!"))
+                .catch(error => alert("Error: " + error.message));
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)) })
+                .then(response => alert("Subscribed successfully!"))
+                .catch(error => alert("Error: " + error.message));
+        });
+        /*
+        document.getElementById("contactForm").addEventListener("submit", (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
         fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)) })
-            .then(response => alert("Subscribed successfully!"))
+            .then(response => alert("Message sent successfully!"))
             .catch(error => alert("Error: " + error.message));
-    });
-    /*
-    document.getElementById("contactForm").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)) })
-        .then(response => alert("Message sent successfully!"))
-        .catch(error => alert("Error: " + error.message));
-    });
-
-    */
+        });
+    
+        */
 </script>
 
 <!--COLLAPSIBLE FAQ-->
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const collapsibleButtons = document.querySelectorAll('.collapsible');
+        document.addEventListener('DOMContentLoaded', function () {
+            const collapsibleButtons = document.querySelectorAll('.collapsible');
 
-        collapsibleButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                const content = this.nextElementSibling;
+            collapsibleButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const content = this.nextElementSibling;
+                    const collapsibleButtons = document.querySelectorAll('.collapsible');
 
-                this.classList.toggle('active');
+                    collapsibleButtons.forEach(button => {
+                        button.addEventListener('click', function () {
+                            const content = this.nextElementSibling;
 
-                if (content.style.maxHeight) {
-                    expandIcon.textContent = "+";
-                    content.style.maxHeight = null;
-                    content.classList.remove('expanded');
-                } else {
-                    expandIcon.textContent = "-";
-                    content.style.maxHeight = content.scrollHeight + 'px'; //expand to full height
-                    content.classList.add('expanded');
-                }
-            });
-        });
-    });
+                            this.classList.toggle('active');
+
+                            if (content.style.maxHeight) {
+                                expandIcon.textContent = "+";
+                                content.style.maxHeight = null;
+                                content.classList.remove('expanded');
+                            } else {
+                                expandIcon.textContent = "-";
+                                content.style.maxHeight = content.scrollHeight + 'px'; //expand to full height
+                                content.classList.add('expanded');
+                            }
+                        });
+                    });
+                });
 
 </script>
 
 <script>
-    window.onload = function () {
-        const collapsible = document.querySelectorAll('.collapsible');
-        const profile = document.querySelector('.profile');
+            window.onload = function () {
+                const collapsible = document.querySelectorAll('.collapsible');
+                const profile = document.querySelector('.profile');
 
-        collapsible.forEach((label, index) => {
-            label.style.animationDelay = `${index * 0.1}s`;
-            label.style.opacity = 1; // Set opacity to 1 to make it visible
-        });
-        profile.forEach((image, index) => {
-            image.style.animationDelay = `${index * 0.1}s`;
-            image.style.opacity = 1;
-        })
-    };
+                collapsible.forEach((label, index) => {
+                    label.style.animationDelay = `${index * 0.1}s`;
+                    label.style.opacity = 1; // Set opacity to 1 to make it visible
+                });
+                profile.forEach((image, index) => {
+                    image.style.animationDelay = `${index * 0.1}s`;
+                    image.style.opacity = 1;
+                })
+            };
+</script>
+this.classList.toggle('active');
+
+if (content.style.maxHeight) {
+expandIcon.textContent = "+";
+content.style.maxHeight = null;
+content.classList.remove('expanded');
+} else {
+expandIcon.textContent = "-";
+content.style.maxHeight = content.scrollHeight + 'px'; //expand to full height
+content.classList.add('expanded');
+}
+});
+});
+});
+
+</script>
+
+<script>
+            window.onload = function () {
+                const collapsible = document.querySelectorAll('.collapsible');
+                const profile = document.querySelector('.profile');
+
+                collapsible.forEach((label, index) => {
+                    label.style.animationDelay = `${index * 0.1}s`;
+                    label.style.opacity = 1; // Set opacity to 1 to make it visible
+                });
+                profile.forEach((image, index) => {
+                    image.style.animationDelay = `${index * 0.1}s`;
+                    image.style.opacity = 1;
+                })
+            };
 </script>
 
 </html>
