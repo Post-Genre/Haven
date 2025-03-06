@@ -261,7 +261,7 @@ html {
 
 .event-cards-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 400px;
   /* width: 50vw; */
@@ -280,7 +280,7 @@ html {
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  scroll-padding: 50%;
+  scroll-padding: 0;
   scrollbar-width: none;
   -ms-overflow-style: none;
   padding-bottom: 0;

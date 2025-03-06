@@ -744,7 +744,7 @@
 <script>
 
     let intervalID;
-    let cardWidth;
+    const cardWidth = document.querySelector('.new-event-card').offsetWidth + 15;
     const anchors = document.querySelectorAll('#events-nav-tag');
     const anchorsArray = Array.from(anchors);
     let index = 0;
@@ -753,24 +753,25 @@
         const container = document.querySelector('.event-cards-container');
         const firstCard = document.querySelector('#first-card');
 
-        cardWidth = document.querySelector('.new-event-card').offsetWidth + 15; // Account for the gap
         console.log("cardwidth: ", cardWidth);
 
         if (container && firstCard) {
             console.log("loaded");
             // Calculate the offset to center the first card
-            const containerWidth = container.offsetWidth;
-            const cardWidth = firstCard.offsetWidth;
-            // const scrollPosition = firstCard.getBoundingClientRect().x - (containerWidth - cardWidth) / 2;
+            const containerRect = container.getBoundingClientRect();
+            const firstCardRect = firstCard.getBoundingClientRect();
 
-            console.log("containerWidhth ", containerWidth);
-            console.log("cardwidth ", cardWidth);
-            // console.log("scrollPosiition ", scrollPosition);
-            // Scroll the container to the calculated position
-            // container.scrollLeft = 2000;
+            const scrollOffset = firstCardRect.left - containerRect.left + container.scrollLeft;
+
+            console.log("containerWidth ", container.offsetWidth);
+            console.log("containerSpot ", container.offsetLeft);
+            console.log("cardWidth ", firstCard.offsetWidth);
+
+            console.log("container bound ", containerRect);
+            console.log("card bound ", firstCardRect);
 
             container.scrollTo({
-                left: firstCard.getBoundingClientRect().x - container.getBoundingClientRect().x,
+                left: scrollOffset,
                 behavior: 'smooth'
             });
 
@@ -822,7 +823,7 @@
 
     const container = document.querySelector('.event-cards-container');
     const backScrollLeft = document.querySelector("#first-card").offsetLeft;
-    const frontScrollLeft = -backScrollLeft;
+    const frontScrollLeft = document.querySelector("#last-card").offsetLeft - cardWidth;
     document.getElementById('back-button').addEventListener('click', moveLeft);
 
     document.getElementById('front-button').addEventListener('click', moveRight);
@@ -895,7 +896,7 @@
     }
 
     function startInterval() {
-        intervalID = setInterval(moveRight, 5000);
+        intervalID = setInterval(moveRight, 3000);
         console.log("interval started");
     }
 
