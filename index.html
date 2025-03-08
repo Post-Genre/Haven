@@ -122,46 +122,42 @@
 
                     <div class="gallery-wrap">
 
-                    <div class="gallery">
-                        <div >
-                            <span
-                            data-image="/media/events/3_14.png"
-                            data-date = "FRI, MAR 14"
-                            data-time = "7PM"
-                            data-cost = "$13.75"
-                            data-link = "https://indietix.org/events/postgenre/haven314"
-                            data-title = "MEBA Presents: Play-It-Forward (a Farina Foundation Benefit Concert)">
-                            <div class="event-date-label"><p>3/14</p></div>
-                            <img src="/media/events/3_14.png">
-                            </span>
-                            
-                            <span
-                            data-image="/media/events/3_15.png"
-                            data-date = "SAT, MAR 15"
-                            data-time = "7PM"
-                            data-cost = "$13.75"
-                            data-link = "https://indietix.org/events/postgenre/haven-315"
-                            data-title = "Times New Wrestlers, Artist Quest, & Townsppl">
-                            <div class="event-date-label"><p>3/15</p></div>
-                            <img src="/media/events/3_15.png">
-                            </span>
+                        <div class="gallery">
+                            <div>
+                                <span data-image="/media/events/3_14.png" data-date="FRI, MAR 14" data-time="7PM"
+                                    data-cost="$13.75" data-link="https://indietix.org/events/postgenre/haven314"
+                                    data-title="MEBA Presents: Play-It-Forward (a Farina Foundation Benefit Concert)">
+                                    <div class="event-date-label">
+                                        <p>3/14</p>
+                                    </div>
+                                    <img src="/media/events/3_14.png">
+                                </span>
 
-                               <span
-                            data-image="/media/events/3_21.png"
-                            data-date = "FRI, MAR 21"
-                            data-time = "7PM"
-                            data-cost = "$13.75"
-                            data-link = "https://indietix.org/events/postgenre/haven-321"
-                            data-title = "Megane EP Release Show featuring The Morning People and Hollownorth">
-                            <div class="event-date-label"><p>3/21</p></div>
-                            <img src="/media/events/3_21.png">
-                            </span>
+                                <span data-image="/media/events/3_15.png" data-date="SAT, MAR 15" data-time="7PM"
+                                    data-cost="$13.75" data-link="https://indietix.org/events/postgenre/haven-315"
+                                    data-title="Times New Wrestlers, Artist Quest, & Townsppl">
+                                    <div class="event-date-label">
+                                        <p>3/15</p>
+                                    </div>
+                                    <img src="/media/events/3_15.png">
+                                </span>
 
+                                <span data-image="/media/events/3_21.png" data-date="FRI, MAR 21" data-time="7PM"
+                                    data-cost="$13.75" data-link="https://indietix.org/events/postgenre/haven-321"
+                                    data-title="Megane EP Release Show featuring The Morning People and Hollownorth">
+                                    <div class="event-date-label">
+                                        <p>3/21</p>
+                                    </div>
+                                    <img src="/media/events/3_21.png">
+                                </span>
+
+                            </div>
                         </div>
                     </div>
-                </div>
-                    <div style="padding-top: 10vh; container-type: inline-size; width: 100vw; display: flex; justify-content: center;">
-                        <a href="events.html" target="_blank" style="text-decoration: none; display: flex; justify-content: center; width: 90%; max-width: 450px;">
+                    <div
+                        style="padding-top: 10vh; container-type: inline-size; width: 100vw; display: flex; justify-content: center;">
+                        <a href="events.html" target="_blank"
+                            style="text-decoration: none; display: flex; justify-content: center; width: 90%; max-width: 450px;">
                             <div class="content-button">
                                 See More Events
                             </div>
@@ -246,7 +242,7 @@
                             </p>
                             <p>
                                 HAVEN is also available for private event rentals including formals, conferences,
-                                meetings, and special performances. The space is equipped with professional audio 
+                                meetings, and special performances. The space is equipped with professional audio
                                 and lighting systems, tables, and chairs. <br><br>
                             </p>
 
@@ -468,7 +464,7 @@
     const result = document.getElementById("result");
     const submitButton = document.getElementById("submitbutton")
 
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', function (e) {
 
         e.preventDefault(); //prevents "submit" button from reloading page (its default behavior)
         const formData = new FormData(form); //FormData is a built in JS object for collecting input data
@@ -477,32 +473,32 @@
         submitButton.textContent = "Submitting...";
         submitButton.style = "background-color: grey; pointer-events: none"
 
-            fetch("https://api.web3forms.com/submit", {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response)=> {
+        fetch("https://api.web3forms.com/submit", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+            .then(async (response) => {
                 let json = await response.json();
-                if (response.status ==200) {
+                if (response.status == 200) {
                     submitButton.textContent = "submit"
                     submitButton.style = "background-color: #2b2323"
                     alert("Message Submitted!")
                 }
             })
-        .catch(error => {
-            console.log(error);
-            alert = "Something went wrong";
-        })
-        .then(function() {
-            form.reset();
-            setTimeout(() => {
-                result.style.display = "none";
-            }, 3000);
-        })
+            .catch(error => {
+                console.log(error);
+                alert = "Something went wrong";
+            })
+            .then(function () {
+                form.reset();
+                setTimeout(() => {
+                    result.style.display = "none";
+                }, 3000);
+            })
     })
 </script>
 
@@ -726,6 +722,8 @@
 
         collapsibleButtons.forEach(button => {
             button.addEventListener('click', function () {
+                const expandIcon = this.querySelector('#expandIcon');
+
                 const content = this.nextElementSibling;
 
                 this.classList.toggle('active');
