@@ -1043,7 +1043,11 @@
 
         collapsibleButtons.forEach(button => {
             button.addEventListener('click', function () {
+                const expandIcon = this.querySelector('#expandIcon');
+
                 const content = this.nextElementSibling;
+
+                console.log("content, ", content);
 
                 this.classList.toggle('active');
 
