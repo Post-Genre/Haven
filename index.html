@@ -1036,6 +1036,7 @@
 </script>
 
 <!--COLLAPSIBLE FAQ-->
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const collapsibleButtons = document.querySelectorAll('.collapsible');
@@ -1043,7 +1044,6 @@
         collapsibleButtons.forEach(button => {
             button.addEventListener('click', function () {
                 const content = this.nextElementSibling;
-                const expandIcon = this.querySelector('.expand-icon');
 
                 this.classList.toggle('active');
 
@@ -1053,30 +1053,29 @@
                     content.classList.remove('expanded');
                 } else {
                     expandIcon.textContent = "-";
-                    content.style.maxHeight = content.scrollHeight + 'px';
+                    content.style.maxHeight = content.scrollHeight + 'px'; //expand to full height
                     content.classList.add('expanded');
                 }
             });
         });
     });
+
 </script>
 
-<!--PROFILE ANIMATION-->
 <script>
     window.onload = function () {
         const collapsible = document.querySelectorAll('.collapsible');
-        const profile = document.querySelectorAll('.profile');
+        const profile = document.querySelector('.profile');
 
         collapsible.forEach((label, index) => {
             label.style.animationDelay = `${index * 0.1}s`;
-            label.style.opacity = 1;
+            label.style.opacity = 1; // Set opacity to 1 to make it visible
         });
-
         profile.forEach((image, index) => {
             image.style.animationDelay = `${index * 0.1}s`;
             image.style.opacity = 1;
-        });
-    };  
+        })
+    };
 </script>
 
 </html>
