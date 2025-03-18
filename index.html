@@ -632,7 +632,7 @@
 <script>
 
     let intervalID;
-    const cardWidth = document.querySelector('.new-event-card').offsetWidth + 15;
+    let cardWidth = document.querySelector('.new-event-card').offsetWidth + 15;
     const anchors = document.querySelectorAll('#events-nav-tag');
     const anchorsArray = Array.from(anchors);
     let index = 0;
@@ -710,8 +710,8 @@
     }
 
     const container = document.querySelector('.event-cards-container');
-    const backScrollLeft = document.querySelector("#first-card").offsetLeft;
-    const frontScrollLeft = document.querySelector("#last-card").offsetLeft - cardWidth;
+    let backScrollLeft = document.querySelector("#first-card").offsetLeft;
+    let frontScrollLeft = document.querySelector("#last-card").offsetLeft - cardWidth;
     document.getElementById('back-button').addEventListener('click', moveLeft);
 
     document.getElementById('front-button').addEventListener('click', moveRight);
@@ -719,6 +719,9 @@
     function moveLeft() {
         console.log("hi", backScrollLeft);
         console.log(container.scrollLeft);
+        cardWidth = document.querySelector('.new-event-card').offsetWidth + 15;
+        backScrollLeft = document.querySelector("#first-card").offsetLeft;
+        frontScrollLeft = document.querySelector("#last-card").offsetLeft - cardWidth;
 
         const startScroll = container.scrollLeft;
         if (container.scrollLeft <= backScrollLeft) {
@@ -752,6 +755,9 @@
     function moveRight() {
         console.log("hi", frontScrollLeft);
         console.log(container.scrollLeft);
+        cardWidth = document.querySelector('.new-event-card').offsetWidth + 15;
+        backScrollLeft = document.querySelector("#first-card").offsetLeft;
+        frontScrollLeft = document.querySelector("#last-card").offsetLeft - cardWidth;
 
         const startScroll = container.scrollLeft;
 
