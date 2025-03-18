@@ -341,10 +341,15 @@ function updateEventsList(events) {
         eventListContainer.appendChild(eventCard);
     });
 
-
     const contentButton = document.createElement('div');
-    contentButton.className = 'content-button';
-    contentButton.innerHTML = `View All Events`;
+    // contentButton.className = 'content-button';
+    contentButton.style.width = "100%";
+    contentButton.innerHTML = `
+    <a href="events.html"  style="text-decoration: none; display: flex; justify-content: center;">
+        <div class="content-button">
+VIEW ALL UPCOMING EVENTS        </div>
+    </a>
+`;
     eventListContainer.appendChild(contentButton);
 }
 
