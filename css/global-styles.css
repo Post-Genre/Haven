@@ -920,9 +920,9 @@ section-header h2 {
   font-size: max(1.3rem, 4cqw);
   text-align: left;
   margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: wrap;
+  /* overflow: auto; */
+  /* text-overflow: ellipsis; */
   max-width: 100%;
 }
 
