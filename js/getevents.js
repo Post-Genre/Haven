@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("event-container")) {
         fetchEventsForEventsPage();
-    } else if (document.querySelector(".gallery")) {
-        fetchEventsForSlideshow();
-    } else if (document.querySelector(".event-line-section")) {
+    } if (document.querySelector(".event-line-section")) {
         fetchEventsForEventsList();
+    } if (document.querySelector(".event-cards-container")) {
+        fetchEventsForSlideshow();
     }
 });
+
 
 // index.html gallery
 async function fetchEventsForEventsPage() {
@@ -67,7 +68,7 @@ async function fetchEventsForSlideshow() {
         if (nextThreeEvents.length > 0) {
             // update slideshow with the upcoming events
             updateSlideshow(nextThreeEvents);
-            updateMainEventCard(nextThreeEvents[0]);
+            // updateMainEventCard(nextThreeEvents[0]);
         } else {
             console.log("No upcoming events to display in slideshow");
         }
@@ -78,6 +79,7 @@ async function fetchEventsForSlideshow() {
 }
 
 async function fetchEventsForEventsList() {
+    console.log("fetcheventsforeventlist");
     try {
         const response = await fetch("https://67sxoyzalltf7cnmecge2sj5yq0bckqd.lambda-url.us-east-2.on.aws", {
             method: 'GET',
@@ -135,15 +137,22 @@ function getUpcomingEvents(events) {
 
 // update slideshow
 function updateSlideshow(events) {
-    const galleryContainer = document.querySelector(".gallery > div");
-    if (!galleryContainer) {
-        console.error("Gallery container not found");
+    const eventCardsContainer = document.querySelector(".event-cards-container");
+    if (!eventCardsContainer) {
+        console.error("Event cards container not found");
         return;
     }
 
-    galleryContainer.innerHTML = "";
+    const cardsToPopulate = ["first-card", "event-3", "event-4"];
 
-    events.forEach(event => {
+    // console.log("Looking for IDs:", cardsToPopulate);
+    // cardsToPopulate.forEach(id => {
+    //     console.log(`Checking ID ${id}:`, document.getElementById(id));
+    // });
+
+    // console.log("asflkjas df;lk , ", document.querySelector(".event-cards-container"));
+
+    events.forEach((event, index) => {
         const [year, month, day] = event.EventDate.split('-').map(num => parseInt(num, 10));
         const shortDate = `${month}/${day}`;
 
@@ -154,37 +163,33 @@ function updateSlideshow(events) {
 
         const doorsTime = event.EventDoorsOpen ? formatTime(event.EventDoorsOpen) : "TBA";
 
-        let price = "TBA";
-        if (event.ticketTypes && event.ticketTypes.length > 0) {
-            const prices = event.ticketTypes.map(ticket => ticket.Price);
-            const lowestPrice = Math.min(...prices);
-            price = `$${lowestPrice.toFixed(2)}`;
-        }
+        // const eventSpan = document.createElement("div");
 
-        const eventSpan = document.createElement("span");
+        console.log("Index, ", cardsToPopulate[index]);
+        const eventCard = document.getElementById(cardsToPopulate[index]);
+        eventCard.style.backgroundImage = `url('${event.EventThumbnail || './media/placeholder-event.jpg'}')`;
 
-        eventSpan.dataset.image = event.EventThumbnail || "./media/placeholder-event.jpg";
-        eventSpan.dataset.date = formattedDate;
-        eventSpan.dataset.time = doorsTime;
-        eventSpan.dataset.cost = price;
-        eventSpan.dataset.link = event.EventUrl;
-        eventSpan.dataset.title = event.EventName;
 
-        eventSpan.innerHTML = `
-            <div class="event-date-label">
-                <p>${shortDate}</p>
-            </div>
-            <img src="${event.EventThumbnail || './media/placeholder-event.jpg'}" onerror="this.src='./media/placeholder-event.jpg'">
-        `;
+        eventCard.innerHTML = `
+         <div class="new-event-title">
+                                    ${event.EventName}<br>
+                                    <i>Get Your Tickets Now!</i>
+                                </div>
 
-        eventSpan.addEventListener("click", () => {
-            updateMainEvent(eventSpan);
-        });
+                                <div class="new-event-button">
 
-        galleryContainer.appendChild(eventSpan);
+
+                                    <button
+                                        onclick="window.open('${event.EventUrl}' , '_blank');">
+                                        TICKETS
+                                    </button>
+                                </div>
+                                `;
+
+        console.log("Evnetcard, ", eventCard);
     });
 
-    const firstEvent = galleryContainer.querySelector("span");
+    const firstEvent = eventCardsContainer.querySelector("span");
     if (firstEvent) {
         firstEvent.click();
     }
@@ -288,6 +293,7 @@ function displayEvents(events) {
 }
 
 function updateEventsList(events) {
+    console.log("updateEventsList");
     const eventListContainer = document.querySelector(".event-line-section");
     if (!eventListContainer) {
         console.error("Event container not found");
