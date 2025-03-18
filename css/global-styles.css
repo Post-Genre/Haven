@@ -403,6 +403,17 @@ html {
   }
 }
 
+@media (max-width: 400px) {
+  .new-event-card {
+    width: 50px;
+  }
+}
+
+@media (max-width: 700px) {
+  .new-event-card {
+    width: 500px;
+  }
+}
 @media (max-width: 700px) {
   #back-button {
     left: 90px;
