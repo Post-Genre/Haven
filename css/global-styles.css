@@ -453,7 +453,7 @@ html {
 
 @media (max-width: 400px) {
   .new-event-card {
-    width: 350px;
+    width: 300px;
   }
 }
 

@@ -641,32 +641,43 @@
         const container = document.querySelector('.event-cards-container');
         const firstCard = document.querySelector('#first-card');
 
+        console.log("<<<<<<<<<<<<<<<<<");
         console.log("cardwidth: ", cardWidth);
+        console.log("firstCard, ", firstCard);
+        console.log("First Card Margin: ", window.getComputedStyle(firstCard).marginLeft);
 
         if (container && firstCard) {
             console.log("loaded");
             // Calculate the offset to center the first card
-            const containerRect = container.getBoundingClientRect();
-            const firstCardRect = firstCard.getBoundingClientRect();
+            //const containerRect = container.offsetLeft();
+            //   const firstCardRect = firstCard.offsetLeft();
 
-            const scrollOffset = firstCardRect.left - containerRect.left + container.scrollLeft;
+            //    const scrollOffset = firstCardRect.left - containerRect.left + container.scrollLeft;
 
             console.log("containerWidth ", container.offsetWidth);
             console.log("containerSpot ", container.offsetLeft);
-            console.log("cardWidth ", firstCard.offsetWidth);
+            console.log("cardWidth ", firstCard.offsetLeft);
+            console.log("scroll left, ", container.scrollLeft);
 
-            console.log("container bound ", containerRect);
-            console.log("card bound ", firstCardRect);
+
+            //  console.log("container bound ", containerRect);
+            //console.log("card bound ", firstCardRect);
+
+
 
             container.scrollTo({
-                left: scrollOffset,
+                left: firstCard.offsetLeft - container.offsetLeft,
                 behavior: 'smooth'
             });
 
             console.log("scrollLeft ", container.scrollLeft);
+
+            console.log("scroll left, ", container.scrollLeft);
+
         }
 
-
+        startInterval();
+        setActiveButton();
     });
 
 
@@ -798,8 +809,7 @@
     }
 
 
-    startInterval();
-    setActiveButton();
+
 
 </script>
 
