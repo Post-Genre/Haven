@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("vp width: ", document.documentElement.clientWidth);
+    console.log("screen widdth: ", document.body.offsetWidth);
+    console.log("event card width, ", document.querySelector(".new-event-card").offsetWidth);
     if (document.getElementById("event-container")) {
         fetchEventsForEventsPage();
     } if (document.querySelector(".event-line-section")) {
@@ -7,7 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
         fetchEventsForSlideshow();
     }
 });
+// fetchEventsForSlideshow();
+// fetchEventsForEventsList();
+// fetchEventsForEventsPage();
 
+document.addEventListener("resize", () => {
+    console.log("hi screen width, ", document.body.offsetWidth);
+    console.log("hi event card width, ", document.querySelector(".new-event-card").offsetWidth);
+})
 
 // index.html gallery
 async function fetchEventsForEventsPage() {

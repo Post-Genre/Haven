@@ -723,8 +723,8 @@
         backScrollLeft = document.querySelector("#first-card").offsetLeft;
         frontScrollLeft = document.querySelector("#last-card").offsetLeft - cardWidth;
 
-        const startScroll = container.scrollLeft;
         if (container.scrollLeft <= backScrollLeft) {
+            console.log("here");
             const lastRealCard = document.querySelector('#last-card');
             container.scrollTo({
                 left: lastRealCard.offsetLeft - container.offsetLeft,
@@ -759,9 +759,12 @@
         backScrollLeft = document.querySelector("#first-card").offsetLeft;
         frontScrollLeft = document.querySelector("#last-card").offsetLeft - cardWidth;
 
-        const startScroll = container.scrollLeft;
+        console.log("container ", container.offsetLeft);
+        console.log("first card ", backScrollLeft);
+
 
         if (container.scrollLeft >= frontScrollLeft) {
+            console.log("here");
             const lastRealCard = document.querySelector('#first-card');
             container.scrollTo({
                 left: lastRealCard.offsetLeft - container.offsetLeft,

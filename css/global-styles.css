@@ -291,7 +291,7 @@ html {
 
 .new-event-card {
   display: flex;
-  flex: 1 0 60%;
+  /* flex: 1 0 60%; */
   width: 650px;
   height: 400px;
   aspect-ratio: 1.75;
@@ -397,23 +397,12 @@ html {
   font-size: 50px;
 }
 
-@media (max-width: 500px) {
-  .new-event-card {
-    width: 300px;
-  }
-}
-
-@media (max-width: 400px) {
+/* @media only screen and (width: 393px) {
   .new-event-card {
     width: 50px;
   }
-}
+} */
 
-@media (max-width: 700px) {
-  .new-event-card {
-    width: 500px;
-  }
-}
 @media (max-width: 700px) {
   #back-button {
     left: 90px;
@@ -422,7 +411,49 @@ html {
     right: 90px;
   }
   .new-event-button {
-    right: 40px;
+    /* right: 40px; */
+  }
+}
+
+@media (max-width: 575px) {
+  #back-button {
+    left: 150px;
+  }
+  #front-button {
+    right: 150px;
+  }
+  .new-event-button {
+    /* right: 60px; */
+  }
+}
+
+@media (max-width: 450px) {
+  #back-button {
+    left: 195px;
+  }
+  #front-button {
+    right: 195px;
+  }
+  .new-event-button {
+    /* right: 60px; */
+  }
+}
+
+@media (max-width: 700px) {
+  .new-event-card {
+    width: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .new-event-card {
+    width: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .new-event-card {
+    width: 350px;
   }
 }
 
@@ -470,6 +501,13 @@ html {
 .events-nav-button .active {
   background-color: lightgrey;
   border-radius: 50%;
+}
+
+.loading-message {
+  font-family: "Virile";
+  font-size: 2.25vw;
+  color: white;
+  font-style: italic;
 }
 
 /* Optional: Expand hidden boxes slightly on hover */
