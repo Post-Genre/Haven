@@ -791,7 +791,7 @@
         backScrollLeft = document.querySelector("#first-card").offsetLeft;
         frontScrollLeft = document.querySelector("#last-card").offsetLeft - cardWidth;
 
-        console.log("container ", container.offsetLeft);
+        console.log("container ", container.offsetWidth);
         console.log("first card ", backScrollLeft);
 
 
@@ -813,7 +813,21 @@
                 left: target.offsetLeft - container.offsetLeft,
                 behavior: 'smooth'
             });
-        } else {
+        } /*else if (index === 4) { //going to last element, can adjust hardcoded number if more elements are added to carousel
+            index++;
+
+            const target = document.querySelector(hrefArray[index].getAttribute('href'));
+            const container = document.querySelector('.event-cards-container');
+            console.log("trying to go to, ", frontScrollLeft);
+
+            container.scrollTo({
+                left: frontScrollLeft,
+                behavior: 'smooth'
+            });
+        }
+            */
+
+        else {
             /*
             container.scrollBy({
                 left: cardWidth,

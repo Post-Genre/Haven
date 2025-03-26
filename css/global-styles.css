@@ -166,6 +166,7 @@ html {
 .events-container {
   display: flex;
   height: 100%;
+  width: 100%;
   /* margin-left: 200px;
   margin-right: 20px; */
   padding-bottom: 15px;
@@ -272,15 +273,15 @@ html {
   -webkit-mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0),
-    black 20%,
-    black 80%,
+    black 10%,
+    black 90%,
     rgba(0, 0, 0, 0)
   );
   mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0),
-    black 20%,
-    black 80%,
+    black 10%,
+    black 90%,
     rgba(0, 0, 0, 0)
   );
 }
@@ -403,6 +404,7 @@ html {
   }
 } */
 
+/*
 @media (max-width: 700px) {
   #back-button {
     left: 90px;
@@ -410,9 +412,7 @@ html {
   #front-button {
     right: 90px;
   }
-  .new-event-button {
-    /* right: 40px; */
-  }
+
 }
 
 @media (max-width: 575px) {
@@ -422,9 +422,7 @@ html {
   #front-button {
     right: 150px;
   }
-  .new-event-button {
-    /* right: 60px; */
-  }
+
 }
 
 @media (max-width: 450px) {
@@ -434,10 +432,8 @@ html {
   #front-button {
     right: 195px;
   }
-  .new-event-button {
-    /* right: 60px; */
-  }
 }
+*/
 
 @media (max-width: 700px) {
   .new-event-card {
@@ -454,7 +450,12 @@ html {
 @media (max-width: 400px) {
   .new-event-card {
     /* cant go past 360 for some reason */
-    width: 375px;
+    width: 360px;
+  }
+
+  .event-cards-container {
+    -webkit-mask-image: none;
+    mask-image: none;
   }
 }
 
