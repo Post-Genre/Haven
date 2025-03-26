@@ -685,7 +685,9 @@
         history.replaceState(null, null, ' '); // Removes the hash from the URL without refreshing
     }
 
-    document.querySelectorAll('#events-nav-tag').forEach(anchor => {
+    const hrefArray = document.querySelectorAll('#events-nav-tag');
+
+    hrefArray.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
@@ -736,19 +738,38 @@
 
         if (container.scrollLeft <= backScrollLeft) {
             console.log("here");
-            const lastRealCard = document.querySelector('#last-card');
+            /*  const lastRealCard = document.querySelector('#last-card');
+              container.scrollTo({
+                  left: lastRealCard.offsetLeft - container.offsetLeft,
+                  behavior: 'smooth'
+              });
+              */
+            index = anchorsArray.length - 1;
+            const target = document.querySelector(hrefArray[index].getAttribute('href'));
+            const container = document.querySelector('.event-cards-container');
+
             container.scrollTo({
-                left: lastRealCard.offsetLeft - container.offsetLeft,
+                left: target.offsetLeft - container.offsetLeft,
                 behavior: 'smooth'
             });
-            index = anchorsArray.length - 1;
+
         }
         else {
+            /*
             container.scrollBy({
                 left: -cardWidth,
                 behavior: 'smooth'
             });
+            */
             index--;
+
+            const target = document.querySelector(hrefArray[index].getAttribute('href'));
+            const container = document.querySelector('.event-cards-container');
+
+            container.scrollTo({
+                left: target.offsetLeft - container.offsetLeft,
+                behavior: 'smooth'
+            });
 
         }
 
@@ -776,18 +797,38 @@
 
         if (container.scrollLeft >= frontScrollLeft) {
             console.log("here");
+            /*
             const lastRealCard = document.querySelector('#first-card');
             container.scrollTo({
                 left: lastRealCard.offsetLeft - container.offsetLeft,
                 behavior: 'smooth'
             });
+            */
             index = 0;
+
+            const target = document.querySelector(hrefArray[index].getAttribute('href'));
+            const container = document.querySelector('.event-cards-container');
+
+            container.scrollTo({
+                left: target.offsetLeft - container.offsetLeft,
+                behavior: 'smooth'
+            });
         } else {
+            /*
             container.scrollBy({
                 left: cardWidth,
                 behavior: 'smooth'
             });
+            */
             index++;
+
+            const target = document.querySelector(hrefArray[index].getAttribute('href'));
+            const container = document.querySelector('.event-cards-container');
+
+            container.scrollTo({
+                left: target.offsetLeft - container.offsetLeft,
+                behavior: 'smooth'
+            });
         }
 
         console.log(container.scrollLeft);
