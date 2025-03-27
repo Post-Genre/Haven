@@ -289,15 +289,15 @@ html {
   -webkit-mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0),
-    black 10%,
-    black 90%,
+    black 5%,
+    black 95%,
     rgba(0, 0, 0, 0)
   );
   mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0),
-    black 10%,
-    black 90%,
+    black 5%,
+    black 95%,
     rgba(0, 0, 0, 0)
   );
 }
@@ -449,6 +449,13 @@ html {
 }
 */
 
+@media (max-width: 750px) {
+  .event-cards-container {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+
 @media (max-width: 700px) {
   .new-event-card {
     width: 500px;
@@ -465,11 +472,6 @@ html {
   .new-event-card {
     /* cant go past 360 for some reason */
     width: 360px;
-  }
-
-  .event-cards-container {
-    -webkit-mask-image: none;
-    mask-image: none;
   }
 }
 

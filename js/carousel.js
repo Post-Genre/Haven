@@ -2,6 +2,17 @@
 let intervalID;
 let cardWidth = document.querySelector('.new-event-card').offsetWidth + 15;
 const anchors = document.querySelectorAll('#events-nav-tag');
+const cards = document.querySelectorAll('.new-event-card');
+let cardsArray = Array.from(cards);
+
+console.log("cards0", cardsArray[0]);
+
+if (cardsArray.length > 1) {
+    cardsArray.shift(); // Remove the first element from the array
+    cardsArray.pop();   // Remove the last element from the array
+}
+
+console.log("crads, ", cardsArray);
 const anchorsArray = Array.from(anchors);
 let index = 0;
 
@@ -41,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startInterval();
     setActiveButton();
+    setActiveCard();
 });
 
 
@@ -56,6 +68,8 @@ hrefArray.forEach(anchor => {
 
         index = anchorsArray.indexOf(anchor);
         setActiveButton();
+
+        setActiveCard();
 
         scrollToPosition(this.getAttribute('href'));
 
@@ -75,6 +89,18 @@ function setActiveButton() {
     console.log(anchorsArray[index].querySelector('button'));
     const activeButton = anchorsArray[index].querySelector('button');
     if (activeButton) activeButton.style.transform = "scale(1.2)";
+}
+
+function setActiveCard() {
+
+    cardsArray.forEach((card, i) => {
+        if (i === (index)) { //idk why, but the center card is not the current index
+            card.style.opacity = "1";
+        }
+        else {
+            card.style.opacity = ".5";
+        }
+    })
 }
 
 const container = document.querySelector('.event-cards-container');
@@ -100,7 +126,6 @@ var Swipe = new Hammer.Swipe();
 
 // Add the recognizer to the manager
 manager.add(Swipe);
-console.log("manager, ", manager);
 
 // Declare global variables to swiped correct distance
 var deltaX = 0;
@@ -143,6 +168,8 @@ function moveLeft() {
 
     setActiveButton();
 
+    setActiveCard();
+
 
     resetInterval();
 
@@ -173,6 +200,8 @@ function moveRight() {
     console.log(container.scrollLeft);
 
     setActiveButton();
+
+    setActiveCard();
 
     resetInterval();
 
