@@ -17,6 +17,11 @@
 </script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
 
+<!-- detecting swipes on mobile -->
+<script src="node_modules/hammerjs/hammer.js"></script>
+<!-- <script src="node_modules/hammerjs/manager.js"></script> -->
+
+
 
 
 <head>
@@ -635,10 +640,16 @@
     var deltaY = 0;
 
     // Subscribe to a desired event
+    //2 is forward, 4 is backward
     manager.on('swipe', function (e) {
         deltaX = deltaX + e.deltaX;
         var direction = e.offsetDirection;
         console.log("direction of swipe", direction);
+        if (direction === 2) {
+            moveRight();
+        } else if (direction === 4) {
+            moveLeft();
+        }
     });
 
     function moveLeft() {

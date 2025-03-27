@@ -420,16 +420,14 @@ html {
   }
 } */
 
-/*
-@media (max-width: 700px) {
+@media (max-width: 700px) and (hover: none) and (pointer: coarse) {
   #back-button {
-    left: 90px;
+    display: none;
   }
   #front-button {
-    right: 90px;
+    display: none;
   }
-
-}
+} /*
 
 @media (max-width: 575px) {
   #back-button {

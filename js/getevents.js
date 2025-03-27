@@ -140,7 +140,7 @@ function getUpcomingEvents(events) {
     return events.filter(event => {
         const [year, month, day] = event.EventDate.split('-').map(num => parseInt(num, 10));
         const eventDate = new Date(year, month - 1, day);
-        return eventDate >= today;
+        return eventDate >= today && event.ShowPublic;
     });
 }
 
