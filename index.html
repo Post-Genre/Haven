@@ -624,6 +624,11 @@
 
     eventFrontButton.addEventListener('click', moveRight);
 
+    container.addEventListener("wheel", function (event) {
+        if (event.deltaX !== 0) {
+            event.preventDefault(); // Block horizontal scrolling
+        }
+    }, { passive: false }); // Important to allow `preventDefault()`
 
     // Create a manager to manager the element
     var manager = new Hammer.Manager(container);
