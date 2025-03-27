@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("vp width: ", document.documentElement.clientWidth);
-    console.log("screen widdth: ", document.body.offsetWidth);
-    console.log("event card width, ", document.querySelector(".new-event-card").offsetWidth);
+
     if (document.getElementById("event-container")) {
         fetchEventsForEventsPage();
     } if (document.querySelector(".event-line-section")) {
@@ -21,6 +19,7 @@ document.addEventListener("resize", () => {
 
 // index.html gallery
 async function fetchEventsForEventsPage() {
+    console.log("fetchEventsForEventsPage");
     try {
         const response = await fetch("https://67sxoyzalltf7cnmecge2sj5yq0bckqd.lambda-url.us-east-2.on.aws", {
             method: 'GET',
@@ -365,13 +364,18 @@ VIEW ALL UPCOMING EVENTS        </div>
 
 function formatTime(timeStr) {
     if (!timeStr) return "TBA";
+    console.log("formatTIme", timeStr);
 
     if (timeStr.includes(':')) {
         const [hours, minutes] = timeStr.split(':');
         const hour = parseInt(hours, 10);
         const ampm = hour >= 12 ? 'PM' : 'AM';
         const hour12 = hour % 12 || 12;
-        return `${hour12}${ampm}`;
+        if (minutes === '00') {
+            return `${hour12}${ampm}`;
+        } else {
+            return `${hour12}:${minutes} ${ampm}`;
+        }
     }
 
     return timeStr;
