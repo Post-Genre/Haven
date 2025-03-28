@@ -15,6 +15,10 @@
   --animation-duration: 2s;
 }
 
+* {
+  hyphens: auto;
+}
+
 html {
   width: 100vw;
   overflow-x: hidden;
@@ -905,6 +909,11 @@ color: black;
   font-style: normal;
   font-weight: bold;
   text-decoration: none;
+}
+
+.content .link {
+  font-weight: bold;
+  font-style: italic;
 }
 
 .content-header {
