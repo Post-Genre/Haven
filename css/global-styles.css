@@ -969,25 +969,37 @@ color: black;
   /* background-color: black; */
   border-radius: 20px;
   align-items: center;
+  width: min(80vw, 450px);
 }
 
 .form-box {
   box-sizing: border-box;
-  border-radius: 12px;
+  border-radius: 10px;
   height: 40px;
   width: 100%;
   margin: 0;
-  padding: 12px;
+  padding: 8px;
   font-size: 20px;
   border: none;
+  opacity: 90%;
+}
+
+.horizontal-form-container {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
 }
 
 .form-container textarea {
   display: flex;
   align-items: center;
   resize: vertical;
-  min-height: 40px; /* Match input height */
+  min-height: 60px; /* Match input height */
   max-height: 100px;
+  /* scrollbar-width: 0; */
+  overflow: hidden;
 }
 
 .form-container button {
@@ -995,12 +1007,16 @@ color: black;
   width: 100%;
   margin: 0;
   padding: 12px;
-  border: none;
+  border-radius: 10px;
+  /* align-self: end; */
 }
 
 .form-container button:hover {
-  transform: scale(1.1);
-  transition: 0.2s;
+  /* transform: scale(1.05);
+  font-size: 105%; */
+  background-color: rgb(8, 188, 50);
+  color: black;
+  transition: 0.5s;
 }
 
 /* 301c09 */
