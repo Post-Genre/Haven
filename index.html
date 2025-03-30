@@ -314,14 +314,27 @@
                     <div class="content" style="background-color: #074785;">
                         <div class="content-text" style="  background-image: url(/media/banners/bottom2.jpg);">
 
-                            <p>Interested in playing at HAVEN? Events at HAVEN are managed by Post Genre. Click the link
-                                below to visit Post Genre’s website, and fill out our artist interest form; we’ll get
+                            <p>Interested in playing at HAVEN? Events at HAVEN are managed by Post Genre. Fill out our
+                                artist interest form below - we’ll get
                                 back to you as soon as we can! We’re excited to collaborate and bring your vision to
                                 life.
 
                                 <br> <br>
                             </p>
-                            <div
+
+                            <form id="interestForm" class="form-container">
+                                <input class="form-box" type="text" style="width: 100%" name="firstName"
+                                    placeholder="Band/Artist Name" required></label>
+                                <input class="form-box" type="email" id="email" name="email"
+                                    placeholder="Enter your email" required>
+                                <input class="form-box" type="link" id="link" name="link"
+                                    placeholder="Link to your music" optional>
+                                <textarea class="form-box" name="message" placeholder="Enter your message here!"
+                                    required></textarea></label>
+                                <button type="submit" id="feedbackMessage">Submit</button>
+                            </form>
+                            <p id="responseMessage"></p>
+                            <!-- <div
                                 style="padding-top: 10vh; container-type: inline-size; width: 100vw; display: flex; justify-content: center;">
                                 <a href="https://pg.media/get-involved.html" target="_blank"
                                     style="text-decoration: none; display: flex; justify-content: center;">
@@ -329,7 +342,7 @@
                                         Artist Interest Form
                                     </div>
                                 </a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </section>
@@ -479,6 +492,37 @@
     <script src="js/getevents.js" defer></script>
     <script src="js/carousel.js"></script>
 </body>
+
+<script>
+    //FORM OUTPUT
+    const artistScriptURL = "https://script.google.com/macros/s/AKfycbyCZOUoghnSPWvuqSZ82Q84XItfndIGViDMiJ4tf_3mzn2aohrRtkx-AI9_Hv5lVpQ9OQ/exec";
+    document.getElementById("interestForm").addEventListener("submit", (e) => {
+        e.preventDefault(); //keeps the page from automatically reloading the page after the form is submitted (default form behavior)
+
+        const form = e.target; //e.target is the elemnt that triggered the event (e), which in this case is the interest form
+        const feedbackMessage = document.getElementById("feedbackMessage");
+        feedbackMessage.textContent = "Submitting...";
+        //feedbackMessage.style = "background-color: grey; pointer-events: none;";
+
+
+        const formData = new FormData(e.target);
+        fetch(artistScriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)), })
+            .then(response => {
+                alert("Message Submitted!")
+                form.reset()
+                feedbackMessage.textContent = "Submit"
+                // feedbackMessage.style = "background-color: #EE7D31;"
+            })
+            .catch(error => alert("Error:" + error.message))
+            .finally(() => {
+                setTimeout(() => {
+                }, 3000);
+            });
+    });
+
+
+
+</script>
 
 
 <script>
