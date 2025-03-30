@@ -217,6 +217,14 @@ function startInterval() {
     console.log("interval started");
 }
 
+function scrollToStudio() {
+    const target = document.querySelector("#studio");
+
+    if (target) {
+        target.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to section
+        history.replaceState(null, null, "#studio"); // Update URL without reloading
+    }
+}
 
 
 
