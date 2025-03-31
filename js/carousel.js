@@ -78,18 +78,40 @@ hrefArray.forEach(anchor => {
 });
 
 function setActiveButton() {
-    for (let i = 0; i < anchorsArray.length; i++) {
-        if (i != index) {
-            const button = anchorsArray[i].querySelector('button');
-            if (button) button.style.transform = "";
-        }
-    }
+
+    // for (let i = 0; i < anchorsArray.length; i++) {
+    //     if (i != index) {
+    //         const button = anchorsArray[i].querySelector('button');
+    //         if (button) button.style.transform = "";
+    //     }
+    // }
+    anchorsArray.forEach(btn => btn.querySelector("button").style.transform = "");
+
+    // Add 'active' class to the clicked button
+    // this.classList.add('active');
 
     console.log(anchorsArray[index]);
     console.log(anchorsArray[index].querySelector('button'));
     const activeButton = anchorsArray[index].querySelector('button');
     if (activeButton) activeButton.style.transform = "scale(1.2)";
+
+
+
+
+
 }
+
+// const buttons = document.querySelectorAll('.events-nav-button');
+
+// buttons.forEach(button => {
+//     button.addEventListener('click', function () {
+//         // Remove 'active' class from all buttons
+//         buttons.forEach(btn => btn.style.transform = "");
+
+//         // Add 'active' class to the clicked button
+//         this.style.transform = "scale(1.2)";
+//     });
+// });
 
 function setActiveCard() {
 
