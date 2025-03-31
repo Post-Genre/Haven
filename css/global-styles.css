@@ -499,7 +499,8 @@ html {
 @media (max-width: 400px) {
   .new-event-card {
     /* cant go past 360 for some reason */
-    width: 360px;
+    width: 350px;
+    height: 300px;
   }
 }
 
