@@ -121,8 +121,14 @@ container.addEventListener("wheel", function (event) {
 // Create a manager to manager the element
 var manager = new Hammer.Manager(container);
 
+var Tap = new Hammer.Tap();
+manager.add(Tap);
+
 // Create a recognizer
-var Swipe = new Hammer.Swipe();
+var Swipe = new Hammer.Swipe({
+    threshold: 2, // Minimum distance (px) before it's recognized as a swipe
+    velocity: 0.2 // Adjust to require a faster or slower swipe
+});
 
 // Add the recognizer to the manager
 manager.add(Swipe);
