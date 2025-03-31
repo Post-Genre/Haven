@@ -17,6 +17,12 @@
 </script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
 
+<!-- detecting swipes on mobile -->
+<script src="node_modules/hammerjs/hammer.js"></script>
+<!-- <script src="node_modules/hammerjs/manager.js"></script> -->
+
+
+
 
 <head>
     <meta charset="UTF-8" />
@@ -26,6 +32,8 @@
     <meta name="description"
         content="Oakland's first above-ground, independent music venue in 20 years launches in January 2025. Get in touch, or sign up for our newsletter so we can keep you in the loop!">
     <link rel="icon" href="media/backgrounds/Church-Lowres.png" type="image/png"> <!-- For .png files -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
 
     <!--Get outta here Pinterest button-->
     <meta name="pinterest" content="nohover">
@@ -47,7 +55,10 @@
 
 
 <body>
+
+
     <div class="background-wrapper"></div>
+
     <div class="flowers">
         <div id="flower-bundleL" class="flower-bundleL">
             <img src="media/flowers/flowers_L_downscaled/lily4.png" class="flowerL flower4" alt="Flower 4">
@@ -74,10 +85,13 @@
         <nav class="navbar">
             <div class="nav-content">
                 <ul class="nav-links">
-                    <li><a href="events.html">Events</a></li>
+                    <!-- <a href="#home" class="img-nav-link"><img src="media/haven-church-logo.png"
+                                alt="Haven logo" /></a> -->
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="#events">Events</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#studio">Studio</a></li>
-                    <li><a href="#studio">Rentals</a></li>
                     <li><a href="#artists">Artists</a></li>
                     <li><a href="#faqs">FAQS</a></li>
 
@@ -85,12 +99,14 @@
             </div>
             <div class="two-row-nav-content" onclick="toggleMenu()">
                 <ul class="nav-links">
-                    <li><a href="events.html">Events</a></li>
+                    <!-- <a href="#home" class="img-nav-link"><img src="media/haven-church-logo.png"
+                                alt="Haven logo" /></a> -->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#events">Events</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#studio">Studio</a></li>
                 </ul>
                 <ul class="nav-links-alt">
-                    <li><a href="#studio">Rentals</a></li>
+                    <li><a href="#studio">Studio</a></li>
                     <li><a href="#artists">Artists</a></li>
                     <li><a href="#faqs">FAQS</a></li>
                 </ul>
@@ -101,72 +117,97 @@
         <div class="bricked-up-body">
 
             <div class="contents" style="width: 100vw;">
-                <section class="section-a">
 
-                    <h1 class="section-title" id="events">Upcoming Events</h1>
 
-                    <div class="event-card">
-                        <div class="event-title"></div>
+                <section class="section-a" id="home">
+                    <!-- <h1 class="header-title">HAVEN - Live Music Every Weekend</h1> -->
 
-                        <div class="event-image">
-                            <img src="./media/church-opening-poster.png" alt="Event Image" />
+
+                    <div class="events-container">
+                        <i class="arrow-button bi bi-caret-left-fill" id="back-button"></i>
+
+                        <div class="event-cards-container">
+
+                            <div class="new-event-card end-card"></div>
+
+                            <div id="first-card" class="new-event-card"></div>
+
+                            <div id="event-1" class="new-event-card"
+                                style="background-image: url('/media/2_14-Spins.png')">
+                                <div class="new-event-title">
+                                    Follow us on Instagram!<br>
+                                    <i>@haven.pgh</i>
+                                </div>
+
+                                <div class="new-event-button">
+                                    <button
+                                        onclick="window.open('https://www.instagram.com/haven.pgh/?hl=en', '_blank');">
+                                        INSTAGRAM
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div id="event-2" class="new-event-card"
+                                style="background-image: url('/media/events/1_24-TheSpins.png')">
+                                <div class="new-event-title">
+                                    PG Studios - Rehearsal Space at HAVEN<br>
+                                    <i>Opening in the Spring! </i>
+                                </div>
+
+                                <div class="new-event-button">
+                                    <button onclick=scrollToStudio()>
+                                        PG STUDIOS
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <div id="event-3" class="new-event-card"></div>
+                            <div id="event-4" class="new-event-card"></div>
+
+                            <div id="last-card" class="new-event-card"
+                                style="background-image: url('/media/backgrounds/Psych Background.png')">
+                                <div class="new-event-title">
+                                    Want to get involved at HAVEN? <br>
+                                    <i>Fill out our interest form!</i>
+                                </div>
+
+                                <div class="new-event-button">
+                                    <button
+                                        onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
+                                        GET INVOLVED!
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <div class="new-event-card end-card"></div>
+
+
                         </div>
 
-                        <div class="event-info">
-                            <div class="event-item"></div>
-                            <div class="event-item"></div>
-                            <div class="event-item"></div>
-                            <div class="event-item"><a href="" target="_blank">TICKETS</a></div>
-                        </div>
+                        <i class="arrow-button bi bi-caret-right-fill" id="front-button"></i>
                     </div>
 
-
-
-                    <div class="gallery-wrap">
-
-                        <div class="gallery">
-                            <div>
-
-                                <span data-image="/media/events/4_03.jpg" data-date="THU, APR 3" data-time="7:30PM"
-                                    data-cost="$10.00" data-link="https://indietix.org/events/postgenre/04032025"
-                                    data-title="HAVEN Comedy Night Hosted by Andrew Lafferty">
-                                    <div class="event-date-label">
-                                        <p>4/3</p>
-                                    </div>
-                                    <img src="/media/events/4_03.jpg">
-                                </span>
-
-                                <span data-image="/media/events/4_4.jpg" data-date="FRI, APR 4" data-time="7PM"
-                                    data-cost="$13.75" data-link="https://indietix.org/events/postgenre/04042025"
-                                    data-title="Funky Lamp 'Punky Lamp' Release with Dream the Heavy and Casino Six">
-                                    <div class="event-date-label">
-                                        <p>4/4</p>
-                                    </div>
-                                    <img src="/media/events/4_4.jpg">
-                                </span>
-
-                                <span data-image="/media/events/4_5.png" data-date="SAT, APR 5" data-time="7PM"
-                                    data-cost="$13.75" data-link="https://indietix.org/events/postgenre/04052025-1"
-                                    data-title="Sunset Drive, Wild Blue Yonder, & Riko and the Whaler
-                                    Collective">
-                                    <div class="event-date-label">
-                                        <p>4/5</p>
-                                    </div>
-                                <img src="/media/events/4_5.png">
-                            </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        style="padding-top: 10vh; container-type: inline-size; width: 100vw; display: flex; justify-content: center;">
-                        <a href="events.html" target="_blank"
-                            style="text-decoration: none; display: flex; justify-content: center; width: 90%; max-width: 450px;">
-                            <div class="content-button">
-                                See More Events
-                            </div>
-                        </a>
+                    <div class="events-nav-container">
+                        <a id="events-nav-tag" href="#first-card"><button class="events-nav-button"></button></a>
+                        <a id="events-nav-tag" href="#event-1"><button class="events-nav-button"></button></a>
+                        <a id="events-nav-tag" href="#event-2"><button class="events-nav-button"></button></a>
+                        <a id="events-nav-tag" href="#event-3"><button class="events-nav-button"></button></a>
+                        <a id="events-nav-tag" href="#event-4"><button class="events-nav-button"></button></a>
+                        <a id="events-nav-tag" href="#last-card"><button class="events-nav-button"></button></a>
                     </div>
                 </section>
+
+                <section class="section-b" id="events">
+                    <h2 style="color: black; font-size: 5vw;">Upcoming Events</h2>
+
+                    <!-- filled with getevents.js -->
+                    <div class="event-line-section"></div>
+
+                </section>
+
+
 
                 <section class="section-b" id="about">
                     <div class="section-header">
@@ -182,7 +223,7 @@
                             <p>
                                 <span class="content-header"> HAVEN </span> is an independent music venue in the heart
                                 of Pittsburgh’s Oakland neighborhood. The venue is operated by <a
-                                    href="https://pg.media" target="_blank" class="link">Post Genre</a> a
+                                    href="https://pg.media" target="_blank" class="link"><u>Post Genre,</u></a> a
                                 Pittsburgh-based organization dedicated to enriching the local community through
                                 concerts, event production training, workshops, and more.
                                 <br><br>
@@ -246,18 +287,22 @@
                             <p>
                                 HAVEN is also available for private event rentals including formals, conferences,
                                 meetings, and special performances. The space is equipped with professional audio
+                                meetings, and special performances. The space is equipped with professional audio
                                 and lighting systems, tables, and chairs. <br><br>
                             </p>
 
                             <p> Contact us to schedule an event now!
                             </p>
 
-                            <form method="POST" id="form">
+                            <form method="POST" id="form" class="form-container">
 
                                 <input type="hidden" name="access_key" value="ee138676-5470-4fad-a8cd-f9119cfc88f5">
-                                <input type="text" name="name" placeholder="Name" required>
-                                <input type="email" name="email" placeholder="Email" required>
-                                <textarea name="message" placeholder="Message" required></textarea>
+                                <!-- <div class="horizontal-form-container"> -->
+                                <input class="form-box" type="text" name="name" placeholder="Name" required>
+                                <input class="form-box" type="email" name="email" placeholder="Email" required>
+                                <!-- </div> -->
+
+                                <textarea class="form-box" name="message" placeholder="Message" required></textarea>
                                 <input type="hidden" name="redirect" value="https://web3forms.com/success">
                                 <button type="submit" id="submitbutton">Submit</button>
                             </form>
@@ -275,14 +320,27 @@
                     <div class="content" style="background-color: #074785;">
                         <div class="content-text" style="  background-image: url(/media/banners/bottom2.jpg);">
 
-                            <p>Interested in playing at HAVEN? Events at HAVEN are managed by Post Genre. Click the link
-                                below to visit Post Genre’s website, and fill out our artist interest form; we’ll get
+                            <p>Interested in playing at HAVEN? Events at HAVEN are managed by Post Genre. Fill out our
+                                artist interest form below - we’ll get
                                 back to you as soon as we can! We’re excited to collaborate and bring your vision to
                                 life.
 
                                 <br> <br>
                             </p>
-                            <div
+
+                            <form id="interestForm" class="form-container">
+                                <input class="form-box" type="text" style="width: 100%" name="firstName"
+                                    placeholder="Band/Artist Name" required></label>
+                                <input class="form-box" type="email" id="email" name="email"
+                                    placeholder="Enter your email" required>
+                                <input class="form-box" type="link" id="link" name="link"
+                                    placeholder="Link to your music" optional>
+                                <textarea class="form-box" name="message" placeholder="Enter your message here!"
+                                    required></textarea></label>
+                                <button type="submit" id="feedbackMessage">Submit</button>
+                            </form>
+                            <p id="responseMessage"></p>
+                            <!-- <div
                                 style="padding-top: 10vh; container-type: inline-size; width: 100vw; display: flex; justify-content: center;">
                                 <a href="https://pg.media/get-involved.html" target="_blank"
                                     style="text-decoration: none; display: flex; justify-content: center;">
@@ -290,7 +348,7 @@
                                         Artist Interest Form
                                     </div>
                                 </a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </section>
@@ -325,6 +383,7 @@
                                         </a></a>
                                 </div>
                             </div>
+
 
                             <div class="collapsible-section" style="padding-bottom: 15px;">
                                 <button class="collapsible">
@@ -361,6 +420,9 @@
                                         </a></a>
                                 </div>
                             </div>
+
+
+
 
                             <div class="collapsible-section" style="padding-bottom: 15px;">
                                 <button class="collapsible">
@@ -401,22 +463,8 @@
                 </section>
 
 
+
                 <section id="newsletter-signup" class="section-a">
-                    <!--   <p><i class="arrow">↓</i></p> -->
-
-
-
-                    <!--
-                <form id="newsletterForm">
-                    <div class="name">
-                        <input type="text" style="width: 100%" name="firstName" placeholder="First Name (optional)" optional></label>
-                        <input type="text" style="width: 100%" name="lastName" placeholder="Last Name (optional)" optional></label>
-                    </div> 
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    <input type="phone" id="phone" name="phone" placeholder="Enter your phone number (optional)" optional>
-                    <button type="submit">Subscribe</button>
-                </form>
-                -->
                     <div class="footer">
                         <img src="./media/havenpngvirile2.png" style="filter:brightness(0); width: 100%; scale: 80%;">
 
@@ -435,20 +483,6 @@
                                 <img src="./media/pg-logo.png" alt="intagram" style="filter: brightness(0);">
                             </a>
                         </div>
-                        <!--
-                        <form id="contactForm">
-                            <div class="input-container">
-                                <div class="name">
-                                    <input type="text" style="width: 100%" name="firstName" placeholder="First Name" optional></label>
-                                    <input type="text" style="width: 100%" name="lastName" placeholder="Last Name" optional></label>
-                                </div> 
-                                <input type="email" name="email" placeholder="Email Address"required></label>
-                                <input type="phone" id="phone" name="phone" placeholder="Enter your phone number (optional)" optional>
-                                <textarea name="message" placeholder="Enter your message here!" required></textarea></label>
-                                <button type="submit">Send</button>
-                            </div> 
-                        </form>
-                    -->
                         <p id="responseMessage"></p>
 
                         <div class="copyright">
@@ -460,7 +494,71 @@
         </div>
     </section>
 
+
+    <script src="js/getevents.js" defer></script>
+    <script src="js/carousel.js"></script>
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (window.location.hash) {
+            const target = document.querySelector(window.location.hash);
+            console.log("target, ", target);
+            if (target) {
+                setTimeout(() => {
+                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 500); // Small delay to ensure the page is fully loaded
+            }
+        }
+    });
+
+    const navs = document.querySelectorAll("a");
+
+    navs.forEach(nav => {
+        nav.addEventListener('click', function (e) {
+            const rect = this.getBoundingClientRect();
+
+            console.log("Clicked, target is:", this.getAttribute("href"));
+            console.log("Position on screen:");
+            console.log("Top:", rect.top);
+            console.log("Left:", rect.left);
+            console.log("Bottom:", rect.bottom);
+            console.log("Right:", rect.right);
+        });
+    });
+</script>
+
+<script>
+    //FORM OUTPUT
+    const artistScriptURL = "https://script.google.com/macros/s/AKfycbyCZOUoghnSPWvuqSZ82Q84XItfndIGViDMiJ4tf_3mzn2aohrRtkx-AI9_Hv5lVpQ9OQ/exec";
+    document.getElementById("interestForm").addEventListener("submit", (e) => {
+        e.preventDefault(); //keeps the page from automatically reloading the page after the form is submitted (default form behavior)
+
+        const form = e.target; //e.target is the elemnt that triggered the event (e), which in this case is the interest form
+        const feedbackMessage = document.getElementById("feedbackMessage");
+        feedbackMessage.textContent = "Submitting...";
+        //feedbackMessage.style = "background-color: grey; pointer-events: none;";
+
+
+        const formData = new FormData(e.target);
+        fetch(artistScriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)), })
+            .then(response => {
+                alert("Message Submitted!")
+                form.reset()
+                feedbackMessage.textContent = "Submit"
+                // feedbackMessage.style = "background-color: #EE7D31;"
+            })
+            .catch(error => alert("Error:" + error.message))
+            .finally(() => {
+                setTimeout(() => {
+                }, 3000);
+            });
+    });
+
+
+
+</script>
+
 
 <script>
     const form = document.getElementById("form");
@@ -507,6 +605,7 @@
 
 <!--EVENT CAROUSEL NAVIGATION-->
 <script>
+    console.log("HII");
     const backButton = document.getElementById("backButton");
     const forwardButton = document.getElementById("forwardButton");
     const gallery = document.querySelector(".gallery");
@@ -529,24 +628,29 @@
     const mainEventImage = mainEventCard.querySelector(".event-image img");
     const mainEventInfo = mainEventCard.querySelectorAll(".event-item");
     const mainEventTitle = document.querySelector(".event-title");
+    const miniEventCardsArray = Array.from(miniEventCards);
 
     function updateMainEvent(card) {
         mainEventImage.src = card.dataset.image;
+        function updateMainEvent(card) {
+            mainEventImage.src = card.dataset.image;
 
-        mainEventInfo[0].textContent = card.dataset.date;
-        mainEventInfo[1].textContent = card.dataset.time;
-        mainEventInfo[2].textContent = card.dataset.cost;
-        mainEventInfo[3].querySelector("a").href = card.dataset.link;
-        mainEventTitle.textContent = card.dataset.title;
-    };
-    miniEventCards.forEach((card) => {
-        card.addEventListener("click", () => {
-            updateMainEvent(card);
+            mainEventInfo[0].textContent = card.dataset.date;
+            mainEventInfo[1].textContent = card.dataset.time;
+            mainEventInfo[2].textContent = card.dataset.cost;
+            mainEventInfo[3].querySelector("a").href = card.dataset.link;
+            mainEventTitle.textContent = card.dataset.title;
+        };
+        miniEventCards.forEach((card) => {
+            card.addEventListener("click", () => {
+                updateMainEvent(card);
+                removeColor(card);
+            })
         })
-    })
 
-    if (miniEventCards.length > 0) {
-        miniEventCards[0].click();
+        if (miniEventCards.length > 0) {
+            miniEventCards[0].click();
+        }
     }
 </script>
 
@@ -561,31 +665,27 @@
         flowersL.forEach((flower, index) => {
             const delayFraction = (index + 1) / flowersL.length;
             const delay = totalDuration * delayFraction;
-
-            flower.style.setProperty('--animation-delay', `-${delay}s`)
-        })
+            flower.style.setProperty('--animation-delay', `-${delay}s`);
+        });
 
         flowersR.forEach((flower, index) => {
             const delayFraction = (index + 1) / flowersR.length;
             const delay = totalDuration * delayFraction;
-
-            flower.style.setProperty("--animation-delay", `-${delay}s`)
-        })
-
+            flower.style.setProperty('--animation-delay', `-${delay}s`);
+        });
     });
 </script>
 
 <!--BOUNCY ARROW-->
 <script>
     function checkWindowSize() {
-        const arrow = document.querySelector('.arrow')
+        const arrow = document.querySelector('.arrow');
 
         if (window.innerWidth < 500) {
             arrow.style.display = 'none';
             arrow.parentElement.style.display = 'none';
-        }
-        else {
-            arrow.style.display = "inline-block"
+        } else {
+            arrow.style.display = 'inline-block';
             arrow.parentElement.style.display = 'block';
         }
     }
@@ -598,7 +698,7 @@
 <script>
     window.addEventListener('beforeunload', () => {
         window.scrollTo(0, 0);
-    })
+    });
 </script>
 
 <!--TITLE ANIM AND FLOWER ANIM-->
@@ -614,7 +714,6 @@
             const minScale = totalScale * 0.6;
             let currScale = totalScale;
 
-            // Calculate the scale proportionally
             const scaleProgress = (window.scrollY - 0) / (document.body.scrollHeight * 0.3);
             currScale = totalScale - ((totalScale - minScale) * scaleProgress);
             if (window.scrollY > document.body.scrollHeight * 0.3) {
@@ -625,77 +724,34 @@
             flowerBundleR.style.scale = `${currScale}`;
         };
 
-        // Run the flower scaling stuff on load and scroll
         adjustFlowerScale();
+        document.addEventListener('scroll', adjustFlowerScale);
 
-
-        // Check if both elements exist to avoid null errors
         if (word && newsletterSignup) {
             document.addEventListener('scroll', () => {
-                const scrollPosition = window.scrollY; // Get the current scroll position
+                const scrollPosition = window.scrollY;
 
-                const maxSpacing = 40; // Maximum letter spacing in pixels
-                const maxOffset = -100;
-                const startScroll = 0; // Scroll position where spacing starts to change
-                const endScroll = window.innerHeight * .5; // Scroll position where maximum spacing is applied
-                //SCALE VARIABLES
-                const startScaleScroll = document.body.scrollHeight * 0;
-                const endScaleScroll = document.body.scrollHeight * .3;
-                const totalScale = (window.innerWidth / 1920);
-                const minScale = totalScale * .6;
-                let currScale = totalScale;
-                // Calculate the letter spacing based on the scroll position
-                let letterSpacing = window.innerWidth < 500 ? 0 : 0; //changed so this does nothing
+                const maxSpacing = 40;
+                const startScroll = 0;
+                const endScroll = window.innerHeight * 0.5;
 
-                //if scroll is not at top or bottom
+                let letterSpacing = window.innerWidth < 500 ? 0 : 0;
                 if (scrollPosition >= startScroll && scrollPosition <= endScroll) {
-                    letterSpacing += (scrollPosition / endScroll) * maxSpacing; // Calculate letter spacing
-                    //else if scroll is at bottom
+                    letterSpacing += (scrollPosition / endScroll) * maxSpacing;
                 } else if (scrollPosition > endScroll) {
-                    letterSpacing += maxSpacing; // Cap at max spacing
-                }
-                if (scrollPosition >= startScaleScroll && scrollPosition <= endScaleScroll) {
-                    const scaleProgress = (scrollPosition - startScaleScroll) / (endScaleScroll - startScaleScroll);
-                    currScale = totalScale - ((totalScale - minScale) * scaleProgress); // Adjust scale proportionally
-                } else if (scrollPosition > endScaleScroll) {
-                    currScale = minScale; // Cap at minimum scale
-                }
-                else if (scrollPosition == startScaleScroll) {
-                    currScale = totalScale;
+                    letterSpacing = maxSpacing;
                 }
 
-                // Apply the calculated letter spacing to the word
                 word.style.letterSpacing = `${letterSpacing}px`;
-                flowerBundleL.style.scale = `${currScale}`;
-                flowerBundleR.style.scale = `${currScale}`;
-
-
-                /*
-                    // Adjust the opacity of the newsletter signup background
-                    const maxOpacity = 0.80; // Target opacity at maximum scroll
-                    const minOpacity = 0; // Starting opacity
-                    let opacity;
-        
-                    if (scrollPosition <= endScroll) {
-                        opacity = minOpacity + (scrollPosition / endScroll) * (maxOpacity - minOpacity);
-                    } else {
-                        opacity = maxOpacity;
-                    }
-        
-                    // Apply the opacity to the background color of newsletterSignup
-                    newsletterSignup.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
-                */
             });
         } else {
             console.error("Either 'animated-word' or 'newsletter-signup' element not found.");
         }
     });
-
 </script>
 
 <!--FORM OUTPUT-->
 <script>
-    //FORM OUTPUT
     const scriptURL = "https://script.google.com/macros/s/AKfycbwzF6tvfbhEdv96_Hp3wRct1gQhseovMiK_PVzuVdL-MMKa2gcL4aTg_ftwEXBq3xfd4Q/exec";
 
     document.getElementById("newsletterForm").addEventListener("submit", (e) => {
@@ -705,16 +761,6 @@
             .then(response => alert("Subscribed successfully!"))
             .catch(error => alert("Error: " + error.message));
     });
-    /*
-    document.getElementById("contactForm").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)) })
-        .then(response => alert("Message sent successfully!"))
-        .catch(error => alert("Error: " + error.message));
-    });
-
-    */
 </script>
 
 <!--COLLAPSIBLE FAQ-->
@@ -728,6 +774,8 @@
                 const expandIcon = this.querySelector('#expandIcon');
 
                 const content = this.nextElementSibling;
+
+                console.log("content, ", content);
 
                 this.classList.toggle('active');
 
