@@ -547,6 +547,17 @@ html {
   gap: 5px;
 }
 
+@media (max-width: 700px) and (hover: none) and (pointer: coarse) {
+  .events-nav-container {
+    display: none;
+  }
+
+  #back-button,
+  #front-button {
+    bottom: 0;
+  }
+}
+
 .events-nav-button {
   border-radius: 50%;
   width: 24px;

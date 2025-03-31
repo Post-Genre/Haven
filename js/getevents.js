@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
 // fetchEventsForEventsPage();
 
 document.addEventListener("resize", () => {
-    console.log("hi screen width, ", document.body.offsetWidth);
-    console.log("hi event card width, ", document.querySelector(".new-event-card").offsetWidth);
+    //     console.log("hi screen width, ", document.body.offsetWidth);
+    //     console.log("hi event card width, ", document.querySelector(".new-event-card").offsetWidth);
 })
 
 // index.html gallery
 async function fetchEventsForEventsPage() {
-    console.log("fetchEventsForEventsPage");
+    //     console.log("fetchEventsForEventsPage");
     try {
         const response = await fetch("https://67sxoyzalltf7cnmecge2sj5yq0bckqd.lambda-url.us-east-2.on.aws", {
             method: 'GET',
@@ -31,7 +31,7 @@ async function fetchEventsForEventsPage() {
         }
 
         const data = await response.json();
-        console.log("Event data:", data);
+        //         console.log("Event data:", data);
 
         const sortedEvents = sortEventsByDate(data);
 
@@ -67,7 +67,7 @@ async function fetchEventsForSlideshow() {
         }
 
         const data = await response.json();
-        console.log("Event data for slideshow:", data);
+        //         console.log("Event data for slideshow:", data);
 
         // sort events by date and get the next 3
         const sortedEvents = sortEventsByDate(data);
@@ -79,7 +79,7 @@ async function fetchEventsForSlideshow() {
             updateSlideshow(nextThreeEvents);
             // updateMainEventCard(nextThreeEvents[0]);
         } else {
-            console.log("No upcoming events to display in slideshow");
+            //             console.log("No upcoming events to display in slideshow");
         }
     }
     catch (error) {
@@ -88,7 +88,7 @@ async function fetchEventsForSlideshow() {
 }
 
 async function fetchEventsForEventsList() {
-    console.log("fetcheventsforeventlist");
+    //     console.log("fetcheventsforeventlist");
     try {
         const response = await fetch("https://67sxoyzalltf7cnmecge2sj5yq0bckqd.lambda-url.us-east-2.on.aws", {
             method: 'GET',
@@ -100,7 +100,7 @@ async function fetchEventsForEventsList() {
         }
 
         const data = await response.json();
-        console.log("Event data for slideshow:", data);
+        //         console.log("Event data for slideshow:", data);
 
         // sort events by date and get the next 3
         const sortedEvents = sortEventsByDate(data);
@@ -113,7 +113,7 @@ async function fetchEventsForEventsList() {
             // update slideshow with the upcoming events
             updateEventsList(nextThreeEvents);
         } else {
-            console.log("No upcoming events to display in slideshow");
+            //             console.log("No upcoming events to display in slideshow");
         }
     }
     catch (error) {
@@ -154,12 +154,12 @@ function updateSlideshow(events) {
 
     const cardsToPopulate = ["first-card", "event-3", "event-4"];
 
-    // console.log("Looking for IDs:", cardsToPopulate);
+    //     // console.log("Looking for IDs:", cardsToPopulate);
     // cardsToPopulate.forEach(id => {
-    //     console.log(`Checking ID ${id}:`, document.getElementById(id));
+    //     //     console.log(`Checking ID ${id}:`, document.getElementById(id));
     // });
 
-    // console.log("asflkjas df;lk , ", document.querySelector(".event-cards-container"));
+    //     // console.log("asflkjas df;lk , ", document.querySelector(".event-cards-container"));
 
     events.forEach((event, index) => {
         const [year, month, day] = event.EventDate.split('-').map(num => parseInt(num, 10));
@@ -174,7 +174,7 @@ function updateSlideshow(events) {
 
         // const eventSpan = document.createElement("div");
 
-        console.log("Index, ", cardsToPopulate[index]);
+        //         console.log("Index, ", cardsToPopulate[index]);
         const eventCard = document.getElementById(cardsToPopulate[index]);
         eventCard.style.backgroundImage = `url('${event.EventThumbnail || './media/placeholder-event.jpg'}')`;
 
@@ -195,7 +195,7 @@ function updateSlideshow(events) {
                                 </div>
                                 `;
 
-        console.log("Evnetcard, ", eventCard);
+        //         console.log("Evnetcard, ", eventCard);
     });
 
     const firstEvent = eventCardsContainer.querySelector("span");
@@ -302,7 +302,7 @@ function displayEvents(events) {
 }
 
 function updateEventsList(events) {
-    console.log("updateEventsList");
+    //     console.log("updateEventsList");
     const eventListContainer = document.querySelector(".event-line-section");
     if (!eventListContainer) {
         console.error("Event container not found");
@@ -364,7 +364,7 @@ VIEW ALL UPCOMING EVENTS        </div>
 
 function formatTime(timeStr) {
     if (!timeStr) return "TBA";
-    console.log("formatTIme", timeStr);
+    //     console.log("formatTIme", timeStr);
 
     if (timeStr.includes(':')) {
         const [hours, minutes] = timeStr.split(':');

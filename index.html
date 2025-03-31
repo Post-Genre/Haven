@@ -503,7 +503,7 @@
     document.addEventListener("DOMContentLoaded", function () {
         if (window.location.hash) {
             const target = document.querySelector(window.location.hash);
-            console.log("target, ", target);
+            // console.log("target, ", target);
             if (target) {
                 setTimeout(() => {
                     target.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -518,12 +518,8 @@
         nav.addEventListener('click', function (e) {
             const rect = this.getBoundingClientRect();
 
-            console.log("Clicked, target is:", this.getAttribute("href"));
-            console.log("Position on screen:");
-            console.log("Top:", rect.top);
-            console.log("Left:", rect.left);
-            console.log("Bottom:", rect.bottom);
-            console.log("Right:", rect.right);
+            //console.log("Clicked, target is:", this.getAttribute("href"));
+
         });
     });
 </script>
@@ -605,7 +601,7 @@
 
 <!--EVENT CAROUSEL NAVIGATION-->
 <script>
-    console.log("HII");
+    //console.log("HII");
     const backButton = document.getElementById("backButton");
     const forwardButton = document.getElementById("forwardButton");
     const gallery = document.querySelector(".gallery");
@@ -775,7 +771,7 @@
 
                 const content = this.nextElementSibling;
 
-                console.log("content, ", content);
+                //  console.log("content, ", content);
 
                 this.classList.toggle('active');
 

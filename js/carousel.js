@@ -5,14 +5,14 @@ const anchors = document.querySelectorAll('#events-nav-tag');
 const cards = document.querySelectorAll('.new-event-card');
 let cardsArray = Array.from(cards);
 
-console.log("cards0", cardsArray[0]);
+// // console.log("cards0", cardsArray[0]);
 
 if (cardsArray.length > 1) {
     cardsArray.shift(); // Remove the first element from the array
     cardsArray.pop();   // Remove the last element from the array
 }
 
-console.log("crads, ", cardsArray);
+// // console.log("crads, ", cardsArray);
 const anchorsArray = Array.from(anchors);
 let index = 0;
 
@@ -30,23 +30,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.event-cards-container');
     const firstCard = document.querySelector('#first-card');
 
-    console.log("<<<<<<<<<<<<<<<<<");
-    console.log("cardwidth: ", cardWidth);
-    console.log("firstCard, ", firstCard);
-    console.log("First Card Margin: ", window.getComputedStyle(firstCard).marginLeft);
+    //     console.log("<<<<<<<<<<<<<<<<<");
+    //     console.log("cardwidth: ", cardWidth);
+    //     console.log("firstCard, ", firstCard);
+    //     console.log("First Card Margin: ", window.getComputedStyle(firstCard).marginLeft);
 
     if (container && firstCard) {
-        console.log("loaded");
-        console.log("containerWidth ", container.offsetWidth);
-        console.log("containerSpot ", container.offsetLeft);
-        console.log("cardWidth ", firstCard.offsetLeft);
-        console.log("scroll left, ", container.scrollLeft);
+        //         console.log("loaded");
+        //         console.log("containerWidth ", container.offsetWidth);
+        //         console.log("containerSpot ", container.offsetLeft);
+        //         console.log("cardWidth ", firstCard.offsetLeft);
+        //         console.log("scroll left, ", container.scrollLeft);
 
         scrollToPosition('#first-card');
 
-        console.log("scrollLeft ", container.scrollLeft);
+        //         console.log("scrollLeft ", container.scrollLeft);
 
-        console.log("scroll left, ", container.scrollLeft);
+        //         console.log("scroll left, ", container.scrollLeft);
 
     }
 
@@ -90,8 +90,8 @@ function setActiveButton() {
     // Add 'active' class to the clicked button
     // this.classList.add('active');
 
-    console.log(anchorsArray[index]);
-    console.log(anchorsArray[index].querySelector('button'));
+    //     console.log(anchorsArray[index]);
+    //     console.log(anchorsArray[index].querySelector('button'));
     const activeButton = anchorsArray[index].querySelector('button');
     if (activeButton) activeButton.style.transform = "scale(1.2)";
 
@@ -164,7 +164,7 @@ var deltaY = 0;
 manager.on('swipe', function (e) {
     deltaX = deltaX + e.deltaX;
     var direction = e.offsetDirection;
-    console.log("direction of swipe", direction);
+    // //     console.log("direction of swipe", direction);
     if (direction === 2) {
         moveRight();
     } else if (direction === 4) {
@@ -173,14 +173,14 @@ manager.on('swipe', function (e) {
 });
 
 function moveLeft() {
-    console.log("hi", backScrollLeft);
-    console.log(container.scrollLeft);
+    // //     console.log("hi", backScrollLeft);
+    // //     console.log(container.scrollLeft);
     cardWidth = document.querySelector('.new-event-card').offsetWidth + 15;
     backScrollLeft = document.querySelector("#first-card").offsetLeft;
     frontScrollLeft = document.querySelector("#last-card").offsetLeft - cardWidth;
 
     if (container.scrollLeft <= backScrollLeft) {
-        console.log("here");
+        // //         console.log("here");
         index = anchorsArray.length - 1;
     }
     else {
@@ -192,7 +192,7 @@ function moveLeft() {
 
     const endScroll = container.scrollLeft;
 
-    console.log(endScroll);
+    // //     console.log(endScroll);
 
     setActiveButton();
 
@@ -204,18 +204,18 @@ function moveLeft() {
 }
 
 function moveRight() {
-    console.log("hi", frontScrollLeft);
-    console.log(container.scrollLeft);
+    // //     console.log("hi", frontScrollLeft);
+    // //     console.log(container.scrollLeft);
     cardWidth = document.querySelector('.new-event-card').offsetWidth + 15;
     backScrollLeft = document.querySelector("#first-card").offsetLeft;
     frontScrollLeft = document.querySelector("#last-card").offsetLeft - cardWidth;
 
-    console.log("container ", container.offsetWidth);
-    console.log("first card ", backScrollLeft);
+    // //     console.log("container ", container.offsetWidth);
+    // //     console.log("first card ", backScrollLeft);
 
 
     if (container.scrollLeft >= frontScrollLeft) {
-        console.log("here");
+        // //         console.log("here");
         index = 0;
     }
     else {
@@ -225,7 +225,7 @@ function moveRight() {
 
     scrollToPosition(hrefArray[index].getAttribute('href'));
 
-    console.log(container.scrollLeft);
+    // //     console.log(container.scrollLeft);
 
     setActiveButton();
 
@@ -242,7 +242,7 @@ function resetInterval() {
 
 function startInterval() {
     intervalID = setInterval(moveRight, 5000);
-    console.log("interval started");
+    // //     console.log("interval started");
 }
 
 function scrollToStudio() {
