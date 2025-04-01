@@ -1,4 +1,6 @@
 
+import Hammer from 'hammerjs';
+
 let intervalID;
 let cardWidth = document.querySelector('.new-event-card').offsetWidth + 15;
 const anchors = document.querySelectorAll('#events-nav-tag');
