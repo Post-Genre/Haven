@@ -95,6 +95,7 @@ hrefArray.forEach(anchor => {
         }, 100);
 
         e.preventDefault();
+        history.replaceState(null, null, ' ');
 
         index = anchorsArray.indexOf(anchor);
         setActiveButton();
