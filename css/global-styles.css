@@ -559,7 +559,7 @@ html {
 
   #back-button,
   #front-button {
-    bottom: 0;
+    display: none;
   }
 }
 
