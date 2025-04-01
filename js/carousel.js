@@ -42,19 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //     console.log("<<<<<<<<<<<<<<<<<");
     //     console.log("cardwidth: ", cardWidth);
-    console.log("firstCard, ", firstCard);
+    //  console.log("firstCard, ", firstCard);
     //     console.log("First Card Margin: ", window.getComputedStyle(firstCard).marginLeft);
 
     if (container && firstCard) {
         //         console.log("loaded");
-        console.log("containerWidth ", container.offsetWidth);
+        //  console.log("containerWidth ", container.offsetWidth);
         //         console.log("containerSpot ", container.offsetLeft);
         //         console.log("cardWidth ", firstCard.offsetLeft);
         //         console.log("scroll left, ", container.scrollLeft);
 
         scrollToPosition('#first-card');
 
-        console.log("scrollLeft ", container.scrollLeft);
+        //  console.log("scrollLeft ", container.scrollLeft);
 
         //         console.log("scroll left, ", container.scrollLeft);
 
@@ -87,7 +87,7 @@ const hrefArray = document.querySelectorAll('#events-nav-tag');
 hrefArray.forEach(anchor => {
     anchor.addEventListener('click', function (e) {
 
-        console.log("being pressed", this.getAttribute('href'));
+        // console.log("being pressed", this.getAttribute('href'));
 
         this.style.pointerEvents = "none";
         setTimeout(() => {
@@ -158,7 +158,7 @@ function setActiveButton() {
     anchorsArray.forEach(btn => {
         const button = btn.querySelector("button");
         if (button.classList.contains("active-button")) {
-            console.log("HI");
+            //  console.log("HI");
         }
     })
 }
