@@ -1,5 +1,5 @@
 
-import Hammer from 'hammerjs';
+// import Hammer from 'hammerjs';
 
 let intervalID;
 let cardWidth = document.querySelector('.new-event-card').offsetWidth + 15;
@@ -23,7 +23,7 @@ function scrollToPosition(elementToScroll) {
     const container = document.querySelector('.event-cards-container');
 
     container.scrollTo({
-        left: target.offsetLeft - container.offsetLeft,
+        left: target.offsetLeft,
         behavior: 'smooth'
     });
 }
@@ -42,19 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //     console.log("<<<<<<<<<<<<<<<<<");
     //     console.log("cardwidth: ", cardWidth);
-    //     console.log("firstCard, ", firstCard);
+    console.log("firstCard, ", firstCard);
     //     console.log("First Card Margin: ", window.getComputedStyle(firstCard).marginLeft);
 
     if (container && firstCard) {
         //         console.log("loaded");
-        //         console.log("containerWidth ", container.offsetWidth);
+        console.log("containerWidth ", container.offsetWidth);
         //         console.log("containerSpot ", container.offsetLeft);
         //         console.log("cardWidth ", firstCard.offsetLeft);
         //         console.log("scroll left, ", container.scrollLeft);
 
         scrollToPosition('#first-card');
 
-        //         console.log("scrollLeft ", container.scrollLeft);
+        console.log("scrollLeft ", container.scrollLeft);
 
         //         console.log("scroll left, ", container.scrollLeft);
 
