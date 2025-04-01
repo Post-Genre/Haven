@@ -26,6 +26,14 @@ function scrollToPosition(elementToScroll) {
     });
 }
 
+// const eventContainer = document.querySelector(".event-cards-container");
+
+// eventContainer.addEventListener("touchmove", function (e) {
+//     if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+//         e.stopPropagation(); // Allow vertical scrolling
+//     }
+// }, { passive: true });
+
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.event-cards-container');
     const firstCard = document.querySelector('#first-card');
@@ -55,6 +63,18 @@ document.addEventListener('DOMContentLoaded', () => {
     setActiveCard();
 });
 
+document.addEventListener('load', () => {
+    const container = document.querySelector('.event-cards-container');
+    const firstCard = document.querySelector('#first-card');
+    if (container && firstCard) {
+        scrollToPosition('#first-card');
+    }
+
+    startInterval();
+    setActiveButton();
+    setActiveCard();
+});
+
 
 // if (window.location.hash) {
 //     history.replaceState(null, null, ' '); // Removes the hash from the URL without refreshing
@@ -64,6 +84,14 @@ const hrefArray = document.querySelectorAll('#events-nav-tag');
 
 hrefArray.forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+
+        console.log("being pressed", this.getAttribute('href'));
+
+        this.style.pointerEvents = "none";
+        setTimeout(() => {
+            this.style.pointerEvents = "auto";
+        }, 100);
+
         e.preventDefault();
 
         index = anchorsArray.indexOf(anchor);
@@ -74,9 +102,11 @@ hrefArray.forEach(anchor => {
         scrollToPosition(this.getAttribute('href'));
 
         resetInterval();
+
+
     });
 });
-
+/*
 function setActiveButton() {
 
     // for (let i = 0; i < anchorsArray.length; i++) {
@@ -100,6 +130,36 @@ function setActiveButton() {
 
 
 }
+    */
+
+
+function setActiveButton() {
+    // First, reset all buttons
+    anchorsArray.forEach(btn => {
+        const button = btn.querySelector("button");
+        if (button) button.classList.remove("active-button"); // Remove the class instead of modifying styles directly
+        if (!button.classList.contains("inactive-button")) {
+            button.classList.add("inactive-button");
+        }
+    });
+
+    // Then, add 'active' class to the new clicked button
+    const activeButton = anchorsArray[index].querySelector('button');
+    if (activeButton) {
+        activeButton.classList.add("active-button");
+        if (activeButton.classList.contains("inactive-button")) {
+            activeButton.classList.remove("inactive-button");
+        }
+    }
+
+    anchorsArray.forEach(btn => {
+        const button = btn.querySelector("button");
+        if (button.classList.contains("active-button")) {
+            console.log("HI");
+        }
+    })
+}
+
 
 // const buttons = document.querySelectorAll('.events-nav-button');
 
@@ -143,8 +203,8 @@ container.addEventListener("wheel", function (event) {
 // Create a manager to manager the element
 var manager = new Hammer.Manager(container);
 
-var Tap = new Hammer.Tap();
-manager.add(Tap);
+// var Tap = new Hammer.Tap();
+// manager.add(Tap);
 
 // Create a recognizer
 var Swipe = new Hammer.Swipe({

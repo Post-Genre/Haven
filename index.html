@@ -173,8 +173,7 @@
                                 </div>
 
                                 <div class="new-event-button">
-                                    <button
-                                        onclick="window.open('https://indietix.org/events/postgenre/haven-show-4', '_blank');">
+                                    <button onclick="window.open('https://www.pg.media/get-involved.html', '_blank');">
                                         GET INVOLVED!
                                     </button>
                                 </div>
@@ -522,6 +521,25 @@
 
         });
     });
+
+    document.addEventListener("touchstart", function () {
+        document.body.classList.add("disable-hover");
+    });
+
+    document.addEventListener("touchend", function () {
+        setTimeout(() => {
+            document.body.classList.remove("disable-hover");
+        }, 100); // Small delay to ensure the click registers
+    });
+
+
+    window.addEventListener("load", function () {
+        if (window.location.hash) {
+            history.replaceState(null, null, ' ');
+        }
+    });
+
+
 </script>
 
 <script>

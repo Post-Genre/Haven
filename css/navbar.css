@@ -215,6 +215,27 @@ ul.nav-links-alt li:nth-child(odd):hover {
   border-bottom: none;
 }
 
+@media (hover: none) {
+  ul.nav-links li:nth-child(odd):hover {
+    background-color: #db9883;
+    transition: 0;
+  }
+
+  ul.nav-links li:nth-child(even):hover {
+    background-color: #989bd9;
+    transition: 0;
+  }
+  ul.nav-links-alt li:nth-child(even):hover {
+    background-color: #db9883;
+    transition: 0;
+  }
+
+  ul.nav-links-alt li:nth-child(odd):hover {
+    background-color: #989bd9;
+    transition: 0;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .nav-content {
     display: none;

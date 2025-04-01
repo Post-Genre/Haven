@@ -23,6 +23,11 @@ html {
   width: 100vw;
   overflow-x: hidden;
 }
+
+.disable-hover button:hover {
+  background-color: initial !important; /* Prevent hover from sticking */
+}
+
 .background-wrapper {
   background-image: url("../media/backgrounds/psychbackground_lowres.jpg");
   background-color: rgba(0, 0, 0, 0);
@@ -548,9 +553,9 @@ html {
 }
 
 @media (max-width: 700px) and (hover: none) and (pointer: coarse) {
-  .events-nav-container {
+  /* .events-nav-container {
     display: none;
-  }
+  } */
 
   #back-button,
   #front-button {
@@ -567,8 +572,18 @@ html {
   cursor: pointer;
 }
 
-.events-nav-button:hover {
+/* .events-nav-button:hover {
   transform: scale(1.2);
+} */
+
+.active-button {
+  transform: scale(1.2);
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.inactive-button {
+  transform: 0;
+  transition: 0;
 }
 
 .events-nav-button .active {
@@ -1383,6 +1398,41 @@ form button {
 
 .copyright {
   font-style: normal;
+}
+
+@media (hover: none) {
+  .arrow-button:hover {
+    opacity: 80%;
+    transform: 0;
+    transition: 0;
+  }
+
+  .new-event-button button:hover {
+    background-color: #2222227a;
+    color: white;
+    transform: 0;
+    transition: 0;
+  }
+
+  .events-nav-button:hover {
+    transform: 0;
+  }
+
+  .content-button:hover {
+    transition: 0;
+    transform: 0;
+  }
+
+  .form-container button:hover {
+    transform: 0;
+    transition: 0;
+  }
+
+  .tickets:hover {
+    background-color: white;
+    color: black;
+    transition-duration: 0;
+  }
 }
 
 @media (max-width: 500px) {
