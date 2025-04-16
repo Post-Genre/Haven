@@ -198,7 +198,7 @@ eventBackButton.addEventListener('click', moveLeft);
 eventFrontButton.addEventListener('click', moveRight);
 
 container.addEventListener("wheel", function (event) {
-    if (event.deltaX !== 0) {
+    if (event.deltaX == 0) {
         event.preventDefault(); // Block horizontal scrolling
     }
 }, { passive: false }); // Important to allow `preventDefault()`
@@ -223,27 +223,32 @@ var deltaX = 0;
 var deltaY = 0;
 
 // Subscribe to a desired event
-//2 is forward, 4 is backward
+//2 is forward, 4 is backward, 8 is swipe up, 16 is swipe down
 manager.on('swipe', function (e) {
     deltaX = deltaX + e.deltaX;
     var direction = e.offsetDirection;
-    // //     console.log("direction of swipe", direction);
+    console.log("direction of swipe", direction);
+        console.log("direction of swipe", direction);
     if (direction === 2) {
         moveRight();
     } else if (direction === 4) {
         moveLeft();
     }
+    else if (direction === 8 || direction === 16) {
+    
+    }
 });
 
+
+
 function moveLeft() {
-    // //     console.log("hi", backScrollLeft);
-    // //     console.log(container.scrollLeft);
+        console.log("scroll left called");
     cardWidth = document.querySelector('.new-event-card').offsetWidth + 15;
     backScrollLeft = document.querySelector("#first-card").offsetLeft;
     frontScrollLeft = document.querySelector("#last-card").offsetLeft - cardWidth;
 
     if (container.scrollLeft <= backScrollLeft) {
-        // //         console.log("here");
+              console.log("here");
         index = anchorsArray.length - 1;
     }
     else {
@@ -267,8 +272,7 @@ function moveLeft() {
 }
 
 function moveRight() {
-    // //     console.log("hi", frontScrollLeft);
-    // //     console.log(container.scrollLeft);
+    console.log("scroll right called");
     cardWidth = document.querySelector('.new-event-card').offsetWidth + 15;
     backScrollLeft = document.querySelector("#first-card").offsetLeft;
     frontScrollLeft = document.querySelector("#last-card").offsetLeft - cardWidth;
