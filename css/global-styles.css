@@ -1107,6 +1107,44 @@ color: black;
   transition: 0.5s;
 }
 
+.input-date-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  white-space: nowrap; /* prevent wrapping */
+  gap: 16px;
+  width: 100%;
+}
+
+.input-date-container label {
+  color: white;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+.input-date-container input {
+  font-size: 20px;
+  max-width: 100%; /* prevent overflow */
+  white-space: nowrap; /* no wrapping */
+  text-overflow: ellipsis; /* optional: show ... if too long */
+  overflow: hidden;
+}
+
+@media (max-width: 750px) {
+  .input-date-container label {
+    font-size: 16px;
+  }
+  .input-date-container {
+    white-space: wrap;
+    gap: 8px;
+  }
+
+  .input-date-container input {
+    width: 200px;
+  }
+}
 /* 301c09 */
 .section-header {
   display: grid;

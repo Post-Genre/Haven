@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <link rel="stylesheet" type="text/css" href="css/global-styles.css">
 <link rel="stylesheet" href="https://use.typekit.net/wvw8sro.css">
 <link rel="stylesheet" type="text/css" href="css/navbar.css">
@@ -93,7 +93,7 @@
 
                     <li><a href="#events">Events</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#studio">Studio</a></li>
+                    <li><a href="#studio">Rentals</a></li>
                     <li><a href="#artists">Artists</a></li>
                     <li><a href="#faqs">FAQS</a></li>
 
@@ -108,7 +108,7 @@
                     <li><a href="#about">About</a></li>
                 </ul>
                 <ul class="nav-links-alt">
-                    <li><a href="#studio">Studio</a></li>
+                    <li><a href="#studio">Rentals</a></li>
                     <li><a href="#artists">Artists</a></li>
                     <li><a href="#faqs">FAQS</a></li>
                 </ul>
@@ -152,13 +152,13 @@
                             <div id="event-2" class="new-event-card"
                                 style="background-image: url('/media/events/1_24-TheSpins.png')">
                                 <div class="new-event-title">
-                                    PG Studios - Rehearsal Space at HAVEN<br>
-                                    <i>Opening in the Spring! </i>
+                                    Interested in hosting your event at HAVEN?<br>
+                                    <i>Contact Us Below!</i>
                                 </div>
 
                                 <div class="new-event-button">
                                     <button onclick=scrollToStudio()>
-                                        PG STUDIOS
+                                        RENTALS
                                     </button>
                                 </div>
 
@@ -279,7 +279,7 @@
 
                         <div class="content-text">
                             <p>
-                                Starting this Spring, PG Studios will offer a smart rehearsal studio in HAVEN that will
+                                Coming soon, PG Studios will offer a smart rehearsal studio in HAVEN that will
                                 provide musicians with a convenient, professional, and affordable environment to
                                 rehearse, record, and create. Our space includes a full instrument and sound backline, a
                                 digital mixing board, and multi track recording capabilities.
@@ -287,7 +287,6 @@
                             </p>
                             <p>
                                 HAVEN is also available for private event rentals including formals, conferences,
-                                meetings, and special performances. The space is equipped with professional audio
                                 meetings, and special performances. The space is equipped with professional audio
                                 and lighting systems, tables, and chairs. <br><br>
                             </p>
@@ -303,7 +302,14 @@
                                 <input class="form-box" type="email" name="email" placeholder="Email" required>
                                 <!-- </div> -->
 
+
                                 <textarea class="form-box" name="message" placeholder="Message" required></textarea>
+
+                                <div class="input-date-container">
+                                    <label for="date">Enter your preferred rental date:</label>
+                                    <input class="form-box" type="date" id="date" name="date"
+                                        placeholder="Enter your preferred event/rental date:" />
+                                </div>
                                 <input type="hidden" name="redirect" value="https://web3forms.com/success">
                                 <button type="submit" id="submitbutton">Submit</button>
                             </form>
@@ -376,12 +382,11 @@
                                     venue is in walking distance to the University of Pittsburgh, Carnegie Mellon
                                     University and Carlow University.
                                     <br><br>
-                                    <a href='https://maps.google.com/?q=401 Atwood St, Pittsburgh, PA 15213'
+
+                                    <a href='https://maps.apple.com/maps?q=401 Atwood St, Pittsburgh, PA 15213'
                                         target="_blank" style="color: white;">
-                                        <a href='https://maps.apple.com/maps?q=401 Atwood St, Pittsburgh, PA 15213'
-                                            target="_blank" style="color: white;">
-                                            Directions to HAVEN
-                                        </a></a>
+                                        Directions to HAVEN
+                                    </a>
                                 </div>
                             </div>
 
@@ -398,6 +403,9 @@
                                     Alcohol is prohibited at events.
                                     <br><br>
 
+                                    <a href="https://www.instagram.com/p/DEpqra4v7PV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                                        target="_blank" style="color: white;">
+                                        Read more about the venue policies for HAVEN </a>
                                 </div>
                             </div>
 
@@ -413,12 +421,11 @@
                                     Meyran Streets. Additionally, the Forbes-Semple Garage is a five-minute walk away
                                     and costs $6.00 on weekends after 4 p.m.
                                     <br><br>
-                                    <a href='https://maps.google.com/?q=210 Meyran Ave, Pittsburgh, PA 15213'
+
+                                    <a href='https://maps.apple.com/maps?q=210 Meyran Ave, Pittsburgh, PA 15213'
                                         target="_blank">
-                                        <a href='https://maps.apple.com/maps?q=210 Meyran Ave, Pittsburgh, PA 15213'
-                                            target="_blank">
-                                            Directions to the Forbes-Semple Garage
-                                        </a></a>
+                                        Directions to the Forbes-Semple Garage
+                                    </a>
                                 </div>
                             </div>
 
@@ -601,7 +608,7 @@
             .then(async (response) => {
                 let json = await response.json();
                 if (response.status == 200) {
-                    submitButton.textContent = "submit"
+                    submitButton.textContent = "Submit"
                     submitButton.style = "background-color: #2b2323"
                     alert("Message Submitted!")
                 }
