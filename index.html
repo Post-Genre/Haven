@@ -327,7 +327,7 @@
                     <div class="content" style="background-color: #074785;">
                         <div class="content-text" style="  background-image: url(/media/banners/bottom2.jpg);">
 
-                            <p>Interested in playing at HAVEN? Events at HAVEN are managed by Post Genre. Fill out our
+                            <p>Interested in playing at HAVEN? Fill out our
                                 artist interest form below - we’ll get
                                 back to you as soon as we can! We’re excited to collaborate and bring your vision to
                                 life.
@@ -338,13 +338,18 @@
                             </p>
 
                             <form id="interestForm" class="form-container">
-                                <input class="form-box" type="text" name="name" placeholder="Band/Artist Name"
+                                <input class="form-box" type="text" name="name" placeholder="Band/Artist Name*"
                                     required></label>
                                 <input class="form-box" type="email" id="email" name="email"
-                                    placeholder="Enter your email" required>
-                                <input class="form-box" type="link" id="link" name="link"
-                                    placeholder="Link to your music" optional>
-                                <textarea class="form-box" name="message" placeholder="Tell us more about your band!"
+                                    placeholder="Enter your email*" required>
+                                <input class="form-box" type="text" id="city" name="city"
+                                    placeholder="What city are you most active in?*" required>
+                                <input class="form-box" type="text" id="music" name="music"
+                                    placeholder="Link(s) to your music - spotify, bandcamp, etc." optional>
+                                <input class="form-box" type="text" id="social" name="social"
+                                    placeholder="Social media link(s)" optional>
+                                <textarea class="form-box" name="message"
+                                    placeholder="Tell us more about your band! What genre do you consider yourself? Where have you played? etc.*"
                                     required></textarea></label>
                                 <!-- <input class="form-box" type="text" name="dates"
                                     placeholder="Please provide some possible dates that you would like to have your show on."
@@ -355,7 +360,9 @@
                                         placeholder="Enter your preferred event/rental date:" />
                                 </div>
                                 <button type="submit" id="feedbackMessage">Submit</button>
+                                <h4 class="required-fields-container">*required fields</h4>
                             </form>
+
                             <p id="responseMessage"></p>
                             <!-- <div
                                 style="padding-top: 10vh; container-type: inline-size; width: 100vw; display: flex; justify-content: center;">
@@ -574,10 +581,7 @@
 
 
         const formData = new FormData(e.target);
-        fetch(artistScriptURL, {
-            method: "POST",
-            body: new FormData(form)
-        })
+        fetch(artistScriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)), })
             .then(response => {
                 alert("Message Submitted!")
                 form.reset()
@@ -591,7 +595,7 @@
             });
     });
 
-    // artistScriptURL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(Object.fromEntries(formData)), }
+
 
 
 </script>
