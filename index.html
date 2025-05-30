@@ -331,19 +331,29 @@
                                 artist interest form below - we’ll get
                                 back to you as soon as we can! We’re excited to collaborate and bring your vision to
                                 life.
-
+                                <br><br>
+                                If possible, please provide a link to your music, and a possible date to host your show
+                                at HAVEN!
                                 <br> <br>
                             </p>
 
                             <form id="interestForm" class="form-container">
-                                <input class="form-box" type="text" style="width: 100%" name="firstName"
-                                    placeholder="Band/Artist Name" required></label>
+                                <input class="form-box" type="text" name="name" placeholder="Band/Artist Name"
+                                    required></label>
                                 <input class="form-box" type="email" id="email" name="email"
                                     placeholder="Enter your email" required>
                                 <input class="form-box" type="link" id="link" name="link"
                                     placeholder="Link to your music" optional>
-                                <textarea class="form-box" name="message" placeholder="Enter your message here!"
+                                <textarea class="form-box" name="message" placeholder="Tell us more about your band!"
                                     required></textarea></label>
+                                <!-- <input class="form-box" type="text" name="dates"
+                                    placeholder="Please provide some possible dates that you would like to have your show on."
+                                    required></label> -->
+                                <div class="input-date-container">
+                                    <label for="date">Enter your proposed show date:</label>
+                                    <input class="form-box" type="date" id="date" name="date"
+                                        placeholder="Enter your preferred event/rental date:" />
+                                </div>
                                 <button type="submit" id="feedbackMessage">Submit</button>
                             </form>
                             <p id="responseMessage"></p>
@@ -553,7 +563,7 @@
 
 <script>
     //FORM OUTPUT
-    const artistScriptURL = "https://script.google.com/macros/s/AKfycbyCZOUoghnSPWvuqSZ82Q84XItfndIGViDMiJ4tf_3mzn2aohrRtkx-AI9_Hv5lVpQ9OQ/exec";
+    const artistScriptURL = "https://script.google.com/macros/s/AKfycbxDIY0e3PdeEt2_G6H8db2pxN5wYW1i5WABXMaaklvUO2mf-QvlTamebZaNTvfPtLgq7g/exec";
     document.getElementById("interestForm").addEventListener("submit", (e) => {
         e.preventDefault(); //keeps the page from automatically reloading the page after the form is submitted (default form behavior)
 
@@ -564,7 +574,10 @@
 
 
         const formData = new FormData(e.target);
-        fetch(artistScriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)), })
+        fetch(artistScriptURL, {
+            method: "POST",
+            body: new FormData(form)
+        })
             .then(response => {
                 alert("Message Submitted!")
                 form.reset()
@@ -578,6 +591,7 @@
             });
     });
 
+    // artistScriptURL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(Object.fromEntries(formData)), }
 
 
 </script>
