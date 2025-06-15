@@ -1083,10 +1083,10 @@ color: black;
   display: flex;
   align-items: center;
   resize: vertical;
-  min-height: 60px; /* Match input height */
-  max-height: 100px;
-  /* scrollbar-width: 0; */
-  overflow: hidden;
+  min-height: 80px; /* Match input height */
+  max-height: 200px;
+  /* overflow: hidden; */
+  scrollbar-width: 2px;
 }
 
 .form-container button {
@@ -1132,7 +1132,24 @@ color: black;
   overflow: hidden;
 }
 
+.required-fields-container {
+  align-self: end;
+  font-family: "Inter";
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-weight: normal;
+  margin-left: auto;
+}
+
 @media (max-width: 750px) {
+  .form-box {
+    font-size: 14px;
+  }
+  .form-container textarea {
+    min-height: 100px;
+  }
   .input-date-container label {
     font-size: 16px;
   }
