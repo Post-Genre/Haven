@@ -237,7 +237,7 @@
                             <p>
                                 Once the heart of music in Pittsburgh, Oakland’s vibrant music scene was pushed
                                 underground after a wave of venue closures in the early 2000’s. Although these venues
-                                left Oakland, the borough’s passion for local music perservered.
+                                left Oakland, the borough’s passion for local music persevered.
                                 <br><br>
                             </p>
                             <p>
@@ -327,25 +327,42 @@
                     <div class="content" style="background-color: #074785;">
                         <div class="content-text" style="  background-image: url(/media/banners/bottom2.jpg);">
 
-                            <p>Interested in playing at HAVEN? Events at HAVEN are managed by Post Genre. Fill out our
+                            <p>Interested in playing at HAVEN? Fill out our
                                 artist interest form below - we’ll get
                                 back to you as soon as we can! We’re excited to collaborate and bring your vision to
                                 life.
-
+                                <br><br>
+                                If possible, please provide a link to your music, and a possible date to host your show
+                                at HAVEN!
                                 <br> <br>
                             </p>
 
                             <form id="interestForm" class="form-container">
-                                <input class="form-box" type="text" style="width: 100%" name="firstName"
-                                    placeholder="Band/Artist Name" required></label>
+                                <input class="form-box" type="text" name="name" placeholder="Band/Artist Name*"
+                                    required></label>
                                 <input class="form-box" type="email" id="email" name="email"
-                                    placeholder="Enter your email" required>
-                                <input class="form-box" type="link" id="link" name="link"
-                                    placeholder="Link to your music" optional>
-                                <textarea class="form-box" name="message" placeholder="Enter your message here!"
+                                    placeholder="Enter your email*" required>
+                                <input class="form-box" type="text" id="city" name="city"
+                                    placeholder="What city are you most active in?*" required>
+                                <input class="form-box" type="text" id="music" name="music"
+                                    placeholder="Link(s) to your music - spotify, bandcamp, etc." optional>
+                                <input class="form-box" type="text" id="social" name="social"
+                                    placeholder="Social media link(s)" optional>
+                                <textarea class="form-box" name="message"
+                                    placeholder="Tell us more about your band! What genre do you consider yourself? Where have you played? etc.*"
                                     required></textarea></label>
+                                <!-- <input class="form-box" type="text" name="dates"
+                                    placeholder="Please provide some possible dates that you would like to have your show on."
+                                    required></label> -->
+                                <div class="input-date-container">
+                                    <label for="date">Enter your proposed show date:</label>
+                                    <input class="form-box" type="date" id="date" name="date"
+                                        placeholder="Enter your preferred event/rental date:" />
+                                </div>
                                 <button type="submit" id="feedbackMessage">Submit</button>
+                                <h4 class="required-fields-container">*required fields</h4>
                             </form>
+
                             <p id="responseMessage"></p>
                             <!-- <div
                                 style="padding-top: 10vh; container-type: inline-size; width: 100vw; display: flex; justify-content: center;">
@@ -553,7 +570,7 @@
 
 <script>
     //FORM OUTPUT
-    const artistScriptURL = "https://script.google.com/macros/s/AKfycbyCZOUoghnSPWvuqSZ82Q84XItfndIGViDMiJ4tf_3mzn2aohrRtkx-AI9_Hv5lVpQ9OQ/exec";
+    const artistScriptURL = "https://script.google.com/macros/s/AKfycbxDIY0e3PdeEt2_G6H8db2pxN5wYW1i5WABXMaaklvUO2mf-QvlTamebZaNTvfPtLgq7g/exec";
     document.getElementById("interestForm").addEventListener("submit", (e) => {
         e.preventDefault(); //keeps the page from automatically reloading the page after the form is submitted (default form behavior)
 
@@ -577,6 +594,7 @@
                 }, 3000);
             });
     });
+
 
 
 
