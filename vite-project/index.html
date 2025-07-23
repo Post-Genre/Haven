@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="styles/global-styles.css">
+<link rel="stylesheet" href="https://use.typekit.net/wvw8sro.css">
+<link rel="stylesheet" type="text/css" href="styles/navbar.css">
+<link rel="stylesheet" type="text/css" href="styles/faq.css">
+
+<div id="root"></div>
+
+<!--Vercel traffic and speed insights-->
+<script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
+<script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+
+<!-- detecting swipes on mobile -->
+<!-- <script src="node_modules/hammerjs/hammer.js"></script> -->
+<!-- <script src="node_modules/hammerjs/manager.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+
+
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haven Official Website</title>
+    <meta name="description"
+        content="Oakland's first above-ground, independent music venue in 20 years launches in January 2025. Get in touch, or sign up for our newsletter so we can keep you in the loop!">
+    <link rel="icon" href="public/backgrounds/Church-Lowres.png" type="image/png"> <!-- For .png files -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+
+    <!--Get outta here Pinterest button-->
+    <meta name="pinterest" content="nohover">
+    </meta>
+
+
+    <!-- Additional Meta Tags for SEO -->
+    <meta name="keywords" content="pittsburgh, venue, music, art, independent">
+    <meta name="author" content="Post Genre Records">
+
+    <!-- Open Graph Meta Tags for social media sharing -->
+    <meta property="og:title" content="Haven Official Website">
+    <meta property="og:description" content="Oakland music starts here">
+    <!-- <meta property="og:image" content="https://www.havenvenue.com/church">  URL of the image -->
+    <meta property="og:url" content="https://www.havenvenue.com/">
+
+    <div id="react-root"></div>
+
+</head>
+
+
+<body>
+
+
+    <div class="background-wrapper"></div>
+
+    <div class="flowers">
+        <div id="flower-bundleL" class="flower-bundleL">
+            <img src="public/flowers/flowers_L_downscaled/lily4.png" class="flowerL flower4" alt="Flower 4">
+            <img src="public/flowers/flowers_L_downscaled/lily5.png" class="flowerL flower3" alt="Flower 3">
+
+            <img src="public/flowers/flowers_L_downscaled/lily2-flip.png" class="flowerL flower1" alt="Flower 1">
+            <img src="public/flowers/flowers_L_downscaled/lily2.png" class="flowerL flower2" alt="Flower 2">
+        </div>
+        <div id="flower-bundleR" class="flower-bundleR">
+            <img src="public/flowers/flowers_R_downscaled/lily4.png" class="flowerR flower7" alt="Flower 3">
+            <img src="public/flowers/flowers_R_downscaled/lily1.png" class="flowerR flower5" alt="Flower 1">
+            <img src="public/flowers/flowers_R_downscaled/lily4.png" class="flowerR flower6" alt="Flower 2">
+            <img src="public/flowers/flowers_R_downscaled/lily3.png" class="flowerR flower8" alt="Flower 4">
+        </div>
+    </div>
+
+    <section>
+
+        <div class="church" style="height: fit-content;">
+            <img src="public/backgrounds/Church-Lowres.png" alt="Church">
+            <h1 id="animated-word" class="website-title">HAVEN</h1>
+        </div>
+
+        <nav class="navbar">
+            <div class="nav-content">
+                <ul class="nav-links">
+                    <!-- <a href="#home" class="img-nav-link"><img src="media/haven-church-logo.png"
+                                alt="Haven logo" /></a> -->
+                    <li><a href="#home">Home</a></li>
+
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#studio">Rentals</a></li>
+                    <li><a href="#artists">Artists</a></li>
+                    <li><a href="#faqs">FAQS</a></li>
+
+                </ul>
+            </div>
+            <div class="two-row-nav-content" onclick="toggleMenu()">
+                <ul class="nav-links">
+                    <!-- <a href="#home" class="img-nav-link"><img src="media/haven-church-logo.png"
+                                alt="Haven logo" /></a> -->
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+                <ul class="nav-links-alt">
+                    <li><a href="#studio">Rentals</a></li>
+                    <li><a href="#artists">Artists</a></li>
+                    <li><a href="#faqs">FAQS</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="bricked-up-body">
+
+            <div class="contents" style="width: 100vw;">
+
+
+                <section class="section-a" id="home">
+                    <!-- <h1 class="header-title">HAVEN - Live Music Every Weekend</h1> -->
+
+
+                    <div class="events-container">
+                        <i class="arrow-button bi bi-caret-left-fill" id="back-button"></i>
+
+                        <div class="event-cards-container">
+
+                            <div class="new-event-card end-card"></div>
+
+                            <div id="first-card" class="new-event-card"></div>
+
+                            <div id="event-1" class="new-event-card"
+                                style="background-image: url('public/2_14-Spins.png')">
+                                <div class="new-event-title">
+                                    Follow us on Instagram!<br>
+                                    <i>@haven.pgh</i>
+                                </div>
+
+                                <div class="new-event-button">
+                                    <button
+                                        onclick="window.open('https://www.instagram.com/haven.pgh/?hl=en', '_blank');">
+                                        INSTAGRAM
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div id="event-2" class="new-event-card"
+                                style="background-image: url('public/events/1_24-TheSpins.png')">
+                                <div class="new-event-title">
+                                    Interested in hosting your event at HAVEN?<br>
+                                    <i>Contact Us Below!</i>
+                                </div>
+
+                                <div class="new-event-button">
+                                    <button onclick=scrollToStudio()>
+                                        RENTALS
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <div id="event-3" class="new-event-card"></div>
+                            <div id="event-4" class="new-event-card"></div>
+
+                            <div id="last-card" class="new-event-card"
+                                style="background-image: url('public/backgrounds/Psych Background.png')">
+                                <div class="new-event-title">
+                                    Want to get involved at HAVEN? <br>
+                                    <i>Fill out our interest form!</i>
+                                </div>
+
+                                <div class="new-event-button">
+                                    <button onclick="window.open('https://www.pg.media/get-involved.html', '_blank');">
+                                        GET INVOLVED!
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <div class="new-event-card end-card"></div>
+
+
+                        </div>
+
+                        <i class="arrow-button bi bi-caret-right-fill" id="front-button"></i>
+                    </div>
+
+                    <div class="events-nav-container">
+                        <a id="events-nav-tag" href="#first-card"><button class="events-nav-button"></button></a>
+                        <a id="events-nav-tag" href="#event-1"><button class="events-nav-button"></button></a>
+                        <a id="events-nav-tag" href="#event-2"><button class="events-nav-button"></button></a>
+                        <a id="events-nav-tag" href="#event-3"><button class="events-nav-button"></button></a>
+                        <a id="events-nav-tag" href="#event-4"><button class="events-nav-button"></button></a>
+                        <a id="events-nav-tag" href="#last-card"><button class="events-nav-button"></button></a>
+                    </div>
+                </section>
+
+                <section class="section-b" id="events">
+                    <h2 style="color: black; font-size: 5vw;">Upcoming Events</h2>
+
+                    <!-- filled with getevents.js -->
+                    <div class="event-line-section"></div>
+
+                </section>
+
+
+
+                <section class="section-b" id="about">
+                    <div class="section-header">
+                        <img src="public/banners/banner1.jpg">
+                        <h2 style="color: white;">Who We Are</h2>
+                    </div>
+                    <div class="content" style="background-color: #142714;">
+                        <div>
+                            <img src="public/banners/bottom1.jpg">
+                        </div>
+
+                        <div class="content-text">
+                            <p>
+                                <span class="content-header"> HAVEN </span> is an independent music venue in the heart
+                                of Pittsburgh’s Oakland neighborhood. The venue is operated by <a
+                                    href="https://pg.media" target="_blank" class="link"><u>Post Genre,</u></a> a
+                                Pittsburgh-based organization dedicated to enriching the local community through
+                                concerts, event production training, and more.
+                                <br><br>
+                            </p>
+
+                            <p>
+                                <span class="content-header"> Oakland has musical roots</span>
+                                <br><br>
+                            </p>
+                            <p>
+                                Once the heart of music in Pittsburgh, Oakland’s vibrant music scene was pushed
+                                underground after a wave of venue closures in the early 2000’s. Although these venues
+                                left Oakland, the borough’s passion for local music persevered.
+                                <br><br>
+                            </p>
+                            <p>
+                                <span class="content-header"> Why Haven? </span>
+                                <br><br>
+
+                            </p>
+                            <p>
+                                The opening of HAVEN brings an end to the two-decade long absence of permanent music
+                                venues in Oakland, and represents a culmination of the community-driven creative energy
+                                that has sustained the neighborhood’s music scene for the last twenty years. The venue
+                                will serve as a home (or haven) for musicians, artists, and audiences to come together,
+                                providing a secure, professional, and sustainable environment for concerts and other
+                                live events in Pittsburgh’s most populated borough.
+                            </p>
+
+                            <div
+                                style="padding-top: 10vh; container-type: inline-size; width: 100vw; display: flex; justify-content: center;">
+                                <a href="https://pg.media/" target="_blank"
+                                    style="text-decoration: none; display: flex; justify-content: center;">
+                                    <div class="content-button">
+                                        Learn More About Post Genre
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section-b" id="studio">
+                    <div class="section-header">
+                        <img src="public/banners/banner3.jpg">
+                        <h2 style="color: white; font-size: 7cqi;">Studio & Rentals</h2>
+                    </div>
+                    <div class="content" style="background-color: #0f0504;">
+                        <div>
+                            <img src="public/banners/bottom3-cropped.jpg">
+                        </div>
+
+                        <div class="content-text">
+                            <p>
+                                Coming soon, PG Studios will offer a smart rehearsal studio in HAVEN that will
+                                provide musicians with a convenient, professional, and affordable environment to
+                                rehearse, record, and create. Our space includes a full instrument and sound backline, a
+                                digital mixing board, and multi track recording capabilities.
+                                <br><br>
+                            </p>
+                            <p>
+                                HAVEN is also available for private event rentals including formals, conferences,
+                                meetings, and special performances. The space is equipped with professional audio
+                                and lighting systems, tables, and chairs. <br><br>
+                            </p>
+
+                            <p> Contact us to schedule an event now!
+                            </p>
+
+                            <form method="POST" id="form" class="form-container">
+
+                                <input type="hidden" name="access_key" value="ee138676-5470-4fad-a8cd-f9119cfc88f5">
+                                <!-- <div class="horizontal-form-container"> -->
+                                <input class="form-box" type="text" name="name" placeholder="Name" required>
+                                <input class="form-box" type="email" name="email" placeholder="Email" required>
+                                <!-- </div> -->
+
+
+                                <textarea class="form-box" name="message" placeholder="Message" required></textarea>
+
+                                <div class="input-date-container">
+                                    <label for="date">Enter your preferred rental date:</label>
+                                    <input class="form-box" type="date" id="date" name="date"
+                                        placeholder="Enter your preferred event/rental date:" />
+                                </div>
+                                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                                <button type="submit" id="submitbutton">Submit</button>
+                            </form>
+                            <p id="responseMessage"></p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="section-b" id="artists">
+                    <div class="section-header">
+                        <img src="public/banners/banner2.jpg">
+                        <h2 style="color: white;">Artists</h2>
+                    </div>
+                    <div class="content" style="background-color: #074785;">
+                        <div class="content-text" style="  background-image: url(public/banners/bottom2.jpg);">
+
+                            <p>Interested in playing at HAVEN? Fill out our
+                                artist interest form below - we’ll get
+                                back to you as soon as we can! We’re excited to collaborate and bring your vision to
+                                life.
+                                <br><br>
+                                If possible, please provide a link to your music, and a possible date to host your show
+                                at HAVEN!
+                                <br> <br>
+                            </p>
+
+                            <form id="interestForm" class="form-container">
+                                <input class="form-box" type="text" name="name" placeholder="Band/Artist Name*"
+                                    required></label>
+                                <input class="form-box" type="email" id="email" name="email"
+                                    placeholder="Enter your email*" required>
+                                <input class="form-box" type="text" id="city" name="city"
+                                    placeholder="What city are you most active in?*" required>
+                                <input class="form-box" type="text" id="music" name="music"
+                                    placeholder="Link(s) to your music - spotify, bandcamp, etc." optional>
+                                <input class="form-box" type="text" id="social" name="social"
+                                    placeholder="Social media link(s)" optional>
+                                <textarea class="form-box" name="message"
+                                    placeholder="Tell us more about your band! What genre do you consider yourself? Where have you played? etc.*"
+                                    required></textarea></label>
+                                <!-- <input class="form-box" type="text" name="dates"
+                                    placeholder="Please provide some possible dates that you would like to have your show on."
+                                    required></label> -->
+                                <div class="input-date-container">
+                                    <label for="date">Enter your proposed show date:</label>
+                                    <input class="form-box" type="date" id="date" name="date"
+                                        placeholder="Enter your preferred event/rental date:" />
+                                </div>
+                                <button type="submit" id="feedbackMessage">Submit</button>
+                                <h4 class="required-fields-container">*required fields</h4>
+                            </form>
+
+                            <p id="responseMessage"></p>
+                            <!-- <div
+                                style="padding-top: 10vh; container-type: inline-size; width: 100vw; display: flex; justify-content: center;">
+                                <a href="https://pg.media/get-involved.html" target="_blank"
+                                    style="text-decoration: none; display: flex; justify-content: center;">
+                                    <div class="content-button">
+                                        Artist Interest Form
+                                    </div>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section-b" id="faqs">
+                    <div class="section-header">
+                        <img src="public/banners/banner4.jpg">
+                        <h2 style="color: white;">FAQs</h2>
+                    </div>
+                    <div class="content" style="background-color: #011e08;">
+                        <div>
+                            <img src="public/banners/bottom4.jpg">
+                        </div>
+                        <div class="content-text">
+                            <div class="collapsible-section" style="padding-bottom: 15px;">
+                                <button class="collapsible">
+                                    <div class="collapsible-button">
+                                        <h3>Where is Haven?</h3>
+                                        <h3 id="expandIcon" style="width: 10%; font-size: 30px;">+</h3>
+                                    </div>
+                                </button>
+                                <div class="faq-content">
+                                    HAVEN is located at 401 Atwood St in the Oakland Neighborhood of Pittsburgh, PA. The
+                                    venue is in walking distance to the University of Pittsburgh, Carnegie Mellon
+                                    University and Carlow University.
+                                    <br><br>
+
+                                    <a href='https://maps.apple.com/maps?q=401 Atwood St, Pittsburgh, PA 15213'
+                                        target="_blank" style="color: white;">
+                                        Directions to HAVEN
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <div class="collapsible-section" style="padding-bottom: 15px;">
+                                <button class="collapsible">
+                                    <div class="collapsible-button">
+                                        <h3>Is Haven all-ages?</h3>
+                                        <h3 id="expandIcon" style="width: 10%; font-size: 30px;">+</h3>
+                                    </div>
+                                </button>
+                                <div class="faq-content">
+                                    All shows at HAVEN are open to all ages, unless stated otherwise on the event page.
+                                    Alcohol is prohibited at events.
+                                    <br><br>
+
+                                    <a href="https://www.instagram.com/p/DEpqra4v7PV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                                        target="_blank" style="color: white;">
+                                        Read more about the venue policies for HAVEN </a>
+                                </div>
+                            </div>
+
+                            <div class="collapsible-section" style="padding-bottom: 15px;">
+                                <button class="collapsible">
+                                    <div class="collapsible-button">
+                                        <h3>Where should I park?</h3>
+                                        <h3 id="expandIcon" style="width: 10%; font-size: 30px;">+</h3>
+                                    </div>
+                                </button>
+                                <div class="faq-content">
+                                    Paid parking is available two blocks from HAVEN, near Forbes Avenue on Atwood and
+                                    Meyran Streets. Additionally, the Forbes-Semple Garage is a five-minute walk away
+                                    and costs $6.00 on weekends after 4 p.m.
+                                    <br><br>
+
+                                    <a href='https://maps.apple.com/maps?q=210 Meyran Ave, Pittsburgh, PA 15213'
+                                        target="_blank">
+                                        Directions to the Forbes-Semple Garage
+                                    </a>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="collapsible-section" style="padding-bottom: 15px;">
+                                <button class="collapsible">
+                                    <div class="collapsible-button">
+                                        <h3>Where can I get event tickets?
+                                        </h3>
+                                        <h3 id="expandIcon" style="width: 10%; font-size: 30px;">+</h3>
+                                    </div>
+                                </button>
+                                <div class="faq-content">
+                                    Tickets for events can be purchased through our ticket provider IndieTix or
+                                    in-person unless the event is Sold Out.
+                                    <br><br>
+                                </div>
+                            </div>
+
+                            <div class="collapsible-section" style="padding-bottom: 15px;">
+                                <button class="collapsible">
+                                    <div class="collapsible-button">
+                                        <h3>Can I book Haven for my private event?
+                                        </h3>
+                                        <h3 id="expandIcon" style="width: 10%; font-size: 30px;">+</h3>
+                                    </div>
+                                </button>
+                                <div class="faq-content">
+                                    Yes! Haven is available for a wide range of private events, including formals,
+                                    corporate gatherings, private concerts, workshops, and more.
+                                    <br><br>
+                                    Our space is equipped with professional audio and lighting systems to meet the needs
+                                    of your event. We offer tables and seating arrangements to comfortably accommodate
+                                    over 100 guests.
+                                    <br><br>
+                                    For more information about hosting your private event at HAVEN, contact us using
+                                    <a href="#studio" style="">this form!</a>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+
+
+
+                <section id="newsletter-signup" class="section-a">
+                    <div class="footer">
+                        <img src="public/havenpngvirile2.png" style="filter:brightness(0); width: 100%; scale: 80%;">
+
+
+                        <div class="socials">
+                            <a href="mailto:eli@postgenre.world" target="_blank">
+                                <img src="public/email.png" alt="email">
+                            </a>
+                            <a href="https://discord.gg/YnPGXRsryk" target="_blank">
+                                <img src="public/discord.svg" alt="discord" style="filter: brightness(0);">
+                            </a>
+                            <a href="https://www.instagram.com/haven.pgh/?hl=en" target="_blank">
+                                <img src="public/instagram.png" alt="intagram">
+                            </a>
+                            <a href="https://www.pg.media" target="_blank">
+                                <img src="public/pg-logo.png" alt="intagram" style="filter: brightness(0);">
+                            </a>
+                        </div>
+                        <p id="responseMessage"></p>
+
+                        <div class="copyright">
+                            © 2025 Post Genre. All Rights Reserved.
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/getevents.js" defer></script>
+    <script src="js/carousel.js"></script>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (window.location.hash) {
+            const target = document.querySelector(window.location.hash);
+            // console.log("target, ", target);
+            if (target) {
+                setTimeout(() => {
+                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 500); // Small delay to ensure the page is fully loaded
+            }
+        }
+    });
+
+    const navs = document.querySelectorAll("a");
+
+    navs.forEach(nav => {
+        nav.addEventListener('click', function (e) {
+            const rect = this.getBoundingClientRect();
+
+            //console.log("Clicked, target is:", this.getAttribute("href"));
+
+        });
+    });
+
+    document.addEventListener("touchstart", function () {
+        document.body.classList.add("disable-hover");
+    });
+
+    document.addEventListener("touchend", function () {
+        setTimeout(() => {
+            document.body.classList.remove("disable-hover");
+        }, 100); // Small delay to ensure the click registers
+    });
+
+
+    window.addEventListener("load", function () {
+        if (window.location.hash) {
+            history.replaceState(null, null, ' ');
+        }
+    });
+
+
+</script>
+
+<script>
+    //FORM OUTPUT
+    const artistScriptURL = "https://script.google.com/macros/s/AKfycbxDIY0e3PdeEt2_G6H8db2pxN5wYW1i5WABXMaaklvUO2mf-QvlTamebZaNTvfPtLgq7g/exec";
+    document.getElementById("interestForm").addEventListener("submit", (e) => {
+        e.preventDefault(); //keeps the page from automatically reloading the page after the form is submitted (default form behavior)
+
+        const form = e.target; //e.target is the elemnt that triggered the event (e), which in this case is the interest form
+        const feedbackMessage = document.getElementById("feedbackMessage");
+        feedbackMessage.textContent = "Submitting...";
+        //feedbackMessage.style = "background-color: grey; pointer-events: none;";
+
+
+        const formData = new FormData(e.target);
+        fetch(artistScriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)), })
+            .then(response => {
+                alert("Message Submitted!")
+                form.reset()
+                feedbackMessage.textContent = "Submit"
+                // feedbackMessage.style = "background-color: #EE7D31;"
+            })
+            .catch(error => alert("Error:" + error.message))
+            .finally(() => {
+                setTimeout(() => {
+                }, 3000);
+            });
+    });
+
+
+
+
+</script>
+
+
+<script>
+    const form = document.getElementById("form");
+    const result = document.getElementById("result");
+    const submitButton = document.getElementById("submitbutton")
+
+    form.addEventListener('submit', function (e) {
+
+        e.preventDefault(); //prevents "submit" button from reloading page (its default behavior)
+        const formData = new FormData(form); //FormData is a built in JS object for collecting input data
+        const object = Object.fromEntries(formData); // .fromEntries converts FormData to regular JS object
+        const json = JSON.stringify(object); //turns object into JSON string
+        submitButton.textContent = "Submitting...";
+        submitButton.style = "background-color: grey; pointer-events: none"
+
+        fetch("https://api.web3forms.com/submit", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    submitButton.textContent = "Submit"
+                    submitButton.style = "background-color: #2b2323"
+                    alert("Message Submitted!")
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                alert = "Something went wrong";
+            })
+            .then(function () {
+                form.reset();
+                setTimeout(() => {
+                    result.style.display = "none";
+                }, 3000);
+            })
+    })
+</script>
+
+<!--EVENT CAROUSEL NAVIGATION-->
+<script>
+    //console.log("HII");
+    const backButton = document.getElementById("backButton");
+    const forwardButton = document.getElementById("forwardButton");
+    const gallery = document.querySelector(".gallery");
+
+    const scrollAmount = 300;
+
+    backButton.addEventListener("click", () => {
+        gallery.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
+
+    forwardButton.addEventListener("click", () => {
+        gallery.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+</script>
+
+<!--EVENT CAROUSEL CLICKING-->
+<script>
+    const mainEventCard = document.querySelector(".event-card");
+    const miniEventCards = document.querySelectorAll(".gallery span");
+    const mainEventImage = mainEventCard.querySelector(".event-image img");
+    const mainEventInfo = mainEventCard.querySelectorAll(".event-item");
+    const mainEventTitle = document.querySelector(".event-title");
+    const miniEventCardsArray = Array.from(miniEventCards);
+
+    function updateMainEvent(card) {
+        mainEventImage.src = card.dataset.image;
+        function updateMainEvent(card) {
+            mainEventImage.src = card.dataset.image;
+
+            mainEventInfo[0].textContent = card.dataset.date;
+            mainEventInfo[1].textContent = card.dataset.time;
+            mainEventInfo[2].textContent = card.dataset.cost;
+            mainEventInfo[3].querySelector("a").href = card.dataset.link;
+            mainEventTitle.textContent = card.dataset.title;
+        };
+        miniEventCards.forEach((card) => {
+            card.addEventListener("click", () => {
+                updateMainEvent(card);
+                removeColor(card);
+            })
+        })
+
+        if (miniEventCards.length > 0) {
+            miniEventCards[0].click();
+        }
+    }
+</script>
+
+
+<!--FLOWER ANIMATION DELAY-->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const flowersL = document.querySelectorAll('.flowerL');
+        const flowersR = document.querySelectorAll('.flowerR');
+        const totalDuration = 2;
+
+        flowersL.forEach((flower, index) => {
+            const delayFraction = (index + 1) / flowersL.length;
+            const delay = totalDuration * delayFraction;
+            flower.style.setProperty('--animation-delay', `-${delay}s`);
+        });
+
+        flowersR.forEach((flower, index) => {
+            const delayFraction = (index + 1) / flowersR.length;
+            const delay = totalDuration * delayFraction;
+            flower.style.setProperty('--animation-delay', `-${delay}s`);
+        });
+    });
+</script>
+
+<!--BOUNCY ARROW-->
+<script>
+    function checkWindowSize() {
+        const arrow = document.querySelector('.arrow');
+
+        if (window.innerWidth < 500) {
+            arrow.style.display = 'none';
+            arrow.parentElement.style.display = 'none';
+        } else {
+            arrow.style.display = 'inline-block';
+            arrow.parentElement.style.display = 'block';
+        }
+    }
+
+    checkWindowSize();
+    window.addEventListener('resize', checkWindowSize);
+</script>
+
+<!--START SCROLL @ TOP-->
+<script>
+    window.addEventListener('beforeunload', () => {
+        window.scrollTo(0, 0);
+    });
+</script>
+
+<!--TITLE ANIM AND FLOWER ANIM-->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const word = document.getElementById('animated-word');
+        const newsletterSignup = document.getElementById('newsletter-signup');
+        const flowerBundleL = document.getElementById('flower-bundleL');
+        const flowerBundleR = document.getElementById('flower-bundleR');
+
+        const adjustFlowerScale = () => {
+            const totalScale = (window.innerWidth / 1920);
+            const minScale = totalScale * 0.6;
+            let currScale = totalScale;
+
+            const scaleProgress = (window.scrollY - 0) / (document.body.scrollHeight * 0.3);
+            currScale = totalScale - ((totalScale - minScale) * scaleProgress);
+            if (window.scrollY > document.body.scrollHeight * 0.3) {
+                currScale = minScale;
+            }
+
+            flowerBundleL.style.scale = `${currScale}`;
+            flowerBundleR.style.scale = `${currScale}`;
+        };
+
+        adjustFlowerScale();
+        document.addEventListener('scroll', adjustFlowerScale);
+
+        if (word && newsletterSignup) {
+            document.addEventListener('scroll', () => {
+                const scrollPosition = window.scrollY;
+
+                const maxSpacing = 40;
+                const startScroll = 0;
+                const endScroll = window.innerHeight * 0.5;
+
+                let letterSpacing = window.innerWidth < 500 ? 0 : 0;
+                if (scrollPosition >= startScroll && scrollPosition <= endScroll) {
+                    letterSpacing += (scrollPosition / endScroll) * maxSpacing;
+                } else if (scrollPosition > endScroll) {
+                    letterSpacing = maxSpacing;
+                }
+
+                word.style.letterSpacing = `${letterSpacing}px`;
+            });
+        } else {
+            console.error("Either 'animated-word' or 'newsletter-signup' element not found.");
+        }
+    });
+</script>
+
+<!--FORM OUTPUT-->
+<script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwzF6tvfbhEdv96_Hp3wRct1gQhseovMiK_PVzuVdL-MMKa2gcL4aTg_ftwEXBq3xfd4Q/exec";
+
+    document.getElementById("newsletterForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        fetch(scriptURL, { method: "POST", body: JSON.stringify(Object.fromEntries(formData)) })
+            .then(response => alert("Subscribed successfully!"))
+            .catch(error => alert("Error: " + error.message));
+    });
+</script>
+
+<!--COLLAPSIBLE FAQ-->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const collapsibleButtons = document.querySelectorAll('.collapsible');
+
+        collapsibleButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const expandIcon = this.querySelector('#expandIcon');
+
+                const content = this.nextElementSibling;
+
+                //  console.log("content, ", content);
+
+                this.classList.toggle('active');
+
+                if (content.style.maxHeight) {
+                    expandIcon.textContent = "+";
+                    content.style.maxHeight = null;
+                    content.classList.remove('expanded');
+                } else {
+                    expandIcon.textContent = "-";
+                    content.style.maxHeight = content.scrollHeight + 'px'; //expand to full height
+                    content.classList.add('expanded');
+                }
+            });
+        });
+    });
+
+</script>
+
+<script>
+    window.onload = function () {
+        const collapsible = document.querySelectorAll('.collapsible');
+        const profile = document.querySelector('.profile');
+
+        collapsible.forEach((label, index) => {
+            label.style.animationDelay = `${index * 0.1}s`;
+            label.style.opacity = 1; // Set opacity to 1 to make it visible
+        });
+        profile.forEach((image, index) => {
+            image.style.animationDelay = `${index * 0.1}s`;
+            image.style.opacity = 1;
+        })
+    };
+</script>
+
+</html>
