@@ -182,6 +182,24 @@ html {
   grid-row: 1;
 }
 
+.swiper {
+  width: 90vw;
+  height: auto;
+  padding: 20px !important;
+}
+
+.swiper img {
+  border-radius: 10px;
+}
+
+
+.swiper:after {
+    transform: translateX(50vw);
+    right: 50%;
+    background: rgb(26, 32, 38);
+    background: linear-gradient(90deg, rgba(26, 32, 38, 0) 0%, rgb(26, 32, 38) 100%)
+}
+
 .events-container {
   display: flex;
   height: 100%;

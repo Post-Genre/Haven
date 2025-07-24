@@ -1,33 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<link rel="stylesheet" type="text/css" href="styles/global-styles.css">
-<link rel="stylesheet" href="https://use.typekit.net/wvw8sro.css">
-<link rel="stylesheet" type="text/css" href="styles/navbar.css">
-<link rel="stylesheet" type="text/css" href="styles/faq.css">
-
-<div id="root"></div>
-
-<!--Vercel traffic and speed insights-->
-<script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
-
-<script>
-    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/speed-insights/script.js"></script>
-
-<!-- detecting swipes on mobile -->
-<!-- <script src="node_modules/hammerjs/hammer.js"></script> -->
-<!-- <script src="node_modules/hammerjs/manager.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-
-
-
-
-
 <head>
+    <html lang="en">
+    <link rel="stylesheet" type="text/css" href="styles/global-styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wvw8sro.css">
+    <link rel="stylesheet" type="text/css" href="styles/navbar.css">
+    <link rel="stylesheet" type="text/css" href="styles/faq.css">
+
+    <div id="root"></div>
+
+    <!--Vercel traffic and speed insights-->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <script>
+        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+
+    <!-- detecting swipes on mobile -->
+    <!-- <script src="node_modules/hammerjs/hammer.js"></script> -->
+    <!-- <script src="node_modules/hammerjs/manager.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <meta charset="UTF-8" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,9 +47,6 @@
     <meta property="og:description" content="Oakland music starts here">
     <!-- <meta property="og:image" content="https://www.havenvenue.com/church">  URL of the image -->
     <meta property="og:url" content="https://www.havenvenue.com/">
-
-
-
 </head>
 
 
@@ -128,6 +120,26 @@
                     
                     <div id="react-root"></div>
                     
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="./public/3_14.png"></div>
+                            <div class="swiper-slide"><img src="./public/3_15.png"></div>
+                            <div class="swiper-slide"><img src="./public/2_28.png"></div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+
                 </section>
 
                 <section class="section-b" id="events">
@@ -153,7 +165,7 @@
                         <div class="content-text">
                             <p>
                                 <span class="content-header"> HAVEN </span> is an independent music venue in the heart
-                                of Pittsburgh’s Oakland neighborhood. The venue is operated by <a
+                                of Pittsburgh's Oakland neighborhood. The venue is operated by <a
                                     href="https://pg.media" target="_blank" class="link"><u>Post Genre,</u></a> a
                                 Pittsburgh-based organization dedicated to enriching the local community through
                                 concerts, event production training, and more.
@@ -165,9 +177,9 @@
                                 <br><br>
                             </p>
                             <p>
-                                Once the heart of music in Pittsburgh, Oakland’s vibrant music scene was pushed
-                                underground after a wave of venue closures in the early 2000’s. Although these venues
-                                left Oakland, the borough’s passion for local music persevered.
+                                Once the heart of music in Pittsburgh, Oakland's vibrant music scene was pushed
+                                underground after a wave of venue closures in the early 2000's. Although these venues
+                                left Oakland, the borough's passion for local music persevered.
                                 <br><br>
                             </p>
                             <p>
@@ -178,10 +190,10 @@
                             <p>
                                 The opening of HAVEN brings an end to the two-decade long absence of permanent music
                                 venues in Oakland, and represents a culmination of the community-driven creative energy
-                                that has sustained the neighborhood’s music scene for the last twenty years. The venue
+                                that has sustained the neighborhood's music scene for the last twenty years. The venue
                                 will serve as a home (or haven) for musicians, artists, and audiences to come together,
                                 providing a secure, professional, and sustainable environment for concerts and other
-                                live events in Pittsburgh’s most populated borough.
+                                live events in Pittsburgh's most populated borough.
                             </p>
 
                             <div
@@ -258,8 +270,8 @@
                         <div class="content-text" style="  background-image: url(public/banners/bottom2.jpg);">
 
                             <p>Interested in playing at HAVEN? Fill out our
-                                artist interest form below - we’ll get
-                                back to you as soon as we can! We’re excited to collaborate and bring your vision to
+                                artist interest form below - we'll get
+                                back to you as soon as we can! We're excited to collaborate and bring your vision to
                                 life.
                                 <br><br>
                                 If possible, please provide a link to your music, and a possible date to host your show
