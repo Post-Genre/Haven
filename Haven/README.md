@@ -5,6 +5,10 @@ Repository for for react build of Haven's website. Currently in another reposito
 ## Running/Testing the build
 cd into haven-react-site, then run "npm run dev". To test on mobile, make sure your desktop and phone are on the same wifi network, then run "npm run dev -- --host" instead. Use the "Network" link to view the test build on your phone.
 
+## Git pathways/processes 
+'main' branch will remain untouched until the react build is complete - this will stay as the vanilla html version and will keep the domain name until needed. <br><br>
+Our new main/master branch will be titled 'react-main-branch.' For each component/set of components we do, we will create new branches off of this, and then merge back into 'react-main-branch' upon completion. (Hopefully we will be able to set branch protection for 'react-main-branch'). Before merging branches, we can have one or both other members review it over.
+
 ## Naming conventions
 Each component will be placed into its own folder inside of the components folder, titled ComponentName. Inside each folder will contain a ComponentName.jsx, and a component-name.css file, and any other files if necessary (js data file, library, etc.). Styling and properties for each component remain local to each individual component.
 
