@@ -1,0 +1,25 @@
+.header-container {
+  background-color: var(--burnt-orange);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.header-container img {
+  /* width: 54px; */
+  height: 70px;
+}
+
+.nav-container {
+  display: flex;
+  color: white;
+  margin-left: auto;
+}
+
+.nav-container h4 {
+  margin: 0;
+  padding: 20px;
+}

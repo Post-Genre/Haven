@@ -1,11 +1,51 @@
+@font-face {
+  font-family: "heading-text";
+  src: url(./assets/fonts/NexaRust.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "logo-text";
+  src: url(./assets/fonts/Virile.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "body-text";
+  src: url(./assets/fonts/Inter.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "body-text-italic";
+  src: url(./assets/fonts/Inter-Italic.ttf) format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Color Palette */
+  --white: #ffffff;
+  --black: #000000;
+  --cream: #ffe4d6;
+  --burnt-orange: #db9883;
+  --light-purple: #989bd9;
+  --dark-yellow: #e7be47;
+
+  font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* color: #000000; */
+
+  background-image: url(./assets/media/backgrounds/tile-light.png);
+  background-repeat: repeat;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,48 +53,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+#root {
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: 80px 1fr 303px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* might need to remove */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -65,4 +79,50 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "heading-text", Verdana, sans-serif;
+  height: max-content;
+  letter-spacing: -0.5px;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.small-font {
+  font-size: 0.75rem;
+}
+
+.smallest-font {
+  font-size: 0.563rem;
 }
