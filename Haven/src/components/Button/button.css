@@ -1,0 +1,31 @@
+a {
+  font-size: 1.25rem;
+  font-family: "heading-text";
+  color: white;
+  padding: 12px 64px;
+  border-radius: 8px;
+  display: flex;
+}
+
+.button-primary {
+  background-color: var(--light-purple);
+}
+
+.button-secondary {
+  background-color: var(--burnt-orange);
+}
+
+.button-tertiary {
+  background-color: var(--white);
+  color: var(--black);
+  font-family: "body-text";
+  font-weight: 900;
+  border-radius: 0px;
+  padding: 16px 96px;
+  border-radius: 4px;
+}
+
+a:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}

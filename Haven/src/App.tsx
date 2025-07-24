@@ -1,9 +1,11 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+// import { useState } from "react";
+
 import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import ButtonPrimary from "./components/Button/ButtonPrimary";
+import ButtonSecondary from "./components/Button/ButtonSecondary";
+import ButtonTertiary from "./components/Button/ButtonTertiary";
 
 function App() {
   return (
@@ -11,9 +13,9 @@ function App() {
       <Header />
       <main>
         <h1>Hello World</h1>
-        {/* <ButtonPrimary link="google.com" text="Button Primary" />
+        <ButtonPrimary link="google.com" text="Button Primary" />
         <ButtonSecondary link="google.com" text="Button Secondary" />
-        <ButtonTertiary link="google.com" text="BUTTON TERTIARY" /> */}
+        <ButtonTertiary link="google.com" text="BUTTON TERTIARY" />
       </main>
       <Footer />
     </>
