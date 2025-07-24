@@ -53,7 +53,7 @@
     <!-- <meta property="og:image" content="https://www.havenvenue.com/church">  URL of the image -->
     <meta property="og:url" content="https://www.havenvenue.com/">
 
-    <div id="react-root"></div>
+
 
 </head>
 
@@ -125,81 +125,9 @@
 
                 <section class="section-a" id="home">
                     <!-- <h1 class="header-title">HAVEN - Live Music Every Weekend</h1> -->
-
-
-                    <div class="events-container">
-                        <i class="arrow-button bi bi-caret-left-fill" id="back-button"></i>
-
-                        <div class="event-cards-container">
-
-                            <div class="new-event-card end-card"></div>
-
-                            <div id="first-card" class="new-event-card"></div>
-
-                            <div id="event-1" class="new-event-card"
-                                style="background-image: url('public/2_14-Spins.png')">
-                                <div class="new-event-title">
-                                    Follow us on Instagram!<br>
-                                    <i>@haven.pgh</i>
-                                </div>
-
-                                <div class="new-event-button">
-                                    <button
-                                        onclick="window.open('https://www.instagram.com/haven.pgh/?hl=en', '_blank');">
-                                        INSTAGRAM
-                                    </button>
-                                </div>
-
-                            </div>
-                            <div id="event-2" class="new-event-card"
-                                style="background-image: url('public/events/1_24-TheSpins.png')">
-                                <div class="new-event-title">
-                                    Interested in hosting your event at HAVEN?<br>
-                                    <i>Contact Us Below!</i>
-                                </div>
-
-                                <div class="new-event-button">
-                                    <button onclick=scrollToStudio()>
-                                        RENTALS
-                                    </button>
-                                </div>
-
-                            </div>
-
-                            <div id="event-3" class="new-event-card"></div>
-                            <div id="event-4" class="new-event-card"></div>
-
-                            <div id="last-card" class="new-event-card"
-                                style="background-image: url('public/backgrounds/Psych Background.png')">
-                                <div class="new-event-title">
-                                    Want to get involved at HAVEN? <br>
-                                    <i>Fill out our interest form!</i>
-                                </div>
-
-                                <div class="new-event-button">
-                                    <button onclick="window.open('https://www.pg.media/get-involved.html', '_blank');">
-                                        GET INVOLVED!
-                                    </button>
-                                </div>
-
-                            </div>
-
-                            <div class="new-event-card end-card"></div>
-
-
-                        </div>
-
-                        <i class="arrow-button bi bi-caret-right-fill" id="front-button"></i>
-                    </div>
-
-                    <div class="events-nav-container">
-                        <a id="events-nav-tag" href="#first-card"><button class="events-nav-button"></button></a>
-                        <a id="events-nav-tag" href="#event-1"><button class="events-nav-button"></button></a>
-                        <a id="events-nav-tag" href="#event-2"><button class="events-nav-button"></button></a>
-                        <a id="events-nav-tag" href="#event-3"><button class="events-nav-button"></button></a>
-                        <a id="events-nav-tag" href="#event-4"><button class="events-nav-button"></button></a>
-                        <a id="events-nav-tag" href="#last-card"><button class="events-nav-button"></button></a>
-                    </div>
+                    
+                    <div id="react-root"></div>
+                    
                 </section>
 
                 <section class="section-b" id="events">
@@ -523,7 +451,10 @@
 
 
     <script src="js/getevents.js" defer></script>
-    <script src="js/carousel.js"></script>
+
+    <!--THIS IS THE REACT COMPONENT-->
+    <script type="module" src="/src/main.tsx"></script>
+
 </body>
 
 <script>
@@ -664,38 +595,6 @@
     });
 </script>
 
-<!--EVENT CAROUSEL CLICKING-->
-<script>
-    const mainEventCard = document.querySelector(".event-card");
-    const miniEventCards = document.querySelectorAll(".gallery span");
-    const mainEventImage = mainEventCard.querySelector(".event-image img");
-    const mainEventInfo = mainEventCard.querySelectorAll(".event-item");
-    const mainEventTitle = document.querySelector(".event-title");
-    const miniEventCardsArray = Array.from(miniEventCards);
-
-    function updateMainEvent(card) {
-        mainEventImage.src = card.dataset.image;
-        function updateMainEvent(card) {
-            mainEventImage.src = card.dataset.image;
-
-            mainEventInfo[0].textContent = card.dataset.date;
-            mainEventInfo[1].textContent = card.dataset.time;
-            mainEventInfo[2].textContent = card.dataset.cost;
-            mainEventInfo[3].querySelector("a").href = card.dataset.link;
-            mainEventTitle.textContent = card.dataset.title;
-        };
-        miniEventCards.forEach((card) => {
-            card.addEventListener("click", () => {
-                updateMainEvent(card);
-                removeColor(card);
-            })
-        })
-
-        if (miniEventCards.length > 0) {
-            miniEventCards[0].click();
-        }
-    }
-</script>
 
 
 <!--FLOWER ANIMATION DELAY-->

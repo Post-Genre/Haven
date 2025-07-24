@@ -1,23 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Carousel from "./carousel";
+
+const HomePage: React.FC = () => (
+  <div className="max-w-2xl mx-auto mt-10">
+    <Carousel />
+  </div>
+);
 
 const rootElement = document.getElementById("react-root");
 if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
-    <React.StrictMode></React.StrictMode>
-  );
-}
-
-function MyWidget() {
-  return <div>Hello from React!</div>;
-}
-
-// Mount React into any part of your existing HTML
-const mountPoint = document.getElementById("react-root");
-if (mountPoint) {
-  ReactDOM.createRoot(mountPoint).render(
     <React.StrictMode>
-      <MyWidget />
+      <HomePage /> {/*this calls the Carousel component and renders it */}
     </React.StrictMode>
   );
 }

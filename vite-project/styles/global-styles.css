@@ -98,7 +98,7 @@ html {
 }
 
 .church {
-  width: 100%;
+  width: 96%;
   position: relative;
   display: flex;
   align-items: center;
@@ -113,9 +113,7 @@ html {
 .church img {
   width: 70%;
 }
-.church img {
-  width: 70%;
-}
+
 
 #animated-word {
   transition: letter-spacing 0.1s ease; /* Smooth transition */

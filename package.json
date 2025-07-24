@@ -4,8 +4,11 @@
     "@vercel/speed-insights": "^1.1.0",
     "bootstrap": "^5.3.3",
     "hammerjs": "^2.0.8",
+    "install": "^0.13.0",
+    "npm": "^11.4.2",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "swiper": "^11.2.10"
   },
   "name": "havensite",
   "version": "1.0.0",
