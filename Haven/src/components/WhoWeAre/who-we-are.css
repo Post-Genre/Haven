@@ -1,0 +1,31 @@
+.who-we-are-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: white;
+  hyphens: auto;
+}
+
+.content-header {
+  color: var(--dark-yellow);
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../assets/media/backgrounds/bottom1.png");
+  background-size: cover;
+  /* background-repeat: round; */
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  padding: 36px 24px;
+}
+
+.body-container p {
+  width: 700px;
+}

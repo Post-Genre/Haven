@@ -33,7 +33,7 @@
   align-items: center;
 }
 
-p {
+.footer-container p {
   color: white;
   font-family: "Times New Roman", Times, serif;
 }

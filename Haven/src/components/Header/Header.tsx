@@ -7,11 +7,11 @@ export default function Header() {
       <div className="header-container">
         <img src={havenChurchLogo} alt="" />
         <div className="nav-container">
-          <h4>EVENTS</h4>
-          <h4>ABOUT</h4>
-          <h4>RENTALS</h4>
-          <h4>ARTISTS</h4>
-          <h4>PHOTOS</h4>
+          <h5>EVENTS</h5>
+          <h5>ABOUT</h5>
+          <h5>RENTALS</h5>
+          <h5>ARTISTS</h5>
+          <h5>PHOTOS</h5>
         </div>
       </div>
     </>

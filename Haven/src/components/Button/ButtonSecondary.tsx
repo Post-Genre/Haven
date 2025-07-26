@@ -7,7 +7,7 @@ type ButtonSecondaryProps = {
 
 export default function ButtonSecondary({ link, text }: ButtonSecondaryProps) {
   return (
-    <div>
+    <div className="button-container">
       <a
         target="_blank"
         rel="noopener noreferrer"

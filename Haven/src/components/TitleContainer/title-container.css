@@ -1,0 +1,10 @@
+.title-container {
+  color: white;
+  background-position: top;
+  background-size: cover;
+  height: 350px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}

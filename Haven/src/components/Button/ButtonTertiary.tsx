@@ -7,7 +7,7 @@ type ButtonTertiaryProps = {
 
 export default function ButtonTertiary({ link, text }: ButtonTertiaryProps) {
   return (
-    <div>
+    <div className="button-container">
       <a
         target="_blank"
         rel="noopener noreferrer"

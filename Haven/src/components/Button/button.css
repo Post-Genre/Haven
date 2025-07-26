@@ -1,10 +1,11 @@
-a {
-  font-size: 1.25rem;
+.button-container a {
+  font-size: 0.85rem;
   font-family: "heading-text";
   color: white;
   padding: 12px 64px;
   border-radius: 8px;
   display: flex;
+  width: auto;
 }
 
 .button-primary {
@@ -15,7 +16,7 @@ a {
   background-color: var(--burnt-orange);
 }
 
-.button-tertiary {
+.button-container .button-tertiary {
   background-color: var(--white);
   color: var(--black);
   font-family: "body-text";
@@ -26,6 +27,6 @@ a {
 }
 
 a:hover {
-  transform: scale(1.1);
-  transition: 0.2s;
+  transform: scale(1.05);
+  transition: 0.35s;
 }

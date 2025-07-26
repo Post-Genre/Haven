@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <p>©2025 Post Genre. All Rights Reserved.</p>
+      <p className="smallest-font">©2025 Post Genre. All Rights Reserved.</p>
     </div>
   );
 }

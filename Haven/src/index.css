@@ -10,11 +10,13 @@
 
 @font-face {
   font-family: "body-text";
+  font-style: normal;
   src: url(./assets/fonts/Inter.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "body-text-italic";
+  font-family: "body-text";
+  font-style: italic;
   src: url(./assets/fonts/Inter-Italic.ttf) format("truetype");
 }
 
@@ -28,6 +30,11 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
 :root {
   /* Color Palette */
   --white: #ffffff;
@@ -37,12 +44,12 @@ a {
   --light-purple: #989bd9;
   --dark-yellow: #e7be47;
 
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 24px;
+  line-height: 1.25;
   font-weight: 400;
 
   color-scheme: light dark;
-  /* color: #000000; */
+  color: #000000;
 
   background-image: url(./assets/media/backgrounds/tile-light.png);
   background-repeat: repeat;
@@ -65,7 +72,8 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* @media (prefers-color-scheme: light) {
@@ -100,29 +108,36 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
+/* body-text, used for larger font non-headers, like event cards */
 h4 {
   font-size: 1.75rem;
+  font-family: "body-text", Verdana, sans-serif;
 }
 
 h5 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
+/* body-text, used for large font non-headers, like event cards */
 h6 {
-  font-size: 1.25rem;
+  font-size: 1.175rem;
+  font-family: "body-text", Verdana, sans-serif;
 }
 
 p {
   font-size: 1rem;
+  font-family: "body-text", Verdana, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0%;
 }
 
 .small-font {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 
 .smallest-font {
-  font-size: 0.563rem;
+  font-size: 0.7rem;
 }
