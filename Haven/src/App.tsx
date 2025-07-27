@@ -7,7 +7,7 @@ import ButtonPrimary from "./components/Button/ButtonPrimary";
 import ButtonSecondary from "./components/Button/ButtonSecondary";
 import ButtonTertiary from "./components/Button/ButtonTertiary";
 import WhoWeAre from "./components/WhoWeAre/WhoWeAre";
-import TitleContainer from "./components/TitleContainer/TitleContainer";
+import UpcomingEventItem from "./components/UpcomingEventItem/UpcomingEventItem";
 
 function App() {
   return (
@@ -24,6 +24,11 @@ function App() {
         <ButtonSecondary link="google.com" text="Button Secondary" />
         <ButtonTertiary link="google.com" text="BUTTON TERTIARY" />
         <WhoWeAre />
+        <UpcomingEventItem
+          title="The Blazing Daisies, Mr. Dr."
+          date="2025-01-17"
+          link="google.com"
+        />
       </main>
       <Footer />
     </>
