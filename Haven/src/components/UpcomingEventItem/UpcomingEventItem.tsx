@@ -35,14 +35,14 @@ export default function UpcomingEventItem({
         <h4>{title}</h4>
       </div>
       <div className="event-info-container">
-        <div className="date-container">
-          <h6>{formattedDate}</h6>
-        </div>
-        <div className="tickets-container">
-          <a href={link}>
-            <h6>TICKETS</h6>
-          </a>
-        </div>
+        {/* <div className="date-container"> */}
+        <h6 className="date-container">{formattedDate}</h6>
+        {/* </div> */}
+        {/* <div className="tickets-container"> */}
+        <a href={link} className="tickets-container">
+          TICKETS
+        </a>
+        {/* </div> */}
       </div>
     </div>
   );
