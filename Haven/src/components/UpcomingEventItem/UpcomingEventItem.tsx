@@ -39,7 +39,12 @@ export default function UpcomingEventItem({
         <h6 className="date-container">{formattedDate}</h6>
         {/* </div> */}
         {/* <div className="tickets-container"> */}
-        <a href={link} className="tickets-container">
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="tickets-container"
+        >
           TICKETS
         </a>
         {/* </div> */}
