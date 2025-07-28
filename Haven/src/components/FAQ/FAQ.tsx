@@ -63,7 +63,7 @@ export default function FAQ() {
         />
         
         <FAQItem
-          question="What other transportation options are there?"
+          question="What transit options are there?"
           answer={
             <p>
               Most PRT busses passing through Oakland stop on Forbes Avenue and Fifth Avenue, which are a short walk from HAVEN.
