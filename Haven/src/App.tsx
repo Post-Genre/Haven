@@ -7,6 +7,7 @@ import ButtonPrimary from "./components/Button/ButtonPrimary";
 import ButtonSecondary from "./components/Button/ButtonSecondary";
 import ButtonTertiary from "./components/Button/ButtonTertiary";
 import WhoWeAre from "./components/WhoWeAre/WhoWeAre";
+import FAQ from "./components/FAQ/FAQ";
 import TitleContainer from "./components/TitleContainer/TitleContainer";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <ButtonSecondary link="google.com" text="Button Secondary" />
         <ButtonTertiary link="google.com" text="BUTTON TERTIARY" />
         <WhoWeAre />
+        <FAQ />
       </main>
       <Footer />
     </>
