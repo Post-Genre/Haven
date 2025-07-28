@@ -53,21 +53,30 @@ export default function FAQ() {
           question="Where should I park?"
           answer={
             <p>
-              Paid parking is available two blocks from HAVEN, near Forbes
-              Avenue on Atwood and Meyran Streets. <br />
+              Off-street parking is not available. Paid parking is available two blocks from HAVEN, near Forbes
+              Avenue, on Atwood and Meyran Streets. <br />
               <a href="link-to-directions">
                 Directions to the Forbes-Semple Garage
               </a>
             </p>
           }
         />
-
+        
+        <FAQItem
+          question="What other transportation options are there?"
+          answer={
+            <p>
+              Most PRT busses passing through Oakland stop on Forbes Avenue and Fifth Avenue, which are a short walk from HAVEN.
+              Additionally, there is a POGOH station just outside of the venue.
+            </p>
+          }
+        />
         <FAQItem
           question="Is HAVEN all ages?"
           answer={
             <p>
-                All shows at HAVEN are open to all ages, unless stated otherwise on the event page.<br></br>
-                Drugs and alcohol are prohibited; usage or possession will result in being asked to leave the venue.
+                Yes! All shows at HAVEN are open to all ages, unless stated otherwise on the event page.<br></br>
+                Drugs and alcohol are prohibited; if found in violation, you will be asked to leave the venue.
             </p>
           }
         />
