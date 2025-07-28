@@ -1,64 +1,58 @@
-/* Banner section */
-.faq-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 0;
-}
-
+/* --- FAQ Section Wrapper --- */
 .faq-section {
   width: 100%;
-  background-color: #052C3D;
+  background-color: #052c3d;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding-bottom: 40px; */
 }
 
-
+/* Banner with Background Image */
 .faq-banner {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 100px 24px;
 
-  background-image: url("../../assets/media/banners/banner4.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  padding: 36px 24px;
+  background: url("../../assets/media/banners/banner4.jpg") center/cover
+    no-repeat;
 }
 
 .faq-title {
   font-size: 3rem;
   font-weight: bold;
   color: white;
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Accordion section */
-.collapsible-section {
-  width: 90%;
-  max-width: 650px;
-  margin: 20px auto;
-}
-
-.collapsible {
-  background-color: #45628769;
-  color: white;
-  cursor: pointer;
+/* FAQ Item List */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  max-width: 650px;
+  padding: 20px;
+  gap: 16px;
+}
+
+/* Individual Accordion Item */
+.collapsible {
+  width: 100%;
+  background-color: rgba(69, 98, 135, 0.41);
+  color: white;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
   text-align: left;
   outline: none;
-  font-family: "body-text", Verdana, sans-serif; /* Force Inter */
+
+  font-family: "body-text", Verdana, sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
 
-  transition: background-color 0.3s ease, border-radius 0.5s;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
 }
 
 .collapsible.active {
@@ -66,9 +60,10 @@
 }
 
 .collapsible:hover {
-  background-color: rgba(255, 255, 255, 0.158);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
+/* Header row inside accordion button */
 .collapsible-button {
   display: flex;
   justify-content: space-between;
@@ -78,27 +73,29 @@
 
 .collapsible-button h3 {
   margin: 0;
-  font-family: inherit;
-  font-weight: inherit;
-  font-size: inherit;
+  font: inherit;
 }
 
 #expandIcon {
   font-size: 1.5rem;
 }
 
+/* Accordion Content */
 .faq-content {
-  max-height: 0;
+  /* max-height: 0; */
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  background-color: #45698769;
-  color: white;
   padding: 0 16px;
+  background-color: rgba(69, 105, 135, 0.41);
   border-radius: 0 0 10px 10px;
+
   font-family: "body-text", Verdana, sans-serif;
   font-size: 1rem;
+  color: white;
+
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 }
 
 .faq-content.expanded {
   padding: 16px;
+  /* max-height: 1000px;  */
 }
