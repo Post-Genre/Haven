@@ -62,10 +62,10 @@
 .event-items-wrapper {
   position: relative;
   z-index: 1;
-  padding: 60px 20px;
+  padding: 36px 24px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 72px;
+  gap: 36px;
   align-items: center;
 }
