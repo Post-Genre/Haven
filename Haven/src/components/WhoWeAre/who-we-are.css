@@ -20,19 +20,24 @@
   /* background-image: url("../../assets/media/backgrounds/bottom1.png"); */
   /* background-size: cover; */
   /* background-repeat: round; */
+  background-color: #142714;
+
+  background-size: auto;
+  background-repeat: round;
   align-items: center;
   width: 100%;
   gap: 20px;
-  padding: 36px 24px;
+  /* padding: 36px 24px; */
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
-.body-container p {
+.body-text-container p {
   width: 700px;
 }
 
-.bg-image {
+/* .bg-image {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -40,4 +45,24 @@
   object-fit: cover;
   object-position: top;
   z-index: -1;
+} */
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.body-text-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 36px 24px;
 }
