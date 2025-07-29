@@ -11,6 +11,7 @@ import UpcomingEventItem from "./components/UpcomingEventItem/UpcomingEventItem"
 import UpcomingEvents from "./components/UpcomingEvents/UpcomingEvents";
 import EventItem from "./components/EventItem/EventItem";
 import banner from "./assets/media/haven pics/DSC_4602-Enhanced-NR.jpg";
+import Events from "./components/Events/Events";
 
 function App() {
   return (
@@ -28,14 +29,15 @@ function App() {
         <ButtonTertiary link="https://google.com" text="BUTTON TERTIARY" />
         <WhoWeAre />
         <UpcomingEvents />
-        <EventItem
+        {/* <EventItem
           title="Sunny Daze & the Weathermen: Candy & Cigarettes Release Show"
-          date="THU, JUL 10"
-          doorsOpen="7 PM"
-          price="$13.75"
+          date="2025-07-10"
+          doorsOpen="19:00:00"
+          price="13.75"
           link="https://google.com"
           image={banner}
-        />
+        /> */}
+        <Events />
       </main>
       <Footer />
     </>

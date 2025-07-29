@@ -60,10 +60,15 @@ a:visited {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
+/* #root {
   min-height: 100vh;
   display: grid;
   grid-template-rows: 80px 1fr 303px;
+} */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* might need to remove */

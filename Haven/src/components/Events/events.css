@@ -1,0 +1,33 @@
+.events-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.events-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  /* background-image: url("../../assets/media/backgrounds/bottom1.png"); */
+  /* background-position: top;
+  background-size: auto; */
+  width: 100%;
+  /* height: 100%; */
+  align-items: center;
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  z-index: -1;
+}
