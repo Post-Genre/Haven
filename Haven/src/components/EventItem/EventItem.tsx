@@ -4,7 +4,7 @@ type EventItemProps = {
   title: string;
   date: string;
   doorsOpen: string;
-  price: string;
+  price: any[];
   link: string;
   image: string;
 };
@@ -63,7 +63,14 @@ export default function EventItem({
   //   const eventCard = document.createElement("div");
   //   eventCard.className = "event-card";
 
-  let eventPrice = `$${price}`;
+  // let eventPrice = `$${price}`;
+
+  let eventPrice = "TBA";
+  if (price && price.length > 0) {
+    const prices = price.map((ticket) => ticket.Price);
+    const lowestPrice = Math.min(...prices);
+    eventPrice = `$${lowestPrice.toFixed(2)}`;
+  }
   // if (event.ticketTypes && event.ticketTypes.length > 0) {
   //     const prices = event.ticketTypes.map(ticket => ticket.Price);
   //     const lowestPrice = Math.min(...prices);
@@ -84,7 +91,7 @@ export default function EventItem({
         <h6>|</h6>
         <h6>{eventPrice}</h6>
         <h6>|</h6>
-        <a href={link}>
+        <a href={link} target="_blank">
           <h6>
             <u>TICKETS</u>
           </h6>

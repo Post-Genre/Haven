@@ -44,8 +44,18 @@
   text-align: center;
 }
 
+.full-event-info-container a {
+  text-decoration: none;
+  color: white;
+}
+
 .full-event-info-container a:hover {
   transform: none;
+}
+
+.full-event-info-container a:visited {
+  text-decoration: none;
+  color: white;
 }
 
 /* .full-event-info-container h6:not(:last-child) {
