@@ -15,51 +15,27 @@
 }
 
 .body-container {
-  display: flex;
-  flex-direction: column;
-  /* background-image: url("../../assets/media/backgrounds/bottom1.png"); */
-  /* background-size: cover; */
-  /* background-repeat: round; */
+  /* color to match bottom of background image */
   background-color: #142714;
-
   background-size: auto;
   background-repeat: round;
-  align-items: center;
-  width: 100%;
-  gap: 20px;
-  /* padding: 36px 24px; */
+  /* needed for background image to work */
   position: relative;
   overflow: hidden;
+  /* container is placed at the same level as the content-wrapper, above the background-image */
   z-index: 1;
+  width: 100%;
 }
 
 .body-text-container p {
   width: 700px;
 }
 
-/* .bg-image {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  z-index: -1;
-} */
-
-.bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: -1;
-  pointer-events: none;
-}
-
 .body-text-container {
-  position: relative;
+  /* content-wrapper is placed at the same level as the container, above the background-image */
   z-index: 1;
+  position: relative;
+
   display: flex;
   flex-direction: column;
   gap: 20px;
