@@ -29,14 +29,6 @@ function App() {
         <ButtonTertiary link="https://google.com" text="BUTTON TERTIARY" />
         <WhoWeAre />
         <UpcomingEvents />
-        {/* <EventItem
-          title="Sunny Daze & the Weathermen: Candy & Cigarettes Release Show"
-          date="2025-07-10"
-          doorsOpen="19:00:00"
-          price="13.75"
-          link="https://google.com"
-          image={banner}
-        /> */}
         <Events />
       </main>
       <Footer />
