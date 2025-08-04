@@ -9,6 +9,9 @@ import ButtonTertiary from "./components/Button/ButtonTertiary";
 import WhoWeAre from "./components/WhoWeAre/WhoWeAre";
 import UpcomingEventItem from "./components/UpcomingEventItem/UpcomingEventItem";
 import UpcomingEvents from "./components/UpcomingEvents/UpcomingEvents";
+import EventItem from "./components/EventItem/EventItem";
+import banner from "./assets/media/haven pics/DSC_4602-Enhanced-NR.jpg";
+import Events from "./components/Events/Events";
 
 function App() {
   return (
@@ -26,6 +29,7 @@ function App() {
         <ButtonTertiary link="https://google.com" text="BUTTON TERTIARY" />
         <WhoWeAre />
         <UpcomingEvents />
+        <Events />
       </main>
       <Footer />
     </>

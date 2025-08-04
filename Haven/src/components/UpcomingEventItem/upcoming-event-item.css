@@ -7,11 +7,18 @@
 }
 
 .event-title-container {
-  display: flex;
-  align-items: center;
+  align-self: center;
   color: black;
-  padding: 16px;
+  padding: 12px;
   width: 700px;
+}
+
+.event-title-container h4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Max number of lines */
+  -webkit-box-orient: vertical; /* Required for line clamp */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add "..." at the end */
 }
 
 .event-info-container {
