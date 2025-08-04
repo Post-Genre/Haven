@@ -14,6 +14,7 @@ import banner from "./assets/media/haven pics/DSC_4602-Enhanced-NR.jpg";
 import Events from "./components/Events/Events";
 import EventInterestForm from "./components/InterestForm/EventInterestForm";
 import ParagraphAndButton from "./components/ParagraphAndButton/ParagraphAndButton";
+import Rentals from "./components/Rentals/Rentals";
 
 function App() {
   return (
@@ -32,12 +33,7 @@ function App() {
         <WhoWeAre />
         <UpcomingEvents />
         <Events />
-        <EventInterestForm />
-        <ParagraphAndButton
-          link="https://google.com"
-          buttonText="BOOK YOUR RENTAL"
-          paragraph="Looking to host a concert, showcase, or special event? HAVEN offers a fully equipped space designed for unforgettable experiences. From professional audio and lighting to digital ticketing, we’ve got everything you need to make your event run smoothly."
-        />
+        <Rentals />
       </main>
       <Footer />
     </>
