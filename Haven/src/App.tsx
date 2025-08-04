@@ -12,6 +12,7 @@ import UpcomingEvents from "./components/UpcomingEvents/UpcomingEvents";
 import EventItem from "./components/EventItem/EventItem";
 import banner from "./assets/media/haven pics/DSC_4602-Enhanced-NR.jpg";
 import Events from "./components/Events/Events";
+import EventInterestForm from "./components/InterestForm/EventInterestForm";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <WhoWeAre />
         <UpcomingEvents />
         <Events />
+        <EventInterestForm />
       </main>
       <Footer />
     </>
