@@ -53,8 +53,8 @@ export default function Rentals() {
         <div className="what-we-offer-text">
           <h5>WHAT WE OFFER</h5>
           <p>
-            1. Professional audio and lighting <br></br>2. Green Rooms and guest
-            services <br></br>3. 24x14’ Permanent Stage<br></br>4. Tables,
+            1. Professional audio and lighting <br></br>2. Green room and guest
+            services <br></br>3. 24x14’ Permanent stage<br></br>4. Tables and
             chairs
           </p>
         </div>
