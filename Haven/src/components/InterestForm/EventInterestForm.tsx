@@ -7,7 +7,7 @@ export default function EventInterestForm() {
   return (
     <form className="form-container">
       <h6>PRIVATE EVENT INQUIRY</h6>
-      <p>CONTACT INFORMATION</p>
+      <p>Contact Information</p>
       <div className="two-inputs">
         <input
           className="half-input"
