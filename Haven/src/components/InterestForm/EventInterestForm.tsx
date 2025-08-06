@@ -83,51 +83,69 @@ export default function EventInterestForm() {
         name="numPeople"
         placeholder="Number of People"
       />
-      {/* <p>Does your event need any of the following?</p>
+      <p>Does your event need any of the following?</p>
       <div className="form-grid">
-        <input
-          className="check-box"
-          type="checkbox"
-          id="audio"
-          name="audio"
-          placeholder="Audio"
-        />
-        <input
-          className="check-box"
-          type="checkbox"
-          id="lighting"
-          name="lighting"
-          placeholder="Lighting"
-        />
-        <input
-          className="check-box"
-          type="checkbox"
-          id="tables"
-          name="tables"
-          placeholder="Tables/Chairs"
-        />
-        <input
-          className="check-box"
-          type="checkbox"
-          id="photos"
-          name="photos"
-          placeholder="Photography"
-        />
-        <input
-          className="check-box"
-          type="checkbox"
-          id="videos"
-          name="videos"
-          placeholder="Videography"
-        />
-        <input
-          className="check-box"
-          type="checkbox"
-          id="tickets"
-          name="tickets"
-          placeholder="Digital Ticketing"
-        />
-      </div> */}
+        <label htmlFor="audio">
+          <input
+            className="check-box"
+            type="checkbox"
+            id="audio"
+            name="audio"
+          />
+          Audio
+        </label>
+
+        <label htmlFor="lighting">
+          <input
+            className="check-box"
+            type="checkbox"
+            id="lighting"
+            name="lighting"
+          />
+          Lighting
+        </label>
+
+        <label htmlFor="tables">
+          <input
+            className="check-box"
+            type="checkbox"
+            id="tables"
+            name="tables"
+          />
+          Tables/Chairs
+        </label>
+
+        <label htmlFor="photos">
+          <input
+            className="check-box"
+            type="checkbox"
+            id="photos"
+            name="photos"
+          />
+          Photography
+        </label>
+
+        <label htmlFor="videos">
+          <input
+            className="check-box"
+            type="checkbox"
+            id="videos"
+            name="videos"
+          />
+          Videography
+        </label>
+
+        <label htmlFor="tickets">
+          <input
+            className="check-box"
+            type="checkbox"
+            id="tickets"
+            name="tickets"
+          />
+          Digital Ticketing
+        </label>
+      </div>
+
       <input
         className="long-input"
         type="text"
