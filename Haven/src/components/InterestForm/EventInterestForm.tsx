@@ -1,5 +1,7 @@
 import ButtonPrimary from "../Button/ButtonPrimary";
 import "./interest-form.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function EventInterestForm() {
   return (
@@ -53,15 +55,21 @@ export default function EventInterestForm() {
         name="eventNature"
         placeholder="Nature of this event (Concert, Formal, etc)*"
       />
-      <input
+      {/* <input
         className="full-input"
         type="date"
         id="date"
         name="date"
         placeholder="Event Date"
+      /> */}
+      <DatePicker
+        // selected={date}
+        // onChange={(date) => setDate(date)}
+        placeholderText="Event Date"
+        className="full-input"
       />
       <div className="two-inputs">
-        <input
+        {/* <input
           className="half-input"
           type="time"
           id="startTime"
@@ -74,8 +82,31 @@ export default function EventInterestForm() {
           id="endTime"
           name="endTime"
           placeholder="Event End Time"
+        /> */}
+        <DatePicker
+          //   selected={time}
+          //   onChange={(time) => setTime(time)}
+          showTimeSelect
+          showTimeSelectOnly
+          timeIntervals={15}
+          timeCaption="Time"
+          dateFormat="h:mm aa"
+          placeholderText="Event Start Time"
+          className="half-input"
+        />
+        <DatePicker
+          //   selected={time}
+          //   onChange={(time) => setTime(time)}
+          showTimeSelect
+          showTimeSelectOnly
+          timeIntervals={15}
+          timeCaption="Time"
+          dateFormat="h:mm aa"
+          placeholderText="Event End Time"
+          className="half-input"
         />
       </div>
+
       <input
         className="full-input"
         type="number"
