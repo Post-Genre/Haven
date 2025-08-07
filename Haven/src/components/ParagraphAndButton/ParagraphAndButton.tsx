@@ -16,7 +16,12 @@ export default function ParagraphAndButton({
     <div className="paragraph-and-button-container">
       <p className="small-font">{paragraph}</p>
       <div className="paragraph-and-button-button">
-        <ButtonSecondary link={link} text={buttonText} />
+        <ButtonSecondary
+          onClick={() => {
+            window.location.href = "https://www.google.com";
+          }}
+          text={buttonText}
+        />
       </div>
     </div>
   );

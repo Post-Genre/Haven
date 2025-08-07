@@ -1,21 +1,21 @@
 import "./button.css";
 
 type ButtonPrimaryProps = {
-  link: string;
+  onClick?: () => void;
   text: string;
+  type?: "button" | "submit" | "reset";
 };
 
-export default function ButtonPrimary({ link, text }: ButtonPrimaryProps) {
+export default function ButtonPrimary({
+  onClick,
+  text,
+  type = "button",
+}: ButtonPrimaryProps) {
   return (
     <div className="button-container">
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        className="button-primary"
-        href={link}
-      >
+      <button className="button-primary" type={type} onClick={onClick}>
         {text}
-      </a>
+      </button>
     </div>
   );
 }

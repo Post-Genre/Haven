@@ -27,9 +27,24 @@ function App() {
         <h4>Hello World</h4>
         <h5>Hello World</h5>
         <h6>Hello World</h6>
-        <ButtonPrimary link="https://google.com" text="Button Primary" />
-        <ButtonSecondary link="https://google.com" text="Button Secondary" />
-        <ButtonTertiary link="https://google.com" text="BUTTON TERTIARY" />
+        <ButtonPrimary
+          onClick={() => {
+            window.location.href = "https://www.google.com";
+          }}
+          text="Button Primary"
+        />
+        <ButtonSecondary
+          onClick={() => {
+            window.location.href = "https://www.google.com";
+          }}
+          text="Button Secondary"
+        />
+        <ButtonTertiary
+          onClick={() => {
+            window.location.href = "https://www.google.com";
+          }}
+          text="BUTTON TERTIARY"
+        />
         <WhoWeAre />
         <UpcomingEvents />
         <Events />

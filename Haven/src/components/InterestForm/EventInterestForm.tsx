@@ -2,47 +2,129 @@ import ButtonPrimary from "../Button/ButtonPrimary";
 import "./interest-form.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useState } from "react";
 
 export default function EventInterestForm() {
+  const initialValues = {
+    fname: "",
+    lname: "",
+    email: "",
+    phone: "",
+    company: "",
+    eventNature: "",
+    date: null as Date | null,
+    startTime: null as Date | null,
+    endTime: null as Date | null,
+    numPeople: "",
+    audio: false,
+    lighting: false,
+    tables: false,
+    photos: false,
+    videos: false,
+    tickets: false,
+    info: "",
+  };
+  const [formData, setFormData] = useState({
+    fname: "",
+    lname: "",
+    email: "",
+    phone: "",
+    company: "",
+    eventNature: "",
+    date: null as Date | null,
+    startTime: null as Date | null,
+    endTime: null as Date | null,
+    numPeople: "",
+    audio: false,
+    lighting: false,
+    tables: false,
+    photos: false,
+    videos: false,
+    tickets: false,
+    info: "",
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const payload = {
+      ...formData,
+      date: formData.date?.toLocaleDateString(),
+      startTime: formData.startTime?.toLocaleTimeString(),
+      endTime: formData.endTime?.toLocaleTimeString(),
+    };
+
+    try {
+      const response = await fetch("YOUR_GOOGLE_SCRIPT_URL", {
+        method: "POST",
+        body: JSON.stringify(payload),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.ok) {
+        alert("Form submitted successfully!");
+        setFormData({ ...initialValues }); // reset form if needed
+      } else {
+        alert("Failed to submit form.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("An error occurred.");
+    }
+  };
+
   return (
-    <form className="form-container">
+    <form className="form-container" onSubmit={handleSubmit}>
       <h6>PRIVATE EVENT INQUIRY</h6>
       <p>Contact Information</p>
       <div className="two-inputs">
         <input
           className="half-input"
           type="text"
-          id="fname"
+          value={formData.fname}
+          onChange={(e) => setFormData({ ...formData, fname: e.target.value })}
           name="fname"
           placeholder="First Name*"
+          required
         />
         <input
           className="half-input"
           type="text"
-          id="lname"
+          value={formData.lname}
+          onChange={(e) => setFormData({ ...formData, lname: e.target.value })}
           name="lname"
           placeholder="Last Name*"
+          required
         />
       </div>
       <input
         className="full-input"
         type="email"
-        id="email"
+        value={formData.email}
+        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         name="email"
         placeholder="Email*"
+        required
       />
       <div className="two-inputs">
         <input
           className="half-input"
           type="text"
-          id="phone"
+          value={formData.phone}
+          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           name="phone"
           placeholder="Phone Number*"
+          required
         />
         <input
           className="half-input"
           type="text"
-          id="company"
+          value={formData.company}
+          onChange={(e) =>
+            setFormData({ ...formData, company: e.target.value })
+          }
           name="company"
           placeholder="Company"
         />
@@ -51,41 +133,24 @@ export default function EventInterestForm() {
       <input
         className="full-input"
         type="text"
-        id="eventNature"
+        value={formData.eventNature}
+        onChange={(e) =>
+          setFormData({ ...formData, eventNature: e.target.value })
+        }
         name="eventNature"
         placeholder="Nature of this event (Concert, Formal, etc)*"
+        required
       />
-      {/* <input
-        className="full-input"
-        type="date"
-        id="date"
-        name="date"
-        placeholder="Event Date"
-      /> */}
       <DatePicker
-        // selected={date}
-        // onChange={(date) => setDate(date)}
+        selected={formData.date}
+        onChange={(date) => setFormData({ ...formData, date })}
         placeholderText="Event Date"
         className="full-input"
       />
       <div className="two-inputs">
-        {/* <input
-          className="half-input"
-          type="time"
-          id="startTime"
-          name="startTime"
-          placeholder="Event Start Time"
-        />
-        <input
-          className="half-input"
-          type="time"
-          id="endTime"
-          name="endTime"
-          placeholder="Event End Time"
-        /> */}
         <DatePicker
-          //   selected={time}
-          //   onChange={(time) => setTime(time)}
+          selected={formData.startTime}
+          onChange={(startTime) => setFormData({ ...formData, startTime })}
           showTimeSelect
           showTimeSelectOnly
           timeIntervals={15}
@@ -95,8 +160,8 @@ export default function EventInterestForm() {
           className="half-input"
         />
         <DatePicker
-          //   selected={time}
-          //   onChange={(time) => setTime(time)}
+          selected={formData.endTime}
+          onChange={(endTime) => setFormData({ ...formData, endTime })}
           showTimeSelect
           showTimeSelectOnly
           timeIntervals={15}
@@ -110,7 +175,10 @@ export default function EventInterestForm() {
       <input
         className="full-input"
         type="number"
-        id="numPeople"
+        value={formData.numPeople}
+        onChange={(e) =>
+          setFormData({ ...formData, numPeople: e.target.value })
+        }
         name="numPeople"
         placeholder="Number of People"
       />
@@ -120,7 +188,10 @@ export default function EventInterestForm() {
           <input
             className="check-box"
             type="checkbox"
-            id="audio"
+            checked={formData.audio}
+            onChange={(e) =>
+              setFormData({ ...formData, audio: e.target.checked })
+            }
             name="audio"
           />
           Audio
@@ -130,7 +201,10 @@ export default function EventInterestForm() {
           <input
             className="check-box"
             type="checkbox"
-            id="lighting"
+            checked={formData.lighting}
+            onChange={(e) =>
+              setFormData({ ...formData, lighting: e.target.checked })
+            }
             name="lighting"
           />
           Lighting
@@ -140,7 +214,10 @@ export default function EventInterestForm() {
           <input
             className="check-box"
             type="checkbox"
-            id="tables"
+            checked={formData.tables}
+            onChange={(e) =>
+              setFormData({ ...formData, tables: e.target.checked })
+            }
             name="tables"
           />
           Tables/Chairs
@@ -150,7 +227,10 @@ export default function EventInterestForm() {
           <input
             className="check-box"
             type="checkbox"
-            id="photos"
+            checked={formData.photos}
+            onChange={(e) =>
+              setFormData({ ...formData, photos: e.target.checked })
+            }
             name="photos"
           />
           Photography
@@ -160,7 +240,10 @@ export default function EventInterestForm() {
           <input
             className="check-box"
             type="checkbox"
-            id="videos"
+            checked={formData.videos}
+            onChange={(e) =>
+              setFormData({ ...formData, videos: e.target.checked })
+            }
             name="videos"
           />
           Videography
@@ -170,7 +253,10 @@ export default function EventInterestForm() {
           <input
             className="check-box"
             type="checkbox"
-            id="tickets"
+            checked={formData.tickets}
+            onChange={(e) =>
+              setFormData({ ...formData, tickets: e.target.checked })
+            }
             name="tickets"
           />
           Digital Ticketing
@@ -184,7 +270,7 @@ export default function EventInterestForm() {
         name="info"
         placeholder="Any additional information or special requests?"
       />
-      <ButtonPrimary link="https://www.google.com" text="SUBMIT" />
+      <ButtonPrimary type="submit" text="SUBMIT" />
     </form>
   );
 }
