@@ -1,0 +1,1 @@
+{"version":3,"file":"UpcomingEventItem.d.ts","sourceRoot":"","sources":["UpcomingEventItem.tsx"],"names":[],"mappings":"AAAA,OAAO,2BAA2B,CAAC;AAEnC,KAAK,sBAAsB,GAAG;IAC5B,KAAK,EAAE,MAAM,CAAC;IACd,IAAI,EAAE,MAAM,CAAC;IACb,IAAI,EAAE,MAAM,CAAC;CACd,CAAC;AAEF,MAAM,CAAC,OAAO,UAAU,iBAAiB,CAAC,EACxC,KAAK,EACL,IAAI,EACJ,IAAI,GACL,EAAE,sBAAsB,2CAyCxB"}

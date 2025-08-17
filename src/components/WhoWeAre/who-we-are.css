@@ -1,0 +1,50 @@
+.who-we-are-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: white;
+  hyphens: auto;
+}
+
+.content-header {
+  color: var(--dark-yellow);
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #e7be47;
+}
+
+.body-container {
+  /* color to match bottom of background image */
+  background-color: #142714;
+  background-size: auto;
+  background-repeat: round;
+  /* needed for background image to work */
+  position: relative;
+  overflow: hidden;
+  /* container is placed at the same level as the content-wrapper, above the background-image */
+  z-index: 1;
+  width: 100%;
+}
+
+.body-text-container p {
+  font-size: 1.5rem;
+  width: 80vw;
+  max-width: 800px;
+  font-family: "Inter";
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+  text-align: justify;
+  color: white;}
+
+.body-text-container {
+  /* content-wrapper is placed at the same level as the container, above the background-image */
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
