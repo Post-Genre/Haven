@@ -30,7 +30,7 @@
 }
 
 .body-text-container p {
-  font-size: 1.5rem;
+  font-size: 24px;
   width: 80vw;
   max-width: 800px;
   font-family: "Inter";
@@ -47,4 +47,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.body-text-container p, .body-text-container div {
+    padding-bottom: 2%;
 }

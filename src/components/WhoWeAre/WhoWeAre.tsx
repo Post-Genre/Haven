@@ -32,10 +32,10 @@ export default function WhoWeAre() {
             <span className="content-header"> WHY HAVEN?</span>
           </p>
           <p>
-            Once the heart of music in Pittsburgh, Oakland’s vibrant music scene
-            was pushed underground after a wave of venue closures in the early
-            2000’s. Although these venues left Oakland, the borough’s passion
-            for local music persevered.
+            The opening of HAVEN brings an end to the two-decade long absence of
+            permanent music venues in Oakland, and represents a culmination of
+            the community-driven creative energy that has sustained the
+            neighborhood’s music scene for the last twenty years.
           </p>
           <ButtonTertiary link="google.com" text="HAVEN FAQ" />
         </div>

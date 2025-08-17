@@ -6,14 +6,10 @@ type TitleContainerProps = {
 };
 
 export default function TitleContainer({ image, text }: TitleContainerProps) {
-  console.log(image);
   return (
-    <div
-      className="title-container"
-      style={{ display: "grid"}}
-    >
-      <img src={image} alt="title" />
-      <h1>{text}</h1>
+    <div className="title-container">
+      <img src={image} alt="title" className="title-image" />
+      <h1 className="title-text">{text}</h1>
     </div>
   );
 }
