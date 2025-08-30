@@ -54,14 +54,19 @@ export default function EventInterestForm() {
       endTime: formData.endTime?.toLocaleTimeString(),
     };
 
+    console.log("Payload, ", payload);
+
     try {
-      const response = await fetch("YOUR_GOOGLE_SCRIPT_URL", {
-        method: "POST",
-        body: JSON.stringify(payload),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbzNmMVdKVS9CBlMsVcyrTdSZtu_4REwxBDC3BOZsvNEW_TQ0JWVv3XuSbAReuZ1NjQJ/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(payload),
+          // headers: {
+          //   "Content-Type": "application/json",
+          // },
+        }
+      );
 
       if (response.ok) {
         alert("Form submitted successfully!");
@@ -111,7 +116,7 @@ export default function EventInterestForm() {
       <div className="two-inputs">
         <input
           className="half-input"
-          type="text"
+          type="tel"
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           name="phone"
@@ -266,7 +271,8 @@ export default function EventInterestForm() {
       <input
         className="long-input"
         type="text"
-        id="info"
+        value={formData.info}
+        onChange={(e) => setFormData({ ...formData, info: e.target.value })}
         name="info"
         placeholder="Any additional information or special requests?"
       />
