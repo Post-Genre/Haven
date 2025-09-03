@@ -26,7 +26,9 @@ export default function FAQItem({ question, answer }: FAQItemProps) {
         ref={contentRef}
         className={`faq-content ${open ? "expanded" : ""}`}
         style={{
-          maxHeight: open ? `${contentRef.current?.scrollHeight}px` : "0px",
+          maxHeight: open
+            ? `${(contentRef.current?.scrollHeight ?? 0) + 32}px`
+            : "0px",
         }}
       >
         {answer}
