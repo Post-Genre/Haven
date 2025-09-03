@@ -12,6 +12,9 @@ import UpcomingEvents from "./components/UpcomingEvents/UpcomingEvents";
 import EventItem from "./components/EventItem/EventItem";
 import banner from "./assets/media/haven pics/DSC_4602-Enhanced-NR.jpg";
 import Events from "./components/Events/Events";
+import EventInterestForm from "./components/InterestForm/EventInterestForm";
+import ParagraphAndButton from "./components/ParagraphAndButton/ParagraphAndButton";
+import Rentals from "./components/Rentals/Rentals";
 
 function App() {
   return (
@@ -24,12 +27,28 @@ function App() {
         <h4>Hello World</h4>
         <h5>Hello World</h5>
         <h6>Hello World</h6>
-        <ButtonPrimary link="https://google.com" text="Button Primary" />
-        <ButtonSecondary link="https://google.com" text="Button Secondary" />
-        <ButtonTertiary link="https://google.com" text="BUTTON TERTIARY" />
+        <ButtonPrimary
+          onClick={() => {
+            window.location.href = "https://www.google.com";
+          }}
+          text="Button Primary"
+        />
+        <ButtonSecondary
+          onClick={() => {
+            window.location.href = "https://www.google.com";
+          }}
+          text="Button Secondary"
+        />
+        <ButtonTertiary
+          onClick={() => {
+            window.location.href = "https://www.google.com";
+          }}
+          text="BUTTON TERTIARY"
+        />
         <WhoWeAre />
         <UpcomingEvents />
         <Events />
+        <Rentals />
       </main>
       <Footer />
     </>

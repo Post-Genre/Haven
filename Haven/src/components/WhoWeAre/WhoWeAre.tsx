@@ -25,7 +25,9 @@ export default function WhoWeAre() {
             community through concerts, event production training, and more.
           </p>
           <ButtonTertiary
-            link="google.com"
+            onClick={() => {
+              window.location.href = "https://www.google.com";
+            }}
             text="LEARN MORE ABOUT POST GENRE"
           />
           <p>
@@ -37,7 +39,12 @@ export default function WhoWeAre() {
             2000’s. Although these venues left Oakland, the borough’s passion
             for local music persevered.
           </p>
-          <ButtonTertiary link="google.com" text="HAVEN FAQ" />
+          <ButtonTertiary
+            onClick={() => {
+              window.location.href = "https://www.google.com";
+            }}
+            text="HAVEN FAQ"
+          />
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-.button-container a {
+.button-container button {
   font-size: 0.85rem;
   font-family: "heading-text";
   color: white;
@@ -6,6 +6,7 @@
   border-radius: 8px;
   display: flex;
   width: auto;
+  border: none;
 }
 
 .button-primary {
@@ -26,7 +27,8 @@
   border-radius: 4px;
 }
 
-a:hover {
+.button-container button:hover {
   transform: scale(1.05);
   transition: 0.35s;
+  cursor: pointer;
 }

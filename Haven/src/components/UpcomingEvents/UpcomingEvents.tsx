@@ -97,7 +97,9 @@ export default function UpcomingEvents() {
         );
       })}
       <ButtonTertiary
-        link="https://google.com"
+        onClick={() => {
+          window.location.href = "https://www.google.com";
+        }}
         text="VIEW ALL UPCOMING EVENTS"
       />
     </div>
