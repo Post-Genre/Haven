@@ -1,3 +1,15 @@
+.carousel-and-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.carousel-buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
 .carousel-container {
   display: flex;
   justify-content: center;
@@ -13,19 +25,35 @@
   display: none;
 }
 
-.angle-button {
+.carousel-button {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.3);
-  /* width: 48px;
-  height: 48px; */
-  aspect-ratio: 1;
-  padding: 0px;
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1 / 1;
   margin: 0px;
-}
-
-.angle-button:hover {
   cursor: pointer;
 }
+
+.carousel-button:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.angle-button {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* .circle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1 / 1;
+  margin: 0px;
+  cursor: pointer;
+} */

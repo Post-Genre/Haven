@@ -21,7 +21,7 @@
 }
 
 .carousel-item-title h4,
-p {
+.carousel-item-title p {
   display: -webkit-box;
   -webkit-line-clamp: 1; /* Max number of lines */
   -webkit-box-orient: vertical; /* Required for line clamp */

@@ -1,7 +1,7 @@
 import "./carousel.css";
 import { useState } from "react";
 import CarouselItem from "../CarouselItem/CarouselItem";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
+import { FaAngleLeft, FaAngleRight, FaCircle } from "react-icons/fa6";
 
 export default function Carousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -28,28 +28,41 @@ export default function Carousel() {
   }
 
   return (
-    <div className="carousel-container">
-      <FaAngleLeft
-        className="angle-button"
-        color="white"
-        onClick={handlePrevious}
-      />
-      {carouselItems.map((carouselItem, index) => (
-        <div
-          className={
-            currentSlide === index
-              ? "current-image"
-              : "current-image hide-current-image"
-          }
-        >
-          {carouselItem}
+    <div className="carousel-and-buttons">
+      <div className="carousel-container">
+        {carouselItems.map((carouselItem, index) => (
+          <div
+            className={
+              currentSlide === index
+                ? "current-image"
+                : "current-image hide-current-image"
+            }
+          >
+            {carouselItem}
+          </div>
+        ))}
+      </div>
+      <div className="carousel-buttons-container">
+        <div className="carousel-button angle-button" onClick={handlePrevious}>
+          <FaAngleLeft color="white" size={32} />
         </div>
-      ))}
-      <FaAngleRight
-        className="angle-button"
-        color="white"
-        onClick={handleNext}
-      />
+        <div className="carousel-button circle-button">
+          <FaCircle color="white" size={40} />
+        </div>
+        <div className="carousel-button circle-button">
+          <FaCircle color="white" size={40} />
+        </div>
+        <div className="carousel-button circle-button">
+          <FaCircle color="white" size={40} />
+        </div>
+        <div className="carousel-button circle-button">
+          <FaCircle color="white" size={40} />
+        </div>
+
+        <div className="carousel-button angle-button" onClick={handleNext}>
+          <FaAngleRight color="white" size={32} />
+        </div>
+      </div>
     </div>
   );
 }
