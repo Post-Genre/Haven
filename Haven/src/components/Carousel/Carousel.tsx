@@ -46,19 +46,19 @@ export default function Carousel() {
         <div className="carousel-button angle-button" onClick={handlePrevious}>
           <FaAngleLeft color="white" size={32} />
         </div>
-        <div className="carousel-button circle-button">
-          <FaCircle color="white" size={40} />
-        </div>
-        <div className="carousel-button circle-button">
-          <FaCircle color="white" size={40} />
-        </div>
-        <div className="carousel-button circle-button">
-          <FaCircle color="white" size={40} />
-        </div>
-        <div className="carousel-button circle-button">
-          <FaCircle color="white" size={40} />
-        </div>
-
+        {carouselItems.map((item, index) => (
+          <div
+            className={
+              currentSlide === index
+                ? "carousel-button circle-button active-button"
+                : "carousel-button circle-button"
+            }
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+          >
+            <FaCircle color="white" size={40} />
+          </div>
+        ))}
         <div className="carousel-button angle-button" onClick={handleNext}>
           <FaAngleRight color="white" size={32} />
         </div>

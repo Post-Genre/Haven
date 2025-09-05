@@ -35,11 +35,17 @@
   aspect-ratio: 1 / 1;
   margin: 0px;
   cursor: pointer;
+  user-select: none; /* prevents highlighting */
+  -webkit-user-select: none;
 }
 
 .carousel-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
   transition: 0.3s;
+}
+
+.active-button {
+  transform: scale(1.15);
 }
 
 .angle-button {
