@@ -1,6 +1,6 @@
 .carousel-and-buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 16px;
 }
 
@@ -14,6 +14,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.swiper-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 500px;
 }
 
 .current-image {
@@ -39,13 +51,29 @@
   -webkit-user-select: none;
 }
 
+.swipper-button-prev,
+.swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1 / 1;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none; /* prevents highlighting */
+  -webkit-user-select: none;
+}
+
 .carousel-button:hover {
   transform: scale(1.15);
   transition: 0.3s;
 }
 
-.active-button {
+.swiper-pagination-bullet-active {
   transform: scale(1.15);
+  background-color: red;
 }
 
 .angle-button {
@@ -63,3 +91,17 @@
   margin: 0px;
   cursor: pointer;
 } */
+
+/* Make the active slide take up most of the space */
+.swiper-slide-container-class {
+  width: 700px; /* or 90%, adjust as needed */
+  max-width: 700px; /* optional */
+}
+
+/* Optional: peek-in effect */
+.swiper-container-class {
+  width: 100%;
+  padding: 0 10%;
+  /* creates side “cut off” effect */
+  box-sizing: border-box;
+}
