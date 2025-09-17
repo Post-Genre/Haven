@@ -101,37 +101,52 @@ export default function Carousel() {
     </SwiperSlide>
   ));
   return (
-    <Swiper
-      effect="coverflow"
-      modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
-      spaceBetween={50}
-      slidesPerView={"auto"}
-      navigation={true}
-      centeredSlides={true}
-      loop={true}
-      pagination={{
-        clickable: true,
-        bulletClass: "swiper-pagination-bullet",
-      }}
-      autoplay={{
-        delay: 4000,
-        disableOnInteraction: false,
-      }}
-      coverflowEffect={{
-        rotate: 20,
-        stretch: 0,
-        depth: 50,
-        modifier: 1,
-        slideShadows: false,
-      }}
-      className="swiper-container-class"
-    >
-      {/* {carouselItems.map((item, index) => (
-        <SwiperSlide key={index} className="swiper-slide-container-class">
-          {item}
-        </SwiperSlide>
-      ))} */}
-      {carouselItems}
-    </Swiper>
+    <>
+      <Swiper
+        effect="coverflow"
+        modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
+        spaceBetween={50}
+        slidesPerView={"auto"}
+        navigation={{
+          prevEl: ".custom-prev",
+          nextEl: ".custom-next",
+        }}
+        centeredSlides={true}
+        loop={true}
+        pagination={{
+          clickable: true,
+          el: ".custom-pagination",
+        }}
+        initialSlide={0}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        coverflowEffect={{
+          rotate: 20,
+          stretch: 0,
+          depth: 50,
+          modifier: 1,
+          slideShadows: false,
+        }}
+        className="swiper-container-class"
+      >
+        {/* {carouselItems.map((item, index) => (
+      <SwiperSlide key={index} className="swiper-slide-container-class">
+        {item}
+      </SwiperSlide>
+    ))} */}
+        {carouselItems}
+      </Swiper>
+      <div className="controls-row">
+        <div className="custom-prev">
+          <FaAngleLeft color="white" size={28} />
+        </div>
+        <div className="custom-pagination"></div>
+        <div className="custom-next">
+          <FaAngleRight color="white" size={28} />
+        </div>
+      </div>
+    </>
   );
 }
