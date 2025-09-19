@@ -1,5 +1,5 @@
 import "./carousel.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import CarouselItem from "../CarouselItem/CarouselItem";
 import { FaAngleLeft, FaAngleRight, FaCircle } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,17 +15,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import DJImage from "../../assets/media/haven pics/IMG_0687.jpg";
+import GetInvolved from "../../assets/media/backgrounds/Psych Background.png";
+
 export default function Carousel() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  //   const swiperRef = useRef<any>(null);
-
-  //   useEffect(() => {
-  //     if (swiperRef.current) {
-  //       swiperRef.current.autoplay.start();
-  //     }
-  //   }, []);
-
   type Event = {
     EventName: string;
     EventDate: string;
@@ -63,7 +56,7 @@ export default function Carousel() {
         const eventDate = new Date(year, month - 1, day);
         return eventDate >= today && event.ShowPublic;
       })
-      .slice(0, 6); // Only return first 3
+      .slice(0, 4); // Only return first 3
   }
 
   async function fetchProducts() {
@@ -95,10 +88,9 @@ export default function Carousel() {
   }
   useEffect(() => {
     fetchProducts();
-    // swiperRef.current?.autoplay.start();
   }, []);
 
-  const carouselItems = events.map((eventItem, index) => (
+  const slideEvents = events.map((eventItem, index) => (
     <SwiperSlide key={index} className="swiper-slide-container-class">
       <CarouselItem
         mainTitle={eventItem.EventName}
@@ -109,6 +101,30 @@ export default function Carousel() {
       />
     </SwiperSlide>
   ));
+  const carouselItems: ReactNode[] = [
+    slideEvents[0],
+    <SwiperSlide key={1} className="swiper-slide-container-class">
+      <CarouselItem
+        mainTitle="Follow us on Instagram!"
+        subtitle="@haven.pgh"
+        image={DJImage}
+        url="https://www.instagram.com/haven.pgh/?hl=en"
+        buttonText="INSTAGRAM"
+      />
+    </SwiperSlide>,
+    slideEvents[1],
+    slideEvents[2],
+    slideEvents[3],
+    <SwiperSlide key={5} className="swiper-slide-container-class">
+      <CarouselItem
+        mainTitle="Want to get involved at HAVEN?"
+        subtitle="Fill out our interest form!"
+        image={GetInvolved}
+        url="https://www.pg.media/get-involved.html"
+        buttonText="GET INVOLVED!"
+      />
+    </SwiperSlide>,
+  ];
   return (
     <>
       <Swiper
@@ -132,15 +148,10 @@ export default function Carousel() {
           delay: 4000,
           disableOnInteraction: false,
         }}
-        loopAddBlankSlides={true}
-        onSwiper={(swiper) => {
-          console.log("swiper instance: ", swiper);
-          //   swiper.autoplay.start();
-          //   swiper.pagination.init();
-          //   swiper.navigation.init();
-          //   swiperRef.current = swiper;
-          console.log("swiper instance 2: ", swiper);
-        }}
+        // onSwiper={(swiper) => {
+        //   console.log("swiper instance: ", swiper);
+        //   console.log("swiper instance 2: ", swiper);
+        // }}
         coverflowEffect={{
           rotate: 20,
           stretch: 0,
@@ -150,11 +161,6 @@ export default function Carousel() {
         }}
         className="swiper-container-class"
       >
-        {/* {carouselItems.map((item, index) => (
-      <SwiperSlide key={index} className="swiper-slide-container-class">
-        {item}
-      </SwiperSlide>
-    ))} */}
         {carouselItems}
       </Swiper>
       <div className="controls-row">
