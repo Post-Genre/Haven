@@ -1,5 +1,5 @@
 import "./carousel.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CarouselItem from "../CarouselItem/CarouselItem";
 import { FaAngleLeft, FaAngleRight, FaCircle } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,6 +17,14 @@ import "swiper/css/pagination";
 
 export default function Carousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  //   const swiperRef = useRef<any>(null);
+
+  //   useEffect(() => {
+  //     if (swiperRef.current) {
+  //       swiperRef.current.autoplay.start();
+  //     }
+  //   }, []);
 
   type Event = {
     EventName: string;
@@ -87,6 +95,7 @@ export default function Carousel() {
   }
   useEffect(() => {
     fetchProducts();
+    // swiperRef.current?.autoplay.start();
   }, []);
 
   const carouselItems = events.map((eventItem, index) => (
@@ -106,21 +115,31 @@ export default function Carousel() {
         effect="coverflow"
         modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
         spaceBetween={50}
+        initialSlide={0}
         slidesPerView={"auto"}
+        // slidesPerView={1}
         navigation={{
           prevEl: ".custom-prev",
           nextEl: ".custom-next",
         }}
         centeredSlides={true}
-        loop={true}
+        // loop={true}
         pagination={{
           clickable: true,
           el: ".custom-pagination",
         }}
-        initialSlide={0}
         autoplay={{
           delay: 4000,
           disableOnInteraction: false,
+        }}
+        loopAddBlankSlides={true}
+        onSwiper={(swiper) => {
+          console.log("swiper instance: ", swiper);
+          //   swiper.autoplay.start();
+          //   swiper.pagination.init();
+          //   swiper.navigation.init();
+          //   swiperRef.current = swiper;
+          console.log("swiper instance 2: ", swiper);
         }}
         coverflowEffect={{
           rotate: 20,
