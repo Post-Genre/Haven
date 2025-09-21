@@ -44,7 +44,7 @@ export default function Carousel() {
     });
   }
 
-  function getFirstThreeEvents(events: Event[]): Event[] {
+  function getFirstFourEvents(events: Event[]): Event[] {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
@@ -56,7 +56,7 @@ export default function Carousel() {
         const eventDate = new Date(year, month - 1, day);
         return eventDate >= today && event.ShowPublic;
       })
-      .slice(0, 4); // Only return first 3
+      .slice(0, 4); // Only return first 4
   }
 
   async function fetchProducts() {
@@ -78,7 +78,7 @@ export default function Carousel() {
 
       if (data && data.length > 0) {
         const sortedEvents = sortEventsByDate(data);
-        setEvents(getFirstThreeEvents(sortedEvents));
+        setEvents(getFirstFourEvents(sortedEvents));
         setLoading(false);
       }
     } catch (error) {
