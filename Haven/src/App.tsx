@@ -15,6 +15,8 @@ import Events from "./components/Events/Events";
 import EventInterestForm from "./components/InterestForm/EventInterestForm";
 import ParagraphAndButton from "./components/ParagraphAndButton/ParagraphAndButton";
 import Rentals from "./components/Rentals/Rentals";
+import CarouselItem from "./components/CarouselItem/CarouselItem";
+import Carousel from "./components/Carousel/Carousel";
 
 function App() {
   return (
@@ -49,6 +51,8 @@ function App() {
         <UpcomingEvents />
         <Events />
         <Rentals />
+        {/* <CarouselItem index={0} /> */}
+        <Carousel />
       </main>
       <Footer />
     </>

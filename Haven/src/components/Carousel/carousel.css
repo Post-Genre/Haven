@@ -1,0 +1,78 @@
+.custom-prev,
+.custom-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  aspect-ratio: 1 / 1;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  --swiper-navigation-color: var(--white);
+  --swiper-navigation-top-offset: 90%;
+  --swiper-navigation-sides-offset: 200px;
+}
+
+.custom-next:hover,
+.custom-prev:hover {
+  transform: scale(1.15);
+  transition: 0.3s;
+}
+
+.swiper-pagination-bullet {
+  --swiper-pagination-color: var(--white);
+  --swiper-pagination-left: auto;
+  --swiper-pagination-right: 8px;
+  --swiper-pagination-bottom: auto;
+  --swiper-pagination-top: auto;
+  --swiper-pagination-bullet-size: 32px;
+  --swiper-pagination-bullet-width: 32px;
+  --swiper-pagination-bullet-height: 32px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 0px;
+  --swiper-pagination-bullet-vertical-gap: 0px;
+}
+
+.swiper-pagination-bullet:hover {
+  transform: scale(1.15);
+  transition: 0.3s;
+}
+
+/* Make the active slide take up most of the space */
+.swiper-slide-container-class {
+  width: 700px; /* or 90%, adjust as needed */
+  max-width: 700px; /* optional */
+}
+
+/* Optional: peek-in effect */
+.swiper-container-class {
+  width: 100%;
+  padding: 0 10%;
+  height: 100%;
+  /* creates side “cut off” effect */
+  box-sizing: border-box;
+}
+
+.controls-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.custom-pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
