@@ -1,0 +1,59 @@
+.event-item-container {
+  display: flex;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  gap: 0px;
+  height: auto;
+}
+
+.event-title-container {
+  align-self: center;
+  color: black;
+  padding: 12px;
+  width: 700px;
+}
+
+.event-title-container h4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Max number of lines */
+  -webkit-box-orient: vertical; /* Required for line clamp */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add "..." at the end */
+}
+
+.event-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.date-container {
+  background-color: black;
+  color: white;
+  border-top-right-radius: 20px;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.tickets-container {
+  background-color: white;
+  color: black;
+  border-bottom-right-radius: 20px;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  font-size: 1.175rem;
+  font-family: "body-text", Verdana, sans-serif;
+  font-weight: 700;
+}
+
+.tickets-container:hover {
+  background-color: black;
+  color: white;
+  transform: none;
+}

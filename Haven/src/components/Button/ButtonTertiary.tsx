@@ -1,21 +1,21 @@
 import "./button.css";
 
 type ButtonTertiaryProps = {
-  link: string;
+  onClick?: () => void;
   text: string;
+  type?: "button" | "submit" | "reset";
 };
 
-export default function ButtonTertiary({ link, text }: ButtonTertiaryProps) {
+export default function ButtonTertiary({
+  onClick,
+  text,
+  type = "button",
+}: ButtonTertiaryProps) {
   return (
     <div className="button-container">
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        className="button-tertiary"
-        href={link}
-      >
+      <button className="button-tertiary" type={type} onClick={onClick}>
         {text}
-      </a>
+      </button>
     </div>
   );
 }

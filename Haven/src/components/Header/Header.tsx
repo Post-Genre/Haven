@@ -1,5 +1,5 @@
 import "./header.css";
-import havenChurchLogo from "../../assets/media/havenpngvirile2.png";
+import havenChurchLogo from "../../assets/media/haven-church-logo.png";
 
 export default function Header() {
   return (
