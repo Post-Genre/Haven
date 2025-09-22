@@ -7,6 +7,8 @@ import ButtonPrimary from "./components/Button/ButtonPrimary";
 import ButtonSecondary from "./components/Button/ButtonSecondary";
 import ButtonTertiary from "./components/Button/ButtonTertiary";
 import WhoWeAre from "./components/WhoWeAre/WhoWeAre";
+import FAQ from "./components/FAQ/FAQ";
+import TitleContainer from "./components/TitleContainer/TitleContainer";
 import UpcomingEventItem from "./components/UpcomingEventItem/UpcomingEventItem";
 import UpcomingEvents from "./components/UpcomingEvents/UpcomingEvents";
 import EventItem from "./components/EventItem/EventItem";
@@ -48,6 +50,7 @@ function App() {
           text="BUTTON TERTIARY"
         />
         <WhoWeAre />
+        <FAQ />
         <UpcomingEvents />
         <Events />
         <Rentals />

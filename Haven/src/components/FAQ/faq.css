@@ -1,0 +1,113 @@
+/* --- FAQ Section Wrapper --- */
+.faq-section {
+  width: 100%;
+  background-color: #052c3d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Banner with Background Image */
+.faq-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 24px;
+
+  background: url("../../assets/media/banners/banner4.jpg") center/cover
+    no-repeat;
+}
+
+.faq-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* FAQ Item List */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* max-width: 650px; */
+  padding: 20px;
+  gap: 16px;
+  /* background-image: url("../../assets/media/banners/bottom4.jpg");
+  background-size: cover; */
+}
+
+/* Individual Accordion Item */
+.collapsible {
+  width: 100%;
+  background-color: rgba(69, 98, 135, 0.41);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  outline: none;
+
+  font-family: "body-text", Verdana, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.collapsible.active {
+  border-radius: 10px 10px 0 0;
+}
+
+.collapsible:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Header row inside accordion button */
+.collapsible-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.collapsible-button h3 {
+  margin: 0;
+  font: inherit;
+}
+
+#expandIcon {
+  font-size: 1.5rem;
+}
+
+/* Accordion Content */
+.faq-content {
+  /* max-height: 0; */
+  overflow: hidden;
+  padding: 0 16px;
+  background-color: rgba(69, 105, 135, 0.41);
+  border-radius: 0 0 10px 10px;
+
+  font-family: "body-text", Verdana, sans-serif;
+  font-size: 1rem;
+  color: white;
+
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.faq-content.expanded {
+  padding: 16px;
+  /* max-height: 1000px;  */
+}
+
+.faq-link {
+  color: white;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.collapsible-section {
+  max-width: 650px;
+}
