@@ -1,8 +1,8 @@
 import "./rentals.css";
 import eventsBanner from "../../assets/media/banners/events-banner.png";
-import TitleContainer from "../TitleContainer/TitleContainer";
-import EventInterestForm from "../InterestForm/EventInterestForm";
-import ParagraphAndButton from "../ParagraphAndButton/ParagraphAndButton";
+import TitleContainer from "../../components/TitleContainer/TitleContainer";
+import EventInterestForm from "../../components/InterestForm/EventInterestForm";
+import ParagraphAndButton from "../../components/ParagraphAndButton/ParagraphAndButton";
 import rental1 from "../../assets/media/haven pics/rentalcard1.png";
 import rental2 from "../../assets/media/haven pics/rentalcard2.png";
 import rental3 from "../../assets/media/haven pics/rentalcard3.png";

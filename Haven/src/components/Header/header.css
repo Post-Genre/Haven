@@ -28,3 +28,13 @@
   margin: 0;
   padding: 20px;
 }
+
+.navlink {
+  color: white;
+  text-decoration: none;
+}
+
+.navlink:visited {
+  color: white;
+  text-decoration: none;
+}
