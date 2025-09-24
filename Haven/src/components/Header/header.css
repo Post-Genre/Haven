@@ -38,3 +38,16 @@
   color: white;
   text-decoration: none;
 }
+
+.active {
+  transform: scale(1.1);
+}
+
+/* .active h5 {
+  color: var(--cream);
+} */
+
+.hover {
+  transform: scale(1.11);
+  transition: 0.3s;
+}
