@@ -3,8 +3,10 @@ import upcomingEvents from "./upcoming-events";
 import UpcomingEventItem from "../UpcomingEventItem/UpcomingEventItem";
 import ButtonTertiary from "../Button/ButtonTertiary";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 export default function UpcomingEvents() {
+  const navigate = useNavigate();
   type Event = {
     EventName: string;
     EventDate: string;
@@ -98,7 +100,7 @@ export default function UpcomingEvents() {
       })}
       <ButtonTertiary
         onClick={() => {
-          window.location.href = "https://www.google.com";
+          navigate("/events");
         }}
         text="VIEW ALL UPCOMING EVENTS"
       />

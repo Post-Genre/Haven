@@ -5,5 +5,20 @@
   justify-content: center;
   width: 100%;
   gap: 20px;
-  padding-top: 20px;
+  /* padding-top: 20px; */
+}
+
+.logo-and-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  align-items: center;
+}
+.home-container img {
+  width: 400px;
+}
+
+.home-container h5 {
+  color: black;
 }
