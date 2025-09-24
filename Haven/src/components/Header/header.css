@@ -15,7 +15,10 @@
 
 .header-container img {
   /* width: 54px; */
-  height: 60px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-container {
