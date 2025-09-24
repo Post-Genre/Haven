@@ -83,7 +83,7 @@ export default function UpcomingEvents() {
         <div className="events-list-container">
           <img src={bottom1} alt="" className="bg-image" />
           <div className="event-items-wrapper">
-            <h6>Loading events, please wait!</h6>
+            <p className="small-font">Loading events, please wait!</p>
           </div>
         </div>
       </div>
