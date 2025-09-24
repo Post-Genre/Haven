@@ -1,6 +1,7 @@
 import "./header.css";
 import havenChurchLogo from "../../assets/media/haven-church-logo.png";
 import { NavLink } from "react-router";
+import { useLocation } from "react-router";
 
 type HeaderProps = {
   onClick?: () => void; // optional click handler
@@ -14,7 +15,11 @@ export default function Header({ onClick }: HeaderProps) {
           className={({ isActive }) =>
             isActive ? "navlink active" : "navlink"
           }
-          onClick={onClick}
+          onClick={() => {
+            if (location.pathname === "/") {
+              window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            }
+          }}
           // onMouseEnter={() => handleHover(0)}
           // onMouseLeave={() => handleLeave()}
           // index="0"
@@ -27,8 +32,11 @@ export default function Header({ onClick }: HeaderProps) {
             className={({ isActive }) =>
               isActive ? "navlink active" : "navlink"
             }
-            onClick={onClick}
-            // onMouseEnter={() => handleHover(0)}
+            onClick={() => {
+              if (location.pathname === "/events") {
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+              }
+            }} // onMouseEnter={() => handleHover(0)}
             // onMouseLeave={() => handleLeave()}
             // index="0"
           >
@@ -41,8 +49,11 @@ export default function Header({ onClick }: HeaderProps) {
             className={({ isActive }) =>
               isActive ? "navlink active" : "navlink"
             }
-            onClick={onClick}
-            // onMouseEnter={() => handleHover(0)}
+            onClick={() => {
+              if (location.pathname === "/rentals") {
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+              }
+            }} // onMouseEnter={() => handleHover(0)}
             // onMouseLeave={() => handleLeave()}
             // index="0"
           >

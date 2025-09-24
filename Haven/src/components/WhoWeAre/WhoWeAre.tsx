@@ -26,7 +26,11 @@ export default function WhoWeAre() {
           </p>
           <ButtonTertiary
             onClick={() => {
-              window.location.href = "https://www.google.com";
+              window.open(
+                "https://www.pg.media",
+                "_blank",
+                "noopener,noreferrer"
+              );
             }}
             text="LEARN MORE ABOUT POST GENRE"
           />

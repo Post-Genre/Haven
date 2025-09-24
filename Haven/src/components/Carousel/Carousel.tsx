@@ -15,7 +15,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import DJImage from "../../assets/media/haven pics/IMG_0687.jpg";
+import DJImage from "../../assets/media/disco nap/IMG_2003.jpg";
+import WBYPic from "../../assets/media/haven pics/IMG_8836.jpg";
 import GetInvolved from "../../assets/media/backgrounds/Psych Background.png";
 
 export default function Carousel() {
@@ -113,8 +114,18 @@ export default function Carousel() {
       />
     </SwiperSlide>,
     slideEvents[1],
+    <SwiperSlide key={3} className="swiper-slide-container-class">
+      <CarouselItem
+        mainTitle="Interested in hosting your event at HAVEN?"
+        subtitle="Contact us for private event rentals!"
+        image={WBYPic}
+        routeInPage={true}
+        url="/rentals"
+        buttonText="RENTALS"
+      />
+    </SwiperSlide>,
     slideEvents[2],
-    slideEvents[3],
+    // slideEvents[3],
     <SwiperSlide key={5} className="swiper-slide-container-class">
       <CarouselItem
         mainTitle="Want to get involved at HAVEN?"

@@ -6,7 +6,6 @@ type TitleContainerProps = {
 };
 
 export default function TitleContainer({ image, text }: TitleContainerProps) {
-  console.log(image);
   return (
     <div
       className="title-container"

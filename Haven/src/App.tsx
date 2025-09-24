@@ -10,11 +10,13 @@ import Home from "./pages/Home/Home";
 import Events from "./pages/Events/Events";
 import Rentals from "./pages/Rentals/Rentals";
 import { BrowserRouter, Routes, Route, ScrollRestoration } from "react-router";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <Header />
         <main>
           <Routes>
