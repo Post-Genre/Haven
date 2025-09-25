@@ -11,6 +11,7 @@ import Events from "./pages/Events/Events";
 import Rentals from "./pages/Rentals/Rentals";
 import { BrowserRouter, Routes, Route, ScrollRestoration } from "react-router";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import LoadingIcon from "./components/LoadingIcon/LoadingIcon";
 
 function App() {
   return (
@@ -19,11 +20,12 @@ function App() {
         <ScrollToTop />
         <Header />
         <main>
-          <Routes>
+          {/* <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/events" element={<Events />} />
             <Route path="/rentals" element={<Rentals />} />
-          </Routes>
+          </Routes> */}
+          <LoadingIcon />
         </main>
         <Footer />
       </BrowserRouter>
