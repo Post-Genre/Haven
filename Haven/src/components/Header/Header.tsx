@@ -63,7 +63,7 @@ export default function Header({ onClick }: HeaderProps) {
           <NavLink
             to="/events"
             className={({ isActive }) =>
-              isActive ? "navlink active" : "navlink"
+              isActive ? "navlink navlink-active" : "navlink"
             }
             onClick={() => {
               if (location.pathname === "/events") {
@@ -81,7 +81,7 @@ export default function Header({ onClick }: HeaderProps) {
           <NavLink
             to="/rentals"
             className={({ isActive }) =>
-              isActive ? "navlink active" : "navlink"
+              isActive ? "navlink navlink-active" : "navlink"
             }
             onClick={() => {
               if (location.pathname === "/rentals") {
