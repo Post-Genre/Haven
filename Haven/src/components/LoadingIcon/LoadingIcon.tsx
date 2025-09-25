@@ -1,12 +1,17 @@
 import { motion } from "motion/react";
 import "./loading-icon.css";
 import havenLogo from "../../assets/media/haven-church-logo.png";
+import havenLogoBlack from "../../assets/media/haven-church-logo-black.png";
 
-export default function LoadingIcon() {
+type LoadingIconProps = {
+  blackLogo: boolean;
+};
+
+export default function LoadingIcon({ blackLogo }: LoadingIconProps) {
   return (
     <div>
       <motion.img
-        src={havenLogo}
+        src={blackLogo ? havenLogoBlack : havenLogo}
         alt="Haven Church Logo"
         className="loading-icon-logo"
         animate={{ rotateY: 360 }}

@@ -18,6 +18,7 @@ import "swiper/css/pagination";
 import DJImage from "../../assets/media/disco nap/IMG_2003.jpg";
 import WBYPic from "../../assets/media/haven pics/IMG_8836.jpg";
 import GetInvolved from "../../assets/media/backgrounds/Psych Background.png";
+import LoadingIcon from "../LoadingIcon/LoadingIcon";
 
 export default function Carousel() {
   type Event = {
@@ -63,6 +64,9 @@ export default function Carousel() {
   async function fetchProducts() {
     try {
       setLoading(true);
+      //   setTimeout(() => {
+      //     console.log("hello bark bluemle");
+      //   }, 5000);
       const response = await fetch(
         "https://67sxoyzalltf7cnmecge2sj5yq0bckqd.lambda-url.us-east-2.on.aws",
         {
@@ -136,6 +140,14 @@ export default function Carousel() {
       />
     </SwiperSlide>,
   ];
+
+  if (loading) {
+    return (
+      <div>
+        <LoadingIcon blackLogo={true} />
+      </div>
+    );
+  }
   return (
     <>
       <Swiper

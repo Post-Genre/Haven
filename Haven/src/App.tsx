@@ -20,12 +20,11 @@ function App() {
         <ScrollToTop />
         <Header />
         <main>
-          {/* <Routes>
+          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/events" element={<Events />} />
             <Route path="/rentals" element={<Rentals />} />
-          </Routes> */}
-          <LoadingIcon />
+          </Routes>
         </main>
         <Footer />
       </BrowserRouter>
