@@ -8,6 +8,8 @@ import {
   FaI,
 } from "react-icons/fa6";
 
+import pgLogo from "../../assets/media/pglogo-white-no-text.png";
+
 export default function Footer() {
   return (
     <div className="footer-container">
@@ -21,7 +23,7 @@ export default function Footer() {
         </div>
         <div className="icon-container">
           <div className="fa-icon">
-            <FaEnvelope size={48} color="white" />
+            <img src={pgLogo} alt="" />
           </div>
           <div className="fa-icon">
             <FaInstagram size={48} color="white" />

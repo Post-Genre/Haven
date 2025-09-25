@@ -41,3 +41,8 @@
 .fa-icon {
   padding: 20px;
 }
+
+.fa-icon img {
+  width: 48px;
+  height: 48px;
+}

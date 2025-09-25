@@ -3,7 +3,7 @@ import FAQ from "../../components/FAQ/FAQ";
 import UpcomingEvents from "../../components/UpcomingEvents/UpcomingEvents";
 import WhoWeAre from "../../components/WhoWeAre/WhoWeAre";
 import "./home.css";
-import blackHavenLogo from "../../assets/media/HAVEN-NEWLOGO 5.png";
+import blackHavenLogo from "../../assets/media/havenlogo-black.png";
 
 export default function Home() {
   return (
