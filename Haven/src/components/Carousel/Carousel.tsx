@@ -143,7 +143,7 @@ export default function Carousel() {
 
   if (loading) {
     return (
-      <div>
+      <div className="loading-icon-container">
         <LoadingIcon blackLogo={true} />
       </div>
     );
