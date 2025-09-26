@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="home-container">
       <div className="logo-and-text-container">
-        <img src={blackHavenLogo} alt="" />
+        <img src={blackHavenLogo} alt="HAVEN" />
         <h5>PITTSBURGH, PA</h5>
       </div>
       <Carousel />
