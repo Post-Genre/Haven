@@ -95,7 +95,22 @@ export default function Header({ onClick }: HeaderProps) {
             <h5>RENTALS</h5>
           </NavLink>
           {/* <h5>ARTISTS</h5> */}
-          {/* <h5>PHOTOS</h5> */}
+          <NavLink
+            to="/photos"
+            className={({ isActive }) =>
+              isActive ? "navlink navlink-active" : "navlink"
+            }
+            onClick={() => {
+              if (location.pathname === "/photos") {
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+              }
+            }}
+            onMouseEnter={() => handleHover(3)}
+            onMouseLeave={() => handleLeave()}
+            data-index="3"
+          >
+            <h5>PHOTOS</h5>
+          </NavLink>
         </div>
       </div>
     </>

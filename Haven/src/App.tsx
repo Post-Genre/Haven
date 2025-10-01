@@ -12,6 +12,7 @@ import Rentals from "./pages/Rentals/Rentals";
 import { BrowserRouter, Routes, Route, ScrollRestoration } from "react-router";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import LoadingIcon from "./components/LoadingIcon/LoadingIcon";
+import Photos from "./pages/Photos/Photos";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/events" element={<Events />} />
             <Route path="/rentals" element={<Rentals />} />
+            <Route path="/photos" element={<Photos />} />
           </Routes>
         </main>
         <Footer />

@@ -1,0 +1,10 @@
+.photos-container {
+  width: 100%;
+  height: 600px;
+  padding: 20px;
+}
+
+.photos-swiper-slide {
+  width: 100%;
+  height: 100%;
+}
