@@ -22,7 +22,7 @@ export default function FAQ() {
               <br />
               <br />
               <a
-                href="https://maps.apple.com/maps?q=401 Atwood St, Pittsburgh, PA 15213"
+                href="https://www.google.com/maps/dir//401+Atwood+St,+Pittsburgh,+PA+15213/@40.4380792,-80.0360765,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8834f1e595444105:0xbd19f85eed9d81e!2m2!1d-79.9536756!2d40.4381085?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 className="faq-link"
               >
@@ -103,7 +103,7 @@ export default function FAQ() {
               <br /> <br />
               <a
                 className="faq-link"
-                href="https://maps.apple.com/maps?q=210 Meyran Ave, Pittsburgh, PA 15213"
+                href="https://www.google.com/maps?client=safari&rls=en&oe=UTF-8&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KVdVGlGH8TSIMUn7tNYic0zG&daddr=210+Meyran+Ave,+Pittsburgh,+PA+15213"
                 target="_blank"
               >
                 Directions to the Forbes-Semple Garage
