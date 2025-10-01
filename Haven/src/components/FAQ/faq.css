@@ -49,6 +49,8 @@
   cursor: pointer;
   text-align: left;
   outline: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   font-family: "body-text", Verdana, sans-serif;
   font-size: 1.25rem;
@@ -87,7 +89,7 @@
   /* max-height: 0; */
   overflow: hidden;
   padding: 0 16px;
-  background-color: rgba(69, 105, 135, 0.41);
+  background-color: rgba(53, 108, 153, 0.41);
   border-radius: 0 0 10px 10px;
 
   font-family: "body-text", Verdana, sans-serif;
@@ -109,5 +111,5 @@
 }
 
 .collapsible-section {
-  max-width: 650px;
+  max-width: 675px;
 }

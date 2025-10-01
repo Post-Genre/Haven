@@ -36,8 +36,14 @@
 .footer-container p {
   color: white;
   font-family: "Times New Roman", Times, serif;
+  text-align: center;
 }
 
 .fa-icon {
   padding: 20px;
+}
+
+.fa-icon img {
+  width: 48px;
+  height: 48px;
 }

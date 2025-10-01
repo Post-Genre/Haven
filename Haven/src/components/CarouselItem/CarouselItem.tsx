@@ -1,6 +1,7 @@
 import "./carousel-item.css";
 import { useState } from "react";
 import JasonPic from "../../assets/media/haven pics/DSCF7307.jpg";
+import { useNavigate } from "react-router";
 
 type CarouselItemProps = {
   subtitle: string;
@@ -8,6 +9,7 @@ type CarouselItemProps = {
   mainTitle: string;
   image: string;
   buttonText: string;
+  routeInPage?: boolean;
 };
 export default function CarouselItem({
   mainTitle,
@@ -15,7 +17,9 @@ export default function CarouselItem({
   url,
   image,
   buttonText,
+  routeInPage,
 }: CarouselItemProps) {
+  const navigate = useNavigate();
   return (
     <div
       className="carousel-item-container"
@@ -30,7 +34,11 @@ export default function CarouselItem({
       <button
         className="carousel-item-button"
         onClick={() => {
-          window.open(url, "_blank", "noopener,noreferrer");
+          {
+            routeInPage
+              ? navigate(url)
+              : window.open(url, "_blank", "noopener,noreferrer");
+          }
         }}
       >
         <h6>{buttonText}</h6>
