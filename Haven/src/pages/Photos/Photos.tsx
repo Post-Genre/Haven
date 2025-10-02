@@ -1,8 +1,13 @@
-import { MasonryPhotoAlbum } from "react-photo-album";
+import { MasonryPhotoAlbum, type Photo } from "react-photo-album";
 import "react-photo-album/masonry.css";
 import "./photos.css";
 import { RowsPhotoAlbum } from "react-photo-album";
 import "react-photo-album/rows.css";
+import Lightbox from "yet-another-react-lightbox";
+import Captions from "yet-another-react-lightbox/plugins/captions";
+import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/captions.css";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -15,11 +20,21 @@ import { FreeMode, Scrollbar, Mousewheel } from "swiper/modules";
 import photos from "./photo-list";
 import djPhotos from "./dj-photo-list";
 import { div } from "motion/react-client";
+import { useState } from "react";
+
+type SelectablePhoto = Photo & {
+  selected?: boolean;
+};
 
 export default function Photos() {
   //   console.log("photos: ", photos);
   //   photos.sort(() => Math.random() - 0.5);
   //   djPhotos.sort(() => Math.random() - 0.5);
+  const [lightboxPhoto, setLightboxPhoto] = useState<SelectablePhoto>();
+
+  function displayAltText(photo: Photo) {
+    console.log("Alt Text: ", photo.alt);
+  }
   const photosArraySize = 8;
   const splitPhotos = [];
   const djSplitPhotos = [];
@@ -54,6 +69,10 @@ export default function Photos() {
           //   targetRowHeight={225}
           rowConstraints={{ minPhotos: splitPhoto.length / 2 }}
           spacing={20}
+          onClick={({ photo }) => {
+            // displayAltText(photo);
+            setLightboxPhoto(photo);
+          }}
         />
       </SwiperSlide>
     );
@@ -102,6 +121,31 @@ export default function Photos() {
         >
           {djPhotoAlbumArray}
         </Swiper>
+        <Lightbox
+          open={Boolean(lightboxPhoto)}
+          close={() => setLightboxPhoto(undefined)}
+          slides={
+            lightboxPhoto
+              ? [
+                  {
+                    src: lightboxPhoto.src,
+                    title: lightboxPhoto.title,
+                    description: lightboxPhoto.alt,
+                  },
+                ]
+              : undefined
+          }
+          carousel={{ finite: true }}
+          render={{ buttonPrev: () => null, buttonNext: () => null }}
+          styles={{ root: { "--yarl__color_backdrop": "rgba(0, 0, 0, .8)" } }}
+          controller={{
+            closeOnBackdropClick: true,
+            closeOnPullUp: true,
+            closeOnPullDown: true,
+          }}
+          plugins={[Captions]}
+          captions={{ descriptionTextAlign: "center" }}
+        />
       </div>
     </div>
   );

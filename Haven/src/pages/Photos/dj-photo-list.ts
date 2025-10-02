@@ -21,22 +21,22 @@ import trevor from "../../assets/media/disco nap/trevor.jpeg";
 
 
 const djPhotos: Photo[] = [
-  { src: photo1, width: 600, height: 400, alt: "Photo 1" },
-  { src: photo14, width: 600, height: 400, alt: "Photo 14" },
-  { src: trevor, width: 267, height: 400, alt: "trevor" },
-  { src: photo4, width: 600, height: 400, alt: "Photo 4" },
-  { src: photo11, width: 267, height: 400, alt: "Photo 11" },
-  { src: photo5, width: 600, height: 400, alt: "Photo 5" },
-  { src: photo6, width: 267, height: 400, alt: "Photo 6" },
-  { src: photo7, width: 600, height: 400, alt: "Photo 7" },
-  { src: photo8, width: 600, height: 400, alt: "Photo 8" },
-  { src: photo9, width: 600, height: 400, alt: "Photo 9" },
-  { src: bark, width: 267, height: 400, alt: "bark" },
-  { src: photo12, width: 600, height: 400, alt: "Photo 12" },
-  { src: photo2, width: 600, height: 400, alt: "Photo 2" },
-  { src: photo13, width: 267, height: 400, alt: "Photo 13" },
-  { src: chloe, width: 600, height: 400, alt: "chloe" },
-  { src: photo16, width: 267, height: 400, alt: "Photo 16" },
+  { src: photo1, width: 600, height: 400, alt: "Photo 1", title: "title"},
+  { src: photo14, width: 600, height: 400, alt: "Photo 14", title: "title"},
+  { src: trevor, width: 267, height: 400, alt: "trevor", title: "title"},
+  { src: photo4, width: 600, height: 400, alt: "Photo 4", title: "title"},
+  { src: photo11, width: 267, height: 400, alt: "Photo 11", title: "title" },
+  { src: photo5, width: 600, height: 400, alt: "Photo 5", title: "title" },
+  { src: photo6, width: 267, height: 400, alt: "Photo 6", title: "title" },
+  { src: photo7, width: 600, height: 400, alt: "Photo 7", title: "title" },
+  { src: photo8, width: 600, height: 400, alt: "Photo 8", title: "title" },
+  { src: photo9, width: 600, height: 400, alt: "Photo 9", title: "title" },
+  { src: bark, width: 267, height: 400, alt: "bark", title: "title" },
+  { src: photo12, width: 600, height: 400, alt: "Photo 12", title: "title" },
+  { src: photo2, width: 600, height: 400, alt: "Photo 2", title: "title" },
+  { src: photo13, width: 267, height: 400, alt: "Photo 13", title: "title" },
+  { src: chloe, width: 600, height: 400, alt: "chloe", title: "title" },
+  { src: photo16, width: 267, height: 400, alt: "Photo 16", title: "title" },
 
 
 
