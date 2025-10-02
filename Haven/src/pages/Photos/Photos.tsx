@@ -18,6 +18,8 @@ import { div } from "motion/react-client";
 
 export default function Photos() {
   //   console.log("photos: ", photos);
+  //   photos.sort(() => Math.random() - 0.5);
+  //   djPhotos.sort(() => Math.random() - 0.5);
   const photosArraySize = 8;
   const splitPhotos = [];
   const djSplitPhotos = [];
