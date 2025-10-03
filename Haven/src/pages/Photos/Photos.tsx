@@ -5,6 +5,7 @@ import { RowsPhotoAlbum } from "react-photo-album";
 import "react-photo-album/rows.css";
 import Lightbox from "yet-another-react-lightbox";
 import Captions from "yet-another-react-lightbox/plugins/captions";
+// import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
@@ -24,7 +25,6 @@ import djPhotos from "./dj-photo-list";
 import obpPhotos from "./obp-photo-list";
 import { useState } from "react";
 import TitleContainer from "../../components/TitleContainer/TitleContainer";
-import { div } from "motion/react-client";
 
 type SelectablePhoto = Photo & {
   selected?: boolean;
@@ -63,6 +63,9 @@ export default function Photos() {
           targetRowHeight={225}
           rowConstraints={{ minPhotos: splitPhoto.length / 2 }}
           spacing={20}
+          onClick={({ photo }) => {
+            setLightboxPhoto(photo);
+          }}
         />
       </SwiperSlide>
     );
@@ -95,6 +98,9 @@ export default function Photos() {
           targetRowHeight={225}
           rowConstraints={{ minPhotos: splitPhoto.length / 2 }}
           spacing={20}
+          onClick={({ photo }) => {
+            setLightboxPhoto(photo);
+          }}
         />
       </SwiperSlide>
     );
@@ -168,8 +174,8 @@ export default function Photos() {
               closeOnPullUp: true,
               closeOnPullDown: true,
             }}
-            //   plugins={[Captions]}
-            //   captions={{ descriptionTextAlign: "center" }}
+            plugins={[Captions]}
+            captions={{ descriptionTextAlign: "center" }}
           />
         </div>
 

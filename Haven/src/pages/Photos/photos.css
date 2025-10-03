@@ -25,7 +25,7 @@
 }
 
 .yarl__slide_title_container {
-  font-family: "heading-text";
+  font-family: "body-text";
   text-align: center;
   margin: 0px;
   padding: 0px;
@@ -39,5 +39,6 @@
 
 .yarl__slide_description_container {
   font-family: "body-text";
+  font-size: 0.75rem;
   /* text-align: center; */
 }

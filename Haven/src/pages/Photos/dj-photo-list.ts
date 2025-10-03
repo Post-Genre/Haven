@@ -21,22 +21,22 @@ import trevor from "../../assets/media/disco nap/trevor.jpeg";
 
 
 const djPhotos: Photo[] = [
-  { src: photo1, width: 600, height: 400, alt: "Photo 1", title: "title"},
-  { src: photo14, width: 600, height: 400, alt: "Photo 14", title: "title"},
-  { src: trevor, width: 267, height: 400, alt: "trevor", title: "title"},
-  { src: photo4, width: 600, height: 400, alt: "Photo 4", title: "title"},
-  { src: photo11, width: 267, height: 400, alt: "Photo 11", title: "title" },
-  { src: photo5, width: 600, height: 400, alt: "Photo 5", title: "title" },
-  { src: photo6, width: 267, height: 400, alt: "Photo 6", title: "title" },
-  { src: photo7, width: 600, height: 400, alt: "Photo 7", title: "title" },
-  { src: photo8, width: 600, height: 400, alt: "Photo 8", title: "title" },
-  { src: photo9, width: 600, height: 400, alt: "Photo 9", title: "title" },
-  { src: bark, width: 267, height: 400, alt: "bark", title: "title" },
-  { src: photo12, width: 600, height: 400, alt: "Photo 12", title: "title" },
-  { src: photo2, width: 600, height: 400, alt: "Photo 2", title: "title" },
-  { src: photo13, width: 267, height: 400, alt: "Photo 13", title: "title" },
-  { src: chloe, width: 600, height: 400, alt: "chloe", title: "title" },
-  { src: photo16, width: 267, height: 400, alt: "Photo 16", title: "title" },
+  { src: photo1, width: 600, height: 400, alt: "pc: Colin Tierney", title: "Disco Nap - 8/23"},
+  { src: photo14, width: 600, height: 400, alt: "pc: Colin Tierney", title: "Disco Nap - 9/5"},
+  { src: trevor, width: 267, height: 400, alt: "pc: Trevor Murray", title: "Disco Nap - 9/27"},
+  { src: photo4, width: 600, height: 400, alt: "pc: Colin Tierney", title: "Disco Nap - 8/23"},
+  { src: photo11, width: 267, height: 400, alt: "pc: Colin Tierney", title: "Disco Nap & Big Momma - 8/23"},
+  { src: photo5, width: 600, height: 400, alt: "pc: Colin Tierney", title: "Disco Nap - 8/23"},
+  { src: photo6, width: 267, height: 400, alt: "pc: Colin Tierney", title: "Big Momma - 9/5"},
+  { src: photo7, width: 600, height: 400, alt: "pc: Colin Tierney", title: "Disco Nap - 9/5"},
+  { src: photo8, width: 600, height: 400, alt: "pc: Colin Tierney", title: "Disco Nap - 9/5"},
+  { src: photo9, width: 600, height: 400, alt: "pc: Colin Tierney", title: "Big Momma - 9/5"},
+  { src: bark, width: 267, height: 400, alt: "pc: Colin Tierney", title: "Disco Nap - 9/5"},
+  { src: photo12, width: 600, height: 400, alt: "pc: Colin Tierney", title: "Disco Nap - 8/23"},
+  { src: photo2, width: 600, height: 400, alt: "pc: Colin Tierney", title: "Disco Nap - 8/23"},
+  { src: photo13, width: 267, height: 400, alt: "pc: Colin Tierney", title: "Disco Nap - 8/23"},
+  { src: chloe, width: 600, height: 400, alt: "pc: Chloe Simpson", title: "The Spins - 8/23"},
+  { src: photo16, width: 267, height: 400, alt: "pc: Colin Tierney", title: "Disco Nap - 9/5"},
 
 
 

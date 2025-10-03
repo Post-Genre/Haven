@@ -18,22 +18,22 @@ import photo16 from "../../assets/media/haven pics/IMG_0593.jpg";
 import photo17 from "../../assets/media/haven pics/IMG_0640.jpg";
 
 const photos: Photo[] = [
-  { src: photo1, width: 600, height: 400, alt: "Photo 1" },
-  { src: photo2, width: 600, height: 400, alt: "Photo 2" },
-  { src: photo3, width: 267, height: 400, alt: "Photo 3" },
-  { src: photo4, width: 267, height: 400, alt: "Photo 4" },
-  { src: photo5, width: 267, height: 400, alt: "Photo 5" },
-  { src: photo6, width: 267, height: 400, alt: "Photo 6" },
-  { src: photo7, width: 600, height: 400, alt: "Photo 7" },
-  { src: photo8, width: 267, height: 400, alt: "Photo 8" },
-  { src: photo9, width: 267, height: 400, alt: "Photo 9" },
-  { src: photo10, width: 267, height: 400, alt: "Photo 10" },
-  { src: photo11, width: 600, height: 400, alt: "Photo 11" },
-  { src: photo12, width: 267, height: 400, alt: "Photo 12" },
-  { src: photo13, width: 267, height: 400, alt: "Photo 13" },
-  { src: photo14, width: 600, height: 400, alt: "Photo 14" },
-  { src: photo15, width: 600, height: 400, alt: "Photo 15" },
-  { src: photo16, width: 267, height: 400, alt: "Photo 16" },
+  { src: photo1, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Wild Blue Yonder - 4/5/2025"},
+  { src: photo2, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Wild Blue Yonder - 4/5/2025"},
+  { src: photo3, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Heading North - 2/8/2025"},
+  { src: photo4, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Heading North - 2/8/2025"},
+  { src: photo5, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "King Blue Heron - 2/1/2025"},
+  { src: photo6, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Kids That Fly - 5/31/2025"},
+  { src: photo7, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Kids That Fly - 5/31/2025"},
+  { src: photo8, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Kids That Fly - 5/31/2025"},
+  { src: photo9, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Fungi Flows - 3/14/2025"},
+  { src: photo10, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Funky Lamp - 4/4/2025"},
+  { src: photo11, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Funky Lamp - 4/4/2025"},
+  { src: photo12, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Funky Lamp - 4/4/2025"},
+  { src: photo13, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Funky Lamp - 4/4/2025"},
+  { src: photo14, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Z-Nemo & the Big Slime - 1/18/2025"},
+  { src: photo15, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Z-Nemo & the Big Slime - 1/18/2025"},
+  { src: photo16, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Giovanni Orsini - 4/12/2025"},
 
 
 
