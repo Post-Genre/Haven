@@ -9,6 +9,8 @@ import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
+import backgroundImg from "../../assets/media/banners/banner1.jpg";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -21,6 +23,8 @@ import photos from "./photo-list";
 import djPhotos from "./dj-photo-list";
 import obpPhotos from "./obp-photo-list";
 import { useState } from "react";
+import TitleContainer from "../../components/TitleContainer/TitleContainer";
+import { div } from "motion/react-client";
 
 type SelectablePhoto = Photo & {
   selected?: boolean;
@@ -56,7 +60,7 @@ export default function Photos() {
         <RowsPhotoAlbum
           key={i}
           photos={splitPhoto}
-          //   targetRowHeight={225}
+          targetRowHeight={225}
           rowConstraints={{ minPhotos: splitPhoto.length / 2 }}
           spacing={20}
         />
@@ -70,7 +74,7 @@ export default function Photos() {
         <RowsPhotoAlbum
           key={i}
           photos={splitPhoto}
-          //   targetRowHeight={225}
+          targetRowHeight={225}
           rowConstraints={{ minPhotos: splitPhoto.length / 2 }}
           spacing={20}
           onClick={({ photo }) => {
@@ -88,7 +92,7 @@ export default function Photos() {
         <RowsPhotoAlbum
           key={i}
           photos={splitPhoto}
-          //   targetRowHeight={225}
+          targetRowHeight={225}
           rowConstraints={{ minPhotos: splitPhoto.length / 2 }}
           spacing={20}
         />
@@ -98,94 +102,98 @@ export default function Photos() {
 
   return (
     <div className="photos-container">
-      <h2>LIVE MUSIC</h2>
-      <div className="swiper-photo-album-container">
-        {" "}
-        <Swiper
-          direction={"horizontal"}
-          slidesPerView={"auto"}
-          freeMode={true}
-          // scrollbar={{ draggable: true }}
-          // mousewheel={{
-          //   releaseOnEdges: true, // important: allows vertical page scroll at edges
-          //   forceToAxis: false, // allows free vertical scroll even mid-slider
-          //   invert: false, // flip horizontal direction if needed
-          //   sensitivity: 1, // adjust scroll speed
-          // }}
-          spaceBetween={20}
-          modules={[FreeMode, Scrollbar, Mousewheel]}
-          className="swiper-container-class"
-        >
-          {rowPhotoAlbumArray}
-        </Swiper>
-      </div>
+      <TitleContainer image={backgroundImg} text="PHOTOS" />
 
-      <h2>DJ NIGHTS</h2>
-      <div className="swiper-photo-album-container">
-        <Swiper
-          direction={"horizontal"}
-          slidesPerView={"auto"}
-          freeMode={true}
-          // scrollbar={{ draggable: true }}
-          // mousewheel={{
-          //   releaseOnEdges: true, // important: allows vertical page scroll at edges
-          //   forceToAxis: false, // allows free vertical scroll even mid-slider
-          //   invert: false, // flip horizontal direction if needed
-          //   sensitivity: 1, // adjust scroll speed
-          // }}
-          spaceBetween={20}
-          modules={[FreeMode, Scrollbar, Mousewheel]}
-          className="swiper-container-class"
-        >
-          {djPhotoAlbumArray}
-        </Swiper>
-        <Lightbox
-          open={Boolean(lightboxPhoto)}
-          close={() => setLightboxPhoto(undefined)}
-          slides={
-            lightboxPhoto
-              ? [
-                  {
-                    src: lightboxPhoto.src,
-                    title: lightboxPhoto.title,
-                    description: lightboxPhoto.alt,
-                  },
-                ]
-              : undefined
-          }
-          carousel={{ finite: true }}
-          render={{ buttonPrev: () => null, buttonNext: () => null }}
-          styles={{ root: { "--yarl__color_backdrop": "rgba(0, 0, 0, .8)" } }}
-          controller={{
-            closeOnBackdropClick: true,
-            closeOnPullUp: true,
-            closeOnPullDown: true,
-          }}
-          plugins={[Captions]}
-          captions={{ descriptionTextAlign: "center" }}
-        />
-      </div>
+      <div className="photos-album-container">
+        <h3>LIVE MUSIC</h3>
+        <div className="swiper-photo-album-container">
+          {" "}
+          <Swiper
+            direction={"horizontal"}
+            slidesPerView={"auto"}
+            freeMode={true}
+            // scrollbar={{ draggable: true }}
+            // mousewheel={{
+            //   releaseOnEdges: true, // important: allows vertical page scroll at edges
+            //   forceToAxis: false, // allows free vertical scroll even mid-slider
+            //   invert: false, // flip horizontal direction if needed
+            //   sensitivity: 1, // adjust scroll speed
+            // }}
+            spaceBetween={20}
+            modules={[FreeMode, Scrollbar, Mousewheel]}
+            className="swiper-container-class"
+          >
+            {rowPhotoAlbumArray}
+          </Swiper>
+        </div>
 
-      <h2>OAKLAND BLOCK PARTY 2025</h2>
-      <div className="swiper-photo-album-container">
-        {" "}
-        <Swiper
-          direction={"horizontal"}
-          slidesPerView={"auto"}
-          freeMode={true}
-          // scrollbar={{ draggable: true }}
-          // mousewheel={{
-          //   releaseOnEdges: true, // important: allows vertical page scroll at edges
-          //   forceToAxis: false, // allows free vertical scroll even mid-slider
-          //   invert: false, // flip horizontal direction if needed
-          //   sensitivity: 1, // adjust scroll speed
-          // }}
-          spaceBetween={20}
-          modules={[FreeMode, Scrollbar, Mousewheel]}
-          className="swiper-container-class"
-        >
-          {obpPhotoAlbumArray}
-        </Swiper>
+        <h3>DJ NIGHTS</h3>
+        <div className="swiper-photo-album-container">
+          <Swiper
+            direction={"horizontal"}
+            slidesPerView={"auto"}
+            freeMode={true}
+            // scrollbar={{ draggable: true }}
+            // mousewheel={{
+            //   releaseOnEdges: true, // important: allows vertical page scroll at edges
+            //   forceToAxis: false, // allows free vertical scroll even mid-slider
+            //   invert: false, // flip horizontal direction if needed
+            //   sensitivity: 1, // adjust scroll speed
+            // }}
+            spaceBetween={20}
+            modules={[FreeMode, Scrollbar, Mousewheel]}
+            className="swiper-container-class"
+          >
+            {djPhotoAlbumArray}
+          </Swiper>
+          <Lightbox
+            open={Boolean(lightboxPhoto)}
+            close={() => setLightboxPhoto(undefined)}
+            slides={
+              lightboxPhoto
+                ? [
+                    {
+                      src: lightboxPhoto.src,
+                      title: lightboxPhoto.title,
+                      description: lightboxPhoto.alt,
+                    },
+                  ]
+                : undefined
+            }
+            carousel={{ finite: true }}
+            render={{ buttonPrev: () => null, buttonNext: () => null }}
+            styles={{ root: { "--yarl__color_backdrop": "rgba(0, 0, 0, .8)" } }}
+            controller={{
+              closeOnBackdropClick: true,
+              closeOnPullUp: true,
+              closeOnPullDown: true,
+            }}
+            //   plugins={[Captions]}
+            //   captions={{ descriptionTextAlign: "center" }}
+          />
+        </div>
+
+        <h3>OAKLAND BLOCK PARTY 2025</h3>
+        <div className="swiper-photo-album-container">
+          {" "}
+          <Swiper
+            direction={"horizontal"}
+            slidesPerView={"auto"}
+            freeMode={true}
+            // scrollbar={{ draggable: true }}
+            // mousewheel={{
+            //   releaseOnEdges: true, // important: allows vertical page scroll at edges
+            //   forceToAxis: false, // allows free vertical scroll even mid-slider
+            //   invert: false, // flip horizontal direction if needed
+            //   sensitivity: 1, // adjust scroll speed
+            // }}
+            spaceBetween={20}
+            modules={[FreeMode, Scrollbar, Mousewheel]}
+            className="swiper-container-class"
+          >
+            {obpPhotoAlbumArray}
+          </Swiper>
+        </div>
       </div>
     </div>
   );
