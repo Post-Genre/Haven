@@ -119,12 +119,9 @@ export default function Photos() {
             slidesPerView={"auto"}
             freeMode={true}
             // scrollbar={{ draggable: true }}
-            // mousewheel={{
-            //   releaseOnEdges: true, // important: allows vertical page scroll at edges
-            //   forceToAxis: false, // allows free vertical scroll even mid-slider
-            //   invert: false, // flip horizontal direction if needed
-            //   sensitivity: 1, // adjust scroll speed
-            // }}
+            mousewheel={{
+              forceToAxis: true,
+            }}
             spaceBetween={20}
             modules={[FreeMode, Scrollbar, Mousewheel]}
             className="swiper-container-class"
@@ -140,12 +137,9 @@ export default function Photos() {
             slidesPerView={"auto"}
             freeMode={true}
             // scrollbar={{ draggable: true }}
-            // mousewheel={{
-            //   releaseOnEdges: true, // important: allows vertical page scroll at edges
-            //   forceToAxis: false, // allows free vertical scroll even mid-slider
-            //   invert: false, // flip horizontal direction if needed
-            //   sensitivity: 1, // adjust scroll speed
-            // }}
+            mousewheel={{
+              forceToAxis: true,
+            }}
             spaceBetween={20}
             modules={[FreeMode, Scrollbar, Mousewheel]}
             className="swiper-container-class"
@@ -187,12 +181,9 @@ export default function Photos() {
             slidesPerView={"auto"}
             freeMode={true}
             // scrollbar={{ draggable: true }}
-            // mousewheel={{
-            //   releaseOnEdges: true, // important: allows vertical page scroll at edges
-            //   forceToAxis: false, // allows free vertical scroll even mid-slider
-            //   invert: false, // flip horizontal direction if needed
-            //   sensitivity: 1, // adjust scroll speed
-            // }}
+            mousewheel={{
+              forceToAxis: true,
+            }}
             spaceBetween={20}
             modules={[FreeMode, Scrollbar, Mousewheel]}
             className="swiper-container-class"
