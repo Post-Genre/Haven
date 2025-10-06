@@ -25,20 +25,15 @@ import djPhotos from "./dj-photo-list";
 import obpPhotos from "./obp-photo-list";
 import { useState } from "react";
 import TitleContainer from "../../components/TitleContainer/TitleContainer";
+import PhotoSlide from "./PhotoSlide";
 
 type SelectablePhoto = Photo & {
   selected?: boolean;
 };
 
 export default function Photos() {
-  //   console.log("photos: ", photos);
-  //   photos.sort(() => Math.random() - 0.5);
-  //   djPhotos.sort(() => Math.random() - 0.5);
   const [lightboxPhoto, setLightboxPhoto] = useState<SelectablePhoto>();
 
-  function displayAltText(photo: Photo) {
-    console.log("Alt Text: ", photo.alt);
-  }
   const photosArraySize = 8;
   const splitPhotos = [];
   const djSplitPhotos = [];
@@ -81,7 +76,6 @@ export default function Photos() {
           rowConstraints={{ minPhotos: splitPhoto.length / 2 }}
           spacing={20}
           onClick={({ photo }) => {
-            // displayAltText(photo);
             setLightboxPhoto(photo);
           }}
         />
@@ -161,15 +155,23 @@ export default function Photos() {
                 : undefined
             }
             carousel={{ finite: true }}
-            render={{ buttonPrev: () => null, buttonNext: () => null }}
+            render={{
+              slide: ({ slide }) => (
+                <PhotoSlide
+                  title={slide.title}
+                  subtitle={slide.description}
+                  image={slide.src}
+                />
+              ),
+              buttonNext: () => null,
+              buttonPrev: () => null,
+            }}
             styles={{ root: { "--yarl__color_backdrop": "rgba(0, 0, 0, .8)" } }}
             controller={{
               closeOnBackdropClick: true,
               closeOnPullUp: true,
               closeOnPullDown: true,
             }}
-            plugins={[Captions]}
-            captions={{ descriptionTextAlign: "center" }}
           />
         </div>
 

@@ -45,3 +45,21 @@
   font-size: 0.75rem;
   /* text-align: center; */
 }
+
+.photo-slide-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 100%; */
+  color: white;
+}
+
+.photo-slide-container p {
+  text-align: center;
+}
+
+.photo-slide-container img {
+  max-width: 1000px;
+  max-height: 580px;
+}
