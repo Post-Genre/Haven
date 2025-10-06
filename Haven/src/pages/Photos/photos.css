@@ -27,25 +27,6 @@
   /* height: 600px; */
 }
 
-.yarl__slide_title_container {
-  font-family: "body-text";
-  text-align: center;
-  margin: 0px;
-  padding: 0px;
-}
-
-.yarl__slide_caption_container {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.yarl__slide_description_container {
-  font-family: "body-text";
-  font-size: 0.75rem;
-  /* text-align: center; */
-}
-
 .photo-slide-container {
   display: flex;
   flex-direction: column;
@@ -61,5 +42,5 @@
 
 .photo-slide-container img {
   max-width: 1000px;
-  max-height: 580px;
+  max-height: 550px;
 }
