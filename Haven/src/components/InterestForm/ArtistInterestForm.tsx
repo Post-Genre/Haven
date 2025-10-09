@@ -16,7 +16,7 @@ export default function EventInterestForm() {
     bandInfo: "",
     date: null as Date | null,
     supportingArtists: "",
-    releaseShow: false,
+    // releaseShow: false,
     info: "",
   };
   const [formData, setFormData] = useState({
@@ -30,7 +30,7 @@ export default function EventInterestForm() {
     bandInfo: "",
     date: null as Date | null,
     supportingArtists: "",
-    releaseShow: false,
+    // releaseShow: false,
     info: "",
   });
 
@@ -46,7 +46,7 @@ export default function EventInterestForm() {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzNmMVdKVS9CBlMsVcyrTdSZtu_4REwxBDC3BOZsvNEW_TQ0JWVv3XuSbAReuZ1NjQJ/exec",
+        "https://script.google.com/macros/s/AKfycbwoI-rBkehUOF57qPvuXboxAG5vm-PcJ8_Vsb4Izt7F0swp_CfMQhyHVEdC9Q61py4c7A/exec",
         {
           method: "POST",
           body: JSON.stringify(payload),
@@ -94,6 +94,16 @@ export default function EventInterestForm() {
       </div>
       <input
         className="full-input"
+        type="email"
+        value={formData.email}
+        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+        name="email"
+        placeholder="Email*"
+        required
+      />
+      <p>Band Information</p>
+      <input
+        className="full-input"
         type="text"
         value={formData.bandName}
         onChange={(e) => setFormData({ ...formData, bandName: e.target.value })}
@@ -103,21 +113,11 @@ export default function EventInterestForm() {
       />
       <input
         className="full-input"
-        type="email"
-        value={formData.email}
-        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-        name="email"
-        placeholder="Email*"
-        required
-      />
-      <p>Contact Information</p>
-      <input
-        className="full-input"
         type="text"
         value={formData.location}
         onChange={(e) => setFormData({ ...formData, location: e.target.value })}
         name="location"
-        placeholder="What city are you most active in?"
+        placeholder="What city are you most active in?*"
         required
       />
       <input
@@ -129,7 +129,6 @@ export default function EventInterestForm() {
         }
         name="musicLinks"
         placeholder="Link(s) to your music"
-        required
       />
       <input
         className="full-input"
@@ -140,22 +139,21 @@ export default function EventInterestForm() {
         }
         name="socialLinks"
         placeholder="Social media link(s)"
-        required
       />
-      <input
+      <textarea
         className="long-input"
-        type="text"
         value={formData.bandInfo}
         onChange={(e) => setFormData({ ...formData, bandInfo: e.target.value })}
         name="bandInfo"
         placeholder="Tell us more about your band! What genre do you consider yourself? Where have you played? etc.*"
+        required
       />
 
       <p>Event Details</p>
       <DatePicker
         selected={formData.date}
         onChange={(date) => setFormData({ ...formData, date })}
-        placeholderText="Event Date*"
+        placeholderText="Event Date"
         className="full-input"
       />
       <input
@@ -167,27 +165,41 @@ export default function EventInterestForm() {
         }
         name="supportingArtists"
         placeholder="Do you have a bill already? If so, list your supporing artists"
-        required
       />
-      <label htmlFor="audio">
-        <input
-          className="check-box"
-          type="checkbox"
-          checked={formData.releaseShow}
-          onChange={(e) =>
-            setFormData({ ...formData, releaseShow: e.target.checked })
-          }
-          name="releaseShow"
-        />
-        Will this be a release show?
-      </label>
-      <input
+      {/* <div className="form-grid-one-row">
+        <p>Will this be a release show?</p>
+        <label htmlFor="audio">
+          <input
+            className="check-box"
+            type="checkbox"
+            checked={formData.releaseShow}
+            onChange={(e) =>
+              setFormData({ ...formData, releaseShow: e.target.checked })
+            }
+            name="releaseShow"
+          />
+          Yes
+        </label>
+        <label htmlFor="audio">
+          <input
+            className="check-box"
+            type="checkbox"
+            checked={formData.releaseShow}
+            onChange={(e) =>
+              setFormData({ ...formData, releaseShow: e.target.checked })
+            }
+            name="releaseShow"
+          />
+          No
+        </label>
+      </div> */}
+
+      <textarea
         className="long-input"
-        type="text"
         value={formData.info}
         onChange={(e) => setFormData({ ...formData, info: e.target.value })}
         name="info"
-        placeholder="Any additional information or special requests?"
+        placeholder="Any additional information?"
       />
       <ButtonPrimary type="submit" text="SUBMIT" />
     </form>

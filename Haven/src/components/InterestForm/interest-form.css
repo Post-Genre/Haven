@@ -43,6 +43,7 @@
 .long-input {
   width: 656px;
   height: 200px;
+  padding: 20px;
 }
 
 .form-container h6,
@@ -62,7 +63,7 @@ p {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.form-grid label {
+label {
   display: flex;
   align-items: center; /* vertically center */
   gap: 12px; /* space between checkbox and text */

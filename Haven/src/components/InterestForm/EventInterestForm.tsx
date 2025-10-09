@@ -268,9 +268,8 @@ export default function EventInterestForm() {
         </label>
       </div>
 
-      <input
+      <textarea
         className="long-input"
-        type="text"
         value={formData.info}
         onChange={(e) => setFormData({ ...formData, info: e.target.value })}
         name="info"
