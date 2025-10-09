@@ -8,6 +8,7 @@ import rental2 from "../../assets/media/haven pics/rentalcard2.png";
 import rental3 from "../../assets/media/haven pics/rentalcard3.png";
 import pic1 from "../../assets/media/haven pics/IMG_6230-Enhanced-NR.jpg";
 import pic5 from "../../assets/media/haven pics/IMG_0640.jpg";
+import photo17 from "../../assets/media/haven pics/IMG_0640.jpg";
 
 export default function Rentals() {
   return (
@@ -30,7 +31,7 @@ export default function Rentals() {
           </p>
         </div>
         <div className="rental-card">
-          <img src={rental2} alt="" />
+          <img src={photo17} alt="" />
           <h5>PRIVATE SOCIAL EVENTS</h5>
           <p className="small-font">
             Interested in hosting a concert or live event at HAVEN? From audio
