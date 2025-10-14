@@ -14,6 +14,7 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import LoadingIcon from "./components/LoadingIcon/LoadingIcon";
 import Photos from "./pages/Photos/Photos";
 import Artists from "./pages/Artists/Artists";
+import Bookings from "./pages/Bookings/Bookings";
 
 function App() {
   return (
@@ -25,8 +26,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/events" element={<Events />} />
-            <Route path="/artists" element={<Artists />} />
-            <Route path="/rentals" element={<Rentals />} />
+            <Route path="/bookings" element={<Bookings />} />
+            {/* <Route path="/artists" element={<Artists />} /> 
+            <Route path="/rentals" element={<Rentals />} />  */}
             <Route path="/photos" element={<Photos />} />
           </Routes>
         </main>

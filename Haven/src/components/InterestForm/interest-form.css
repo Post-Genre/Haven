@@ -70,3 +70,31 @@ label {
   font-size: 0.9rem;
   font-family: "body-text";
 }
+
+.interest-forms-tabs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  border: 2px solid var(--burnt-orange);
+  border-radius: 8px;
+  width: fit-content;
+  background-color: var(--cream);
+}
+
+.tab-item {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 12px;
+  cursor: pointer;
+  color: white;
+}
+
+.tab-item.active {
+  background: var(--burnt-orange);
+}
