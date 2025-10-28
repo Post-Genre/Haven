@@ -1,10 +1,11 @@
 import "./events.css";
 // import events from "./events-list";
 import banner1 from "../../assets/media/banners/banner1.jpg";
-import TitleContainer from "../TitleContainer/TitleContainer";
-import EventItem from "../EventItem/EventItem";
+import TitleContainer from "../../components/TitleContainer/TitleContainer";
+import EventItem from "../../components/EventItem/EventItem";
 import bottom1 from "../../assets/media/banners/bottom1.jpg";
 import { useState, useEffect } from "react";
+import LoadingIcon from "../../components/LoadingIcon/LoadingIcon";
 
 export default function UpcomingEvents() {
   type Event = {
@@ -83,7 +84,7 @@ export default function UpcomingEvents() {
         <div className="events-list-container">
           <img src={bottom1} alt="" className="bg-image" />
           <div className="event-items-wrapper">
-            <h6>Loading events, please wait!</h6>
+            <LoadingIcon blackLogo={false} />
           </div>
         </div>
       </div>

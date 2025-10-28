@@ -1,0 +1,57 @@
+import type { Photo } from "react-photo-album";
+import photo1 from "../../assets/media/haven pics/DSCF7307.jpg";
+import photo2 from "../../assets/media/haven pics/DSCF7376.jpg";
+import photo3 from "../../assets/media/haven pics/DSC_1676.jpg";
+import photo4 from "../../assets/media/haven pics/DSC_2355.jpg";
+import photo5 from "../../assets/media/haven pics/DSC_4038.jpg";
+import photo6 from "../../assets/media/haven pics/DSC_4329-Enhanced-NR.jpg";
+import photo7 from "../../assets/media/haven pics/DSC_4602-Enhanced-NR.jpg";
+import photo8 from "../../assets/media/haven pics/DSC_4744-Enhanced-NR.jpg";
+import photo9 from "../../assets/media/haven pics/DSC_6563.jpg";
+import photo10 from "../../assets/media/haven pics/DSC_8396.jpg";
+import photo11 from "../../assets/media/haven pics/DSC_9097.jpg";
+import photo12 from "../../assets/media/haven pics/DSC_9144.jpg";
+import photo13 from "../../assets/media/haven pics/DSC_9161.jpg";
+import photo14 from "../../assets/media/haven pics/IMG_0212-Enhanced-NR.jpg";
+import photo15 from "../../assets/media/haven pics/IMG_0248-Enhanced-NR.jpg";
+import photo16 from "../../assets/media/haven pics/IMG_0593.jpg";
+import photo17 from "../../assets/media/haven pics/IMG_0640.jpg";
+import crowd1 from "../../assets/media/haven pics/IMG_1004_crowd.jpg";
+import crowd2 from "../../assets/media/haven pics/IMG_2890_crowd.jpg";
+import crowd3 from "../../assets/media/haven pics/IMG_6100_crowd.jpg";
+import crowd4 from "../../assets/media/haven pics/IMG_6207-Enhanced-NR_crowd.jpg";
+import crowd5 from "../../assets/media/haven pics/IMG_6215-Enhanced-NR_crowd.jpg";
+import crowd6 from "../../assets/media/haven pics/IMG_6230-Enhanced-NR_crowd.jpg";
+import crowd7 from "../../assets/media/haven pics/IMG_6703-Enhanced-NR_crowd.jpg";
+import crowd8 from "../../assets/media/haven pics/IMG_8836_crowd.jpg";
+
+const photos: Photo[] = [
+  // { src: photo1, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Wild Blue Yonder - 4/5/2025"},
+    { src: crowd1, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "9fiftyseven - 1/31/2025"},
+    { src: crowd8, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Wild Blue Yonder - 4/5/2025"},
+  // { src: photo3, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Heading North - 2/8/2025"},
+    { src: crowd2, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Times New Wrestlers - 3/15/2025"},
+  { src: photo4, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Heading North - 2/8/2025"},
+        { src: crowd6, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Madeline Jo & Friends - 1/10/2025"},
+  { src: photo13, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Funky Lamp - 4/4/2025"},
+  // { src: photo6, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Kids That Fly - 5/31/2025"},
+  { src: photo7, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Kids That Fly - 5/31/2025"},
+  { src: photo8, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Kids That Fly - 5/31/2025"},
+  { src: photo9, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Fungi Flows - 3/14/2025"},
+  // { src: photo10, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Funky Lamp - 4/4/2025"},
+    { src: crowd4, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Madeline Jo & Friends - 1/10/2025"},
+  { src: photo11, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Funky Lamp - 4/4/2025"},
+  { src: photo12, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Funky Lamp - 4/4/2025"},
+    { src: photo5, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "King Blue Heron - 2/1/2025"},
+  { src: photo14, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Z-Nemo & the Big Slime - 1/18/2025"},
+  // { src: photo15, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Z-Nemo & the Big Slime - 1/18/2025"},
+    { src: photo2, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Wild Blue Yonder - 4/5/2025"},
+  // { src: photo16, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Giovanni Orsini - 4/12/2025"},
+    { src: crowd3, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Kids That Fly - 5/31/2025"},
+
+
+
+
+];
+
+export default photos;

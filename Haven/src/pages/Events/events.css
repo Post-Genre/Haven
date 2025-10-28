@@ -32,3 +32,8 @@
   align-items: center;
   color: white;
 }
+
+.event-items-wrapper p {
+  font-style: italic;
+  text-align: center;
+}

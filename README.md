@@ -3,27 +3,29 @@
 Repository for for react build of Haven's website. Currently in another repository but the havenvenue.com domain will be transferred over to here upon completion.
 
 ## Running/Testing the build
-cd into haven-react-site, then run "npm run dev". To test on mobile, make sure your desktop and phone are on the same wifi network, then run "npm run dev -- --host" instead. Use the "Network" link to view the test build on your phone.
+`cd` into `Haven/src/`, then run `npm run dev`. To test on mobile, make sure your desktop and phone are on the same wifi network, then run `npm run dev -- --host` instead. Use the "Network" link to view the test build on your phone.
 
 ## Git pathways/processes 
-'main' branch will remain untouched until the react build is complete - this will stay as the vanilla html version and will keep the domain name until needed. <br><br>
-Our new main/master branch will be titled 'react-main-branch.' For each component/set of components we do, we will create new branches off of this, and then merge back into 'react-main-branch' upon completion. (Hopefully we will be able to set branch protection for 'react-main-branch'). Before merging branches, we can have one or both other members review it over.
+`main` branch will remain untouched until the react build is complete - this will stay as the vanilla html version and will keep the domain name until needed. <br><br>
+Our new main/master branch will be titled `react-main-branch`. For each component/set of components we do, we will create new branches off of this, and then merge back into 'react-main-branch' upon completion. Branch protection has been enabled for both `main` and `react-main-branch`. Before merging branches, we can have one or both other members review it.
 
 ## Naming conventions
-Each component will be placed into its own folder inside of the components folder, titled ComponentName. Inside each folder will contain a ComponentName.jsx, and a component-name.css file, and any other files if necessary (js data file, library, etc.). Styling and properties for each component remain local to each individual component.
+Each component will be placed into its own folder inside of the components folder, titled `ComponentName`. Inside each folder will contain a `ComponentName.jsx`, and a `component-name.css` file, and any other files if necessary (js data file, library, etc.). Styling and properties for each component remain local to each individual component.
 
 ## Testing components
 To view components, add a `<ComponentName />` into the App.jsx main section. Adding to the end of the section should avoid any merge conflicts. 
 
 ## Global styling (index.css) 
-index.css contains general styling guidelines for the entire website. There are variables for all the colors to be used in the website, and each text type (h1 - h6, p, etc.) have pre-defined scales to use, so no need to redefine the font sizes everytime (we can move to vw if needed but right now doesn't seem completely necessary). Fonts NexaRust and Inter are included as well under "heading-text" and "body-text" respectively.
+index.css contains general styling guidelines for the entire website. There are variables for all the colors to be used in the website, and each text type (h1 - h6, p, etc.) have pre-defined scales to use, so no need to redefine the font sizes everytime (we can move to vw if needed but right now doesn't seem completely necessary). Fonts NexaRust and Inter are included as well under `heading-text` and `body-text` respectively.
 
 ## Reusable components
-There will be Link and Button components to use throughout the website, to avoid having to restyle these items for every different usage. When creating a list-type component, you can create an item component first (ie a CarouselItem or an EventsItem) and then a parent component that lists out several of that item component.
+There will be `Link` and `Button` components to use throughout the website, to avoid having to restyle these items for every different usage. When creating a list-type component, you can create an item component first (i.e. a `CarouselItem` or an `EventsItem`) and then a parent component that lists out several of that item component.
 
 ## Icons 
-Any icons to be used will come from the Font Awesome 6 library. To import, use the conventions:<br> <br>
-import { 'IconName' } from "react-icons/fa6";<br><br>
+Any icons to be used will come from the Font Awesome 6 library. To import, use the conventions:
+
+`import { 'IconName' } from "react-icons/fa6";`
+
 Link to icon library: https://fontawesome.com/
 
 # React + TypeScript + Vite

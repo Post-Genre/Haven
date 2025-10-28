@@ -1,6 +1,6 @@
 .header-container {
   background-color: var(--burnt-orange);
-  height: 70px;
+  height: 60px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -15,7 +15,10 @@
 
 .header-container img {
   /* width: 54px; */
-  height: 60px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-container {
@@ -27,4 +30,27 @@
 .nav-container h5 {
   margin: 0;
   padding: 20px;
+}
+
+.navlink {
+  color: white;
+  text-decoration: none;
+}
+
+.navlink:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.navlink-active {
+  transform: scale(1.1);
+}
+
+/* .active h5 {
+  color: var(--cream);
+} */
+
+.hover {
+  transform: scale(1.11);
+  transition: 0.3s;
 }
