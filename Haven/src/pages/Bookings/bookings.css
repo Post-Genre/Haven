@@ -1,0 +1,92 @@
+.bookings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.bookings-container h3 {
+  width: 900px;
+}
+
+.bookings-cards-container {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.bookings-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 100%;
+}
+
+.bookings-card img {
+  width: 100%;
+  height: 300px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  object-fit: cover;
+}
+
+.bookings-card h5 {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background-color: var(--burnt-orange);
+  color: white;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bookings-card p {
+  background-color: rgba(255, 255, 255, 0.65);
+  border: 2px solid var(--burnt-orange);
+  color: black;
+  width: 100%;
+  padding: 16px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  height: 200px;
+}
+
+.what-we-offer {
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.what-we-offer img {
+  width: 500px;
+  border-radius: 10px;
+}
+
+.what-we-offer-text {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  text-align: left;
+  width: 350px;
+  gap: 24px;
+}
+
+.what-we-offer-text h5 {
+  text-align: center;
+}
+
+.interest-form-tabs {
+  scroll-margin-top: 60px;
+  padding: 12px;
+}

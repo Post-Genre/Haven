@@ -78,6 +78,23 @@ export default function Header({ onClick }: HeaderProps) {
           </NavLink>
           {/* <h5>ABOUT</h5> */}
 
+          {/* <NavLink
+            to="/artists"
+            className={({ isActive }) =>
+              isActive ? "navlink navlink-active" : "navlink"
+            }
+            onClick={() => {
+              if (location.pathname === "/artists") {
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+              }
+            }}
+            onMouseEnter={() => handleHover(2)}
+            onMouseLeave={() => handleLeave()}
+            data-index="2"
+          >
+            <h5>ARTISTS</h5>
+          </NavLink>
+
           <NavLink
             to="/rentals"
             className={({ isActive }) =>
@@ -88,13 +105,30 @@ export default function Header({ onClick }: HeaderProps) {
                 window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
               }
             }}
+            onMouseEnter={() => handleHover(3)}
+            onMouseLeave={() => handleLeave()}
+            data-index="3"
+          >
+            <h5>RENTALS</h5>
+          </NavLink> */}
+
+          <NavLink
+            to="/bookings"
+            className={({ isActive }) =>
+              isActive ? "navlink navlink-active" : "navlink"
+            }
+            onClick={() => {
+              if (location.pathname === "/bookings") {
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+              }
+            }}
             onMouseEnter={() => handleHover(2)}
             onMouseLeave={() => handleLeave()}
             data-index="2"
           >
-            <h5>RENTALS</h5>
+            <h5>BOOKINGS</h5>
           </NavLink>
-          {/* <h5>ARTISTS</h5> */}
+
           <NavLink
             to="/photos"
             className={({ isActive }) =>
@@ -105,9 +139,9 @@ export default function Header({ onClick }: HeaderProps) {
                 window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
               }
             }}
-            onMouseEnter={() => handleHover(3)}
+            onMouseEnter={() => handleHover(4)}
             onMouseLeave={() => handleLeave()}
-            data-index="3"
+            data-index="4"
           >
             <h5>PHOTOS</h5>
           </NavLink>
