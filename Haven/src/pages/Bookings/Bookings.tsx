@@ -9,6 +9,7 @@ import rental3 from "../../assets/media/haven pics/rentalcard3.png";
 import pic1 from "../../assets/media/haven pics/IMG_6230-Enhanced-NR.jpg";
 import pic5 from "../../assets/media/haven pics/IMG_0640.jpg";
 import photo17 from "../../assets/media/haven pics/IMG_0640.jpg";
+import rentalstaging from "../../assets/media/haven pics/IMG_7395.jpg";
 import InterestFormTabs from "../../components/InterestForm/InterestFormTabs";
 import ButtonSecondary from "../../components/Button/ButtonSecondary";
 
@@ -59,7 +60,7 @@ export default function Bookings() {
         </div>
       </div>
       <div className="what-we-offer">
-        <img src={pic1} alt="" />
+        <img src={rentalstaging} alt="" />
         <div className="what-we-offer-text">
           <h5>WHAT WE OFFER</h5>
           <p>
