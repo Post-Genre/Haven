@@ -202,6 +202,16 @@ export default function FAQ() {
             </p>
           }
         />
+
+        <FAQItem
+          question="Can I purchase alcohol?"
+          answer={
+            <p>
+              We do not serve alcohol. Visibly intoxicated guests will not be
+              permitted entry.
+            </p>
+          }
+        />
       </div>
     </section>
   );
