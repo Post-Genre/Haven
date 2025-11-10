@@ -27,8 +27,23 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
+.faq-container {
+  /* color to match bottom of background image */
+  background-color: #011e08;
+  background-size: auto;
+  background-repeat: round;
+  /* needed for background image to work */
+  position: relative;
+  overflow: hidden;
+  /* container is placed at the same level as the content-wrapper, above the background-image */
+  z-index: 1;
+  width: 100%;
+}
+
 /* FAQ Item List */
 .faq-list {
+  z-index: 1;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;

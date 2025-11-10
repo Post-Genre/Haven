@@ -98,3 +98,7 @@ label {
 .tab-item.active {
   background: var(--burnt-orange);
 }
+
+textarea {
+  resize: none;
+}
