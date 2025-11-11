@@ -59,6 +59,7 @@ export default function MobileNavBar() {
               if (location.pathname === "/events") {
                 window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
               }
+              setContentOpen(false);
             }}
             onMouseEnter={() => handleHover(1)}
             onMouseLeave={() => handleLeave()}
@@ -75,6 +76,7 @@ export default function MobileNavBar() {
               if (location.pathname === "/bookings") {
                 window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
               }
+              setContentOpen(false);
             }}
             onMouseEnter={() => handleHover(2)}
             onMouseLeave={() => handleLeave()}
@@ -91,6 +93,7 @@ export default function MobileNavBar() {
               if (location.pathname === "/photos") {
                 window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
               }
+              setContentOpen(false);
             }}
             onMouseEnter={() => handleHover(4)}
             onMouseLeave={() => handleLeave()}
