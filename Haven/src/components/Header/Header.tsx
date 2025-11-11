@@ -2,6 +2,8 @@ import "./header.css";
 import havenChurchLogo from "../../assets/media/haven-church-logo.png";
 import { Link, NavLink } from "react-router";
 import { useLocation } from "react-router";
+import NavBar from "../NavBar/NavBar";
+import MobileNavBar from "../MobileNavBar/MobileNavBar";
 
 type HeaderProps = {
   onClick?: () => void; // optional click handler
@@ -59,93 +61,8 @@ export default function Header({ onClick }: HeaderProps) {
           <img src={havenChurchLogo} alt="" />
         </Link>
 
-        <div className="nav-container">
-          <NavLink
-            to="/events"
-            className={({ isActive }) =>
-              isActive ? "navlink navlink-active" : "navlink"
-            }
-            onClick={() => {
-              if (location.pathname === "/events") {
-                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-              }
-            }}
-            onMouseEnter={() => handleHover(1)}
-            onMouseLeave={() => handleLeave()}
-            data-index="1"
-          >
-            <h5>EVENTS</h5>
-          </NavLink>
-          {/* <h5>ABOUT</h5> */}
-
-          {/* <NavLink
-            to="/artists"
-            className={({ isActive }) =>
-              isActive ? "navlink navlink-active" : "navlink"
-            }
-            onClick={() => {
-              if (location.pathname === "/artists") {
-                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-              }
-            }}
-            onMouseEnter={() => handleHover(2)}
-            onMouseLeave={() => handleLeave()}
-            data-index="2"
-          >
-            <h5>ARTISTS</h5>
-          </NavLink>
-
-          <NavLink
-            to="/rentals"
-            className={({ isActive }) =>
-              isActive ? "navlink navlink-active" : "navlink"
-            }
-            onClick={() => {
-              if (location.pathname === "/rentals") {
-                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-              }
-            }}
-            onMouseEnter={() => handleHover(3)}
-            onMouseLeave={() => handleLeave()}
-            data-index="3"
-          >
-            <h5>RENTALS</h5>
-          </NavLink> */}
-
-          <NavLink
-            to="/bookings"
-            className={({ isActive }) =>
-              isActive ? "navlink navlink-active" : "navlink"
-            }
-            onClick={() => {
-              if (location.pathname === "/bookings") {
-                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-              }
-            }}
-            onMouseEnter={() => handleHover(2)}
-            onMouseLeave={() => handleLeave()}
-            data-index="2"
-          >
-            <h5>BOOKINGS</h5>
-          </NavLink>
-
-          <NavLink
-            to="/photos"
-            className={({ isActive }) =>
-              isActive ? "navlink navlink-active" : "navlink"
-            }
-            onClick={() => {
-              if (location.pathname === "/photos") {
-                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-              }
-            }}
-            onMouseEnter={() => handleHover(4)}
-            onMouseLeave={() => handleLeave()}
-            data-index="4"
-          >
-            <h5>PHOTOS</h5>
-          </NavLink>
-        </div>
+        <NavBar />
+        <MobileNavBar />
       </div>
     </>
   );
