@@ -51,7 +51,7 @@
 /* Make the active slide take up most of the space */
 .swiper-slide-container-class {
   width: 700px; /* or 90%, adjust as needed */
-  max-width: 700px; /* optional */
+  max-width: 700px;
 }
 
 /* Optional: peek-in effect */
@@ -89,4 +89,43 @@
   display: flex;
   align-items: center;
   /* min-height: inherit; */
+}
+
+@media (max-width: 937px) {
+  .swiper-slide-container-class {
+    width: 600px;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .swiper-slide-container-class {
+    width: 450px;
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 450px) {
+  .swiper-slide-container-class {
+    width: 400px;
+    max-width: 400px;
+  }
+
+  .custom-prev,
+  .custom-next {
+    width: 24px;
+    height: 24px;
+  }
+
+  .swiper-pagination-bullet {
+    --swiper-pagination-bullet-width: 24px;
+    --swiper-pagination-bullet-height: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  .swiper-slide-container-class {
+    width: 350px;
+    max-width: 350px;
+  }
 }

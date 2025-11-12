@@ -204,3 +204,95 @@ p {
     font-size: 0.5rem;
   }
 }
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  /* body-text, used for larger font non-headers, like event cards */
+  h4 {
+    font-size: 1.1rem;
+    font-family: "body-text", Verdana, sans-serif;
+    font-weight: 800;
+  }
+
+  h5 {
+    font-size: 0.9rem;
+  }
+
+  /* body-text, used for large font non-headers, like event cards */
+  h6 {
+    font-size: 0.75rem;
+    font-family: "body-text", Verdana, sans-serif;
+  }
+
+  p {
+    font-size: 0.6rem;
+    font-family: "body-text", Verdana, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0%;
+  }
+
+  .small-font {
+    font-size: 0.55rem;
+  }
+
+  .smallest-font {
+    font-size: 0.45rem;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  /* body-text, used for larger font non-headers, like event cards */
+  h4 {
+    font-size: 1rem;
+    font-family: "body-text", Verdana, sans-serif;
+    font-weight: 800;
+  }
+
+  h5 {
+    font-size: 0.75rem;
+  }
+
+  /* body-text, used for large font non-headers, like event cards */
+  h6 {
+    font-size: 0.7rem;
+    font-family: "body-text", Verdana, sans-serif;
+  }
+
+  p {
+    font-size: 0.6rem;
+    font-family: "body-text", Verdana, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0%;
+  }
+
+  .small-font {
+    font-size: 0.4rem;
+  }
+
+  .smallest-font {
+    font-size: 0.35rem;
+  }
+}

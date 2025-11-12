@@ -20,10 +20,11 @@
   padding: 8px;
 }
 
-.carousel-item-title h4,
+.carousel-item-title h6,
 .carousel-item-title p {
+  width: 100%;
   display: -webkit-box;
-  -webkit-line-clamp: 1; /* Max number of lines */
+  -webkit-line-clamp: 2; /* Max number of lines */
   -webkit-box-orient: vertical; /* Required for line clamp */
   overflow: hidden; /* Hide overflow text */
   text-overflow: ellipsis; /* Add "..." at the end */
@@ -48,4 +49,32 @@
   color: black;
   transition: 0.3s;
   cursor: pointer;
+}
+
+@media (max-width: 937px) {
+  .carousel-item-container {
+    width: 600px;
+    height: 333px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-item-container {
+    width: 450px;
+    height: 275px;
+  }
+}
+
+@media (max-width: 450px) {
+  .carousel-item-container {
+    width: 400px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 420px) {
+  .carousel-item-container {
+    width: 350px;
+    height: 210px;
+  }
 }

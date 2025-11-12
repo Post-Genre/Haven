@@ -188,11 +188,11 @@ export default function Carousel() {
       </Swiper>
       <div className="controls-row">
         <div className="custom-prev">
-          <FaAngleLeft color="white" size={28} />
+          <FaAngleLeft color="white" />
         </div>
         <div className="custom-pagination"></div>
         <div className="custom-next">
-          <FaAngleRight color="white" size={28} />
+          <FaAngleRight color="white" />
         </div>
       </div>
     </>

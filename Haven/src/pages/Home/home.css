@@ -23,3 +23,15 @@
   color: black;
   font-size: 1rem;
 }
+
+@media (max-width: 600px) {
+  .logo-and-text-container img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 450px) {
+  .logo-and-text-container img {
+    width: 200px;
+  }
+}
