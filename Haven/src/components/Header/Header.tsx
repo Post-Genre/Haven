@@ -4,11 +4,14 @@ import { Link, NavLink } from "react-router";
 import { useLocation } from "react-router";
 import NavBar from "../NavBar/NavBar";
 import MobileNavBar from "../MobileNavBar/MobileNavBar";
+import { useState } from "react";
 
 type HeaderProps = {
   onClick?: () => void; // optional click handler
 };
 export default function Header({ onClick }: HeaderProps) {
+  const [contentOpen, setContentOpen] = useState(false);
+
   function handleHover(index: number) {
     console.log("index: ", index);
     let allATags = document.querySelectorAll(".navlink");
@@ -53,6 +56,7 @@ export default function Header({ onClick }: HeaderProps) {
             if (location.pathname === "/") {
               window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
             }
+            setContentOpen(false);
           }}
           onMouseEnter={() => handleHover(0)}
           onMouseLeave={() => handleLeave()}
@@ -62,7 +66,10 @@ export default function Header({ onClick }: HeaderProps) {
         </Link>
 
         <NavBar />
-        <MobileNavBar />
+        <MobileNavBar
+          contentOpen={contentOpen}
+          setContentOpen={setContentOpen}
+        />
       </div>
     </>
   );

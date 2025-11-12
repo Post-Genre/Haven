@@ -1,10 +1,18 @@
 import "./mobile-nav-bar.css";
 import { Link, NavLink } from "react-router";
 import { FaBars } from "react-icons/fa6";
-import { useState } from "react";
+import { useState, type Dispatch, type SetStateAction } from "react";
 
-export default function MobileNavBar() {
-  const [contentOpen, setContentOpen] = useState(false);
+type MobileNavBarProps = {
+  contentOpen: boolean;
+  setContentOpen: Dispatch<SetStateAction<boolean>>; // The setter function
+};
+
+export default function MobileNavBar({
+  contentOpen,
+  setContentOpen,
+}: MobileNavBarProps) {
+  // const { contentOpen, setContentOpen } = MobileNavBarProps;
 
   function handleHover(index: number) {
     console.log("index: ", index);
