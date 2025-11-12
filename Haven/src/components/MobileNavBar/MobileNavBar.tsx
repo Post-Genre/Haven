@@ -40,7 +40,7 @@ export default function MobileNavBar() {
   return (
     <div className="mobile-nav-container">
       <div
-        className="fa-icon hamburger-icon"
+        className="hamburger-icon"
         onClick={() => setContentOpen(!contentOpen)}
       >
         <FaBars color="white" />

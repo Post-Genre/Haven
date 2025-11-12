@@ -53,12 +53,13 @@
 }
 
 .hamburger-icon {
-  padding: 0px;
+  padding: 18px;
+  cursor: pointer;
   display: flex;
   justify-content: end;
   align-items: center;
   width: 100%;
-  padding-right: 16px;
+  /* padding-right: 16px; */
 }
 
 @media (max-width: 937px) {
