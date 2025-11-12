@@ -161,7 +161,7 @@ p {
 
 @media (max-width: 937px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   h2 {
@@ -207,7 +207,7 @@ p {
 
 @media (max-width: 600px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   h2 {
@@ -257,7 +257,7 @@ p {
   }
 
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
   }
 
   h3 {
