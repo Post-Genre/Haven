@@ -72,7 +72,7 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 400px) {
   .carousel-item-container {
     width: 350px;
     height: 210px;

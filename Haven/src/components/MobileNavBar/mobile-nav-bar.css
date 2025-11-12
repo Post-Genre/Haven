@@ -67,3 +67,9 @@
     display: block;
   }
 }
+
+@media (max-width: 450px) {
+  .mobile-nav-bar-content h5 {
+    font-size: 1rem;
+  }
+}

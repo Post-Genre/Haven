@@ -123,7 +123,7 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 400px) {
   .swiper-slide-container-class {
     width: 350px;
     max-width: 350px;
