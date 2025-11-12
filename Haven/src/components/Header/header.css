@@ -26,3 +26,9 @@
   transform: scale(1.11);
   transition: 0.3s;
 }
+
+@media (max-width: 450px) {
+  .header-container img {
+    height: 48px;
+  }
+}
