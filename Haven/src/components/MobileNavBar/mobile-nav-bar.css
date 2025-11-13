@@ -72,4 +72,8 @@
   .mobile-nav-bar-content h5 {
     font-size: 1rem;
   }
+
+  .hamburger-icon {
+    padding-bottom: 8px;
+  }
 }
