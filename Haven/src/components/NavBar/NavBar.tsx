@@ -2,6 +2,18 @@ import "./nav-bar.css";
 import { Link, NavLink } from "react-router";
 
 export default function NavBar() {
+  function ScrollToTopOfPage() {
+    const scrollOptions: ScrollToOptions = {
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    };
+
+    window.scrollTo(scrollOptions);
+    document.documentElement.scrollTo(scrollOptions);
+    document.body.scrollTo(scrollOptions);
+  }
+
   function handleHover(index: number) {
     console.log("index: ", index);
     let allATags = document.querySelectorAll(".navlink");
@@ -42,7 +54,7 @@ export default function NavBar() {
         }
         onClick={() => {
           if (location.pathname === "/events") {
-            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            ScrollToTopOfPage();
           }
         }}
         onMouseEnter={() => handleHover(1)}
@@ -59,7 +71,7 @@ export default function NavBar() {
         }
         onClick={() => {
           if (location.pathname === "/bookings") {
-            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            ScrollToTopOfPage();
           }
         }}
         onMouseEnter={() => handleHover(2)}
@@ -76,7 +88,7 @@ export default function NavBar() {
         }
         onClick={() => {
           if (location.pathname === "/photos") {
-            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            ScrollToTopOfPage();
           }
         }}
         onMouseEnter={() => handleHover(4)}

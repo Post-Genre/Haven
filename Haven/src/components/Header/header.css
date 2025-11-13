@@ -12,6 +12,7 @@
   left: 0;
   right: 0;
   justify-content: space-between;
+  margin: 0px;
 }
 
 .header-container img {

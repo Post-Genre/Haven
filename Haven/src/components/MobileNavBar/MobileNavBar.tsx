@@ -14,6 +14,18 @@ export default function MobileNavBar({
 }: MobileNavBarProps) {
   // const { contentOpen, setContentOpen } = MobileNavBarProps;
 
+  function ScrollToTopOfPage() {
+    const scrollOptions: ScrollToOptions = {
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    };
+
+    window.scrollTo(scrollOptions);
+    document.documentElement.scrollTo(scrollOptions);
+    document.body.scrollTo(scrollOptions);
+  }
+
   function handleHover(index: number) {
     console.log("index: ", index);
     let allATags = document.querySelectorAll(".navlink");
@@ -65,7 +77,7 @@ export default function MobileNavBar({
             }
             onClick={() => {
               if (location.pathname === "/events") {
-                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                ScrollToTopOfPage();
               }
               setContentOpen(false);
             }}
@@ -82,7 +94,7 @@ export default function MobileNavBar({
             }
             onClick={() => {
               if (location.pathname === "/bookings") {
-                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                ScrollToTopOfPage();
               }
               setContentOpen(false);
             }}
@@ -99,7 +111,7 @@ export default function MobileNavBar({
             }
             onClick={() => {
               if (location.pathname === "/photos") {
-                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                ScrollToTopOfPage();
               }
               setContentOpen(false);
             }}

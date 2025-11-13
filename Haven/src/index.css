@@ -35,6 +35,23 @@ a:visited {
   color: inherit;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+body {
+  background-image: url(./assets/media/backgrounds/tile-light.png);
+  background-repeat: repeat;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   /* Color Palette */
   --white: #ffffff;
@@ -51,8 +68,8 @@ a:visited {
   color-scheme: light dark;
   color: #000000;
 
-  background-image: url(./assets/media/backgrounds/tile-light.png);
-  background-repeat: repeat;
+  /* background-image: url(./assets/media/backgrounds/tile-light.png);
+  background-repeat: repeat; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -69,6 +86,8 @@ a:visited {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 /* might need to remove */
@@ -80,6 +99,8 @@ main {
   /* padding-top: 20px; 
   padding-bottom: 20px; */
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .bg-image {
@@ -90,6 +111,8 @@ main {
   height: auto;
   z-index: -1;
   pointer-events: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* @media (prefers-color-scheme: light) {
