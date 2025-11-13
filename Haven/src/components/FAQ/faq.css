@@ -68,9 +68,8 @@
   padding-top: 10px;
   padding-bottom: 10px;
 
-  font-family: "body-text", Verdana, sans-serif;
-  font-size: 1.25rem;
-  font-weight: 600;
+  /* font-family: "body-text", Verdana, sans-serif; */
+  /* font-size: 1.25rem; */
 
   transition: background-color 0.3s ease, border-radius 0.3s ease;
 }
@@ -91,9 +90,8 @@
   padding: 12px 16px;
 }
 
-.collapsible-button h3 {
-  margin: 0;
-  font: inherit;
+.collapsible-button h4 {
+  font-weight: 600;
 }
 
 #expandIcon {
@@ -108,8 +106,8 @@
   background-color: rgba(53, 108, 153, 0.41);
   border-radius: 0 0 10px 10px;
 
-  font-family: "body-text", Verdana, sans-serif;
-  font-size: 1rem;
+  /* font-family: "body-text", Verdana, sans-serif;
+  font-size: 1rem; */
   color: white;
 
   transition: max-height 0.3s ease-out, padding 0.3s ease-out;
@@ -117,7 +115,6 @@
 
 .faq-content.expanded {
   padding: 16px;
-  /* max-height: 1000px;  */
 }
 
 .faq-link {
@@ -128,4 +125,64 @@
 
 .collapsible-section {
   max-width: 675px;
+}
+
+@media (max-width: 937px) {
+  .collapsible-section {
+    width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .collapsible-section {
+    width: 475px;
+  }
+
+  .collapsible-button {
+    padding: 6px 12px;
+  }
+
+  .faq-content {
+    padding: 0 12px;
+  }
+
+  .faq-content.expanded {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  .collapsible-section {
+    width: 375px;
+  }
+
+  .collapsible-button {
+    padding: 0px 8px;
+  }
+
+  .faq-content {
+    padding: 0 8px;
+  }
+
+  .faq-content.expanded {
+    padding: 8px;
+  }
+
+  #expandIcon {
+    font-size: 1.25rem;
+  }
+
+  .faq-list {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .collapsible-section {
+    width: 350px;
+  }
+
+  #expandIcon {
+    font-size: 1rem;
+  }
 }

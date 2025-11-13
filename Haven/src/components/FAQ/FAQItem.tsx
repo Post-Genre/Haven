@@ -17,7 +17,7 @@ export default function FAQItem({ question, answer }: FAQItemProps) {
         onClick={() => setOpen(!open)}
       >
         <div className="collapsible-button">
-          <h3>{question}</h3>
+          <h4>{question}</h4>
           <span id="expandIcon">{open ? "−" : "+"}</span>
         </div>
       </button>
