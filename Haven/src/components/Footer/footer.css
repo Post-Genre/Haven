@@ -41,12 +41,19 @@
 
 .fa-icon {
   padding: 20px;
+}
+
+.fa-icon a {
   cursor: pointer;
 }
 
 .fa-icon a img {
   width: 48px;
   height: 48px;
+}
+
+.fa-icon-image {
+  font-size: 48px;
 }
 
 @media (max-width: 937px) {
@@ -80,7 +87,15 @@
     width: 300px;
   }
 
-  /* .address-container h5 {
-    font-size: 0.75rem;
-  } */
+  .fa-icon-image,
+  .fa-icon a img {
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+  }
+
+  .fa-icon {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
