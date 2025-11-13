@@ -57,3 +57,46 @@
   color: white;
   transform: none;
 }
+
+@media (max-width: 937px) {
+  .event-title-container {
+    width: 550px;
+  }
+}
+
+@media (max-width: 600px) {
+  .event-title-container {
+    width: 450px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  .event-title-container {
+    width: 325px;
+    padding: 6px 12px;
+  }
+
+  .tickets-container,
+  .date-container {
+    padding: 6px;
+  }
+
+  .tickets-container {
+    border-bottom-right-radius: 16px;
+  }
+
+  .date-container {
+    border-top-right-radius: 16px;
+  }
+
+  .event-item-container {
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .event-title-container {
+    width: 280px;
+  }
+}

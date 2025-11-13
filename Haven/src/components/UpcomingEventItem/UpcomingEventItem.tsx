@@ -45,7 +45,7 @@ export default function UpcomingEventItem({
           rel="noopener noreferrer"
           className="tickets-container"
         >
-          TICKETS
+          <h6>TICKETS</h6>
         </a>
         {/* </div> */}
       </div>
