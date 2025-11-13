@@ -133,7 +133,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .collapsible-section {
     width: 475px;
   }
@@ -151,7 +151,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .collapsible-section {
     width: 375px;
   }

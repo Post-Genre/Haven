@@ -24,13 +24,13 @@
   font-size: 1rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .logo-and-text-container img {
     width: 300px;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .logo-and-text-container img {
     width: 200px;
   }

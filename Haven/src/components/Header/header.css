@@ -27,7 +27,7 @@
   transition: 0.3s;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .header-container img {
     height: 48px;
   }

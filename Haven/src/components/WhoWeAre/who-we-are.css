@@ -55,7 +55,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .body-text-container p {
     width: 400px;
   }
@@ -66,7 +66,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .body-text-container p {
     width: 350px;
   }

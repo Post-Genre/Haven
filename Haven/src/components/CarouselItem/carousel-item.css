@@ -58,14 +58,14 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .carousel-item-container {
     width: 450px;
     height: 275px;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .carousel-item-container {
     width: 375px;
     height: 230px;

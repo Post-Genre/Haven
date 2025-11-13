@@ -68,7 +68,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .mobile-nav-bar-content h5 {
     font-size: 1rem;
   }

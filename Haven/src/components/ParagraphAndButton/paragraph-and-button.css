@@ -32,7 +32,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .paragraph-and-button-container {
     width: 500px;
     gap: 36px;
@@ -44,7 +44,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .paragraph-and-button-container {
     width: 350px;
     gap: 24px;

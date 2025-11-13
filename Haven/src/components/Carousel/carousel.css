@@ -98,14 +98,14 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .swiper-slide-container-class {
     width: 450px;
     max-width: 450px;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .swiper-slide-container-class {
     width: 375px;
     max-width: 375px;

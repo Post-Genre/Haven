@@ -110,7 +110,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .bookings-container h3 {
     width: 500px;
   }
@@ -129,7 +129,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .bookings-container h3 {
     width: 375px;
   }

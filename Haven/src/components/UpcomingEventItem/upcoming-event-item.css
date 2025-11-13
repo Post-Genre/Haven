@@ -64,14 +64,14 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .event-title-container {
     width: 450px;
     padding: 8px 12px;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .event-title-container {
     width: 325px;
     padding: 6px 12px;
