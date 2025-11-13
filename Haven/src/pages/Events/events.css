@@ -37,3 +37,9 @@
   font-style: italic;
   text-align: center;
 }
+
+@media (max-width: 500px) {
+  .event-items-wrapper {
+    gap: 24px;
+  }
+}
