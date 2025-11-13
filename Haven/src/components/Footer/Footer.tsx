@@ -1,5 +1,5 @@
 import "./footer.css";
-import havenLogo from "../../assets/media/havenpngvirile2.png";
+import havenLogo from "../../assets/media/havenlogo-white-updated.png";
 import {
   FaFacebookF,
   FaDiscord,

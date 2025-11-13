@@ -99,3 +99,14 @@
     padding-right: 16px;
   }
 }
+
+@media (max-width: 500px) {
+  .footer-container img {
+    width: 250px;
+  }
+
+  .footer-container {
+    gap: 0px;
+    padding: 8px;
+  }
+}

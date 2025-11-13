@@ -30,6 +30,10 @@
 
 @media (max-width: 500px) {
   .header-container img {
-    height: 48px;
+    height: 40px;
+  }
+
+  .header-container {
+    height: 50px;
   }
 }
