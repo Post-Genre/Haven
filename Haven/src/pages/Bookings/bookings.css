@@ -90,3 +90,75 @@
   scroll-margin-top: 60px;
   padding: 12px;
 }
+
+@media (max-width: 973px) {
+  .bookings-container h3 {
+    width: 700px;
+  }
+
+  .what-we-offer {
+    gap: 24px;
+  }
+
+  .what-we-offer img {
+    width: 350px;
+  }
+
+  .what-we-offer-text {
+    width: 300px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bookings-container h3 {
+    width: 500px;
+  }
+
+  .what-we-offer {
+    gap: 16px;
+  }
+
+  .what-we-offer img {
+    width: 275px;
+  }
+
+  .what-we-offer-text {
+    width: 250px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  .bookings-container h3 {
+    width: 375px;
+  }
+
+  .what-we-offer {
+    gap: 12px;
+  }
+
+  .what-we-offer img {
+    width: 200px;
+  }
+
+  .what-we-offer-text {
+    width: 200px;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .what-we-offer {
+    gap: 8px;
+  }
+
+  .what-we-offer img {
+    width: 150px;
+  }
+
+  .what-we-offer-text {
+    width: 200px;
+    gap: 4px;
+  }
+}

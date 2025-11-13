@@ -21,3 +21,37 @@
 .paragraph-and-button-button {
   justify-self: end;
 }
+
+@media (max-width: 973px) {
+  .paragraph-and-button-container {
+    width: 600px;
+  }
+
+  .paragraph-and-button-container p {
+    width: 550px;
+  }
+}
+
+@media (max-width: 600px) {
+  .paragraph-and-button-container {
+    width: 500px;
+    gap: 36px;
+    padding: 20px 12px;
+  }
+
+  .paragraph-and-button-container p {
+    width: 450px;
+  }
+}
+
+@media (max-width: 450px) {
+  .paragraph-and-button-container {
+    width: 350px;
+    gap: 24px;
+    padding: 16px 8px;
+  }
+
+  .paragraph-and-button-container p {
+    width: 300px;
+  }
+}
