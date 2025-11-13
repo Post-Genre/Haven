@@ -107,8 +107,8 @@
 
 @media (max-width: 450px) {
   .swiper-slide-container-class {
-    width: 400px;
-    max-width: 400px;
+    width: 375px;
+    max-width: 375px;
   }
 
   .custom-prev,

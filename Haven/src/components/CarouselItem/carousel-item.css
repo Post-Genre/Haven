@@ -67,8 +67,8 @@
 
 @media (max-width: 450px) {
   .carousel-item-container {
-    width: 400px;
-    height: 250px;
+    width: 375px;
+    height: 230px;
   }
 }
 
