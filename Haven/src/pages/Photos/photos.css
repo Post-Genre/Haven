@@ -51,6 +51,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 
 .mobile-photo-album-container {
@@ -59,7 +60,6 @@
   align-items: center;
   padding-left: 8px;
   padding-right: 8px;
-  display: none;
 }
 
 .photos-button {
@@ -95,7 +95,7 @@
     color: black;
   }
 
-  .mobile-photo-album-container {
+  .mobile-photo-container {
     display: flex;
   }
 
