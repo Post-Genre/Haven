@@ -164,7 +164,7 @@ export default function EventInterestForm() {
           setFormData({ ...formData, supportingArtists: e.target.value })
         }
         name="supportingArtists"
-        placeholder="Do you have a bill already? If so, list your supporing artists"
+        placeholder="If you have a bill, please list supporting artists"
       />
       {/* <div className="form-grid-one-row">
         <p>Will this be a release show?</p>
