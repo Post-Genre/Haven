@@ -46,6 +46,13 @@
   max-height: 550px;
 }
 
+.mobile-photo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .mobile-photo-album-container {
   display: flex;
   justify-content: center;
@@ -53,6 +60,15 @@
   padding-left: 8px;
   padding-right: 8px;
   display: none;
+}
+
+.photos-button {
+  width: 32px;
+  height: 32px;
+}
+
+.mobile-photos-swiper-slide {
+  width: auto;
 }
 
 @media (max-width: 937px) {
