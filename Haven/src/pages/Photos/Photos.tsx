@@ -26,6 +26,7 @@ import obpPhotos from "./obp-photo-list";
 import { useState } from "react";
 import TitleContainer from "../../components/TitleContainer/TitleContainer";
 import PhotoSlide from "./PhotoSlide";
+import MobilePhotos from "./MobilePhotos";
 
 type SelectablePhoto = Photo & {
   selected?: boolean;
@@ -104,6 +105,7 @@ export default function Photos() {
     <div className="photos-container">
       <TitleContainer image={backgroundImg} text="PHOTOS" />
 
+      <MobilePhotos />
       <div className="photos-album-container">
         <h3>LIVE MUSIC</h3>
         <div className="swiper-photo-album-container">
