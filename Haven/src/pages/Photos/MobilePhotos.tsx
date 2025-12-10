@@ -66,6 +66,14 @@ export default function MobilePhotos() {
             nextEl: ".custom-next",
             enabled: true,
           }}
+          onInit={(swiper) => {
+            const nav = swiper.params.navigation as any;
+            nav.prevEl = swiper.el.querySelector(".custom-prev");
+            nav.nextEl = swiper.el.querySelector(".custom-next");
+
+            swiper.navigation.init();
+            swiper.navigation.update();
+          }}
           // loop={true}
         >
           {photosSlides}
@@ -77,44 +85,60 @@ export default function MobilePhotos() {
 
       <h3>DJ NIGHTS</h3>
       <div className="mobile-photo-album-container">
-        <div className="custom-prev photos-button">
+        <div className="custom-prev-2 photos-button">
           <FaAngleLeft color="white" />
         </div>
         <Swiper
           slidesPerView={1}
           modules={[FreeMode, Scrollbar, Mousewheel, Navigation]}
           navigation={{
-            prevEl: ".custom-prev",
-            nextEl: ".custom-next",
+            prevEl: ".custom-prev-2",
+            nextEl: ".custom-next-2",
             enabled: true,
+          }}
+          onInit={(swiper) => {
+            const nav = swiper.params.navigation as any;
+            nav.prevEl = swiper.el.querySelector(".custom-prev-2");
+            nav.nextEl = swiper.el.querySelector(".custom-next-2");
+
+            swiper.navigation.init();
+            swiper.navigation.update();
           }}
           // loop={true}
         >
           {djPhotosSlides}
         </Swiper>
-        <div className="custom-next photos-button">
+        <div className="custom-next-2 photos-button">
           <FaAngleRight color="white" />
         </div>
       </div>
 
       <h3>OAKLAND BLOCK PARTY 2025</h3>
       <div className="mobile-photo-album-container">
-        <div className="custom-prev photos-button">
+        <div className="custom-prev-3 photos-button">
           <FaAngleLeft color="white" />
         </div>
         <Swiper
           slidesPerView={1}
           modules={[FreeMode, Scrollbar, Mousewheel, Navigation]}
           navigation={{
-            prevEl: ".custom-prev",
-            nextEl: ".custom-next",
+            prevEl: ".custom-prev-3",
+            nextEl: ".custom-next-3",
             enabled: true,
+          }}
+          onInit={(swiper) => {
+            const nav = swiper.params.navigation as any;
+            nav.prevEl = swiper.el.querySelector(".custom-prev-3");
+            nav.nextEl = swiper.el.querySelector(".custom-next-3");
+
+            swiper.navigation.init();
+            swiper.navigation.update();
           }}
           // loop={true}
         >
           {obpPhotosSlides}
         </Swiper>
-        <div className="custom-next photos-button">
+        <div className="custom-next-3 photos-button">
           <FaAngleRight color="white" />
         </div>
       </div>

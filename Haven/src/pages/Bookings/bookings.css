@@ -20,8 +20,9 @@
 }
 
 .bookings-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  /* flex-direction: column; */
+  /* grid-template-rows: 1fr 1fr 1fr; */
   gap: 0;
   align-items: center;
   justify-content: center;
@@ -108,6 +109,65 @@
     width: 300px;
     gap: 16px;
   }
+
+  .bookings-cards-container {
+    flex-direction: column;
+  }
+  .bookings-card {
+    grid-template-rows: 50px 200px;
+    grid-template-columns: 200px 250px;
+  }
+
+  .bookings-card h5 {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .bookings-card img {
+    grid-row: 2;
+    grid-column: 1;
+    height: 200px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 12px;
+    border: 2px solid var(--burnt-orange);
+    border-right: none;
+  }
+
+  .bookings-card p {
+    grid-row: 2;
+    grid-column: 2;
+    height: 200px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 0px;
+    border-left: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .bookings-card.flipped {
+    grid-template-columns: 250px 200px;
+  }
+
+  .bookings-card.flipped img {
+    grid-column: 2;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 12px;
+    border-right: 2px solid var(--burnt-orange);
+    border-left: none;
+  }
+
+  .bookings-card.flipped p {
+    grid-column: 1;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 12px;
+    border-right: none;
+    border-left: 2px solid var(--burnt-orange);
+  }
 }
 
 @media (max-width: 650px) {
@@ -145,6 +205,28 @@
   .what-we-offer-text {
     width: 200px;
     gap: 8px;
+  }
+
+  .bookings-card {
+    grid-template-rows: 40px 160px;
+    grid-template-columns: 150px 200px;
+  }
+
+  .bookings-card h5 {
+    height: 40px;
+  }
+
+  .bookings-card img {
+    height: 160px;
+  }
+
+  .bookings-card p {
+    height: 160px;
+    padding: 12px;
+  }
+
+  .bookings-card.flipped {
+    grid-template-columns: 200px 150px;
   }
 }
 

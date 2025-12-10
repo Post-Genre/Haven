@@ -1,5 +1,9 @@
 .custom-prev,
-.custom-next {
+.custom-next,
+.custom-prev-2,
+.custom-next-2,
+.custom-prev-3,
+.custom-next-3 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,7 +116,11 @@
   }
 
   .custom-prev,
-  .custom-next {
+  .custom-next,
+  .custom-prev-2,
+  .custom-next-2,
+  .custom-prev-3,
+  .custom-next-3 {
     width: 24px;
     height: 24px;
   }

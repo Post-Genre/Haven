@@ -40,7 +40,7 @@ export default function Bookings() {
             future event successful.
           </p>
         </div>
-        <div className="bookings-card">
+        <div className="bookings-card flipped">
           <img src={photo17} alt="" />
           <h5>PRIVATE SOCIAL EVENTS</h5>
           <p className="small-font">
