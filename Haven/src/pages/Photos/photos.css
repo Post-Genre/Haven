@@ -71,7 +71,7 @@
   width: auto;
 }
 
-@media (max-width: 937px) {
+@media (max-width: 992px) {
   .photo-slide-container img {
     max-width: 800px;
     max-height: 450px;

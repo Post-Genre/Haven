@@ -32,7 +32,7 @@
   transition: 0.3s;
 }
 
-@media (max-width: 937px) {
+@media (max-width: 650px) {
   .nav-container {
     display: none;
   }

@@ -190,7 +190,7 @@ p {
   font-size: 0.7rem;
 }
 
-@media (max-width: 937px) {
+@media (max-width: 992px) {
   h1 {
     font-size: 3rem;
   }

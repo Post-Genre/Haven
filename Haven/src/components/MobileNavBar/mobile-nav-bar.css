@@ -62,7 +62,7 @@
   /* padding-right: 16px; */
 }
 
-@media (max-width: 937px) {
+@media (max-width: 650px) {
   .mobile-nav-container {
     display: block;
   }

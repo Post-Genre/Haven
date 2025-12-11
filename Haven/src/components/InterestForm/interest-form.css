@@ -103,7 +103,7 @@ textarea {
   resize: none;
 }
 
-@media (max-width: 937px) {
+@media (max-width: 992px) {
   .form-container {
     width: 600px;
     padding: 24px 24px;

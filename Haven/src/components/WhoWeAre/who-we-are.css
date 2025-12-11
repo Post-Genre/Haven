@@ -44,7 +44,7 @@
   padding: 36px 24px;
 }
 
-@media (max-width: 937px) {
+@media (max-width: 992px) {
   .body-text-container p {
     width: 500px;
   }

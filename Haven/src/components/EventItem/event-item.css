@@ -62,7 +62,7 @@
   border-right: 1px solid white;
 } */
 
-@media (max-width: 973px) {
+@media (max-width: 992px) {
   .full-event-item-container {
     width: 600px;
     height: 350px;

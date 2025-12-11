@@ -22,7 +22,7 @@
   justify-self: end;
 }
 
-@media (max-width: 973px) {
+@media (max-width: 992px) {
   .paragraph-and-button-container {
     width: 600px;
   }
