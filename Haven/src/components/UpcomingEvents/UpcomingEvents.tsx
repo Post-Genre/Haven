@@ -112,6 +112,15 @@ export default function UpcomingEvents() {
       </div>
     );
   }
+
+  if (displayedEvents.length === 0) {
+    return (
+      <div className="upcoming-events-container">
+        <h2>UPCOMING EVENTS</h2>
+        <p>No upcoming events at this time. Check back soon!</p>
+      </div>
+    );
+  }
   return (
     <div className="upcoming-events-container">
       <h2>UPCOMING EVENTS</h2>

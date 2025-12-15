@@ -91,6 +91,20 @@ export default function UpcomingEvents() {
     );
   }
 
+  if (events.length === 0) {
+    return (
+      <div className="events-container">
+        <TitleContainer text="EVENTS" image={banner1} />
+        <div className="events-list-container">
+          <img src={bottom1} alt="" className="bg-image" />
+          <div className="event-items-wrapper">
+            <p>No upcoming events at this time. Check back soon!</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="events-container">
       <TitleContainer text="EVENTS" image={banner1} />
