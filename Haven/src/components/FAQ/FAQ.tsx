@@ -165,7 +165,7 @@ export default function FAQ() {
           }
         /> */}
 
-          <FAQItem
+          {/* <FAQItem
             question="Can I volunteer or get involved with HAVEN?"
             answer={
               <p>
@@ -183,7 +183,7 @@ export default function FAQ() {
                 to get started.
               </p>
             }
-          />
+          /> */}
 
           <FAQItem
             question="Can I book HAVEN for my private event?"
