@@ -242,16 +242,18 @@
   }
 
   .what-we-offer {
-    gap: 12px;
+    gap: 8px;
+    flex-direction: column;
   }
 
   .what-we-offer img {
-    width: 200px;
+    width: 300px;
   }
 
   .what-we-offer-text {
-    width: 200px;
+    width: 400px;
     gap: 8px;
+    align-items: center;
   }
 
   .bookings-card {
@@ -278,16 +280,34 @@
 }
 
 @media (max-width: 420px) {
-  .what-we-offer {
-    gap: 8px;
-  }
-
   .what-we-offer img {
-    width: 150px;
+    width: 250px;
   }
 
   .what-we-offer-text {
-    width: 200px;
+    width: 300px;
     gap: 4px;
+  }
+
+  .bookings-card {
+    grid-template-rows: 36px 150px;
+    grid-template-columns: 130px 180px;
+  }
+
+  .bookings-card h5 {
+    height: 36px;
+  }
+
+  .bookings-card img {
+    height: 150px;
+  }
+
+  .bookings-card p {
+    height: 150px;
+    padding: 12px;
+  }
+
+  .bookings-card.flipped {
+    grid-template-columns: 180px 130px;
   }
 }
