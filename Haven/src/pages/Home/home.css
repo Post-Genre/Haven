@@ -17,6 +17,7 @@
 }
 .logo-and-text-container img {
   width: 350px;
+  max-height: 160px;
 }
 
 .logo-and-text-container h5 {

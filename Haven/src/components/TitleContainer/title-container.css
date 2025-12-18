@@ -19,6 +19,7 @@
   align-content: center;
   overflow: hidden;
   text-align: center;
+  max-height: 350px;
 }
 
 .title-container img,
