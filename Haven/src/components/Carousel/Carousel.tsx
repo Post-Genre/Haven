@@ -124,7 +124,7 @@ export default function Carousel() {
         subtitle="Contact us for private event rentals!"
         image={WBYPic}
         routeInPage={true}
-        url="/rentals"
+        url="/bookings"
         buttonText="RENTALS"
       />
     </SwiperSlide>,

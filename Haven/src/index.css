@@ -267,7 +267,7 @@ p {
   }
 
   p {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     font-family: "body-text", Verdana, sans-serif;
     font-weight: 600;
     letter-spacing: 0%;
@@ -297,7 +297,7 @@ p {
 
   /* body-text, used for larger font non-headers, like event cards */
   h4 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-family: "body-text", Verdana, sans-serif;
     font-weight: 800;
   }
