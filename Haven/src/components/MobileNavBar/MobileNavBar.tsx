@@ -1,7 +1,13 @@
 import "./mobile-nav-bar.css";
 import { Link, NavLink } from "react-router";
 import { FaBars } from "react-icons/fa6";
-import { useState, type Dispatch, type SetStateAction } from "react";
+import {
+  useEffect,
+  useRef,
+  useState,
+  type Dispatch,
+  type SetStateAction,
+} from "react";
 
 type MobileNavBarProps = {
   contentOpen: boolean;
@@ -13,6 +19,20 @@ export default function MobileNavBar({
   setContentOpen,
 }: MobileNavBarProps) {
   // const { contentOpen, setContentOpen } = MobileNavBarProps;
+
+  const ref = useRef<HTMLDivElement>(null);
+
+  //checks for pointer/mouse clicks, and if click happens outside the mobile-nav-bar ref, close the nav bar
+  useEffect(() => {
+    function handlePointerDown(e: PointerEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setContentOpen(false);
+      }
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    return () => document.removeEventListener("pointerdown", handlePointerDown);
+  }, []);
 
   function ScrollToTopOfPage() {
     const scrollOptions: ScrollToOptions = {
@@ -67,6 +87,7 @@ export default function MobileNavBar({
       </div>
       {contentOpen && (
         <div
+          ref={ref}
           className="mobile-nav-bar-content"
           onMouseLeave={() => setContentOpen(false)}
         >
