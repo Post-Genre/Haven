@@ -6,7 +6,14 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
-import { FreeMode, Scrollbar, Mousewheel, Navigation } from "swiper/modules";
+import "swiper/css/pagination";
+import {
+  FreeMode,
+  Scrollbar,
+  Mousewheel,
+  Navigation,
+  Pagination,
+} from "swiper/modules";
 import photos from "./photo-list";
 import djPhotos from "./dj-photo-list";
 import obpPhotos from "./obp-photo-list";
@@ -54,6 +61,43 @@ export default function MobilePhotos() {
   return (
     <div className="mobile-photo-container">
       <h3>LIVE MUSIC</h3>
+      <Swiper
+        slidesPerView={1}
+        modules={[FreeMode, Scrollbar, Mousewheel, Navigation, Pagination]}
+        // navigation={true}
+        mousewheel={{
+          forceToAxis: true,
+        }}
+        className="swiper-container-class"
+      >
+        {photosSlides}
+      </Swiper>
+
+      <h3>DJ NIGHTS</h3>
+      <Swiper
+        slidesPerView={1}
+        modules={[FreeMode, Scrollbar, Mousewheel, Navigation]}
+        mousewheel={{
+          forceToAxis: true,
+        }}
+        className="swiper-container-class"
+      >
+        {djPhotosSlides}
+      </Swiper>
+
+      <h3>OAKLAND BLOCK PARTY 2025</h3>
+      <Swiper
+        slidesPerView={1}
+        modules={[FreeMode, Scrollbar, Mousewheel, Navigation]}
+        mousewheel={{
+          forceToAxis: true,
+        }}
+        className="swiper-container-class"
+      >
+        {obpPhotosSlides}
+      </Swiper>
+
+      {/* <h3>LIVE MUSIC</h3>
       <div className="mobile-photo-album-container">
         <div className="custom-prev photos-button">
           <FaAngleLeft color="white" />
@@ -141,7 +185,7 @@ export default function MobilePhotos() {
         <div className="custom-next-3 photos-button">
           <FaAngleRight color="white" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
