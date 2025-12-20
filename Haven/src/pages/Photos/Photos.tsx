@@ -57,7 +57,10 @@ export default function Photos() {
           key={i}
           photos={splitPhoto}
           targetRowHeight={225}
-          rowConstraints={{ minPhotos: splitPhoto.length / 2 }}
+          rowConstraints={{
+            minPhotos: splitPhoto.length / 2,
+            maxPhotos: splitPhoto.length / 2,
+          }}
           spacing={20}
           onClick={({ photo }) => {
             setLightboxPhoto(photo);
@@ -74,7 +77,10 @@ export default function Photos() {
           key={i}
           photos={splitPhoto}
           targetRowHeight={225}
-          rowConstraints={{ minPhotos: splitPhoto.length / 2 }}
+          rowConstraints={{
+            minPhotos: splitPhoto.length / 2,
+            maxPhotos: splitPhoto.length / 2,
+          }}
           spacing={20}
           onClick={({ photo }) => {
             setLightboxPhoto(photo);
@@ -91,7 +97,10 @@ export default function Photos() {
           key={i}
           photos={splitPhoto}
           targetRowHeight={225}
-          rowConstraints={{ minPhotos: splitPhoto.length / 2 }}
+          rowConstraints={{
+            minPhotos: splitPhoto.length / 2,
+            maxPhotos: splitPhoto.length / 2,
+          }}
           spacing={20}
           onClick={({ photo }) => {
             setLightboxPhoto(photo);
@@ -120,7 +129,7 @@ export default function Photos() {
             }}
             spaceBetween={20}
             modules={[FreeMode, Scrollbar, Mousewheel]}
-            className="swiper-container-class"
+            // className="swiper-container-class"
           >
             {rowPhotoAlbumArray}
           </Swiper>
@@ -138,7 +147,7 @@ export default function Photos() {
             }}
             spaceBetween={20}
             modules={[FreeMode, Scrollbar, Mousewheel]}
-            className="swiper-container-class"
+            // className="swiper-container-class"
           >
             {djPhotoAlbumArray}
           </Swiper>
@@ -190,7 +199,7 @@ export default function Photos() {
             }}
             spaceBetween={20}
             modules={[FreeMode, Scrollbar, Mousewheel]}
-            className="swiper-container-class"
+            // className="swiper-container-class"
           >
             {obpPhotoAlbumArray}
           </Swiper>
