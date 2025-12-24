@@ -13,6 +13,7 @@ import {
   Mousewheel,
   Navigation,
   Pagination,
+  Autoplay,
 } from "swiper/modules";
 import photos from "./photo-list";
 import djPhotos from "./dj-photo-list";
@@ -63,11 +64,20 @@ export default function MobilePhotos() {
       <h3>LIVE MUSIC</h3>
       <Swiper
         slidesPerView={1}
-        modules={[FreeMode, Scrollbar, Mousewheel, Navigation, Pagination]}
+        modules={[
+          FreeMode,
+          Scrollbar,
+          Mousewheel,
+          Navigation,
+          Pagination,
+          Autoplay,
+        ]}
         // navigation={true}
-        mousewheel={{
-          forceToAxis: true,
-        }}
+        // mousewheel={{
+        //   forceToAxis: true,
+        // }}
+        scrollbar={{ draggable: true }}
+        // autoplay={{ disableOnInteraction: true }}
         className="photo-swiper-container-class"
       >
         {photosSlides}
@@ -76,10 +86,20 @@ export default function MobilePhotos() {
       <h3>DJ NIGHTS</h3>
       <Swiper
         slidesPerView={1}
-        modules={[FreeMode, Scrollbar, Mousewheel, Navigation]}
-        mousewheel={{
-          forceToAxis: true,
-        }}
+        modules={[
+          FreeMode,
+          Scrollbar,
+          Mousewheel,
+          Navigation,
+          Pagination,
+          Autoplay,
+        ]}
+        // navigation={true}
+        // mousewheel={{
+        //   forceToAxis: true,
+        // }}
+        scrollbar={{ draggable: true }}
+        // autoplay={{ disableOnInteraction: true }}
         className="photo-swiper-container-class"
       >
         {djPhotosSlides}
@@ -88,10 +108,20 @@ export default function MobilePhotos() {
       <h3>OAKLAND BLOCK PARTY 2025</h3>
       <Swiper
         slidesPerView={1}
-        modules={[FreeMode, Scrollbar, Mousewheel, Navigation]}
-        mousewheel={{
-          forceToAxis: true,
-        }}
+        modules={[
+          FreeMode,
+          Scrollbar,
+          Mousewheel,
+          Navigation,
+          Pagination,
+          Autoplay,
+        ]}
+        // navigation={true}
+        // mousewheel={{
+        //   forceToAxis: true,
+        // }}
+        scrollbar={{ draggable: true }}
+        // autoplay={true}
         className="photo-swiper-container-class"
       >
         {obpPhotosSlides}

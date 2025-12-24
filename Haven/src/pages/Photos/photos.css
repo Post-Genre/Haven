@@ -35,6 +35,7 @@
   /* width: 100%; */
   color: white;
   text-align: center;
+  padding-bottom: 12px;
 }
 
 .photo-slide-container p {
@@ -52,6 +53,9 @@
   justify-content: center;
   align-items: center;
   display: none;
+  text-align: center;
+  padding-bottom: 12px;
+  /* padding-top: 16px; */
 }
 
 .mobile-photo-album-container {
@@ -69,10 +73,18 @@
 
 .mobile-photos-swiper-slide {
   width: auto;
+  height: auto;
 }
 
 .photo-swiper-container-class {
   width: 100%;
+  height: auto;
+}
+
+.swiper-scrollbar {
+  --swiper-scrollbar-top: auto;
+  --swiper-scrollbar-bottom: 0px;
+  --swiper-scrollbar-size: 12px;
 }
 
 @media (max-width: 992px) {
