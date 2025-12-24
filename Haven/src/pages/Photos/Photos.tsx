@@ -123,7 +123,7 @@ export default function Photos() {
             direction={"horizontal"}
             slidesPerView={"auto"}
             freeMode={true}
-            // scrollbar={{ draggable: true }}
+            scrollbar={{ draggable: true, snapOnRelease: false }}
             mousewheel={{
               forceToAxis: true,
             }}
@@ -141,7 +141,7 @@ export default function Photos() {
             direction={"horizontal"}
             slidesPerView={"auto"}
             freeMode={true}
-            // scrollbar={{ draggable: true }}
+            scrollbar={{ draggable: true, snapOnRelease: false }}
             mousewheel={{
               forceToAxis: true,
             }}
@@ -193,7 +193,7 @@ export default function Photos() {
             direction={"horizontal"}
             slidesPerView={"auto"}
             freeMode={true}
-            // scrollbar={{ draggable: true }}
+            scrollbar={{ draggable: true, snapOnRelease: false }}
             mousewheel={{
               forceToAxis: true,
             }}

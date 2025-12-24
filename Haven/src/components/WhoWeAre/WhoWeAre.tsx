@@ -14,17 +14,11 @@ export default function WhoWeAre() {
         <div className="body-text-container">
           <p>
             <span className="content-header"> HAVEN </span> is an independent
-            music venue in the heart of Pittsburgh’s Oakland neighborhood. The
-            venue is operated by{" "}
-            <a href="https://pg.media" target="_blank">
-              <u>
-                <i>Post Genre,</i>
-              </u>
-            </a>{" "}
-            a Pittsburgh-based organization dedicated to enriching the local
-            community through concerts, event production training, and more.
+            music venue in the heart of Oakland, Pittsburgh’s college town. We
+            house a 2,000 sqft venue and event space where we feature live
+            entertainment every week!
           </p>
-          <ButtonTertiary
+          {/* <ButtonTertiary
             onClick={() => {
               window.open(
                 "https://www.pg.media",
@@ -33,15 +27,19 @@ export default function WhoWeAre() {
               );
             }}
             text="LEARN MORE ABOUT POST GENRE"
-          />
+          /> */}
           <p>
             <span className="content-header"> WHY HAVEN?</span>
           </p>
           <p>
-            Once the heart of music in Pittsburgh, Oakland’s vibrant music scene
+            {/* Once the heart of music in Pittsburgh, Oakland’s vibrant music scene
             was pushed underground after a wave of venue closures in the early
             2000’s. Although these venues left Oakland, the borough’s passion
-            for local music persevered.
+            for local music persevered.  */}
+            Our venue serves as a haven for concerts and events in Pittsburgh’s
+            most populated borough. We are the only independent venue in
+            Pittsburgh’s college town of Oakland, where 25,000 students live
+            within a mile radius of our space.
           </p>
           <ButtonTertiary
             onClick={() => {
