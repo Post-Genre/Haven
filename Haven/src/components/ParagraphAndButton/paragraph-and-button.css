@@ -46,12 +46,12 @@
 
 @media (max-width: 500px) {
   .paragraph-and-button-container {
-    width: 350px;
+    width: 375px;
     gap: 24px;
     padding: 16px 8px;
   }
 
   .paragraph-and-button-container p {
-    width: 300px;
+    width: 325px;
   }
 }

@@ -28,34 +28,33 @@ export default function Bookings() {
             }}
           />
         }
-        paragraph="Looking to host a concert, showcase, or special event? HAVEN offers a fully equipped space designed for unforgettable experiences. From professional audio and lighting to digital ticketing, we’ve got everything you need to make your event run smoothly."
+        paragraph="Looking to host a concert or special event? Haven offers a fully equipped space designed to fit your events needs. Our 2,000 sqft space is available for bookings including concerts, student club events, networking events, pop-up shops, art exhibitions, and more. We can provide professional lighting and audio, chair and table arrangements, and ticketing services to make your event run smoothly."
       />
       <div className="bookings-cards-container">
         <div className="bookings-card">
           <img src={rental1} alt="" />
           <h5>PRIVATE SOCIAL EVENTS</h5>
           <p className="small-font">
-            Interested in hosting a concert or live event at HAVEN? From audio
-            services to digital ticketing, we have you covered to make your
-            future event successful.
+            Interested in hosting a private event at Haven? From audio services
+            to digital ticketing, we have you covered to make your future event
+            successful.
           </p>
         </div>
         <div className="bookings-card flipped">
           <img src={photo17} alt="" />
-          <h5>PRIVATE SOCIAL EVENTS</h5>
+          <h5>ARTISTS</h5>
           <p className="small-font">
-            Interested in hosting a concert or live event at HAVEN? From audio
-            services to digital ticketing, we have you covered to make your
-            future event successful.
+            Interested in performing at Haven? Please fill out our artist
+            interest form below, and our team will get back to you as soon as
+            possible.
           </p>
         </div>
         <div className="bookings-card">
           <img src={rental3} alt="" />
-          <h5>PRIVATE SOCIAL EVENTS</h5>
+          <h5>PAST EVENTS</h5>
           <p className="small-font">
-            Interested in hosting a concert or live event at HAVEN? From audio
-            services to digital ticketing, we have you covered to make your
-            future event successful.
+            In addition to live music, Haven has hosted a variety of other
+            events, such as club socials, pop-up thrift shops, and so much more!
           </p>
         </div>
       </div>

@@ -68,7 +68,7 @@ export default function MobilePhotos() {
         mousewheel={{
           forceToAxis: true,
         }}
-        className="swiper-container-class"
+        className="photo-swiper-container-class"
       >
         {photosSlides}
       </Swiper>
@@ -80,7 +80,7 @@ export default function MobilePhotos() {
         mousewheel={{
           forceToAxis: true,
         }}
-        className="swiper-container-class"
+        className="photo-swiper-container-class"
       >
         {djPhotosSlides}
       </Swiper>
@@ -92,7 +92,7 @@ export default function MobilePhotos() {
         mousewheel={{
           forceToAxis: true,
         }}
-        className="swiper-container-class"
+        className="photo-swiper-container-class"
       >
         {obpPhotosSlides}
       </Swiper>
