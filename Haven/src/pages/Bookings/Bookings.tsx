@@ -12,11 +12,14 @@ import photo17 from "../../assets/media/haven pics/IMG_0640.jpg";
 import rentalstaging from "../../assets/media/haven pics/IMG_7395.jpg";
 import InterestFormTabs from "../../components/InterestForm/InterestFormTabs";
 import ButtonSecondary from "../../components/Button/ButtonSecondary";
+import Header from "../../components/Header/Header";
 
 export default function Bookings() {
   return (
     <div className="bookings-container">
+      {/* <Header /> */}
       <TitleContainer image={eventsBanner} text="BOOKINGS" />
+
       <h3>BOOK HAVEN FOR YOUR NEXT EVENT</h3>
       <ParagraphAndButton
         CustomButton={

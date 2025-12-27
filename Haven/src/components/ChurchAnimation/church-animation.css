@@ -1,0 +1,54 @@
+.church-animation-container {
+  position: relative;
+  background-image: url("../../assets//media//backgrounds//psychbackground_lowres.jpg");
+  background-position: top;
+  /* display: flex; */
+  /* align-items: bottom; */
+  justify-content: center;
+  display: none;
+}
+
+.church-image {
+  width: 100%;
+  aspect-ratio: initial;
+  top: auto;
+  display: block;
+  animation: slideUp 0.7s ease-out forwards; /* Apply the slide-up animation */
+}
+
+.website-title {
+  color: var(--cream);
+  font-family: "virile-text";
+  font-weight: normal;
+  -webkit-text-stroke: 3px rgb(168, 80, 80);
+  position: absolute;
+  letter-spacing: 0px;
+  /* bottom: -25vw; */
+  top: auto;
+  bottom: 0px;
+  z-index: 2;
+  font-size: 25vw;
+  line-height: 0.85;
+  filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.473));
+}
+
+#animated-word {
+  transition: letter-spacing 0.1s ease; /* Smooth transition */
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .church-animation-container {
+    display: flex;
+  }
+}

@@ -20,6 +20,12 @@
   src: url(./assets/fonts/Inter-Italic.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "virile-text";
+  font-style: normal;
+  src: url(./assets/fonts/Virile.ttf) format("truetype");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

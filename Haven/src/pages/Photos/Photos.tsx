@@ -27,6 +27,7 @@ import { useState } from "react";
 import TitleContainer from "../../components/TitleContainer/TitleContainer";
 import PhotoSlide from "./PhotoSlide";
 import MobilePhotos from "./MobilePhotos";
+import Header from "../../components/Header/Header";
 
 type SelectablePhoto = Photo & {
   selected?: boolean;
@@ -112,6 +113,8 @@ export default function Photos() {
 
   return (
     <div className="photos-container">
+      {/* <Header /> */}
+
       <TitleContainer image={backgroundImg} text="PHOTOS" />
 
       <MobilePhotos />

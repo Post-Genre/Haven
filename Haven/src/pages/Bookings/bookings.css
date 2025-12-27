@@ -9,6 +9,17 @@
   padding-bottom: 20px;
 }
 
+/* .top-header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+} */
+
 .bookings-container h3 {
   width: 900px;
 }
