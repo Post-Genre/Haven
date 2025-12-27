@@ -44,7 +44,7 @@ a:visited {
 html,
 body {
   height: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   overscroll-behavior: none;
 }
 
@@ -64,6 +64,12 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
   overflow-y: scroll;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+  }
 }
 
 :root {

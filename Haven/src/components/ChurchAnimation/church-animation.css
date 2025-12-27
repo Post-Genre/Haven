@@ -52,3 +52,9 @@
     display: flex;
   }
 }
+
+@media (max-width: 500px) {
+  .website-title {
+    -webkit-text-stroke: 2px rgb(168, 80, 80);
+  }
+}
