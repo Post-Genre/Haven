@@ -55,3 +55,15 @@
     width: 325px;
   }
 }
+
+@media (max-width: 400px) {
+  .paragraph-and-button-container {
+    width: 350px;
+    gap: 24px;
+    padding: 16px 8px;
+  }
+
+  .paragraph-and-button-container p {
+    width: 325px;
+  }
+}
