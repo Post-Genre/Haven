@@ -48,10 +48,17 @@ export default function ChurchAnimation() {
   return (
     <div className="church-animation-container">
       <img className="church-image" src={churchLowres} alt="Church" />
-      <h1 id="animated-word" className="website-title">
+      {/* <h1 id="animated-word" className="website-title">
         HAVEN
-      </h1>
+      </h1> */}
+      {/* <p className="website-title">Oakland's Home for Live Music</p> */}
 
+      <div className="website-title">
+        <h1 id="animated-word" className="website-title">
+          HAVEN
+        </h1>
+        <h4 className="website-title">OAKLAND'S HOME FOR LIVE MUSIC</h4>
+      </div>
       {/* <div className="flowers">
         <div id="flower-bundleL" className="flower-bundleL">
           <img src={lily4left} className="flowerL flower4" alt="Flower 4" />
