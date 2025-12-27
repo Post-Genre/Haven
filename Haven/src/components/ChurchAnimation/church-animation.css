@@ -47,7 +47,7 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 800px) {
   .church-animation-container {
     display: flex;
   }
