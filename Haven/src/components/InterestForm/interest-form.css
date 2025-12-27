@@ -176,6 +176,7 @@ textarea {
   .form-container {
     width: 380px;
     padding: 16px 16px;
+    gap: 12px;
   }
 
   .full-input,
