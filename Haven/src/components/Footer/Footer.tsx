@@ -52,6 +52,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <a href="/rules">
+        <p className="small-font">
+          <u>Terms and Conditions</u>
+        </p>
+      </a>
       <p className="smallest-font">©2025 Post Genre. All Rights Reserved.</p>
     </div>
   );

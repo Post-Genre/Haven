@@ -69,8 +69,9 @@ export default function FAQ() {
                 otherwise on the event page. Alcohol is prohibited at events.
                 <br /> <br />
                 <a
-                  href="https://www.instagram.com/p/DEpqra4v7PV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-                  target="_blank"
+                  // href="https://www.instagram.com/p/DEpqra4v7PV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                  href="/rules"
+                  target="_self"
                   className="faq-link"
                 >
                   Read more about the venue policies for HAVEN{" "}

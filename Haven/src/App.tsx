@@ -15,6 +15,7 @@ import LoadingIcon from "./components/LoadingIcon/LoadingIcon";
 import Photos from "./pages/Photos/Photos";
 import Artists from "./pages/Artists/Artists";
 import Bookings from "./pages/Bookings/Bookings";
+import Rules from "./pages/Rules/Rules";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             {/* <Route path="/artists" element={<Artists />} /> 
             <Route path="/rentals" element={<Rentals />} />  */}
             <Route path="/photos" element={<Photos />} />
+            <Route path="/rules" element={<Rules />} />
           </Routes>
         </main>
         <Footer />
