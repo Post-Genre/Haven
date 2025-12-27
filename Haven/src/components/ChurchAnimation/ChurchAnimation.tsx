@@ -26,6 +26,8 @@ export default function ChurchAnimation() {
     }
 
     word.style.letterSpacing = `${letterSpacing}px`;
+    // word.style.marginLeft = `${letterSpacing * 10}px`;
+    word.style.transform = `translateX(${letterSpacing * 0.5}px)`;
   }
 
   useEffect(() => {

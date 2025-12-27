@@ -6,6 +6,7 @@
   /* align-items: bottom; */
   justify-content: center;
   display: none;
+  text-align: center;
 }
 
 .church-image {
@@ -33,7 +34,8 @@
 }
 
 #animated-word {
-  transition: letter-spacing 0.1s ease; /* Smooth transition */
+  /* transition: letter-spacing 0.1s ease;  */
+  transition: letter-spacing 0.1s ease, transform 0.1s ease;
 }
 
 @keyframes slideUp {
