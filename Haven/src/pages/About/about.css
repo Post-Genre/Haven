@@ -1,0 +1,28 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  gap: 12px;
+  padding-bottom: 12px;
+}
+
+.about-text-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 12px;
+  justify-content: center;
+}
+
+.about-header-and-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-header-and-image img {
+  height: 100px;
+}

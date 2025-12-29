@@ -4,8 +4,11 @@ import banner1 from "../../assets/media/banners/banner1.jpg";
 import bottom1 from "../../assets/media/banners/bottom1.jpg";
 
 import TitleContainer from "../TitleContainer/TitleContainer";
+import { useNavigate } from "react-router";
 
 export default function WhoWeAre() {
+  const navigate = useNavigate();
+
   return (
     <div className="who-we-are-container">
       <TitleContainer image={banner1} text="WHO WE ARE" />
@@ -18,16 +21,12 @@ export default function WhoWeAre() {
             house a 2,000 sqft venue and event space where we feature live
             entertainment every week!
           </p>
-          {/* <ButtonTertiary
+          <ButtonTertiary
             onClick={() => {
-              window.open(
-                "https://www.pg.media",
-                "_blank",
-                "noopener,noreferrer"
-              );
+              navigate("/about");
             }}
-            text="LEARN MORE ABOUT POST GENRE"
-          /> */}
+            text="LEARN MORE ABOUT HAVEN"
+          />
           <p>
             <span className="content-header"> WHY HAVEN?</span>
           </p>

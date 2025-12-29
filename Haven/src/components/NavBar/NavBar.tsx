@@ -48,6 +48,23 @@ export default function NavBar() {
   return (
     <div className="nav-container">
       <NavLink
+        to="/about"
+        className={({ isActive }) =>
+          isActive ? "navlink navlink-active" : "navlink"
+        }
+        onClick={() => {
+          if (location.pathname === "/about") {
+            ScrollToTopOfPage();
+          }
+        }}
+        onMouseEnter={() => handleHover(3)}
+        onMouseLeave={() => handleLeave()}
+        data-index="3"
+      >
+        <h5>ABOUT</h5>
+      </NavLink>
+
+      <NavLink
         to="/events"
         className={({ isActive }) =>
           isActive ? "navlink navlink-active" : "navlink"
