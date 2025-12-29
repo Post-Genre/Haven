@@ -44,8 +44,7 @@ a:visited {
 html,
 body {
   height: 100%;
-  /* overflow-x: hidden; */
-  overscroll-behavior: none;
+  /* overscroll-behavior: none; */
 }
 
 body::-webkit-scrollbar {
@@ -59,6 +58,7 @@ body {
   background-color: #ffffff;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 
   /* removes scrollbar  */
   scrollbar-width: none;
