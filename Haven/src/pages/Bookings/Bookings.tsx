@@ -36,20 +36,21 @@ export default function Bookings() {
       <div className="bookings-cards-container">
         <div className="bookings-card">
           <img src={rental1} alt="" />
-          <h5>PRIVATE SOCIAL EVENTS</h5>
-          <p className="small-font">
-            Interested in hosting a private event at Haven? From audio services
-            to digital ticketing, we have you covered to make your future event
-            successful.
-          </p>
-        </div>
-        <div className="bookings-card flipped">
-          <img src={photo17} alt="" />
+
           <h5>ARTISTS</h5>
           <p className="small-font">
             Interested in performing at Haven? Please fill out our artist
             interest form below, and our team will get back to you as soon as
             possible.
+          </p>
+        </div>
+        <div className="bookings-card flipped">
+          <img src={photo17} alt="" />
+          <h5>PRIVATE SOCIAL EVENTS</h5>
+          <p className="small-font">
+            Interested in hosting a private event at Haven? From audio services
+            to digital ticketing, we have you covered to make your future event
+            successful.
           </p>
         </div>
         <div className="bookings-card">

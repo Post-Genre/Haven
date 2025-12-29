@@ -1,6 +1,7 @@
 .carousel-item-container {
   width: 700px;
-  height: 400px;
+  /* height: 400px; */
+  aspect-ratio: 7/4;
   border-radius: 12px;
   color: white;
   background-position: top;
@@ -54,7 +55,7 @@
 @media (min-width: 1200px) {
   .carousel-item-container {
     width: 800px;
-    height: 435px;
+    /* height: 435px; */
   }
 }
 
@@ -68,27 +69,27 @@
 @media (max-width: 992px) {
   .carousel-item-container {
     width: 600px;
-    height: 333px;
+    /* height: 333px; */
   }
 }
 
 @media (max-width: 650px) {
   .carousel-item-container {
     width: 450px;
-    height: 275px;
+    /* height: 275px; */
   }
 }
 
 @media (max-width: 500px) {
   .carousel-item-container {
     width: 375px;
-    height: 230px;
+    /* height: 230px; */
   }
 }
 
 @media (max-width: 400px) {
   .carousel-item-container {
     width: 350px;
-    height: 210px;
+    /* height: 210px; */
   }
 }
