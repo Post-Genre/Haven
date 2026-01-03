@@ -11,6 +11,7 @@ import "yet-another-react-lightbox/plugins/captions.css";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
 import backgroundImg from "../../assets/media/banners/banner1.jpg";
+import disconapbanner from "../../assets/media/banners/disconapbanner.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -115,7 +116,7 @@ export default function Photos() {
     <div className="photos-container">
       {/* <Header /> */}
 
-      <TitleContainer image={backgroundImg} text="PHOTOS" />
+      <TitleContainer image={disconapbanner} text="PHOTOS" />
 
       <MobilePhotos />
       <div className="photos-album-container">

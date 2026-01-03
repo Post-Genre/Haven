@@ -1,5 +1,5 @@
 import "./bookings.css";
-import eventsBanner from "../../assets/media/banners/banner2.jpg";
+import eventsBanner from "../../assets/media/banners/madelinebanner2.png";
 import TitleContainer from "../../components/TitleContainer/TitleContainer";
 import EventInterestForm from "../../components/InterestForm/EventInterestForm";
 import ParagraphAndButton from "../../components/ParagraphAndButton/ParagraphAndButton";
