@@ -10,6 +10,7 @@ import {
 import pgLogo from "../../assets/media/pglogo-white-no-text.png";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
   return (
     <div className="footer-container">
       <img src={havenLogo} alt="" />
@@ -57,7 +58,7 @@ export default function Footer() {
           <u>Terms and Conditions</u>
         </p>
       </a>
-      <p className="smallest-font">©2025 Post Genre. All Rights Reserved.</p>
+      <p className="smallest-font">©{year} Post Genre. All Rights Reserved.</p>
     </div>
   );
 }

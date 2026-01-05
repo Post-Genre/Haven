@@ -12,20 +12,24 @@ export default function About() {
       <TitleContainer image={obpbanner} text="ABOUT" />
 
       <div className="about-background-wrapper">
-        <img className="about-background-wrapper-image" src={image1} alt="" />
-        <img className="about-background-wrapper-image-2" src={image2} alt="" />
+        {/* <img className="about-background-wrapper-image" src={image1} alt="" />
+        <img className="about-background-wrapper-image-2" src={image2} alt="" /> */}
 
         <div className="about-text-container">
-          {/* <div className="about-header-and-image">
-            <h5>WHAT IS HAVEN?</h5>
+          <div className="about-header-and-image">
+            <div>
+              <h5>WHAT IS HAVEN?</h5>
+              <p>
+                After twenty years without a venue, live music is back in
+                Oakland. Run entirely by dedicated volunteers in the music
+                scene, HAVEN opened in January 2025 to bring live music back to
+                the neighborhood.
+              </p>
+            </div>
             <img src={image1} alt="" />
-          </div> */}
-          <h5>WHAT IS HAVEN?</h5>
-          <p>
-            After twenty years without a venue, live music is back in Oakland.
-            Run entirely by dedicated volunteers in the music scene, HAVEN
-            opened in January 2025 to bring live music back to the neighborhood.
-          </p>
+          </div>
+          {/* <h5>WHAT IS HAVEN?</h5> */}
+
           <h5>WHY MUSIC MATTERS IN OAKLAND</h5>
           <p>
             Once the heart of live music in Pittsburgh, Oakland's music scene
@@ -41,19 +45,22 @@ export default function About() {
             organizations and the city government to open a permanent space in
             January of 2025.
           </p>
-          {/* <div className="about-header-and-image">
-            <h5>HAVENs IMPACT</h5>
+          <div className="about-header-and-image">
+            <div>
+              <h5>HAVENs IMPACT</h5>
+              <p>
+                In its first year, HAVEN has hosted over 50 concerts, 150 bands
+                and welcomed more than 4,500 attendees. HAVEN provides hands-on
+                experience and skill-building opportunities in the live music
+                industry. Alongside artists and musicians, our team of 70
+                dedicated volunteers include photographers, videographers,
+                graphic designers, audio and lighting engineers, social media
+                coordinators, and more.
+              </p>
+            </div>
             <img src={image2} alt="" />
-          </div> */}
-          <h5>HAVENs IMPACT</h5>
-          <p>
-            In its first year, HAVEN has hosted over 50 concerts, 150 bands and
-            welcomed more than 4,500 attendees. HAVEN provides hands-on
-            experience and skill-building opportunities in the live music
-            industry. Alongside artists and musicians, our team of 70 dedicated
-            volunteers include photographers, videographers, graphic designers,
-            audio and lighting engineers, social media coordinators, and more.
-          </p>
+          </div>
+          {/* <h5>HAVENs IMPACT</h5> */}
         </div>
       </div>
       {/* <div className="about-background-wrapper">
