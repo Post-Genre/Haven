@@ -13,8 +13,47 @@ import rentalstaging from "../../assets/media/haven pics/IMG_7395.jpg";
 import InterestFormTabs from "../../components/InterestForm/InterestFormTabs";
 import ButtonSecondary from "../../components/Button/ButtonSecondary";
 import Header from "../../components/Header/Header";
+import { useEffect, useRef, useState } from "react";
+import { RiFlaskLine } from "react-icons/ri";
+import WhatWeOfferModal from "../../components/WhatWeOfferModal/WhatWeOfferModal";
 
 export default function Bookings() {
+  const [spanVisible, setSpanVisible] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
+
+  const ref = useRef<HTMLDivElement>(null);
+
+  //checks for pointer/mouse clicks, and if click happens outside the mobile-nav-bar ref, close the nav bar
+  useEffect(() => {
+    function handlePointerDown(e: PointerEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        console.log("here");
+        handleMouseLeave();
+      }
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    return () => document.removeEventListener("pointerdown", handlePointerDown);
+  }, []);
+
+  function handleMouseEnter(num: Number) {
+    setSpanVisible((prevState) =>
+      prevState.map((item, idx) =>
+        item === true ? !item : idx === num ? !item : item
+      )
+    );
+  }
+
+  function handleMouseLeave() {
+    setSpanVisible([false, false, false, false, false, false]);
+  }
+
   return (
     <div className="bookings-container">
       {/* <Header /> */}
@@ -62,7 +101,7 @@ export default function Bookings() {
           </p>
         </div>
       </div>
-      <div className="what-we-offer">
+      {/* <div className="what-we-offer">
         <img src={rentalstaging} alt="" />
         <div className="what-we-offer-text">
           <h5>WHAT WE OFFER</h5>
@@ -71,6 +110,205 @@ export default function Bookings() {
             services <br></br>3. 24x14’ Permanent stage<br></br>4. Tables and
             chairs <br></br>5. Professional photography
           </p>
+        </div>
+      </div> */}
+      <div className="what-we-offer-new" ref={ref}>
+        <h5>WHAT WE OFFER</h5>
+        <div className="new-thing">
+          <div className="what-we-offer-grid">
+            <p
+              className="what-we-offer-grid-box"
+              onMouseEnter={() => handleMouseEnter(0)}
+              onMouseLeave={handleMouseLeave}
+            >
+              PROFESSIONAL AUDIO & LIGHTING
+              <span
+                className={
+                  spanVisible[0] ? "smallest-font active" : "smallest-font"
+                }
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
+                egestas neque sed dignissim ullamcorper. In sollicitudin.
+              </span>
+            </p>
+            <p
+              className="what-we-offer-grid-box"
+              onMouseEnter={() => handleMouseEnter(1)}
+              onMouseLeave={handleMouseLeave}
+            >
+              24' x 14' PERMANENT STAGE
+              <span
+                className={
+                  spanVisible[1] ? "smallest-font active" : "smallest-font"
+                }
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
+                egestas neque sed dignissim ullamcorper. In sollicitudin.
+              </span>
+            </p>
+
+            <p
+              className="what-we-offer-grid-box"
+              onMouseEnter={() => handleMouseEnter(2)}
+              onMouseLeave={handleMouseLeave}
+            >
+              PHOTO & VIDEO SERVICES
+              <span
+                className={
+                  spanVisible[2] ? "smallest-font active" : "smallest-font"
+                }
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
+                egestas neque sed dignissim ullamcorper. In sollicitudin.
+              </span>
+            </p>
+
+            <p
+              className="what-we-offer-grid-box"
+              onMouseEnter={() => handleMouseEnter(3)}
+              onMouseLeave={handleMouseLeave}
+            >
+              DIGITAL TICKETING SERVICES
+              <span
+                className={
+                  spanVisible[3] ? "smallest-font active" : "smallest-font"
+                }
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
+                egestas neque sed dignissim ullamcorper. In sollicitudin.
+              </span>
+            </p>
+
+            <p
+              className="what-we-offer-grid-box"
+              onMouseEnter={() => handleMouseEnter(4)}
+              onMouseLeave={handleMouseLeave}
+            >
+              GREEN ROOM AND GUEST SERVICES
+              <span
+                className={
+                  spanVisible[4] ? "smallest-font active" : "smallest-font"
+                }
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
+                egestas neque sed dignissim ullamcorper. In sollicitudin.
+              </span>
+            </p>
+
+            <p
+              className="what-we-offer-grid-box"
+              onMouseEnter={() => handleMouseEnter(5)}
+              onMouseLeave={handleMouseLeave}
+            >
+              TABLES AND CHAIRS
+              <span
+                className={
+                  spanVisible[5] ? "smallest-font active" : "smallest-font"
+                }
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
+                egestas neque sed dignissim ullamcorper. In sollicitudin.
+              </span>
+            </p>
+          </div>
+          <div className="what-we-offer-grid-mobile">
+            <p
+              className="what-we-offer-grid-box"
+              onClick={() => handleMouseEnter(0)}
+              // onMouseLeave={handleMouseLeave}
+            >
+              PROFESSIONAL AUDIO & LIGHTING
+            </p>
+            {spanVisible[0] && (
+              <WhatWeOfferModal
+                onClose={handleMouseLeave}
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
+              egestas neque sed dignissim ullamcorper. In sollicitudin."
+              />
+            )}
+            <p
+              className="what-we-offer-grid-box"
+              onClick={() => handleMouseEnter(1)}
+              // onMouseLeave={handleMouseLeave}
+            >
+              24' x 14' PERMANENT STAGE
+            </p>
+            {spanVisible[1] && (
+              <WhatWeOfferModal
+                onClose={handleMouseLeave}
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
+              egestas neque sed dignissim ullamcorper. In sollicitudin."
+              />
+            )}
+            <p
+              className="what-we-offer-grid-box"
+              onClick={() => handleMouseEnter(2)}
+              // onMouseLeave={handleMouseLeave}
+            >
+              PHOTO & VIDEO SERVICES
+            </p>
+            {spanVisible[2] && (
+              <WhatWeOfferModal
+                onClose={handleMouseLeave}
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
+              egestas neque sed dignissim ullamcorper. In sollicitudin."
+              />
+            )}
+            <p
+              className="what-we-offer-grid-box"
+              onClick={() => handleMouseEnter(3)}
+              // onMouseLeave={handleMouseLeave}
+            >
+              DIGITAL TICKETING SERVICES
+            </p>
+            {spanVisible[3] && (
+              <WhatWeOfferModal
+                onClose={handleMouseLeave}
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
+              egestas neque sed dignissim ullamcorper. In sollicitudin."
+              />
+            )}
+            <p
+              className="what-we-offer-grid-box"
+              onClick={() => handleMouseEnter(4)}
+              // onMouseLeave={handleMouseLeave}
+            >
+              GREEN ROOM AND GUEST SERVICES
+            </p>
+            {spanVisible[4] && (
+              <WhatWeOfferModal
+                onClose={handleMouseLeave}
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
+              egestas neque sed dignissim ullamcorper. In sollicitudin."
+              />
+            )}
+            <p
+              className="what-we-offer-grid-box"
+              onClick={() => handleMouseEnter(5)}
+              // onMouseLeave={handleMouseLeave}
+            >
+              TABLES AND CHAIRS
+            </p>
+            {spanVisible[5] && (
+              <WhatWeOfferModal
+                onClose={handleMouseLeave}
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
+              egestas neque sed dignissim ullamcorper. In sollicitudin."
+              />
+            )}
+          </div>
         </div>
       </div>
       <div className="interest-form-tabs">

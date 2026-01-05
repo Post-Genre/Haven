@@ -1,0 +1,120 @@
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+  min-height: 100%;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: animateModal;
+  animation-duration: 0.6s;
+}
+
+.modal-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 600px; */
+}
+
+.close-modal-icon {
+  cursor: pointer;
+  align-self: end;
+  font-weight: bolder;
+  color: white;
+  font-family: "body-text";
+  font-size: 1.75rem;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: none;
+  border: none;
+  z-index: 3;
+  padding: 12px;
+}
+
+/* .close-modal-icon:active,
+.close-modal-icon:focus {
+  outline: none;
+  box-shadow: none;
+  transform: none;
+  background-color: none;
+  border: none;
+} */
+
+.modal-text-container {
+  width: 600px; /*twice the size of a grid-box */
+  aspect-ratio: 2/1;
+  /* height: auto; */
+  /* padding: 20px; */
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--burnt-orange);
+  background-image: url(../../assets/media/backgrounds/tile-light.png);
+  background-blend-mode: color;
+  position: relative;
+  overflow: hidden;
+  /* background-image: linear-gradient(
+    rgba(255, 255, 255, 0.65),
+    rgba(255, 255, 255, 0.65),
+    url(../../assets/media/backgrounds/tile-light.png)
+  ); */
+  border-radius: 12px;
+  font-weight: bolder;
+  z-index: 2;
+}
+
+.modal-text-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.65);
+  z-index: 0;
+}
+
+.modal-text-container p {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+@media (max-width: 992px) {
+  .modal-text-container {
+    width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-text-container {
+    width: 400px;
+  }
+}
+
+@media (max-width: 650px) {
+  .modal-text-container {
+    width: 350px;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal-text-container {
+    width: 300px;
+    aspect-ratio: 5/3;
+  }
+}
+
+@keyframes animateModal {
+  from {
+    /* top: -200px; */
+    opacity: 0;
+  }
+  to {
+    /* top: 0; */
+    opacity: 1;
+  }
+}
