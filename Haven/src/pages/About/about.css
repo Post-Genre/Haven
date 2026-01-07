@@ -15,6 +15,7 @@
   margin-left: 8px;
   float: right;
   width: 40%;
+  border-radius: 8px;
   -webkit-mask-image: linear-gradient(
     to bottom left,
     rgba(0, 0, 0, 0),
@@ -28,4 +29,11 @@
   width: 90%;
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+@media (max-width: 500px) {
+  .wrapped-image {
+    width: 60%;
+    margin-left: 4px;
+  }
 }

@@ -1,8 +1,8 @@
 import "./about.css";
 import banner1 from "../../assets/media/banners/banner1.jpg";
 import TitleContainer from "../../components/TitleContainer/TitleContainer";
-import image1 from "../../assets/media/disco nap/IMG_0768.jpg";
-import image2 from "../../assets/media/haven pics/DSCF7307.jpg";
+import image1 from "../../assets/media/haven pics/IMG_6207-Enhanced-NR_crowd.jpg";
+import image2 from "../../assets/media/haven pics/DSC_9097.jpg";
 import banner3 from "../../assets/media/banners/djbanner.png";
 import obpbanner from "../../assets/media/banners/obpbanner.png";
 import { useEffect, useRef } from "react";
@@ -12,7 +12,7 @@ export default function About() {
     <div className="about-container">
       <TitleContainer image={obpbanner} text="ABOUT" />
       <div className="text-wrap-container">
-        <img src={image1} alt="Disco Nap" className="wrapped-image" />
+        <img src={image1} alt="Haven" className="wrapped-image" />
         <h5>WHAT IS HAVEN?</h5>
         <p>
           After twenty years without a venue, live music is back in Oakland. Run
@@ -37,7 +37,7 @@ export default function About() {
           <br />
           <br />
         </p>
-        <img src={image2} alt="Wild Blue Yonder" className="wrapped-image" />
+        <img src={image2} alt="Haven" className="wrapped-image" />
         <h5>HAVENs IMPACT</h5>
         <p>
           In its first year, HAVEN has hosted over 50 concerts, 150 bands and
