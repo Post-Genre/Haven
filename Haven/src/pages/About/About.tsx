@@ -12,11 +12,7 @@ export default function About() {
     <div className="about-container">
       <TitleContainer image={obpbanner} text="ABOUT" />
       <div className="text-wrap-container">
-        <img
-          src={image1}
-          alt="Description of image"
-          className="wrapped-image"
-        />
+        <img src={image1} alt="Disco Nap" className="wrapped-image" />
         <h5>WHAT IS HAVEN?</h5>
         <p>
           After twenty years without a venue, live music is back in Oakland. Run
@@ -41,11 +37,7 @@ export default function About() {
           <br />
           <br />
         </p>
-        <img
-          src={image2}
-          alt="Description of image"
-          className="wrapped-image"
-        />
+        <img src={image2} alt="Wild Blue Yonder" className="wrapped-image" />
         <h5>HAVENs IMPACT</h5>
         <p>
           In its first year, HAVEN has hosted over 50 concerts, 150 bands and
