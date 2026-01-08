@@ -29,6 +29,15 @@ export default function Bookings() {
 
   const ref = useRef<HTMLDivElement>(null);
 
+  const paragraphs = [
+    "Haven is equipped with industry-standard professional audio and lighting equipment, along with talented personnel ready to staff any and all events.",
+    "Our spacious stage allows for a variety of different events in addition to live music, such as comedy and drag shows, public speaking events, and more.",
+    "We have a talented team of photographers and videographers, all skilled in capturing the best moments during our events. We aim to have photographers staffed at all live music events.",
+    "We process all event tickets through a digital ticketing app, allowing us to easily check in guests and track tickets sales for our events.",
+    "We have a green room that features a private entrance, restroom, fridge & freezer, microwave and more.",
+    "We are able to provide table and/or chair arrangements for any private events, accomodating up to 80 guests.",
+  ];
+
   //checks for pointer/mouse clicks, and if click happens outside the mobile-nav-bar ref, close the nav bar
   useEffect(() => {
     function handlePointerDown(e: PointerEvent) {
@@ -127,9 +136,7 @@ export default function Bookings() {
                   spanVisible[0] ? "smallest-font active" : "smallest-font"
                 }
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
-                egestas neque sed dignissim ullamcorper. In sollicitudin.
+                {paragraphs[0]}
               </span>
             </p>
             <p
@@ -143,9 +150,7 @@ export default function Bookings() {
                   spanVisible[1] ? "smallest-font active" : "smallest-font"
                 }
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
-                egestas neque sed dignissim ullamcorper. In sollicitudin.
+                {paragraphs[1]}
               </span>
             </p>
 
@@ -160,9 +165,7 @@ export default function Bookings() {
                   spanVisible[2] ? "smallest-font active" : "smallest-font"
                 }
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
-                egestas neque sed dignissim ullamcorper. In sollicitudin.
+                {paragraphs[2]}
               </span>
             </p>
 
@@ -177,9 +180,7 @@ export default function Bookings() {
                   spanVisible[3] ? "smallest-font active" : "smallest-font"
                 }
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
-                egestas neque sed dignissim ullamcorper. In sollicitudin.
+                {paragraphs[3]}
               </span>
             </p>
 
@@ -194,9 +195,7 @@ export default function Bookings() {
                   spanVisible[4] ? "smallest-font active" : "smallest-font"
                 }
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
-                egestas neque sed dignissim ullamcorper. In sollicitudin.
+                {paragraphs[4]}
               </span>
             </p>
 
@@ -211,9 +210,7 @@ export default function Bookings() {
                   spanVisible[5] ? "smallest-font active" : "smallest-font"
                 }
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
-                egestas neque sed dignissim ullamcorper. In sollicitudin.
+                {paragraphs[5]}
               </span>
             </p>
           </div>
@@ -228,9 +225,7 @@ export default function Bookings() {
             {spanVisible[0] && (
               <WhatWeOfferModal
                 onClose={handleMouseLeave}
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
-              egestas neque sed dignissim ullamcorper. In sollicitudin."
+                text={paragraphs[0]}
               />
             )}
             <p
@@ -243,9 +238,7 @@ export default function Bookings() {
             {spanVisible[1] && (
               <WhatWeOfferModal
                 onClose={handleMouseLeave}
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
-              egestas neque sed dignissim ullamcorper. In sollicitudin."
+                text={paragraphs[1]}
               />
             )}
             <p
@@ -258,9 +251,7 @@ export default function Bookings() {
             {spanVisible[2] && (
               <WhatWeOfferModal
                 onClose={handleMouseLeave}
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
-              egestas neque sed dignissim ullamcorper. In sollicitudin."
+                text={paragraphs[2]}
               />
             )}
             <p
@@ -273,9 +264,7 @@ export default function Bookings() {
             {spanVisible[3] && (
               <WhatWeOfferModal
                 onClose={handleMouseLeave}
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
-              egestas neque sed dignissim ullamcorper. In sollicitudin."
+                text={paragraphs[3]}
               />
             )}
             <p
@@ -288,9 +277,7 @@ export default function Bookings() {
             {spanVisible[4] && (
               <WhatWeOfferModal
                 onClose={handleMouseLeave}
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
-              egestas neque sed dignissim ullamcorper. In sollicitudin."
+                text={paragraphs[4]}
               />
             )}
             <p
@@ -303,9 +290,7 @@ export default function Bookings() {
             {spanVisible[5] && (
               <WhatWeOfferModal
                 onClose={handleMouseLeave}
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              eget massa euismod, vestibulum turpis ac, gravida est. Aliquam
-              egestas neque sed dignissim ullamcorper. In sollicitudin."
+                text={paragraphs[5]}
               />
             )}
           </div>

@@ -40,8 +40,8 @@ export default function About() {
         <img src={image2} alt="Haven" className="wrapped-image" />
         <h5>HAVENs IMPACT</h5>
         <p>
-          In its first year, HAVEN has hosted over 50 concerts, 150 bands and
-          welcomed more than 4,500 attendees. HAVEN provides hands-on experience
+          In its first year, HAVEN has hosted over 100 events, 200 bands and
+          welcomed more than 6,000 attendees. HAVEN provides hands-on experience
           and skill-building opportunities in the live music industry. Alongside
           artists and musicians, our team of 70 dedicated volunteers include
           photographers, videographers, graphic designers, audio and lighting

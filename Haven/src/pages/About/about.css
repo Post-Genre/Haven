@@ -37,3 +37,9 @@
     margin-left: 4px;
   }
 }
+
+@media (min-width: 1536px) {
+  .text-wrap-container {
+    width: 50%;
+  }
+}
