@@ -1,0 +1,145 @@
+.what-we-offer-new {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  width: 100%;
+}
+
+.what-we-offer-grid {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  gap: 24px;
+  justify-items: center;
+}
+
+.what-we-offer-grid-box {
+  width: 300px;
+  aspect-ratio: 5/3;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--burnt-orange);
+  background-color: rgba(255, 255, 255, 0.65);
+  border-radius: 12px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.what-we-offer-grid span {
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  padding: 20px;
+}
+
+.new-thing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.what-we-offer-grid span.active {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.what-we-offer-modal {
+  z-index: 5;
+  position: absolute;
+  display: none;
+}
+
+.what-we-offer-modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.what-we-offer-grid p:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: transparent;
+}
+
+.what-we-offer-grid-mobile {
+  display: none;
+}
+
+@media (hover: none) {
+  .what-we-offer-grid-mobile {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    gap: 24px;
+    justify-items: center;
+  }
+
+  .what-we-offer-grid {
+    display: none;
+  }
+
+  .what-we-offer-grid p:hover {
+    background-color: rgba(255, 255, 255, 0.65);
+    color: var(--black);
+  }
+}
+
+@media (max-width: 992px) {
+  .what-we-offer-grid-box,
+  .what-we-offer-grid span {
+    width: 225px;
+  }
+
+  .what-we-offer-new,
+  .what-we-offer-grid,
+  .what-we-offer-grid-mobile {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .what-we-offer-grid-box,
+  .what-we-offer-grid span {
+    width: 200px;
+    padding: 12px;
+  }
+
+  .what-we-offer-new,
+  .what-we-offer-grid,
+  .what-we-offer-grid-mobile {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 650px) {
+  .what-we-offer-grid-box,
+  .what-we-offer-grid span {
+    width: 175px;
+    padding: 6px;
+  }
+
+  .what-we-offer-new,
+  .what-we-offer-grid,
+  .what-we-offer-grid-mobile {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .what-we-offer-grid,
+  .what-we-offer-grid-mobile {
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .what-we-offer-new,
+  .what-we-offer-grid,
+  .what-we-offer-grid-mobile {
+    gap: 6px;
+  }
+}
