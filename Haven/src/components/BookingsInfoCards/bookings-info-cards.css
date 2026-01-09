@@ -1,0 +1,76 @@
+.bookings-info-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bookings-info-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.bookings-info-card img {
+  /* float: right; */
+  width: 400px;
+  border-radius: 12px;
+}
+
+.bookings-info-card-text {
+  width: 500px;
+}
+
+.bookings-info-card-text p {
+  text-align: left;
+}
+
+@media (max-width: 992px) {
+  .bookings-info-card {
+    gap: 12px;
+  }
+  .bookings-info-card img {
+    width: 275px;
+  }
+
+  .bookings-info-card-text {
+    width: 375px;
+  }
+}
+
+@media (max-width: 650px) {
+  .bookings-info-card img {
+    width: 225px;
+  }
+
+  .bookings-info-card-text {
+    width: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .bookings-info-card {
+    gap: 6px;
+  }
+  .bookings-info-card img {
+    width: 150px;
+  }
+
+  .bookings-info-card-text {
+    width: 200px;
+  }
+
+  .bookings-info-card-text p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .bookings-info-card img {
+    width: 125px;
+  }
+
+  .bookings-info-card-text {
+    width: 175px;
+  }
+}

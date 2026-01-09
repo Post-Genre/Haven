@@ -20,7 +20,7 @@ export default function WhatWeOffer() {
     "We have a talented team of photographers and videographers, all skilled in capturing the best moments during our events. We aim to have photographers staffed at all live music events.",
     "We process all event tickets through a digital ticketing app, allowing us to easily check in guests and track tickets sales for our events.",
     "We have a green room that features a private entrance, restroom, fridge & freezer, microwave and more.",
-    "We are able to provide table and/or chair arrangements for any private events, accomodating up to 80 guests.",
+    "We are able to provide table and/or chair arrangements for any private events, accommodating up to 80 guests.",
   ];
 
   //checks for pointer/mouse clicks, and if click happens outside the mobile-nav-bar ref, close the nav bar

@@ -17,6 +17,7 @@ import { useEffect, useRef, useState } from "react";
 import { RiFlaskLine } from "react-icons/ri";
 import WhatWeOfferModal from "../../components/WhatWeOfferModal/WhatWeOfferModal";
 import WhatWeOffer from "../../components/WhatWeOffer/WhatWeOffer";
+import BookingsInfoCards from "../../components/BookingsInfoCards/BookingsInfoCards";
 
 export default function Bookings() {
   return (
@@ -37,7 +38,7 @@ export default function Bookings() {
         }
         paragraph="Looking to host a concert or special event? Haven offers a fully equipped space designed to fit your events needs. Our 2,000 sqft space is available for bookings including concerts, student club events, networking events, pop-up shops, art exhibitions, and more. We can provide professional lighting and audio, chair and table arrangements, and ticketing services to make your event run smoothly."
       />
-      <div className="bookings-cards-container">
+      {/* <div className="bookings-cards-container">
         <div className="bookings-card">
           <img src={rental1} alt="" />
 
@@ -65,7 +66,8 @@ export default function Bookings() {
             events, such as club socials, pop-up thrift shops, and so much more!
           </p>
         </div>
-      </div>
+      </div> */}
+      <BookingsInfoCards />
       <WhatWeOffer />
       <div className="interest-form-tabs">
         <InterestFormTabs />
