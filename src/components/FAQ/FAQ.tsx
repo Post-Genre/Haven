@@ -3,6 +3,7 @@ import FAQItem from "./FAQItem";
 import FAQBanner from "../../assets/media/banners/banner4.jpg";
 import TitleContainer from "../TitleContainer/TitleContainer";
 import bottom4 from "../../assets/media/banners/bottom4.jpg";
+import { Link } from "react-router";
 
 export default function FAQ() {
   return (
@@ -69,14 +70,9 @@ export default function FAQ() {
                 otherwise on the event page. Alcohol is prohibited at events,
                 and DJ nights are 18+.
                 <br /> <br />
-                <a
-                  // href="https://www.instagram.com/p/DEpqra4v7PV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-                  href="/rules"
-                  target="_self"
-                  className="faq-link"
-                >
-                  Read more about the venue policies for HAVEN{" "}
-                </a>
+                <Link to="/rules" className="faq-link">
+                  Read more about the venue policies for HAVEN
+                </Link>
               </p>
             }
           />
@@ -122,9 +118,9 @@ export default function FAQ() {
             answer={
               <p>
                 We post all upcoming events on the{" "}
-                <a className="faq-link" href="/events">
+                <Link to="/events" className="faq-link">
                   events page
-                </a>{" "}
+                </Link>{" "}
                 and on Instagram. Following us on social media is the best way
                 to stay updated on the latest events!
               </p>
@@ -202,9 +198,9 @@ export default function FAQ() {
                 <br />
                 For more information about hosting your private event at HAVEN,
                 visit our{" "}
-                <a className="faq-link" href="/rentals">
+                <Link to="/bookings" className="faq-link">
                   private events page!
-                </a>
+                </Link>
               </p>
             }
           />
