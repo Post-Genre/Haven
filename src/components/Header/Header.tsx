@@ -1,7 +1,7 @@
 import "./header.css";
 import havenChurchLogo from "../../assets/media/haven-church-logo.png";
-import { Link, NavLink } from "react-router";
-import { useLocation } from "react-router";
+import { Link } from "react-router";
+// import { useLocation } from "react-router";
 import NavBar from "../NavBar/NavBar";
 import MobileNavBar from "../MobileNavBar/MobileNavBar";
 import { useState } from "react";
@@ -9,7 +9,7 @@ import { useState } from "react";
 type HeaderProps = {
   onClick?: () => void; // optional click handler
 };
-export default function Header({ onClick }: HeaderProps) {
+export default function Header({}: HeaderProps) {
   const [contentOpen, setContentOpen] = useState(false);
 
   function ScrollToTopOfPage() {

@@ -1,5 +1,5 @@
 import "./nav-bar.css";
-import { Link, NavLink } from "react-router";
+import { NavLink } from "react-router";
 
 export default function NavBar() {
   function ScrollToTopOfPage() {

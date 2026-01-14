@@ -6,7 +6,6 @@ import EventItem from "../../components/EventItem/EventItem";
 import bottom1 from "../../assets/media/banners/bottom1.jpg";
 import { useState, useEffect } from "react";
 import LoadingIcon from "../../components/LoadingIcon/LoadingIcon";
-import Header from "../../components/Header/Header";
 
 export default function UpcomingEvents() {
   type Event = {
@@ -115,7 +114,7 @@ export default function UpcomingEvents() {
         <img src={bottom1} alt="" className="bg-image" />
         <div className="event-items-wrapper">
           {events && events.length > 0
-            ? events.map((event, index) => {
+            ? events.map((event) => {
                 return (
                   <EventItem
                     title={event.EventName}

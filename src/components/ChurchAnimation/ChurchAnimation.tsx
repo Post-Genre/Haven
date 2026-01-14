@@ -1,21 +1,19 @@
 import "./church-animation.css";
 
 import churchLowres from "../../assets/media/backgrounds/Church-Lowres.png";
-import backgroundWrapper from "../../assets/media/backgrounds/psychbackground_lowres.jpg";
-import blackHavenLogo from "../../assets/media/havenlogo-black-updated.png";
-import lily4left from "../../assets/media/flowers/flowers_L_downscaled/lily4.png";
-import lily5left from "../../assets/media/flowers/flowers_L_downscaled/lily5.png";
-import lily2flipleft from "../../assets/media/flowers/flowers_L_downscaled/lily2-flip.png";
-import lily2left from "../../assets/media/flowers/flowers_L_downscaled/lily2.png";
-import lily4right from "../../assets/media/flowers/flowers_R_downscaled/lily4.png";
-import lily1right from "../../assets/media/flowers/flowers_R_downscaled/lily1.png";
-import lily3right from "../../assets/media/flowers/flowers_R_downscaled/lily3.png";
+// import backgroundWrapper from "../../assets/media/backgrounds/psychbackground_lowres.jpg";
+// import blackHavenLogo from "../../assets/media/havenlogo-black-updated.png";
+// import lily4left from "../../assets/media/flowers/flowers_L_downscaled/lily4.png";
+// import lily5left from "../../assets/media/flowers/flowers_L_downscaled/lily5.png";
+// import lily2flipleft from "../../assets/media/flowers/flowers_L_downscaled/lily2-flip.png";
+// import lily2left from "../../assets/media/flowers/flowers_L_downscaled/lily2.png";
+// import lily4right from "../../assets/media/flowers/flowers_R_downscaled/lily4.png";
+// import lily1right from "../../assets/media/flowers/flowers_R_downscaled/lily1.png";
+// import lily3right from "../../assets/media/flowers/flowers_R_downscaled/lily3.png";
 
 import { useEffect } from "react";
 
 export default function ChurchAnimation() {
-  const scrollItem = scroll;
-
   function adjustLetterSpacing() {
     console.log("scroll");
     let word = document.getElementById("animated-word");

@@ -1,11 +1,11 @@
 import "./about.css";
-import banner1 from "../../assets/media/banners/banner1.jpg";
+// import banner1 from "../../assets/media/banners/banner1.jpg";
 import TitleContainer from "../../components/TitleContainer/TitleContainer";
 import image1 from "../../assets/media/haven pics/IMG_6207-Enhanced-NR_crowd.jpg";
 import image2 from "../../assets/media/haven pics/DSC_9097.jpg";
-import banner3 from "../../assets/media/banners/djbanner.png";
+// import banner3 from "../../assets/media/banners/djbanner.png";
 import obpbanner from "../../assets/media/banners/obpbanner.png";
-import { useEffect, useRef } from "react";
+// import { useEffect, useRef } from "react";
 
 export default function About() {
   return (

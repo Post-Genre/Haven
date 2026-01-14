@@ -1,7 +1,7 @@
 import "./carousel.css";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import CarouselItem from "../CarouselItem/CarouselItem";
-import { FaAngleLeft, FaAngleRight, FaCircle } from "react-icons/fa6";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Autoplay,
@@ -9,7 +9,7 @@ import {
   Navigation,
   Pagination,
 } from "swiper/modules";
-import JasonPic from "../../assets/media/haven pics/DSCF7307.jpg";
+// import JasonPic from "../../assets/media/haven pics/DSCF7307.jpg";
 
 import "swiper/css";
 import "swiper/css/navigation";

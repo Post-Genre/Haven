@@ -18,10 +18,7 @@ import {
 import photos from "./photo-list";
 import djPhotos from "./dj-photo-list";
 import obpPhotos from "./obp-photo-list";
-import { useState } from "react";
-import TitleContainer from "../../components/TitleContainer/TitleContainer";
 import PhotoSlide from "./PhotoSlide";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
 export default function MobilePhotos() {
   const photosSlides = photos.map((photo, i) => {

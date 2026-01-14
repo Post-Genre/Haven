@@ -1,13 +1,7 @@
 import "./mobile-nav-bar.css";
-import { Link, NavLink } from "react-router";
+import { NavLink } from "react-router";
 import { FaBars } from "react-icons/fa6";
-import {
-  useEffect,
-  useRef,
-  useState,
-  type Dispatch,
-  type SetStateAction,
-} from "react";
+import { useEffect, useRef, type Dispatch, type SetStateAction } from "react";
 
 type MobileNavBarProps = {
   contentOpen: boolean;

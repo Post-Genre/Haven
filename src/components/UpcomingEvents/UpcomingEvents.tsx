@@ -1,5 +1,4 @@
 import "./upcoming-events.css";
-import upcomingEvents from "./upcoming-events";
 import UpcomingEventItem from "../UpcomingEventItem/UpcomingEventItem";
 import ButtonTertiary from "../Button/ButtonTertiary";
 import { useEffect, useState } from "react";
@@ -124,7 +123,7 @@ export default function UpcomingEvents() {
   return (
     <div className="upcoming-events-container">
       <h2>UPCOMING EVENTS</h2>
-      {displayedEvents.map((event, index) => {
+      {displayedEvents.map((event) => {
         return (
           <UpcomingEventItem
             title={event.EventName}

@@ -1,4 +1,4 @@
-import { MasonryPhotoAlbum, type Photo } from "react-photo-album";
+import { type Photo } from "react-photo-album";
 import "react-photo-album/masonry.css";
 import "./photos.css";
 import { RowsPhotoAlbum } from "react-photo-album";
@@ -8,9 +8,7 @@ import Captions from "yet-another-react-lightbox/plugins/captions";
 // import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
-import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
-import backgroundImg from "../../assets/media/banners/banner1.jpg";
 import disconapbanner from "../../assets/media/banners/disconapbanner.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -28,7 +26,6 @@ import { useState } from "react";
 import TitleContainer from "../../components/TitleContainer/TitleContainer";
 import PhotoSlide from "./PhotoSlide";
 import MobilePhotos from "./MobilePhotos";
-import Header from "../../components/Header/Header";
 
 type SelectablePhoto = Photo & {
   selected?: boolean;

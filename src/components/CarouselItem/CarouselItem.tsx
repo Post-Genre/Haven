@@ -1,6 +1,6 @@
 import "./carousel-item.css";
-import { useState } from "react";
-import JasonPic from "../../assets/media/haven pics/DSCF7307.jpg";
+// import { useState } from "react";
+// import JasonPic from "../../assets/media/haven pics/DSCF7307.jpg";
 import { useNavigate } from "react-router";
 
 type CarouselItemProps = {

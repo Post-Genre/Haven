@@ -1,4 +1,3 @@
-import ButtonSecondary from "../Button/ButtonSecondary";
 import "./paragraph-and-button.css";
 
 type ParagraphAndButtonProps = {

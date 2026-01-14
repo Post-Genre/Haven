@@ -1,21 +1,10 @@
 import "./bookings.css";
 import eventsBanner from "../../assets/media/banners/madelinebanner2.png";
 import TitleContainer from "../../components/TitleContainer/TitleContainer";
-import EventInterestForm from "../../components/InterestForm/EventInterestForm";
 import ParagraphAndButton from "../../components/ParagraphAndButton/ParagraphAndButton";
-import rental1 from "../../assets/media/haven pics/rentalcard1.png";
-import rental2 from "../../assets/media/haven pics/rentalcard2.png";
-import rental3 from "../../assets/media/haven pics/rentalcard3.png";
-import pic1 from "../../assets/media/haven pics/IMG_6230-Enhanced-NR.jpg";
-import pic5 from "../../assets/media/haven pics/IMG_0640.jpg";
-import photo17 from "../../assets/media/haven pics/IMG_0640.jpg";
-import rentalstaging from "../../assets/media/haven pics/IMG_7395.jpg";
+
 import InterestFormTabs from "../../components/InterestForm/InterestFormTabs";
 import ButtonSecondary from "../../components/Button/ButtonSecondary";
-import Header from "../../components/Header/Header";
-import { useEffect, useRef, useState } from "react";
-import { RiFlaskLine } from "react-icons/ri";
-import WhatWeOfferModal from "../../components/WhatWeOfferModal/WhatWeOfferModal";
 import WhatWeOffer from "../../components/WhatWeOffer/WhatWeOffer";
 import BookingsInfoCards from "../../components/BookingsInfoCards/BookingsInfoCards";
 

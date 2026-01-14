@@ -4,11 +4,10 @@ import TitleContainer from "../../components/TitleContainer/TitleContainer";
 import EventInterestForm from "../../components/InterestForm/EventInterestForm";
 import ParagraphAndButton from "../../components/ParagraphAndButton/ParagraphAndButton";
 import rental1 from "../../assets/media/haven pics/rentalcard1.png";
-import rental2 from "../../assets/media/haven pics/rentalcard2.png";
 import rental3 from "../../assets/media/haven pics/rentalcard3.png";
 import pic1 from "../../assets/media/haven pics/IMG_6230-Enhanced-NR.jpg";
-import pic5 from "../../assets/media/haven pics/IMG_0640.jpg";
 import photo17 from "../../assets/media/haven pics/IMG_0640.jpg";
+import ButtonSecondary from "../../components/Button/ButtonSecondary";
 
 export default function Rentals() {
   return (
@@ -16,8 +15,7 @@ export default function Rentals() {
       <TitleContainer image={eventsBanner} text="RENTALS" />
       <h3>BOOK HAVEN FOR YOUR NEXT EVENT</h3>
       <ParagraphAndButton
-        link="https://google.com"
-        buttonText="BOOK YOUR RENTAL"
+        CustomButton={<ButtonSecondary text="BOOK YOUR RENTAL" />}
         paragraph="Looking to host a concert, showcase, or special event? HAVEN offers a fully equipped space designed for unforgettable experiences. From professional audio and lighting to digital ticketing, we’ve got everything you need to make your event run smoothly."
       />
       <div className="rental-cards-container">
