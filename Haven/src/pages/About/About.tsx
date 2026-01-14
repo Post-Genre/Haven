@@ -16,8 +16,8 @@ export default function About() {
         <h5>WHAT IS HAVEN?</h5>
         <p>
           After twenty years without a venue, live music is back in Oakland. Run
-          entirely by dedicated volunteers in the music scene, HAVEN opened in
-          January 2025 to bring live music back to the neighborhood.
+          by dedicated volunteers in the music scene, HAVEN opened in January
+          2025 to bring live music back to the neighborhood.
           <br />
           <br />
         </p>
@@ -31,21 +31,20 @@ export default function About() {
           <br />
           Post Genre was founded in 2022 to advocate towards a permanent home
           for live music in Oakland. After three years of hosting concerts in
-          untraditional spaces, they began to work with local community
-          organizations and the city government to open a permanent space in
-          January of 2025.
+          untraditional spaces, they continued the work with local community
+          organizations and musicians to open a permanent space in January of
+          2025.
           <br />
           <br />
         </p>
         <img src={image2} alt="Haven" className="wrapped-image" />
-        <h5>HAVENs IMPACT</h5>
+        <h5>OUR IMPACT</h5>
         <p>
           In its first year, HAVEN has hosted over 100 events, 200 bands and
-          welcomed more than 6,000 attendees. HAVEN provides hands-on experience
-          and skill-building opportunities in the live music industry. Alongside
-          artists and musicians, our team of 70 dedicated volunteers include
-          photographers, videographers, graphic designers, audio and lighting
-          engineers, social media coordinators, and more.
+          welcomed more than 6,000 attendees. Alongside artists and musicians,
+          our team of 50+ dedicated volunteers include photographers,
+          videographers, graphic designers, audio and lighting engineers, social
+          media coordinators, and more.
           <br />
           <br />
         </p>

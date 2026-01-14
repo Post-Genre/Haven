@@ -18,7 +18,7 @@ export default function WhoWeAre() {
           <p>
             <span className="content-header"> HAVEN </span> is an independent
             music venue in the heart of Oakland, Pittsburgh’s college town. We
-            house a 2,000 sqft venue and event space where we feature live
+            are a 2,000 sqft venue and event space where we feature live
             entertainment every week!
           </p>
           <ButtonTertiary

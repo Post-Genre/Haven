@@ -66,7 +66,8 @@ export default function FAQ() {
             answer={
               <p>
                 Yes! All shows at HAVEN are open to all ages, unless stated
-                otherwise on the event page. Alcohol is prohibited at events.
+                otherwise on the event page. Alcohol is prohibited at events,
+                and DJ nights are 18+.
                 <br /> <br />
                 <a
                   // href="https://www.instagram.com/p/DEpqra4v7PV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
@@ -195,8 +196,8 @@ export default function FAQ() {
                 workshops, and more. <br />
                 <br />
                 Our space is equipped with professional audio and lighting
-                systems to meet the needs of your event. We offer tables and
-                seating arrangements to comfortably accommodate over 100 guests.{" "}
+                systems to meet the needs of your event. We also offer tables
+                and seating arrangements.
                 <br />
                 <br />
                 For more information about hosting your private event at HAVEN,

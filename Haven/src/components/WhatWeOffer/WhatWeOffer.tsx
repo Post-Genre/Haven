@@ -15,9 +15,9 @@ export default function WhatWeOffer() {
   const ref = useRef<HTMLDivElement>(null);
 
   const paragraphs = [
-    "Haven is equipped with industry-standard professional audio and lighting equipment, along with talented personnel ready to staff any and all events.",
+    "Haven is equipped with industry-standard professional audio and lighting equipment, along with personnel ready to staff any and all events.",
     "Our spacious stage allows for a variety of different events in addition to live music, such as comedy and drag shows, public speaking events, and more.",
-    "We have a talented team of photographers and videographers, all skilled in capturing the best moments during our events. We aim to have photographers staffed at all live music events.",
+    "We have a team of photographers and videographers available to capture the best moments during any of our events. ",
     "We process all event tickets through a digital ticketing app, allowing us to easily check in guests and track tickets sales for our events.",
     "We have a green room that features a private entrance, restroom, fridge & freezer, microwave and more.",
     "We are able to provide table and/or chair arrangements for any private events, accommodating up to 80 guests.",
