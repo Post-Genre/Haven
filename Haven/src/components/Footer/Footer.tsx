@@ -1,5 +1,5 @@
 import "./footer.css";
-import havenLogo from "../../assets/media/havenpngvirile2.png";
+import havenLogo from "../../assets/media/havenlogo-white-updated.png";
 import {
   FaFacebookF,
   FaDiscord,
@@ -10,6 +10,7 @@ import {
 import pgLogo from "../../assets/media/pglogo-white-no-text.png";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
   return (
     <div className="footer-container">
       <img src={havenLogo} alt="" />
@@ -31,7 +32,7 @@ export default function Footer() {
               href="https://www.google.com/maps/dir//401+Atwood+St,+Pittsburgh,+PA+15213/@40.4380792,-80.0360765,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8834f1e595444105:0xbd19f85eed9d81e!2m2!1d-79.9536756!2d40.4381085?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
             >
-              <FaLocationDot size={48} color="white" />
+              <FaLocationDot className="fa-icon-image" color="white" />
             </a>
           </div>
           <div className="fa-icon">
@@ -39,7 +40,7 @@ export default function Footer() {
               href="https://www.instagram.com/haven.pgh/?hl=en"
               target="_blank"
             >
-              <FaInstagram size={48} color="white" />
+              <FaInstagram className="fa-icon-image" color="white" />
             </a>
           </div>
           <div className="fa-icon">
@@ -47,12 +48,17 @@ export default function Footer() {
               href="https://www.facebook.com/p/HAVEN-Pgh-61576887341038/"
               target="_blank"
             >
-              <FaFacebookF size={48} color="white" />
+              <FaFacebookF className="fa-icon-image" color="white" />
             </a>
           </div>
         </div>
       </div>
-      <p className="smallest-font">©2025 Post Genre. All Rights Reserved.</p>
+      <a href="/rules">
+        <p className="small-font">
+          <u>Terms and Conditions</u>
+        </p>
+      </a>
+      <p className="smallest-font">©{year} Post Genre. All Rights Reserved.</p>
     </div>
   );
 }

@@ -11,6 +11,7 @@ import "yet-another-react-lightbox/plugins/captions.css";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
 import backgroundImg from "../../assets/media/banners/banner1.jpg";
+import disconapbanner from "../../assets/media/banners/disconapbanner.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -26,6 +27,8 @@ import obpPhotos from "./obp-photo-list";
 import { useState } from "react";
 import TitleContainer from "../../components/TitleContainer/TitleContainer";
 import PhotoSlide from "./PhotoSlide";
+import MobilePhotos from "./MobilePhotos";
+import Header from "../../components/Header/Header";
 
 type SelectablePhoto = Photo & {
   selected?: boolean;
@@ -56,7 +59,10 @@ export default function Photos() {
           key={i}
           photos={splitPhoto}
           targetRowHeight={225}
-          rowConstraints={{ minPhotos: splitPhoto.length / 2 }}
+          rowConstraints={{
+            minPhotos: splitPhoto.length / 2,
+            maxPhotos: splitPhoto.length / 2,
+          }}
           spacing={20}
           onClick={({ photo }) => {
             setLightboxPhoto(photo);
@@ -73,7 +79,10 @@ export default function Photos() {
           key={i}
           photos={splitPhoto}
           targetRowHeight={225}
-          rowConstraints={{ minPhotos: splitPhoto.length / 2 }}
+          rowConstraints={{
+            minPhotos: splitPhoto.length / 2,
+            maxPhotos: splitPhoto.length / 2,
+          }}
           spacing={20}
           onClick={({ photo }) => {
             setLightboxPhoto(photo);
@@ -90,7 +99,10 @@ export default function Photos() {
           key={i}
           photos={splitPhoto}
           targetRowHeight={225}
-          rowConstraints={{ minPhotos: splitPhoto.length / 2 }}
+          rowConstraints={{
+            minPhotos: splitPhoto.length / 2,
+            maxPhotos: splitPhoto.length / 2,
+          }}
           spacing={20}
           onClick={({ photo }) => {
             setLightboxPhoto(photo);
@@ -102,8 +114,11 @@ export default function Photos() {
 
   return (
     <div className="photos-container">
-      <TitleContainer image={backgroundImg} text="PHOTOS" />
+      {/* <Header /> */}
 
+      <TitleContainer image={disconapbanner} text="PHOTOS" />
+
+      <MobilePhotos />
       <div className="photos-album-container">
         <h3>LIVE MUSIC</h3>
         <div className="swiper-photo-album-container">
@@ -112,13 +127,13 @@ export default function Photos() {
             direction={"horizontal"}
             slidesPerView={"auto"}
             freeMode={true}
-            // scrollbar={{ draggable: true }}
+            scrollbar={{ draggable: true, snapOnRelease: false }}
             mousewheel={{
               forceToAxis: true,
             }}
             spaceBetween={20}
             modules={[FreeMode, Scrollbar, Mousewheel]}
-            className="swiper-container-class"
+            // className="swiper-container-class"
           >
             {rowPhotoAlbumArray}
           </Swiper>
@@ -130,13 +145,13 @@ export default function Photos() {
             direction={"horizontal"}
             slidesPerView={"auto"}
             freeMode={true}
-            // scrollbar={{ draggable: true }}
+            scrollbar={{ draggable: true, snapOnRelease: false }}
             mousewheel={{
               forceToAxis: true,
             }}
             spaceBetween={20}
             modules={[FreeMode, Scrollbar, Mousewheel]}
-            className="swiper-container-class"
+            // className="swiper-container-class"
           >
             {djPhotoAlbumArray}
           </Swiper>
@@ -182,13 +197,13 @@ export default function Photos() {
             direction={"horizontal"}
             slidesPerView={"auto"}
             freeMode={true}
-            // scrollbar={{ draggable: true }}
+            scrollbar={{ draggable: true, snapOnRelease: false }}
             mousewheel={{
               forceToAxis: true,
             }}
             spaceBetween={20}
             modules={[FreeMode, Scrollbar, Mousewheel]}
-            className="swiper-container-class"
+            // className="swiper-container-class"
           >
             {obpPhotoAlbumArray}
           </Swiper>

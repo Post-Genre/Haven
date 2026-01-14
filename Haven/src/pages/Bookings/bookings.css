@@ -20,18 +20,19 @@
 }
 
 .bookings-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  /* flex-direction: column; */
+  /* grid-template-rows: 1fr 1fr 1fr; */
   gap: 0;
   align-items: center;
   justify-content: center;
-  width: 350px;
+  width: 310px;
   height: 100%;
 }
 
 .bookings-card img {
   width: 100%;
-  height: 300px;
+  height: 275px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   object-fit: cover;
@@ -54,13 +55,15 @@
   border: 2px solid var(--burnt-orange);
   color: black;
   width: 100%;
-  padding: 16px;
+  padding: 12px;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   height: 200px;
+  display: flex;
+  align-items: center;
 }
 
-.what-we-offer {
+/* .what-we-offer {
   display: flex;
   gap: 36px;
   justify-content: center;
@@ -76,7 +79,6 @@
 .what-we-offer-text {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   text-align: left;
   width: 350px;
   gap: 24px;
@@ -89,4 +91,256 @@
 .interest-form-tabs {
   scroll-margin-top: 60px;
   padding: 12px;
+} */
+
+@media (max-width: 992px) {
+  .bookings-container h3 {
+    width: 700px;
+  }
+
+  /* .what-we-offer {
+    gap: 24px;
+  }
+
+  .what-we-offer img {
+    width: 350px;
+  }
+
+  .what-we-offer-text {
+    width: 300px;
+    gap: 16px;
+  } */
+
+  .bookings-cards-container {
+    gap: 16px;
+  }
+
+  .bookings-card {
+    width: 250px;
+  }
+
+  .bookings-card img {
+    height: 225px;
+  }
+
+  .bookings-card h5 {
+    font-size: 0.7rem;
+    height: 40px;
+  }
+
+  .bookings-card p {
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bookings-cards-container {
+    gap: 12px;
+  }
+
+  .bookings-card {
+    width: 215px;
+  }
+
+  .bookings-card h5 {
+    font-size: 0.6rem;
+  }
+
+  .bookings-card img {
+    height: 200px;
+  }
+
+  .bookings-card p {
+    height: 150px;
+    font-size: 0.6rem;
+    padding: 8px;
+  }
+  .what-we-offer-grid-box,
+  .what-we-offer-grid span {
+    width: 200px;
+    padding: 12px;
+  }
+
+  .what-we-offer-new,
+  .what-we-offer-grid,
+  .what-we-offer-grid-mobile {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 650px) {
+  .bookings-container h3 {
+    width: 500px;
+  }
+
+  /* .what-we-offer {
+    gap: 16px;
+  }
+
+  .what-we-offer img {
+    width: 275px;
+  }
+
+  .what-we-offer-text {
+    width: 250px;
+    gap: 16px;
+  } */
+
+  .bookings-cards-container {
+    flex-direction: column;
+  }
+  .bookings-card {
+    grid-template-rows: 40px 200px;
+    grid-template-columns: 200px 250px;
+  }
+
+  .bookings-card h5 {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .bookings-card img {
+    grid-row: 2;
+    grid-column: 1;
+    height: 200px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 12px;
+    border: 2px solid var(--burnt-orange);
+    border-right: none;
+  }
+
+  .bookings-card p {
+    grid-row: 2;
+    grid-column: 2;
+    height: 200px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 0px;
+    border-left: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .bookings-card.flipped {
+    grid-template-columns: 250px 200px;
+  }
+
+  .bookings-card.flipped img {
+    grid-column: 2;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 12px;
+    border-right: 2px solid var(--burnt-orange);
+    border-left: none;
+  }
+
+  .bookings-card.flipped p {
+    grid-column: 1;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 12px;
+    border-right: none;
+    border-left: 2px solid var(--burnt-orange);
+  }
+
+  .what-we-offer-grid-box,
+  .what-we-offer-grid span {
+    width: 175px;
+    padding: 6px;
+  }
+
+  .what-we-offer-new,
+  .what-we-offer-grid,
+  .what-we-offer-grid-mobile {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .bookings-container h3 {
+    width: 375px;
+  }
+
+  /* .what-we-offer {
+    gap: 8px;
+    flex-direction: column;
+  }
+
+  .what-we-offer img {
+    width: 300px;
+  }
+
+  .what-we-offer-text {
+    width: 400px;
+    gap: 8px;
+    align-items: center;
+  } */
+
+  .bookings-card {
+    grid-template-rows: 40px 160px;
+    grid-template-columns: 150px 200px;
+  }
+
+  .bookings-card h5 {
+    height: 40px;
+  }
+
+  .bookings-card img {
+    height: 160px;
+  }
+
+  .bookings-card p {
+    height: 160px;
+    padding: 12px;
+  }
+
+  .bookings-card.flipped {
+    grid-template-columns: 200px 150px;
+  }
+
+  .what-we-offer-grid,
+  .what-we-offer-grid-mobile {
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  /* .what-we-offer img {
+    width: 250px;
+  }
+
+  .what-we-offer-text {
+    width: 300px;
+    gap: 4px;
+  } */
+
+  .bookings-card {
+    grid-template-rows: 36px 150px;
+    grid-template-columns: 130px 180px;
+  }
+
+  .bookings-card h5 {
+    height: 36px;
+  }
+
+  .bookings-card img {
+    height: 150px;
+  }
+
+  .bookings-card p {
+    height: 150px;
+    padding: 12px;
+  }
+
+  .bookings-card.flipped {
+    grid-template-columns: 180px 130px;
+  }
+
+  .what-we-offer-new,
+  .what-we-offer-grid,
+  .what-we-offer-grid-mobile {
+    gap: 6px;
+  }
 }

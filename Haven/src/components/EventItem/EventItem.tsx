@@ -78,7 +78,7 @@ export default function EventItem({
   // }
   return (
     <div
-      className="full-event-item-container"
+      className="carousel-item-container"
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className="full-event-title-container">

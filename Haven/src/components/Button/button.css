@@ -22,7 +22,6 @@
   color: var(--black);
   font-family: "body-text";
   font-weight: 900;
-  border-radius: 0px;
   padding: 16px 96px;
   border-radius: 4px;
 }
@@ -31,4 +30,29 @@
   transform: scale(1.05);
   transition: 0.35s;
   cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .button-container button {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .button-container button {
+    font-size: 0.6rem;
+  }
+
+  .button-container .button-tertiary {
+    padding: 16px 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .button-container button {
+    padding: 12px 32px;
+  }
+  .button-container .button-tertiary {
+    font-weight: 800;
+  }
 }

@@ -21,3 +21,49 @@
 .paragraph-and-button-button {
   justify-self: end;
 }
+
+@media (max-width: 992px) {
+  .paragraph-and-button-container {
+    width: 600px;
+  }
+
+  .paragraph-and-button-container p {
+    width: 550px;
+  }
+}
+
+@media (max-width: 650px) {
+  .paragraph-and-button-container {
+    width: 500px;
+    gap: 36px;
+    padding: 20px 12px;
+  }
+
+  .paragraph-and-button-container p {
+    width: 450px;
+  }
+}
+
+@media (max-width: 500px) {
+  .paragraph-and-button-container {
+    width: 375px;
+    gap: 24px;
+    padding: 16px 8px;
+  }
+
+  .paragraph-and-button-container p {
+    width: 325px;
+  }
+}
+
+@media (max-width: 400px) {
+  .paragraph-and-button-container {
+    width: 350px;
+    gap: 24px;
+    padding: 16px 8px;
+  }
+
+  .paragraph-and-button-container p {
+    width: 325px;
+  }
+}

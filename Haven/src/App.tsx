@@ -15,6 +15,8 @@ import LoadingIcon from "./components/LoadingIcon/LoadingIcon";
 import Photos from "./pages/Photos/Photos";
 import Artists from "./pages/Artists/Artists";
 import Bookings from "./pages/Bookings/Bookings";
+import Rules from "./pages/Rules/Rules";
+import About from "./pages/About/About";
 
 function App() {
   return (
@@ -25,11 +27,13 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/events" element={<Events />} />
             <Route path="/bookings" element={<Bookings />} />
             {/* <Route path="/artists" element={<Artists />} /> 
             <Route path="/rentals" element={<Rentals />} />  */}
             <Route path="/photos" element={<Photos />} />
+            <Route path="/rules" element={<Rules />} />
           </Routes>
         </main>
         <Footer />

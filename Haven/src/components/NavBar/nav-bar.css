@@ -1,0 +1,44 @@
+.nav-container {
+  display: flex;
+  color: white;
+  margin-left: auto;
+}
+
+.nav-container h5 {
+  margin: 0;
+  padding: 20px;
+}
+
+.navlink {
+  color: white;
+  text-decoration: none;
+}
+
+.navlink:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.navlink-active {
+  transform: scale(1.1);
+}
+
+/* .active h5 {
+  color: var(--cream);
+} */
+
+.hover {
+  transform: scale(1.11);
+  transition: 0.3s;
+}
+
+@media (max-width: 992px) {
+  .nav-container a h5 {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  .nav-container {
+    display: none;
+  }
+}

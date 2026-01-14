@@ -1,5 +1,9 @@
 .custom-prev,
-.custom-next {
+.custom-next,
+.custom-prev-2,
+.custom-next-2,
+.custom-prev-3,
+.custom-next-3 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +55,7 @@
 /* Make the active slide take up most of the space */
 .swiper-slide-container-class {
   width: 700px; /* or 90%, adjust as needed */
-  max-width: 700px; /* optional */
+  max-width: 700px;
 }
 
 /* Optional: peek-in effect */
@@ -89,4 +93,81 @@
   display: flex;
   align-items: center;
   /* min-height: inherit; */
+}
+
+@media (min-width: 1200px) {
+  .swiper-slide-container-class {
+    width: 800px;
+    max-width: 800px;
+  }
+
+  .swiper-container-class {
+    max-width: 1800px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .swiper-container-class {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      black 2%,
+      black 98%,
+      rgba(0, 0, 0, 0)
+    );
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      black 2%,
+      black 98%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+
+  /* .swiper-slide-container-class {
+    width: 900px;
+    max-width: 900px;
+  } */
+}
+@media (max-width: 992px) {
+  .swiper-slide-container-class {
+    width: 600px;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+  .swiper-slide-container-class {
+    width: 450px;
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 500px) {
+  .swiper-slide-container-class {
+    width: 375px;
+    max-width: 375px;
+  }
+
+  .custom-prev,
+  .custom-next,
+  .custom-prev-2,
+  .custom-next-2,
+  .custom-prev-3,
+  .custom-next-3 {
+    width: 24px;
+    height: 24px;
+  }
+
+  .swiper-pagination-bullet {
+    --swiper-pagination-bullet-width: 24px;
+    --swiper-pagination-bullet-height: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .swiper-slide-container-class {
+    width: 350px;
+    max-width: 350px;
+  }
 }

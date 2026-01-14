@@ -10,7 +10,7 @@
 
 .footer-container img {
   width: 500px;
-  height: 152px;
+  /* height: 152px; */
 }
 
 .address-and-icon-container {
@@ -43,7 +43,70 @@
   padding: 20px;
 }
 
-.fa-icon img {
+.fa-icon a {
+  cursor: pointer;
+}
+
+.fa-icon a img {
   width: 48px;
   height: 48px;
+}
+
+.fa-icon-image {
+  font-size: 48px;
+}
+
+@media (max-width: 992px) {
+  .footer-container {
+    gap: 8px;
+  }
+
+  .footer-container img {
+    width: 400px;
+  }
+
+  .address-and-icon-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* .address-container h5 {
+    font-size: 1rem;
+  } */
+
+  .fa-icon {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+@media (max-width: 650px) {
+  .footer-container img,
+  .address-container,
+  .icon-container {
+    width: 300px;
+  }
+
+  .fa-icon-image,
+  .fa-icon a img {
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+  }
+
+  .fa-icon {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-container img {
+    width: 250px;
+  }
+
+  .footer-container {
+    gap: 0px;
+    padding: 8px;
+  }
 }

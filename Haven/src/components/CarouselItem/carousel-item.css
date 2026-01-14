@@ -1,6 +1,7 @@
 .carousel-item-container {
   width: 700px;
-  height: 400px;
+  /* height: 400px; */
+  aspect-ratio: 7/4;
   border-radius: 12px;
   color: white;
   background-position: top;
@@ -20,10 +21,11 @@
   padding: 8px;
 }
 
-.carousel-item-title h4,
+.carousel-item-title h6,
 .carousel-item-title p {
+  width: 100%;
   display: -webkit-box;
-  -webkit-line-clamp: 1; /* Max number of lines */
+  -webkit-line-clamp: 2; /* Max number of lines */
   -webkit-box-orient: vertical; /* Required for line clamp */
   overflow: hidden; /* Hide overflow text */
   text-overflow: ellipsis; /* Add "..." at the end */
@@ -48,4 +50,46 @@
   color: black;
   transition: 0.3s;
   cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .carousel-item-container {
+    width: 800px;
+    /* height: 435px; */
+  }
+}
+
+/* @media (min-width: 1536px) {
+  .carousel-item-container {
+    width: 900px;
+    height: 515px;
+  }
+} */
+
+@media (max-width: 992px) {
+  .carousel-item-container {
+    width: 600px;
+    /* height: 333px; */
+  }
+}
+
+@media (max-width: 650px) {
+  .carousel-item-container {
+    width: 450px;
+    /* height: 275px; */
+  }
+}
+
+@media (max-width: 500px) {
+  .carousel-item-container {
+    width: 375px;
+    /* height: 230px; */
+  }
+}
+
+@media (max-width: 400px) {
+  .carousel-item-container {
+    width: 350px;
+    /* height: 210px; */
+  }
 }

@@ -11,8 +11,8 @@
 
 .full-event-title-container {
   background-color: rgba(0, 0, 0, 0.55);
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
   padding: 16px 12px;
   color: white;
   width: 100%;
@@ -61,3 +61,58 @@
 /* .full-event-info-container h6:not(:last-child) {
   border-right: 1px solid white;
 } */
+
+@media (max-width: 992px) {
+  .full-event-item-container {
+    width: 600px;
+    height: 350px;
+  }
+
+  .full-event-title-container {
+    padding: 12px 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .full-event-item-container {
+    width: 475px;
+    height: 260px;
+  }
+
+  .full-event-info-container h6 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  .full-event-item-container {
+    width: 350px;
+    height: 200px;
+  }
+
+  .full-event-info-container h6 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  .full-event-item-container {
+    width: 300px;
+    height: 175px;
+  }
+
+  .full-event-info-container h6 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .full-event-title-container h4 {
+    font-size: 0.6rem;
+  }
+
+  .full-event-title-container {
+    padding: 8px 2px;
+  }
+}

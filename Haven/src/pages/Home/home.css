@@ -17,9 +17,27 @@
 }
 .logo-and-text-container img {
   width: 350px;
+  max-height: 160px;
 }
 
 .logo-and-text-container h5 {
   color: black;
   font-size: 1rem;
+}
+
+@media (max-width: 800px) {
+  .logo-and-text-container img {
+    /* width: 300px; */
+    display: none;
+  }
+
+  .home-container {
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo-and-text-container img {
+    width: 225px;
+  }
 }

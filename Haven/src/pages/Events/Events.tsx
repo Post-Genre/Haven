@@ -6,6 +6,7 @@ import EventItem from "../../components/EventItem/EventItem";
 import bottom1 from "../../assets/media/banners/bottom1.jpg";
 import { useState, useEffect } from "react";
 import LoadingIcon from "../../components/LoadingIcon/LoadingIcon";
+import Header from "../../components/Header/Header";
 
 export default function UpcomingEvents() {
   type Event = {
@@ -91,9 +92,25 @@ export default function UpcomingEvents() {
     );
   }
 
+  if (events.length === 0) {
+    return (
+      <div className="events-container">
+        <TitleContainer text="EVENTS" image={banner1} />
+        <div className="events-list-container">
+          <img src={bottom1} alt="" className="bg-image" />
+          <div className="event-items-wrapper">
+            <p>No upcoming events at this time. Check back soon!</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="events-container">
+      {/* <Header /> */}
       <TitleContainer text="EVENTS" image={banner1} />
+
       <div className="events-list-container">
         <img src={bottom1} alt="" className="bg-image" />
         <div className="event-items-wrapper">

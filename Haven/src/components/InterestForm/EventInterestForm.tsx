@@ -202,17 +202,17 @@ export default function EventInterestForm() {
           Audio
         </label>
 
-        <label htmlFor="lighting">
+        <label htmlFor="photos">
           <input
             className="check-box"
             type="checkbox"
-            checked={formData.lighting}
+            checked={formData.photos}
             onChange={(e) =>
-              setFormData({ ...formData, lighting: e.target.checked })
+              setFormData({ ...formData, photos: e.target.checked })
             }
-            name="lighting"
+            name="photos"
           />
-          Lighting
+          Photography
         </label>
 
         <label htmlFor="tables">
@@ -228,17 +228,17 @@ export default function EventInterestForm() {
           Tables/Chairs
         </label>
 
-        <label htmlFor="photos">
+        <label htmlFor="lighting">
           <input
             className="check-box"
             type="checkbox"
-            checked={formData.photos}
+            checked={formData.lighting}
             onChange={(e) =>
-              setFormData({ ...formData, photos: e.target.checked })
+              setFormData({ ...formData, lighting: e.target.checked })
             }
-            name="photos"
+            name="lighting"
           />
-          Photography
+          Lighting
         </label>
 
         <label htmlFor="videos">
