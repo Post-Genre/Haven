@@ -153,6 +153,7 @@ export default function Photos() {
             {djPhotoAlbumArray}
           </Swiper>
           <Lightbox
+            plugins={[Captions]}
             open={Boolean(lightboxPhoto)}
             close={() => setLightboxPhoto(undefined)}
             slides={

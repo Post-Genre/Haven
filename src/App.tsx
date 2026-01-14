@@ -3,17 +3,11 @@
 import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import ButtonPrimary from "./components/Button/ButtonPrimary";
-import ButtonSecondary from "./components/Button/ButtonSecondary";
-import ButtonTertiary from "./components/Button/ButtonTertiary";
 import Home from "./pages/Home/Home";
 import Events from "./pages/Events/Events";
-import Rentals from "./pages/Rentals/Rentals";
-import { BrowserRouter, Routes, Route, ScrollRestoration } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import LoadingIcon from "./components/LoadingIcon/LoadingIcon";
 import Photos from "./pages/Photos/Photos";
-import Artists from "./pages/Artists/Artists";
 import Bookings from "./pages/Bookings/Bookings";
 import Rules from "./pages/Rules/Rules";
 import About from "./pages/About/About";
