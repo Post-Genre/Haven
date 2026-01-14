@@ -4,10 +4,12 @@ import "./photos.css";
 import { RowsPhotoAlbum } from "react-photo-album";
 import "react-photo-album/rows.css";
 import Lightbox from "yet-another-react-lightbox";
-import Captions from "yet-another-react-lightbox/plugins/captions";
+// import Captions from "yet-another-react-lightbox/plugins/captions";
 // import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import "yet-another-react-lightbox/styles.css";
-import "yet-another-react-lightbox/plugins/captions.css";
+// import "yet-another-react-lightbox/plugins/captions.css";
+
+import type { SlideImage } from "yet-another-react-lightbox";
 
 import disconapbanner from "../../assets/media/banners/disconapbanner.png";
 
@@ -29,6 +31,11 @@ import MobilePhotos from "./MobilePhotos";
 
 type SelectablePhoto = Photo & {
   selected?: boolean;
+};
+
+type CustomSlide = SlideImage & {
+  title?: string;
+  description?: string;
 };
 
 export default function Photos() {
@@ -153,29 +160,32 @@ export default function Photos() {
             {djPhotoAlbumArray}
           </Swiper>
           <Lightbox
-            plugins={[Captions]}
             open={Boolean(lightboxPhoto)}
             close={() => setLightboxPhoto(undefined)}
             slides={
               lightboxPhoto
-                ? [
+                ? ([
                     {
                       src: lightboxPhoto.src,
                       title: lightboxPhoto.title,
                       description: lightboxPhoto.alt,
                     },
-                  ]
+                  ] as CustomSlide[])
                 : undefined
             }
             carousel={{ finite: true }}
             render={{
-              slide: ({ slide }) => (
-                <PhotoSlide
-                  title={slide.title}
-                  subtitle={slide.description}
-                  image={slide.src}
-                />
-              ),
+              slide: ({ slide }) => {
+                const customSlide = slide as CustomSlide;
+
+                return (
+                  <PhotoSlide
+                    title={customSlide.title}
+                    subtitle={customSlide.description}
+                    image={customSlide.src}
+                  />
+                );
+              },
               buttonNext: () => null,
               buttonPrev: () => null,
             }}
