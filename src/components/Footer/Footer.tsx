@@ -1,12 +1,26 @@
 import "./footer.css";
 import havenLogo from "../../assets/media/havenlogo-white-updated.png";
 import { FaFacebookF, FaInstagram, FaLocationDot } from "react-icons/fa6";
+import { Link } from "react-router";
+
 //lowercase png
 
 import pgLogo from "../../assets/media/pglogo-white-no-text.png";
 
 export default function Footer() {
   const year = new Date().getFullYear();
+
+  function ScrollToTopOfPage() {
+    const scrollOptions: ScrollToOptions = {
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    };
+
+    window.scrollTo(scrollOptions);
+    document.documentElement.scrollTo(scrollOptions);
+    document.body.scrollTo(scrollOptions);
+  }
   return (
     <div className="footer-container">
       <img src={havenLogo} alt="" />
@@ -49,11 +63,19 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <a href="/rules">
+      <Link
+        to="/rules"
+        onClick={() => {
+          if (location.pathname === "/rules") {
+            ScrollToTopOfPage();
+          }
+        }}
+        className="navlink"
+      >
         <p className="small-font">
           <u>Terms and Conditions</u>
         </p>
-      </a>
+      </Link>
       <p className="smallest-font">©{year} Post Genre. All Rights Reserved.</p>
     </div>
   );
