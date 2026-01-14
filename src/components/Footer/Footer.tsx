@@ -1,6 +1,7 @@
 import "./footer.css";
 import havenLogo from "../../assets/media/havenlogo-white-updated.png";
 import { FaFacebookF, FaInstagram, FaLocationDot } from "react-icons/fa6";
+//lowercase png
 
 import pgLogo from "../../assets/media/pglogo-white-no-text.png";
 
