@@ -1,6 +1,7 @@
 import "./bookings-info-cards.css";
-import pic1 from "../../assets/media/haven pics/IMG_6230-Enhanced-NR.jpg";
+// import pic1 from "../../assets/media/haven pics/IMG_6230-Enhanced-NR.jpg";
 import rentalstaging from "../../assets/media/haven pics/IMG_7395.jpg";
+import crowd3 from "../../assets/media/haven pics/IMG_6100_crowd.jpg";
 
 export default function BookingsInfoCards() {
   return (
@@ -14,7 +15,7 @@ export default function BookingsInfoCards() {
             possible.
           </p>
         </div>
-        <img src={pic1} alt="" />
+        <img src={crowd3} alt="" />
       </div>
       <div className="bookings-info-card">
         <img src={rentalstaging} alt="" />

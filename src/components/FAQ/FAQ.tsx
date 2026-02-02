@@ -211,6 +211,11 @@ export default function FAQ() {
               <p>
                 We do not serve alcohol. Visibly intoxicated guests will not be
                 permitted entry.
+                <br />
+                <br />
+                <Link to="/rules" className="faq-link">
+                  Read more about the venue policies for HAVEN
+                </Link>
               </p>
             }
           />

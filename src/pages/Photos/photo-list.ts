@@ -19,11 +19,14 @@ import photo14 from "../../assets/media/haven pics/IMG_0212-Enhanced-NR.jpg";
 import crowd1 from "../../assets/media/haven pics/IMG_1004_crowd.jpg";
 import crowd2 from "../../assets/media/haven pics/IMG_2890_crowd.jpg";
 import crowd3 from "../../assets/media/haven pics/IMG_6100_crowd.jpg";
-import crowd4 from "../../assets/media/haven pics/IMG_6207-Enhanced-NR_crowd.jpg";
+// import crowd4 from "../../assets/media/haven pics/IMG_6207-Enhanced-NR_crowd.jpg";
 // import crowd5 from "../../assets/media/haven pics/IMG_6215-Enhanced-NR_crowd.jpg";
-import crowd6 from "../../assets/media/haven pics/IMG_6230-Enhanced-NR_crowd.jpg";
+// import crowd6 from "../../assets/media/haven pics/IMG_6230-Enhanced-NR_crowd.jpg";
 // import crowd7 from "../../assets/media/haven pics/IMG_6703-Enhanced-NR_crowd.jpg";
 import crowd8 from "../../assets/media/haven pics/IMG_8836_crowd.jpg";
+import restauri957 from "../../assets/media/haven pics/957-314-restauri-2.jpg";
+import tierney957 from "../../assets/media/haven pics/957_117_tierney.jpg";
+
 
 const photos: Photo[] = [
   // { src: photo1, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Wild Blue Yonder - 4/5/2025"},
@@ -32,14 +35,16 @@ const photos: Photo[] = [
   // { src: photo3, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Heading North - 2/8/2025"},
     { src: crowd2, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Times New Wrestlers - 3/15/2025"},
   { src: photo4, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Heading North - 2/8/2025"},
-        { src: crowd6, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Madeline Jo & Friends - 1/10/2025"},
+        // { src: crowd6, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Madeline Jo & Friends - 1/10/2025"},
+  { src: restauri957, width: 600, height: 400, alt: "pc: Alex Restauri" , title: "9fiftyseven - 3/14/2025"},
   { src: photo13, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Funky Lamp - 4/4/2025"},
   // { src: photo6, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Kids That Fly - 5/31/2025"},
   { src: photo7, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Kids That Fly - 5/31/2025"},
   { src: photo8, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Kids That Fly - 5/31/2025"},
   { src: photo9, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Fungi Flows - 3/14/2025"},
   // { src: photo10, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Funky Lamp - 4/4/2025"},
-    { src: crowd4, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Madeline Jo & Friends - 1/10/2025"},
+    // { src: crowd4, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Madeline Jo & Friends - 1/10/2025"},
+            { src: tierney957, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "9fiftyseven - 1/17/2026"},
   { src: photo11, width: 600, height: 400, alt: "pc: Colin Tierney" , title: "Funky Lamp - 4/4/2025"},
   { src: photo12, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "Funky Lamp - 4/4/2025"},
     { src: photo5, width: 267, height: 400, alt: "pc: Colin Tierney" , title: "King Blue Heron - 2/1/2025"},

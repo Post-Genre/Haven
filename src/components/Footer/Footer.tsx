@@ -73,7 +73,7 @@ export default function Footer() {
         className="navlink"
       >
         <p className="small-font">
-          <u>Terms and Conditions</u>
+          <u>Rules of HAVEN</u>
         </p>
       </Link>
       <p className="smallest-font">©{year} Post Genre. All Rights Reserved.</p>
