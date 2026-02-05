@@ -39,7 +39,7 @@ export default function UpcomingEvents() {
 
     return events.filter((event) => {
       const [year, month, day] = event.EventDate.split("-").map((num) =>
-        parseInt(num, 10)
+        parseInt(num, 10),
       );
       const eventDate = new Date(year, month - 1, day);
       return eventDate >= today && event.ShowPublic;
@@ -54,7 +54,7 @@ export default function UpcomingEvents() {
         {
           method: "GET",
           headers: { "x-api-key": "7a055rda" },
-        }
+        },
       );
 
       if (!response.ok) {
@@ -73,9 +73,9 @@ export default function UpcomingEvents() {
       setLoading(false);
     }
   }
-  useEffect(() => {
-    fetchProducts();
-  }, []);
+  // useEffect(() => {
+  //   fetchProducts();
+  // }, []);
 
   if (loading) {
     return (

@@ -53,7 +53,7 @@ export default function Carousel() {
     return events
       .filter((event) => {
         const [year, month, day] = event.EventDate.split("-").map((num) =>
-          parseInt(num, 10)
+          parseInt(num, 10),
         );
         const eventDate = new Date(year, month - 1, day);
         return eventDate >= today && event.ShowPublic;
@@ -72,7 +72,7 @@ export default function Carousel() {
         {
           method: "GET",
           headers: { "x-api-key": "7a055rda" },
-        }
+        },
       );
 
       if (!response.ok) {
@@ -91,9 +91,9 @@ export default function Carousel() {
       setLoading(false);
     }
   }
-  useEffect(() => {
-    fetchProducts();
-  }, []);
+  // useEffect(() => {
+  //   fetchProducts();
+  // }, []);
 
   const slideEvents = events.map((eventItem, index) => (
     <SwiperSlide key={index} className="swiper-slide-container-class">
@@ -120,12 +120,12 @@ export default function Carousel() {
     slideEvents[1],
     <SwiperSlide key={3} className="swiper-slide-container-class">
       <CarouselItem
-        mainTitle="Interested in hosting your event at HAVEN?"
-        subtitle="Contact us for private event rentals!"
+        mainTitle="Interested in what a show at HAVEN is like?"
+        subtitle="Check out some photos from our past events!"
         image={WBYPic}
         routeInPage={true}
-        url="/bookings"
-        buttonText="RENTALS"
+        url="/photos"
+        buttonText="PHOTOS"
       />
     </SwiperSlide>,
     slideEvents[2],
