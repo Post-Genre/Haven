@@ -1,5 +1,5 @@
 import "./carousel.css";
-import { useEffect, useState, type ReactNode } from "react";
+import { type ReactNode } from "react";
 import CarouselItem from "../CarouselItem/CarouselItem";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,96 +18,96 @@ import "swiper/css/pagination";
 import DJImage from "../../assets/media/disco nap/IMG_2003.jpg";
 import WBYPic from "../../assets/media/haven pics/IMG_8836.jpg";
 import GetInvolved from "../../assets/media/backgrounds/Psych Background.png";
-import LoadingIcon from "../LoadingIcon/LoadingIcon";
+// import LoadingIcon from "../LoadingIcon/LoadingIcon";
 
 export default function Carousel() {
-  type Event = {
-    EventName: string;
-    EventDate: string;
-    EventDoorsOpen: string;
-    ticketTypes: any[];
-    EventUrl: string;
-    EventThumbnail: string;
-    ShowPublic: boolean;
-  };
+  // type Event = {
+  //   EventName: string;
+  //   EventDate: string;
+  //   EventDoorsOpen: string;
+  //   ticketTypes: any[];
+  //   EventUrl: string;
+  //   EventThumbnail: string;
+  //   ShowPublic: boolean;
+  // };
 
-  const [loading, setLoading] = useState(false);
-  const [events, setEvents] = useState<Event[]>([]);
+  // const [loading, setLoading] = useState(false);
+  // const [events, setEvents] = useState<Event[]>([]);
 
-  function sortEventsByDate(events: Event[]): Event[] {
-    return events.sort((a, b) => {
-      const [yearA, monthA, dayA] = a.EventDate.split("-").map(Number);
-      const [yearB, monthB, dayB] = b.EventDate.split("-").map(Number);
+  // function sortEventsByDate(events: Event[]): Event[] {
+  //   return events.sort((a, b) => {
+  //     const [yearA, monthA, dayA] = a.EventDate.split("-").map(Number);
+  //     const [yearB, monthB, dayB] = b.EventDate.split("-").map(Number);
 
-      const dateA = new Date(yearA, monthA - 1, dayA);
-      const dateB = new Date(yearB, monthB - 1, dayB);
+  //     const dateA = new Date(yearA, monthA - 1, dayA);
+  //     const dateB = new Date(yearB, monthB - 1, dayB);
 
-      return dateA.getTime() - dateB.getTime();
-    });
-  }
+  //     return dateA.getTime() - dateB.getTime();
+  //   });
+  // }
 
-  function getFirstFourEvents(events: Event[]): Event[] {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
+  // function getFirstFourEvents(events: Event[]): Event[] {
+  //   const today = new Date();
+  //   today.setHours(0, 0, 0, 0);
 
-    return events
-      .filter((event) => {
-        const [year, month, day] = event.EventDate.split("-").map((num) =>
-          parseInt(num, 10),
-        );
-        const eventDate = new Date(year, month - 1, day);
-        return eventDate >= today && event.ShowPublic;
-      })
-      .slice(0, 4); // Only return first 4
-  }
+  //   return events
+  //     .filter((event) => {
+  //       const [year, month, day] = event.EventDate.split("-").map((num) =>
+  //         parseInt(num, 10),
+  //       );
+  //       const eventDate = new Date(year, month - 1, day);
+  //       return eventDate >= today && event.ShowPublic;
+  //     })
+  //     .slice(0, 4); // Only return first 4
+  // }
 
-  async function fetchProducts() {
-    try {
-      setLoading(true);
-      //   setTimeout(() => {
-      //     console.log("hello bark bluemle");
-      //   }, 5000);
-      const response = await fetch(
-        "https://67sxoyzalltf7cnmecge2sj5yq0bckqd.lambda-url.us-east-2.on.aws",
-        {
-          method: "GET",
-          headers: { "x-api-key": "7a055rda" },
-        },
-      );
+  // async function fetchProducts() {
+  //   try {
+  //     setLoading(true);
+  //     //   setTimeout(() => {
+  //     //     console.log("hello bark bluemle");
+  //     //   }, 5000);
+  //     const response = await fetch(
+  //       "https://67sxoyzalltf7cnmecge2sj5yq0bckqd.lambda-url.us-east-2.on.aws",
+  //       {
+  //         method: "GET",
+  //         headers: { "x-api-key": "7a055rda" },
+  //       },
+  //     );
 
-      if (!response.ok) {
-        throw new Error(`HTTP ERROR, STATUS: ${response.status}`);
-      }
+  //     if (!response.ok) {
+  //       throw new Error(`HTTP ERROR, STATUS: ${response.status}`);
+  //     }
 
-      const data = await response.json();
+  //     const data = await response.json();
 
-      if (data && data.length > 0) {
-        const sortedEvents = sortEventsByDate(data);
-        setEvents(getFirstFourEvents(sortedEvents));
-        setLoading(false);
-      }
-    } catch (error) {
-      console.error("Error fetching event data:", error);
-      setLoading(false);
-    }
-  }
+  //     if (data && data.length > 0) {
+  //       const sortedEvents = sortEventsByDate(data);
+  //       setEvents(getFirstFourEvents(sortedEvents));
+  //       setLoading(false);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching event data:", error);
+  //     setLoading(false);
+  //   }
+  // }
   // useEffect(() => {
   //   fetchProducts();
   // }, []);
 
-  const slideEvents = events.map((eventItem, index) => (
-    <SwiperSlide key={index} className="swiper-slide-container-class">
-      <CarouselItem
-        mainTitle={eventItem.EventName}
-        subtitle="Get your tickets now!"
-        image={eventItem.EventThumbnail}
-        url={eventItem.EventUrl}
-        buttonText="TICKETS"
-      />
-    </SwiperSlide>
-  ));
+  // const slideEvents = events.map((eventItem, index) => (
+  //   <SwiperSlide key={index} className="swiper-slide-container-class">
+  //     <CarouselItem
+  //       mainTitle={eventItem.EventName}
+  //       subtitle="Get your tickets now!"
+  //       image={eventItem.EventThumbnail}
+  //       url={eventItem.EventUrl}
+  //       buttonText="TICKETS"
+  //     />
+  //   </SwiperSlide>
+  // ));
   const carouselItems: ReactNode[] = [
-    slideEvents[0],
+    // slideEvents[0],
     <SwiperSlide key={1} className="swiper-slide-container-class">
       <CarouselItem
         mainTitle="Follow us on Instagram!"
@@ -117,7 +117,7 @@ export default function Carousel() {
         buttonText="INSTAGRAM"
       />
     </SwiperSlide>,
-    slideEvents[1],
+    // slideEvents[1],
     <SwiperSlide key={3} className="swiper-slide-container-class">
       <CarouselItem
         mainTitle="Interested in what a show at HAVEN is like?"
@@ -128,7 +128,7 @@ export default function Carousel() {
         buttonText="PHOTOS"
       />
     </SwiperSlide>,
-    slideEvents[2],
+    // slideEvents[2],
     // slideEvents[3],
     <SwiperSlide key={5} className="swiper-slide-container-class">
       <CarouselItem
@@ -141,13 +141,13 @@ export default function Carousel() {
     </SwiperSlide>,
   ];
 
-  if (loading) {
-    return (
-      <div className="loading-icon-container">
-        <LoadingIcon blackLogo={true} />
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div className="loading-icon-container">
+  //       <LoadingIcon blackLogo={true} />
+  //     </div>
+  //   );
+  // }
   return (
     <>
       <Swiper
