@@ -2,19 +2,26 @@
   position: relative;
   background-image: url("../../assets//media//backgrounds//psychbackground_lowres.jpg");
   background-position: top;
-  /* display: flex; */
-  /* align-items: bottom; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
   justify-content: center;
-  display: none;
+  display: flex;
   text-align: center;
 }
 
-.church-image {
+
+.church {
+  position: relative;
   width: 100%;
-  aspect-ratio: initial;
-  top: auto;
-  display: block;
-  animation: slideUp 0.7s ease-out forwards; /* Apply the slide-up animation */
+  height: 100%;
+}
+
+.church img {
+  height: 100%;
+  object-fit: cover;
+  animation: slideUp 0.7s ease-out forwards;
 }
 
 .website-title {
