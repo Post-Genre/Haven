@@ -4,6 +4,7 @@ import { Link } from "react-router";
 // import { useLocation } from "react-router";
 import NavBar from "../NavBar/NavBar";
 import MobileNavBar from "../MobileNavBar/MobileNavBar";
+import ChurchAnimation from "../ChurchAnimation/ChurchAnimation";
 import { useState } from "react";
 
 type HeaderProps = {
@@ -82,6 +83,8 @@ export default function Header({}: HeaderProps) {
           contentOpen={contentOpen}
           setContentOpen={setContentOpen}
         />
+        
+        
       </div>
     </>
   );
