@@ -24,7 +24,7 @@
   height: 100%;
   object-fit: cover;
   animation: slideUp 0.7s ease-out forwards;
-}
+  }
 
 .website-title {
   color: var(--cream);
@@ -34,7 +34,7 @@
   /* bottom: -25vw; */
   /* top: auto; */
   bottom: 0px;
-  z-index: 2;
+  z-index: 1;
   line-height: 1.25;
   filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.473));
   display: flex;
@@ -55,14 +55,40 @@
 
 @keyframes slideUp {
   0% {
-    transform: translateX(100%);
+    transform: translateY(100%);
     opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
+
+
+@keyframes rustle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(+6deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rustle-flipped {
+  0% {
+    transform: rotate(0deg) scaleY(-1);
+  }
+  50% {
+    transform: rotate(+6deg) scaleY(-1);
+  }
+  100% {
+    transform: rotate(0deg) scaleY(-1);
+  }
+}
+
 
 @media (max-width: 800px) {
   .church-animation-container {
@@ -86,101 +112,4 @@
   width: 100%;
   pointer-events: none;
   z-index: 10;
-}
-
-.flower-bundleL {
-  position: absolute;
-  top: 0px;
-  width: 100px;
-  height: 100px;
-  transition: transform 0.3s ease;
-  animation: slideInLeft 0.5s ease-out forwards; /* Animation for left flowers */
-  transform-origin: 0% 0%;
-}
-
-.flower-bundleR {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  width: 300px;
-  height: 300px;
-  transition: transform 0.3s;
-  animation: slideInRight 0.5s ease-out forwards; /* Animation for right flowers */
-  transform-origin: 100% 0%;
-}
-
-/* Adjust other flower-specific classes if necessary, like below */
-.flowerL,
-.flowerR {
-  position: fixed;
-  transform-origin: center;
-  animation: rustle-flipped var(--animation-duration) ease-in infinite;
-  animation-delay: var(--animation-delay);
-  filter: drop-shadow(0px -5px 11px #2222227a);
-}
-
-.flower1 {
-  top: -110px;
-  left: -110px;
-  transform: rotate(-110deg);
-  transform: scaleY(-1);
-
-  z-index: 2;
-}
-
-.flower2 {
-  top: -120px;
-  left: 80px;
-  transform: scaleY(-1);
-  z-index: 1;
-}
-
-.flower3 {
-  top: 5px;
-  left: 20px;
-  transform: scaleY(-1);
-  z-index: 4;
-}
-
-.flower4 {
-  top: 55px;
-  left: -174px;
-  transform: rotate(-120deg);
-  transform: scaleY(-1);
-  z-index: 3;
-}
-
-.flower5 {
-  top: -136px;
-  right: 100px;
-  transform: scaleY(-1);
-  z-index: 2;
-}
-
-.flower6 {
-  top: -110px;
-  right: -75px;
-  transform: scaleY(-1);
-  rotate: 240deg;
-  z-index: 2;
-}
-
-.flower7 {
-  top: 10px;
-  right: 40px;
-  transform: scaleY(-1);
-  z-index: 4;
-}
-
-.flower8 {
-  top: 47px;
-  right: -120px;
-  transform: scaleY(-1);
-  z-index: 3;
-}
-
-/* Default styling for flower-bundelL and flower-bundelR */
-.flower-bundleL,
-.flower-bundleR {
-  transform: scale(1); /* Set default scale */
 }

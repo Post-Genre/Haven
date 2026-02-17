@@ -1,9 +1,6 @@
 import "./header.css";
-import havenChurchLogo from "../../assets/media/haven-church-logo.png";
 import { Link } from "react-router";
 // import { useLocation } from "react-router";
-import NavBar from "../NavBar/NavBar";
-import MobileNavBar from "../MobileNavBar/MobileNavBar";
 import ChurchAnimation from "../ChurchAnimation/ChurchAnimation";
 import { useState } from "react";
 
@@ -58,34 +55,9 @@ export default function Header({}: HeaderProps) {
 
   return (
     <>
-      <div className="header-container">
-        <Link
-          to="/"
-          // className={({ isActive }) =>
-          //   isActive ? "navlink active" : "navlink"
-          // }
-          className="navlink"
-          onClick={() => {
-            if (location.pathname === "/") {
-              ScrollToTopOfPage();
-            }
-            setContentOpen(false);
-          }}
-          onMouseEnter={() => handleHover(0)}
-          onMouseLeave={() => handleLeave()}
-          data-index="0"
-        >
-          <img src={havenChurchLogo} alt="" />
-        </Link>
-
-        <NavBar />
-        <MobileNavBar
-          contentOpen={contentOpen}
-          setContentOpen={setContentOpen}
-        />
-        
-        
-      </div>
+        <div className="header-container">
+          <ChurchAnimation />
+        </div>
     </>
   );
 }

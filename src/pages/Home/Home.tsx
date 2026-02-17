@@ -9,10 +9,6 @@ import ChurchAnimation from "../../components/ChurchAnimation/ChurchAnimation";
 export default function Home() {
   return (
     <div className="home-container">
-      <ChurchAnimation />
-      <div className="logo-and-text-container">
-        <img src={blackHavenLogo} alt="HAVEN" />
-      </div>
       <Carousel />
       <WhoWeAre />
       <UpcomingEvents />
