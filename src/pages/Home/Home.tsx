@@ -3,8 +3,6 @@ import FAQ from "../../components/FAQ/FAQ";
 import UpcomingEvents from "../../components/UpcomingEvents/UpcomingEvents";
 import WhoWeAre from "../../components/WhoWeAre/WhoWeAre";
 import "./home.css";
-import blackHavenLogo from "../../assets/media/havenlogo-black-updated.png";
-import ChurchAnimation from "../../components/ChurchAnimation/ChurchAnimation";
 
 export default function Home() {
   return (

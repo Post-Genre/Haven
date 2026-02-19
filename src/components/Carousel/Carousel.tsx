@@ -149,7 +149,7 @@ export default function Carousel() {
   //   );
   // }
   return (
-    <>
+    <div className="carousel-container">
       <Swiper
         effect="coverflow"
         modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
@@ -195,6 +195,6 @@ export default function Carousel() {
           <FaAngleRight color="white" />
         </div>
       </div>
-    </>
+    </div>
   );
 }

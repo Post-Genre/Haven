@@ -1,11 +1,11 @@
 .button-container button {
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   font-family: "heading-text";
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 12px 64px;
   border-radius: 8px;
   display: flex;
-  width: auto;
+  width: fit-content;
   border: none;
 }
 
@@ -18,11 +18,10 @@
 }
 
 .button-container .button-tertiary {
-  background-color: var(--white);
   color: var(--black);
   font-family: "body-text";
-  font-weight: 900;
-  padding: 16px 96px;
+  font-weight: 700;
+  padding: 16px;
   border-radius: 4px;
 }
 

@@ -2,7 +2,7 @@ import "./church-animation.css";
 
 import churchLowres from "../../assets/media/backgrounds/Church-Lowres.png";
 import { useEffect, useRef } from "react";
-import FlowerBundle from "../FlowerAnimation/FlowerBundle.tsx";
+import FlowerBundle from "../FlowerBundle/FlowerBundle.tsx";
 
 export default function ChurchAnimation() {
   const havenTextRef = useRef<HTMLHeadingElement>(null);
@@ -30,7 +30,7 @@ export default function ChurchAnimation() {
         }px)`;
       }
     };
-    
+
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);

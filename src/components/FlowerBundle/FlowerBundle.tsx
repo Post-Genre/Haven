@@ -8,15 +8,19 @@ import lily4right from "../../assets/media/flowers/flowers_R_downscaled/lily4.pn
 import lily1right from "../../assets/media/flowers/flowers_R_downscaled/lily1.png";
 import lily3right from "../../assets/media/flowers/flowers_R_downscaled/lily3.png";
 
+//define props for flower bundle, which is the side (left or right)
 interface FlowerBundleProps {
   side: "left" | "right";
 }
 
+//create flower bundle component, taking "side" as a prop to determine which bundle to render
+//App.tsx will render the component twice, but with different "side" props to create the left and right bundles
 export default function FlowerBundle({ side }: FlowerBundleProps) {
   const bundleRef = useRef<HTMLDivElement>(null);
-
+  //useEffect runs when the component mounts, which is after the flowers are rendered.
+  //this selects flowers in the specified bundle and sets animation delay based on index (const flowers)
   useEffect(() => {
-    const flowerClass = side === "left" ? ".flowerL" : ".flowerR";
+    const flowerClass = side == "left" ? ".flowerL" : ".flowerR";
     const flowers = bundleRef.current?.querySelectorAll(flowerClass);
     const totalDuration = 2;
 
@@ -29,6 +33,36 @@ export default function FlowerBundle({ side }: FlowerBundleProps) {
     }
   }, [side]);
 
+  //dynamically adjusts scale based on window width and scroll position
+  useEffect(() => {
+    const adjustFlowerScale = () => {
+      if (!bundleRef.current) return;
+
+      const totalScale = window.innerWidth / 1920;
+      const minScale = totalScale * 0.6;
+      let currScale = totalScale;
+
+      const scaleProgress =
+        window.scrollY / (document.body.scrollHeight * 0.3);
+      currScale =
+        totalScale - (totalScale - minScale) * scaleProgress;
+
+      if (window.scrollY > document.body.scrollHeight * 0.3) {
+        currScale = minScale;
+      }
+
+      bundleRef.current.style.scale = `${currScale}`;
+    };
+
+    adjustFlowerScale();
+    document.addEventListener("scroll", adjustFlowerScale);
+
+    return () => {
+      document.removeEventListener("scroll", adjustFlowerScale);
+    };
+  }, []);
+
+  //if side is left, return left bundle, otherwise return right
   if (side === "left") {
     return (
       <div ref={bundleRef} className="flower-bundleL">
@@ -39,7 +73,7 @@ export default function FlowerBundle({ side }: FlowerBundleProps) {
       </div>
     );
   }
-
+  //(right bundle)
   return (
     <div ref={bundleRef} className="flower-bundleR">
       <img src={lily4right} className="flowerR flower7" alt="Flower 3" />
