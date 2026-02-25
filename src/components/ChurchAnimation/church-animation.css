@@ -43,6 +43,7 @@
   align-items: center;
   width: 100%;
   animation: slideUp 0.7s ease-out forwards;
+  word-spacing: 1.45ch;
 }
 
 .website-title {
@@ -54,12 +55,12 @@
 }
 
 .website-subtitle {
-  font-family: "bidy-text" Inter;
+  font-family: "virile-text";
   font-style: italic;
-  font-size: min(3.5cqi, 52px);
+  font-size: min(5.5cqi, 55px);
   filter: drop-shadow(0px 0px 10px rgba(95, 7, 7, 0.055));
   -webkit-text-stroke: 3px rgb(168, 80, 80);
-  paint-order: stroke fill
+  paint-order: stroke fill;
 }
 
 #animated-word {

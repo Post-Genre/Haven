@@ -193,6 +193,10 @@ p {
   font-family: "body-text", Inter, sans-serif;
   font-weight: 500;
   letter-spacing: 0%;
+  text-align: justify;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .small-font {
@@ -236,7 +240,6 @@ p {
   p {
     font-size: 0.75rem;
     font-family: "body-text", Inter, sans-serif;
-    font-weight: 600;
     letter-spacing: 0%;
   }
 

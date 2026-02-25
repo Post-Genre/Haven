@@ -31,7 +31,7 @@ export default function WhoWeAre() {
             <span className="content-header"> WHY HAVEN?</span> <br />
             Our venue serves as a haven for concerts and events in Pittsburgh’s
             most populated borough. We are the only independent venue in
-            Pittsburgh’s college town of Oakland, where 25,000 students live
+            Pitts&shy;burgh's college town of Oakland, where 25,000 students live
             within a mile radius of our space.
           </p>
           <ButtonTertiary

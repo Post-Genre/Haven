@@ -55,7 +55,7 @@ export default function Header({}: HeaderProps) {
 
   return (
     <>
-        <div className="header-container">
+        <div className="header-container" id="home">
           <ChurchAnimation />
         </div>
     </>

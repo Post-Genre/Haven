@@ -28,19 +28,19 @@ export default function OldNavBar() {
   const navLinks = [
     { href: '#home', label: 'Home' },
     { href: '#events', label: 'Events' },
-    { href: '#about', label: 'About' },
-    { href: '#studio', label: 'Rentals' },
-    { href: '#artists', label: 'Artists' },
+    { href: '/about', label: 'About' },
+    { href: '/bookings', label: 'Rentals' },
+    { href: '/photos', label: 'Artists' },
     { href: '#faqs', label: 'FAQS' },
   ];
 
-  const topLinks = navLinks.slice(0, 2);
+  const topLinks = navLinks.slice(0, 3);
   const bottomLinks = navLinks.slice(3);
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       {/* Desktop Navigation - Single Row */}
-      {windowWidth > 500 && (
+      {windowWidth > 750 && (
         <div className="nav-content">
           <ul className="nav-links">
             {navLinks.map((link) => (
@@ -53,7 +53,7 @@ export default function OldNavBar() {
       )}
 
       {/* Mobile Navigation - Two Rows */}
-      {windowWidth <= 500 && (
+      {windowWidth <= 750 && (
         <div className="two-row-nav-content">
           <ul className="nav-links">
             {topLinks.map((link) => (
