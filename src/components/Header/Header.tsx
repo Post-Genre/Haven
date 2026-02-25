@@ -3,7 +3,6 @@ import { Link } from "react-router";
 // import { useLocation } from "react-router";
 import ChurchAnimation from "../ChurchAnimation/ChurchAnimation";
 import { useState } from "react";
-import OldNavBar from "../OldNavBar/oldnavbar";
 
 type HeaderProps = {
   onClick?: () => void; // optional click handler
@@ -58,7 +57,6 @@ export default function Header({}: HeaderProps) {
     <>
         <div className="header-container">
           <ChurchAnimation />
-          <OldNavBar />
         </div>
     </>
   );

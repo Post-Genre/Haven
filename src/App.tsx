@@ -11,6 +11,7 @@ import Photos from "./pages/Photos/Photos";
 import Bookings from "./pages/Bookings/Bookings";
 import Rules from "./pages/Rules/Rules";
 import About from "./pages/About/About";
+import OldNavBar from "./components/OldNavBar/oldnavbar";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Header />
+        <OldNavBar />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />

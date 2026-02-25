@@ -45,9 +45,12 @@ export default function ChurchAnimation() {
 
       <div className="church" style={{ height: "fit-content" }}>
         <img src={churchLowres} alt="Church" />
-        <h1 ref={havenTextRef} className="website-title">
-          HAVEN
-        </h1>
+        <div className="website-title-container">
+          <h1 ref={havenTextRef} className="website-title">
+            HAVEN
+          </h1>
+          <h5 className="website-subtitle">Oakland's Home for Live Music</h5>
+        </div>
       </div>
     </div>
   );

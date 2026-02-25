@@ -86,7 +86,7 @@ ul.nav-links-alt li:nth-child(odd):hover {
   color: #fff;
   font-size: 2vw;
   text-transform: uppercase;
-  font-family: "nexa-rust-sans-black-2";
+  font-family: 'heading-text';
   padding: 5px 0 0 0;
   display: flex;
   justify-content: center;
@@ -139,9 +139,6 @@ ul.nav-links-alt li:nth-child(odd):hover {
   margin: 6px 0;
 }
 
-.two-row-nav-content {
-  display: none;
-}
 
 .exit {
   display: none;

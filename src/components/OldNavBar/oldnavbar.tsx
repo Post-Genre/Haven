@@ -34,7 +34,7 @@ export default function OldNavBar() {
     { href: '#faqs', label: 'FAQS' },
   ];
 
-  const topLinks = navLinks.slice(0, 3);
+  const topLinks = navLinks.slice(0, 2);
   const bottomLinks = navLinks.slice(3);
 
   return (
@@ -53,7 +53,7 @@ export default function OldNavBar() {
       )}
 
       {/* Mobile Navigation - Two Rows */}
-      {windowWidth <= 750 && (
+      {windowWidth <= 500 && (
         <div className="two-row-nav-content">
           <ul className="nav-links">
             {topLinks.map((link) => (
