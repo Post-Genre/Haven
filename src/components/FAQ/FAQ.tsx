@@ -7,7 +7,7 @@ import { Link } from "react-router";
 
 export default function FAQ() {
   return (
-    <section className="faq-section">
+    <section className="faq-section" id='faq'>
       {/* <div className="faq-banner">
         <h2 className="faq-title">FAQ</h2>
       </div> */}

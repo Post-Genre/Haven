@@ -155,14 +155,13 @@ export default function Carousel() {
         modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
         spaceBetween={50}
         initialSlide={0}
+        rewind={true}
         slidesPerView={"auto"}
-        // slidesPerView={1}
         navigation={{
           prevEl: ".custom-prev",
           nextEl: ".custom-next",
         }}
         centeredSlides={true}
-        // loop={true}
         pagination={{
           clickable: true,
           el: ".custom-pagination",

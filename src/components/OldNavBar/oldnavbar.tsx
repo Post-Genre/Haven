@@ -26,12 +26,12 @@ export default function OldNavBar() {
   }, []);
 
   const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#events', label: 'Events' },
+    { href: '/#home', label: 'Home' },
+    { href: '/events', label: 'Events' },
     { href: '/about', label: 'About' },
-    { href: '/bookings', label: 'Rentals' },
-    { href: '/photos', label: 'Artists' },
-    { href: '#faqs', label: 'FAQS' },
+    { href: '/booking', label: 'Booking' },
+    { href: '/photos', label: 'Photos' },
+    { href: '/#faq', label: 'FAQ' },
   ];
 
   const topLinks = navLinks.slice(0, 3);

@@ -1,4 +1,4 @@
-import "./bookings.css";
+import "./booking.css";
 import eventsBanner from "../../assets/media/banners/madelinebanner2.png";
 import TitleContainer from "../../components/TitleContainer/TitleContainer";
 import ParagraphAndButton from "../../components/ParagraphAndButton/ParagraphAndButton";
@@ -6,13 +6,13 @@ import ParagraphAndButton from "../../components/ParagraphAndButton/ParagraphAnd
 import InterestFormTabs from "../../components/InterestForm/InterestFormTabs";
 import ButtonSecondary from "../../components/Button/ButtonSecondary";
 import WhatWeOffer from "../../components/WhatWeOffer/WhatWeOffer";
-import BookingsInfoCards from "../../components/BookingsInfoCards/BookingsInfoCards";
+import BookingInfoCards from "../../components/BookingInfoCards/BookingInfoCards";
 
-export default function Bookings() {
+export default function booking() {
   return (
-    <div className="bookings-container">
+    <div className="booking-container">
       {/* <Header /> */}
-      <TitleContainer image={eventsBanner} text="BOOKINGS" />
+      <TitleContainer image={eventsBanner} text="booking" />
 
       <h3>BOOK HAVEN FOR YOUR NEXT EVENT</h3>
       <ParagraphAndButton
@@ -25,10 +25,10 @@ export default function Bookings() {
             }}
           />
         }
-        paragraph="Looking to host a concert or special event? Haven offers a fully equipped space designed to fit your events needs. Our 2,000 sqft space is available for bookings including concerts, student club events, networking events, pop-up shops, art exhibitions, and more. We can provide professional lighting and audio, chair and table arrangements, and ticketing services to make your event run smoothly."
+        paragraph="Looking to host a concert or special event? Haven offers a fully equipped space designed to fit your events needs. Our 2,000 sqft space is available for booking including concerts, student club events, networking events, pop-up shops, art exhibitions, and more. We can provide professional lighting and audio, chair and table arrangements, and ticketing services to make your event run smoothly."
       />
-      {/* <div className="bookings-cards-container">
-        <div className="bookings-card">
+      {/* <div className="booking-cards-container">
+        <div className="booking-card">
           <img src={rental1} alt="" />
 
           <h5>ARTISTS</h5>
@@ -38,7 +38,7 @@ export default function Bookings() {
             possible.
           </p>
         </div>
-        <div className="bookings-card flipped">
+        <div className="booking-card flipped">
           <img src={photo17} alt="" />
           <h5>PRIVATE SOCIAL EVENTS</h5>
           <p className="small-font">
@@ -47,7 +47,7 @@ export default function Bookings() {
             successful.
           </p>
         </div>
-        <div className="bookings-card">
+        <div className="booking-card">
           <img src={rental3} alt="" />
           <h5>PAST EVENTS</h5>
           <p className="small-font">
@@ -56,7 +56,7 @@ export default function Bookings() {
           </p>
         </div>
       </div> */}
-      <BookingsInfoCards />
+      <BookingInfoCards />
       <WhatWeOffer />
       <div className="interest-form-tabs">
         <InterestFormTabs />

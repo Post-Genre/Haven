@@ -6,6 +6,7 @@ import FlowerBundle from "../FlowerBundle/FlowerBundle.tsx";
 
 export default function ChurchAnimation() {
   const havenTextRef = useRef<HTMLHeadingElement>(null);
+  const subtitleRef = useRef<HTMLHeadingElement>(null);
 
   // Handle letter spacing on scroll
   useEffect(() => {
@@ -29,8 +30,26 @@ export default function ChurchAnimation() {
           letterSpacing * 0.5
         }px)`;
       }
+
+      // Adjust word spacing for subtitle
+      if (subtitleRef.current) {
+        const scrollPosition = window.scrollY;
+        const maxWordSpacing = 150;
+        const startScroll = 0;
+        const endScroll = window.innerHeight * 0.5;
+
+        let wordSpacing = 0;
+        if (scrollPosition >= startScroll && scrollPosition <= endScroll) {
+          wordSpacing = (scrollPosition / endScroll) * maxWordSpacing;
+        } else if (scrollPosition > endScroll) {
+          wordSpacing = maxWordSpacing;
+        }
+
+        subtitleRef.current.style.wordSpacing = `${wordSpacing}px`;
+      }
     };
 
+    
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -49,7 +68,7 @@ export default function ChurchAnimation() {
           <h1 ref={havenTextRef} className="website-title">
             HAVEN
           </h1>
-          <h5 className="website-subtitle">Oakland's Home for Live Music</h5>
+          <h5 ref={subtitleRef} className="website-subtitle">Oakland's Home for Live Music</h5>
         </div>
       </div>
     </div>

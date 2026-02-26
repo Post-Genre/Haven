@@ -10,7 +10,7 @@ export default function WhoWeAre() {
   const navigate = useNavigate();
 
   return (
-    <div className="who-we-are-container">
+    <div className="who-we-are-container" id='events'>
       <div className="body-container">
         <img src={bottom1} alt="" className="bg-image" />
         <div className="body-text-container">
@@ -41,6 +41,7 @@ export default function WhoWeAre() {
             }}
             text="HAVEN FAQ"
           />
+          
         </div>
       </div>
     </div>

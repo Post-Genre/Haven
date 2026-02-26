@@ -86,10 +86,9 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-top: min(8vh, 10%);
+  padding-top: 4cqi;
   width: 100%;
   background-image: url("../../assets/media/backgrounds/top1.png");
-  background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% 100%;
 }

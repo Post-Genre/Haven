@@ -1,13 +1,13 @@
-import "./bookings-info-cards.css";
+import "./booking-info-cards.css";
 // import pic1 from "../../assets/media/haven pics/IMG_6230-Enhanced-NR.jpg";
 import rentalstaging from "../../assets/media/haven pics/IMG_7395.jpg";
 import crowd3 from "../../assets/media/haven pics/IMG_6100_crowd.jpg";
 
-export default function BookingsInfoCards() {
+export default function bookingInfoCards() {
   return (
-    <div className="bookings-info-cards-container">
-      <div className="bookings-info-card">
-        <div className="bookings-info-card-text">
+    <div className="booking-info-cards-container">
+      <div className="booking-info-card">
+        <div className="booking-info-card-text">
           <h5>LIVE MUSIC</h5>
           <p className="small-font">
             Interested in performing at Haven? Please fill out our artist
@@ -17,9 +17,9 @@ export default function BookingsInfoCards() {
         </div>
         <img src={crowd3} alt="" />
       </div>
-      <div className="bookings-info-card">
+      <div className="booking-info-card">
         <img src={rentalstaging} alt="" />
-        <div className="bookings-info-card-text">
+        <div className="booking-info-card-text">
           <h5>PRIVATE EVENTS</h5>
           <p className="small-font">
             Interested in hosting an event at Haven? We have the services and
