@@ -17,7 +17,7 @@ export default function WhoWeAre() {
           <h1>WHO WE ARE</h1>
           <p>
             <span className="content-header"> HAVEN </span> is an independent
-            music venue in the heart of Oakland, Pittsburgh’s college town. We
+            music venue in the heart of Oakland, Pitts&shy;burgh’s college town. We
             are a 2,000 sqft venue and event space where we feature live
             entertainment every week!
           </p>
@@ -34,6 +34,7 @@ export default function WhoWeAre() {
             Pitts&shy;burgh's college town of Oakland, where 25,000 students live
             within a mile radius of our space.
           </p>
+{/*}
           <ButtonTertiary
             onClick={() => {
               const faqElement = document.querySelector(".faq-section");
@@ -41,7 +42,7 @@ export default function WhoWeAre() {
             }}
             text="HAVEN FAQ"
           />
-          
+*/}
         </div>
       </div>
     </div>
