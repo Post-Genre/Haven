@@ -14,7 +14,7 @@ export default function ChurchAnimation() {
       // Adjust letter spacing for HAVEN text
       if (havenTextRef.current) {
         const scrollPosition = window.scrollY;
-        const maxSpacing = 40;
+        const maxSpacing = 30;
         const startScroll = 0;
         const endScroll = window.innerHeight * 0.5;
 
@@ -26,15 +26,13 @@ export default function ChurchAnimation() {
         }
 
         havenTextRef.current.style.letterSpacing = `${letterSpacing}px`;
-        havenTextRef.current.style.transform = `translateX(${
-          letterSpacing * 0.5
-        }px)`;
+
       }
 
       // Adjust word spacing for subtitle
       if (subtitleRef.current) {
         const scrollPosition = window.scrollY;
-        const maxWordSpacing = 150;
+        const maxWordSpacing = 50;
         const startScroll = 0;
         const endScroll = window.innerHeight * 0.5;
 

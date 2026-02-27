@@ -60,7 +60,6 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-
   /* removes scrollbar  */
   scrollbar-width: none;
   -ms-overflow-style: none;
