@@ -15,8 +15,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import DJImage from "../../assets/media/disco nap/IMG_2003.jpg";
-import WBYPic from "../../assets/media/haven pics/IMG_8836.jpg";
+import DJImage from "../../assets/media/disco nap/IMG_2003_comp.jpg";
+import WBYPic from "../../assets/media/haven pics/IMG_8836_comp.jpg";
 import GetInvolved from "../../assets/media/backgrounds/psychbackground_lowres.jpg";
 // import LoadingIcon from "../LoadingIcon/LoadingIcon";
 
