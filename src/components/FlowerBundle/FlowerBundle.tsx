@@ -39,7 +39,7 @@ export default function FlowerBundle({ side }: FlowerBundleProps) {
       if (!bundleRef.current) return;
 
       const totalScale = window.innerWidth / 1920;
-      const minScale = totalScale * 0.6;
+      const minScale = totalScale * .7;
       let currScale = totalScale;
 
       const scaleProgress =

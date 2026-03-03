@@ -19,6 +19,7 @@
 
 .button-container .button-tertiary {
   color: var(--black);
+  background-color: var(--white);
   font-family: "body-text";
   font-weight: 700;
   padding: 16px;

@@ -1,16 +1,14 @@
 import ButtonTertiary from "../Button/ButtonTertiary";
 import "./who-we-are.css";
-import banner1 from "../../assets/media/banners/banner1.jpg";
 import bottom1 from "../../assets/media/backgrounds/background1.jpg";
 
-import TitleContainer from "../TitleContainer/TitleContainer";
 import { useNavigate } from "react-router";
 
 export default function WhoWeAre() {
   const navigate = useNavigate();
 
   return (
-    <div className="who-we-are-container" id='events'>
+    <div className="who-we-are-container">
       <div className="body-container">
         <img src={bottom1} alt="" className="bg-image" />
         <div className="body-text-container">

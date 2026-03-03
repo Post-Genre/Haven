@@ -88,9 +88,11 @@
   /*gap: 20px;*/
   padding-top: 45px;
   width: 100%;
-  background-image: url("../../assets/media/backgrounds/top1.png");
+  background-image: url("../../assets/media/backgrounds/top1.jpg");
   background-position: center top;
   background-size: 100% 100%;
+  scroll-padding-top: 100px;
+  scroll-margin-top: 200px;
 }
 
 .loading-icon-container {

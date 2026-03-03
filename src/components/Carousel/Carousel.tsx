@@ -17,7 +17,7 @@ import "swiper/css/pagination";
 
 import DJImage from "../../assets/media/disco nap/IMG_2003.jpg";
 import WBYPic from "../../assets/media/haven pics/IMG_8836.jpg";
-import GetInvolved from "../../assets/media/backgrounds/Psych Background.png";
+import GetInvolved from "../../assets/media/backgrounds/psychbackground_lowres.jpg";
 // import LoadingIcon from "../LoadingIcon/LoadingIcon";
 
 export default function Carousel() {
@@ -149,7 +149,7 @@ export default function Carousel() {
   //   );
   // }
   return (
-    <div className="carousel-container">
+    <div className="carousel-container" id="events">
       <Swiper
         effect="coverflow"
         modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
