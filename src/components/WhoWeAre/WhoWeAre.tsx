@@ -19,12 +19,7 @@ export default function WhoWeAre() {
             are a 2,000 sqft venue and event space where we feature live
             entertainment every week!
           </p>
-          <ButtonTertiary
-            onClick={() => {
-              navigate("/about");
-            }}
-            text="LEARN MORE ABOUT HAVEN"
-          />
+          
           <p>
             <span className="content-header"> WHY HAVEN?</span> <br />
             Our venue serves as a haven for concerts and events in Pittsburgh’s
@@ -32,6 +27,13 @@ export default function WhoWeAre() {
             Pitts&shy;burgh's college town of Oakland, where 25,000 students live
             within a mile radius of our space.
           </p>
+
+          <ButtonTertiary
+            onClick={() => {
+              navigate("/about");
+            }}
+            text="LEARN MORE ABOUT HAVEN"
+          />
 {/*}
           <ButtonTertiary
             onClick={() => {

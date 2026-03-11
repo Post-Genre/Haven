@@ -55,6 +55,12 @@
   background-size: cover; */
 }
 
+.faq-list p {
+  text-align: left;
+  hyphens:none;
+  font-size: min(.8rem, 15px);
+}
+
 /* Individual Accordion Item */
 .collapsible {
   width: 100%;
