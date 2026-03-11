@@ -58,7 +58,7 @@
 .faq-list p {
   text-align: left;
   hyphens:none;
-  font-size: min(.8rem, 15px);
+  font-size: min(.8rem, 20pxpx);
 }
 
 /* Individual Accordion Item */
@@ -132,6 +132,7 @@
 
 .collapsible-section {
   max-width: 675px;
+  width: 100%;
 }
 
 @media (max-width: 992px) {

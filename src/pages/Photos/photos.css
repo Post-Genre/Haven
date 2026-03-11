@@ -15,6 +15,7 @@
   text-align: center;
   user-select: none;
   -webkit-user-select: none;
+  background-image: url(/src/assets/media/backgrounds/tile-light.png);
 }
 
 .photos-swiper-slide {

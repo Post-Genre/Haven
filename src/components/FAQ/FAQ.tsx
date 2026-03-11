@@ -205,6 +205,7 @@ export default function FAQ() {
             }
           />
 
+
           <FAQItem
             question="Can I purchase alcohol?"
             answer={
@@ -219,6 +220,10 @@ export default function FAQ() {
               </p>
             }
           />
+
+  
+
+          
         </div>
       </div>
     </section>
