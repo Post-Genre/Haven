@@ -7,16 +7,19 @@
   text-align: center;
   width: 100%;
   padding-bottom: 20px;
+  background-image: url(/src/assets/media/backgrounds/tile-light.png);
 }
 
 .booking-container h3 {
   width: 900px;
+
 }
 
 .booking-cards-container {
   display: flex;
   gap: 24px;
   justify-content: center;
+
 }
 
 .booking-card {
