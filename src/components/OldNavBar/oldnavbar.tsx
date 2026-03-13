@@ -20,7 +20,7 @@ export default function OldNavBar() {
 
   const navLinks = [
     { to: "/#home", label: "Home" },
-    { to: "/#events", label: "Events" },
+    { to: "/events", label: "Events" },
     { to: "/about", label: "About" },
     { to: "/booking", label: "Booking" },
     { to: "/photos", label: "Photos" },
