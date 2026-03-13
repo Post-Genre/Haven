@@ -13,7 +13,6 @@ import Rules from "./pages/Rules/Rules";
 import About from "./pages/About/About";
 import OldNavBar from "./components/OldNavBar/oldnavbar";
 import ScrollToHash from "./components/ScrollToHash";
-import { NavLink } from "react-router"
 
 function App() {
   return (
