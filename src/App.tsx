@@ -12,6 +12,8 @@ import Booking from "./pages/Booking/Booking";
 import Rules from "./pages/Rules/Rules";
 import About from "./pages/About/About";
 import OldNavBar from "./components/OldNavBar/oldnavbar";
+import ScrollToHash from "./components/ScrollToHash";
+import { NavLinkLink } from "react-router"
 
 function App() {
   return (
@@ -20,6 +22,11 @@ function App() {
         <ScrollToTop />
         <Header />
         <OldNavBar />
+        <ScrollToHash />
+      <Routes>
+        {/* routes here */}
+      </Routes>
+
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
