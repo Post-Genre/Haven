@@ -6,8 +6,22 @@
   margin: 0px;
   padding: 0px;
   width: 100%;
+  background-image: url(../../assets/media/backgrounds/tile-light.png);
 }
 
+.rules-container h1 {
+  color: black;
+  padding: 2% 0 0 0;
+  /*text-shadow: 0px 0px 20px #262626;*/
+  font-size: max(3rem, 9vw);
+}
+
+.rules-body{
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
 .rules-text-container {
   width: 80%;
   display: flex;

@@ -11,6 +11,7 @@
 } */
 
 .title-container {
+  position: relative;
   color: white;
   display: grid;
   height: fit-content;
@@ -22,6 +23,7 @@
   max-height: 350px;
 }
 
+
 .title-container img,
 .title-container div,
 .title-container h1 {
@@ -29,9 +31,13 @@
   grid-row: 1;
 }
 
+
 .title-container img {
   width: 100%;
+  
 }
+
+
 
 @media (min-width: 1200px) {
   .title-container {

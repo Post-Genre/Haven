@@ -3,7 +3,7 @@ import "./events.css";
 import banner1 from "../../assets/media/banners/banner1.jpg";
 import TitleContainer from "../../components/TitleContainer/TitleContainer";
 // import EventItem from "../../components/EventItem/EventItem";
-import bottom1 from "../../assets/media/banners/bottom1.jpg";
+import bottom1 from "../../assets/media/backgrounds/background1.jpg";
 // import { useState, useEffect } from "react";
 // import LoadingIcon from "../../components/LoadingIcon/LoadingIcon";
 
@@ -94,9 +94,9 @@ export default function UpcomingEvents() {
   // if (events.length === 0) {
   return (
     <div className="events-container">
-      <TitleContainer text="EVENTS" image={banner1} />
+      <h1>EVENTS</h1>
+      <img src={bottom1} alt="" className="bg-image" />
       <div className="events-list-container">
-        <img src={bottom1} alt="" className="bg-image" />
         <div className="event-items-wrapper">
           <p>No upcoming events at this time. Check back soon!</p>
         </div>

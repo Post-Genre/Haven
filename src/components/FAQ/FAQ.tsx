@@ -12,8 +12,8 @@ export default function FAQ() {
         <h2 className="faq-title">FAQ</h2>
       </div> */}
 
-      <TitleContainer image={FAQBanner} text="FAQ" />
       <div className="faq-container">
+        <h1>FAQ</h1>
         <img src={bottom4} alt="" className="bg-image" />
         <div className="faq-list">
           <FAQItem

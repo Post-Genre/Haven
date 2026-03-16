@@ -13,10 +13,11 @@ import Rules from "./pages/Rules/Rules";
 import About from "./pages/About/About";
 import OldNavBar from "./components/OldNavBar/oldnavbar";
 import ScrollToHash from "./components/ScrollToHash";
+import { useState } from "react";
 
 function App() {
+  const [footerColor, setFooterColor] = useState("#000");
   return (
-    <>
       <BrowserRouter>
         <ScrollToTop />
         <Header />
@@ -37,7 +38,6 @@ function App() {
         </main>
         <Footer />
       </BrowserRouter>
-    </>
   );
 }
 

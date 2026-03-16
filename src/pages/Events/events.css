@@ -1,16 +1,29 @@
 .events-container {
+  /* color to match bottom of background image */
+  background-color: #142714;
+  background-size: auto;
+  background-repeat: round;
+  /* needed for background image to work */
+  position: relative;
+  overflow: hidden;
+  /* container is placed at the same level as the content-wrapper, above the background-image */
+  z-index: 1;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: auto;
-  background-color: #142714;
+  padding: 0 0 10% 0;
+}
+
+.events-container h1 {
+  color: white;
+  padding: 2% 0 0 0;
+  text-shadow: 0px 0px 20px #011e08;
+  font-size: max(3rem, 9vw);
 }
 
 .events-list-container {
   /* color to match bottom of background image */
-  background-color: #142714;
   background-size: auto;
   background-repeat: round;
   width: 100%;

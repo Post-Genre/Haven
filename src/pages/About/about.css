@@ -1,4 +1,6 @@
 .about-container {
+  position:relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -7,39 +9,97 @@
   text-align: left;
   /* gap: 12px; */
   /* padding-bottom: 12px; */
-  background-color: black;
+  background-color: #262626;
   color: white;
+  z-index: 1;
 }
 
+.bg-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+}
 .wrapped-image {
-  margin-left: 8px;
+  line-break: auto;
   float: right;
-  width: 40%;
+  width: 45%;
   border-radius: 8px;
-  -webkit-mask-image: linear-gradient(
+  object-fit: cover;
+  /*-webkit-mask-image: linear-gradient(
     to bottom left,
     rgba(0, 0, 0, 0),
     black 1%,
     black 25%,
     rgba(0, 0, 0, 0)
   );
+  */
 }
 
 .text-wrap-container {
-  width: 90%;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: min(80vw, 1000px);
+  padding-bottom: 10vh;
+  gap: 5vw;
 }
 
-@media (max-width: 500px) {
-  .wrapped-image {
-    width: 60%;
-    margin-left: 4px;
+.text-wrap-container h1 {
+  padding: 10% 0 0 0;
+  text-shadow: 0px 0px 20px #262626;
+  font-size: max(3rem, 9vw);
+}
+
+.text-wrap-container p {
+  text-align: justify;
+  hyphens: none;
+  font-size: .8rem;
+  font-weight: normal;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: row;
+  gap: 5vw
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 0;
+  text-align: left;
+  line-break:loose
+}
+
+@media (max-width: 800px) {
+  .about-section, .about-section p{
+    gap: 5vw;
+    font-size: .6rem;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphenate-limit-lines: 1;
   }
-}
 
-@media (min-width: 1536px) {
-  .text-wrap-container {
-    width: 50%;
+  .about-section h5 {
+    hyphens: none;
+    text-align: left;
+  }
+
+  .wrapped-image {
+    width:25%;
+    float: none;
+  }
+
+  .text-wrap-container{
+    gap: 10vw;
   }
 }
