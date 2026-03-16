@@ -13,7 +13,7 @@ export default function About() {
     <div className="about-container">
       <div className="text-wrap-container">
         <h1>About</h1>
-        <img alt="" className="bg-image" src="/src/assets/media/banners/top2.jpg"></img>
+        <img alt="" className="bg-image" src="../src/assets/media/haven pics/DSCF7376.jpg"></img>
         <div className="about-section">
           <div className="about-text" style={{textAlign: "left"}}>
             <h5>WHAT IS HAVEN?</h5>
