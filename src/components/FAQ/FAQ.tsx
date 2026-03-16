@@ -1,7 +1,5 @@
 import "./faq.css";
 import FAQItem from "./FAQItem";
-import FAQBanner from "../../assets/media/banners/banner4.jpg";
-import TitleContainer from "../TitleContainer/TitleContainer";
 import bottom4 from "../../assets/media/banners/bottom4.jpg";
 import { Link } from "react-router";
 

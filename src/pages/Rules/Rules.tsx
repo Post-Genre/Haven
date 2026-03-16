@@ -1,6 +1,4 @@
-import TitleContainer from "../../components/TitleContainer/TitleContainer";
 import "./rules.css";
-import banner from "../../assets/media/backgrounds/top1.jpg";
 export default function Rules() {
   return (
     <div className="rules-container">

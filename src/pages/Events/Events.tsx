@@ -1,7 +1,5 @@
 import "./events.css";
 // import events from "./events-list";
-import banner1 from "../../assets/media/banners/banner1.jpg";
-import TitleContainer from "../../components/TitleContainer/TitleContainer";
 // import EventItem from "../../components/EventItem/EventItem";
 import bottom1 from "../../assets/media/backgrounds/background1.jpg";
 // import { useState, useEffect } from "react";
