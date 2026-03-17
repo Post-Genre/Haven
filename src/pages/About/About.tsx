@@ -6,7 +6,7 @@ import image2 from "../../assets/media/haven pics/DSC_9097.jpg";
 // import { useEffect, useRef } from "react";
 import crowd8 from "../../assets/media/haven pics/IMG_8836_comp.jpg";
 import image1 from "../../assets/media/banners/top2.jpg"
-import image3 from "../../assets/media/haven pics/DSCF7376-lowres.jpg"
+import image3 from "../../assets/media/events/DSCF7376-lowres.jpg"
 
 export default function About() {
   return (
