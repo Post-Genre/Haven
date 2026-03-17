@@ -5,7 +5,7 @@ import image2 from "../../assets/media/haven pics/DSC_9097.jpg";
 // import banner3 from "../../assets/media/banners/djbanner.png";
 // import { useEffect, useRef } from "react";
 import crowd8 from "../../assets/media/haven pics/IMG_8836_crowd.jpg";
-
+import image1 from "../../assets/media/banners/top2.jpg"
 import image3 from "../../assets/media/haven pics/DSCF7376.jpg"
 
 export default function About() {
@@ -13,7 +13,7 @@ export default function About() {
     <div className="about-container">
       <div className="text-wrap-container">
         <h1>About</h1>
-        <img alt="" className="bg-image" src="../../assets/media/banners/top2.jpg"></img>
+        <img alt="" className="bg-image" src={image1}></img>
         <div className="about-section">
           <div className="about-text" style={{textAlign: "left"}}>
             <h5>WHAT IS HAVEN?</h5>
