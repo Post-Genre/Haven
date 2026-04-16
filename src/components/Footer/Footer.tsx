@@ -1,5 +1,7 @@
 import "./footer.css";
-import havenLogo from "../../assets/media/havenlogo-white-updated.png";
+//import havenLogo from "../../assets/media/havenlogo-white-updated.png";
+import havenLogo from "../../assets/media/havenpngvirile2.png";
+
 import { FaFacebookF, FaInstagram, FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router";
 
