@@ -66,7 +66,7 @@ export default function ChurchAnimation() {
           <h1 ref={havenTextRef} className="website-title">
             HAVEN
           </h1>
-          <h5 ref={subtitleRef} className="website-subtitle">Oakland's Home for Live Music</h5>
+          {/* <h5 ref={subtitleRef} className="website-subtitle">Oakland's Home for Live Music</h5> */}
         </div>
       </div>
     </div>
